@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Chicago - FAQs for Jobseekers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Banner */
+        .top-banner {
+            background-color: #1e3a14;
+            color: white;
+            padding: 12px 0;
+            text-align: center;
+        }
+
+        .top-banner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .social-icons {
+            position: absolute;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons a {
+            color: white;
+        }
+
+        .learn-more-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 6px 16px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Main Navigation */
+        .main-header {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            width: 150px;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .donate-btn {
+            background-color: #67b346;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .btn-arrow {
+            background-color: white;
+            color: #67b346;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-title {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .faq-subtitle {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #67b346;
+        }
+
+        .faq-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .faq-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            padding: 20px;
+            background-color: #fff;
+            color: #4F6B3A;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .faq-toggle {
+            color: #4F6B3A;
+            font-size: 18px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-answer {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            background-color: #f9f9f9;
+        }
+
+        .faq-card.active .faq-answer {
+            padding: 20px;
+            max-height: 1000px;
+        }
+
+        .faq-card.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1e3a14;
+            color: white;
+            padding: 50px 0 0;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-logo {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 18px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-container {
+                flex-direction: column;
+                gap: 30px;
+            }
+            
+            .top-banner-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .social-icons {
+                position: static;
+                justify-content: center;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="top-banner-container">
+                <div>Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#">
+                <img src="https://api.placeholder.com/150x50" alt="Skills Chicago Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Job Seekers</a>
+                    <a href="#">Employers</a>
+                    <a href="#">Community Partners</a>
+                    <a href="#">Donors</a>
+                    <a href="#">Events</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <a href="#" class="donate-btn">
+                    Donate
+                    <span class="btn-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container faq-container">
+            <h1 class="faq-title">FAQs for Jobseekers</h1>
+            <h2 class="faq-subtitle">Got Questions? We've Got Answers.</h2>
+            <p class="faq-intro">
+                Navigating the job search process can be challenging, but we're here to help. Find answers to common
+                questions about applying for jobs, preparing for interviews, and using our services.
+            </p>
+
+            <div class="faq-grid">
+                <!-- FAQ Item 1 -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        How do I apply for jobs through Skills for Chicago?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            To apply for jobs through Skills for Chicago, you can:
+                        </p>
+                        <ul>
+                            <li>Visit our website and browse open positions</li>
+                            <li>Create an account and submit your resume</li>
+                            <li>Attend one of our job fairs or hiring events</li>
+                            <li>Contact one of our job coaches for personalized assistance</li>
+                        </ul>
+                        <p>
+                            Our team will review your qualifications and connect you with opportunities that match your skills and experience.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        Do I need to pay for your services?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            No, all of our services for job seekers are completely free. We are funded by partnerships with employers and philanthropic organizations to help connect talented Chicago residents with quality employment opportunities at no cost to you.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        What industries do you offer jobs in?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We work with employers across many industries including:
+                        </p>
+                        <ul>
+                            <li>Healthcare</li>
+                            <li>Manufacturing</li>
+                            <li>Hospitality</li>
+                            <li>Information Technology</li>
+                            <li>Financial Services</li>
+                            <li>Transportation & Logistics</li>
+                            <li>Retail</li>
+                        </ul>
+                        <p>
+                            Our employer partnerships continue to grow, expanding the range of opportunities available.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        What are the requirements to apply for jobs?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Basic requirements include:
+                        </p>
+                        <ul>
+                            <li>You must be at least 18 years old</li>
+                            <li>You must be legally authorized to work in the United States</li>
+                            <li>You must be a resident of Chicago or the surrounding area</li>
+                            <li>You must complete our registration process</li>
+                        </ul>
+                        <p>
+                            Specific jobs may have additional requirements regarding education, experience, or skills.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        How long does the hiring process take?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            The hiring process timeline varies depending on the employer and position. Generally, you can expect:
+                        </p>
+                        <ul>
+                            <li>1-3 days for initial application review</li>
+                            <li>1-2 weeks for interviews to be scheduled</li>
+                            <li>1-3 weeks for final hiring decisions</li>
+                        </ul>
+                        <p>
+                            Our team works to streamline this process as much as possible and keeps you updated at each stage.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        Will Skills for Chicago guarantee me a job?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            While we cannot guarantee job placement, we significantly improve your chances of finding employment through:
+                        </p>
+                        <ul>
+                            <li>Direct connections with hiring employers</li>
+                            <li>Personalized resume and interview coaching</li>
+                            <li>Job-specific preparation and training</li>
+                            <li>Ongoing support throughout the application process</li>
+                        </ul>
+                        <p>
+                            Our success rate is high because we only connect you with positions where your skills and experience align with employer needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 7 -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        What if I need training or skill development?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We offer several options for skill development:
+                        </p>
+                        <ul>
+                            <li>Free workshops on job-specific skills</li>
+                            <li>Connections to training programs and educational resources</li>
+                            <li>Online learning opportunities</li>
+                            <li>Mentorship and coaching programs</li>
+                        </ul>
+                        <p>
+                            Our team can assess your skills and recommend appropriate training paths to help you qualify for your target positions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 8 -->
+                <div class="faq-card">
+                    <div class="faq-question">
+                        What if I have a gap in my employment history?
+                        <span class="faq-toggle">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Employment gaps are common and don't disqualify you from finding great opportunities. We can help by:
+                        </p>
+                        <ul>
+                            <li>Providing strategies to address gaps during interviews</li>
+                            <li>Formatting your resume to emphasize skills over chronology</li>
+                            <li>Identifying employers who value potential over perfect work history</li>
+                            <li>Connecting you with opportunities that provide on-the-job training</li>
+                        </ul>
+                        <p>
+                            Many of our employer partners understand that career paths aren't always linear and value diverse experiences.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <img src="https://api.placeholder.com/180x60" alt="Skills Chicago Logo" class="footer-logo">
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <div class="footer-links">
+                        <a href="#">Who We Are</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Annual Reports & Financials</a>
+                        <a href="#">Our Work in Action</a>
+                        <a href="#">Careers at Skills</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Job Seekers</h3>
+                    <div class="footer-links">
+                        <a href="#">Find a Job</a>
+                        <a href="#">Career Resources</a>
+                        <a href="#">FAQs for Job Seekers</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Employers</h3>
+                    <div class="footer-links">
+                        <a href="#">Partner With Us</a>
+                        <a href="#">Our Employer Partners</a>
+                        <a href="#">Community Impact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Community Partners</h3>
+                    <div class="footer-links">
+                        <a href="#">Collaborate With Us</a>
+                        <a href="#">Our Community Partners</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Events & Highlights</h3>
+                    <div class="footer-links">
+                        <a href="#">Events & Highlights</a>
+                        <a href="#">Employment Champions Breakfast</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                Copyright © 2025 | Skills For Chicago | All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Accordion functionality for FAQ cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    // Get the parent card element
+                    const card = this.parentElement;
+                    
+                    // Check if this card is already active
+                    const isActive = card.classList.contains('active');
+                    
+                    // Close all other cards first
+                    document.querySelectorAll('.faq-card').forEach(item => {
+                        item.classList.remove('active');
+                    });
+                    
+                    // If the clicked card wasn't active before, make it active
+                    if (!isActive) {
+                        card.classList.add('active');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

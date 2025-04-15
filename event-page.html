@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Champions Breakfast 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        /* Header Styles */
+        .event-header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+        
+        .event-date {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .event-location {
+            font-size: 22px;
+            font-weight: 700;
+            color: #4F6B3A;
+            margin-bottom: 10px;
+        }
+        
+        .event-address {
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+        
+        /* Countdown Timer */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .countdown-box {
+            background-color: #0F230A;
+            color: white;
+            width: 120px;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 72px;
+            font-weight: 700;
+            border-radius: 5px;
+        }
+        
+        .countdown-separator {
+            font-size: 72px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            color: #0F230A;
+        }
+        
+        .countdown-label {
+            font-size: 24px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        /* Event Agenda Section */
+        .event-agenda {
+            background-color: #0F230A;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .event-agenda h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 30px;
+        }
+        
+        .event-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        
+        /* Schedule Grid */
+        .schedule-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .schedule-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .schedule-time {
+            width: 150px;
+            font-weight: 600;
+            text-align: right;
+            padding-right: 20px;
+            border-right: 1px solid #ccc;
+            font-size: 16px;
+        }
+        
+        .schedule-details {
+            flex: 1;
+            padding-left: 20px;
+        }
+        
+        .schedule-title {
+            color: #8DC63F;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .schedule-detail-item {
+            margin-bottom: 15px;
+        }
+        
+        .schedule-person {
+            font-weight: 700;
+        }
+        
+        .schedule-subtitle {
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        /* Featured Speakers Section */
+        .featured-speakers {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .panel-title {
+            text-align: center;
+            color: #4F6B3A;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        
+        .speakers-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .speaker-card {
+            width: 220px;
+            text-align: center;
+        }
+        
+        .speaker-image {
+            width: 100%;
+            height: 200px;
+            background-color: #999;
+            margin-bottom: 15px;
+        }
+        
+        .speaker-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .speaker-title {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .speaker-company {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .speaker-role {
+            font-weight: 600;
+        }
+        
+        /* Sponsors Section */
+        .sponsors-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .sponsors-header {
+            margin-bottom: 40px;
+        }
+        
+        .sponsors-header h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .sponsors-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        .sponsor-tiers {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .sponsor-tier {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            padding: 8px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .sponsor-tier:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .sponsor-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .sponsor-logo {
+            height: 50px;
+            max-width: 150px;
+            object-fit: contain;
+        }
+        
+        /* Recap Section */
+        .recap-section {
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .recap-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        
+        .recap-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin-bottom: 40px;
+        }
+        
+        /* Talent Section */
+        .talent-section {
+            padding: 40px 0;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .view-more-btn {
+            background-color: #8DC63F;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .view-more-btn:hover {
+            background-color: #7db32e;
+        }
+        
+        .talent-grid {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .talent-card {
+            flex: 1;
+            position: relative;
+        }
+        
+        .talent-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .talent-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        
+        .talent-journey {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .talent-name {
+            font-size: 18px;
+            color: #8DC63F;
+            margin-top: 5px;
+        }
+        
+        /* Moments Section */
+        .moments-section {
+            padding: 40px 0 60px;
+        }
+        
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+        
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-slide {
+            flex: 0 0 25%;
+            padding: 0 10px;
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .carousel-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+        
+        .carousel-dot.active {
+            background-color: #666;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .countdown-box {
+                width: 100px;
+                height: 100px;
+                font-size: 60px;
+            }
+            
+            .countdown-separator {
+                font-size: 60px;
+            }
+            
+            .countdown-label {
+                font-size: 20px;
+            }
+            
+            .speakers-grid {
+                gap: 20px;
+            }
+            
+            .speaker-card {
+                width: 180px;
+            }
+            
+            .carousel-slide {
+                flex: 0 0 33.333%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .event-date {
+                font-size: 28px;
+            }
+            
+            .event-location {
+                font-size: 20px;
+            }
+            
+            .countdown-box {
+                width: 80px;
+                height: 80px;
+                font-size: 48px;
+            }
+            
+            .countdown-separator {
+                font-size: 48px;
+            }
+            
+            .countdown-label {
+                font-size: 16px;
+            }
+            
+            .schedule-item {
+                flex-direction: column;
+            }
+            
+            .schedule-time {
+                width: 100%;
+                text-align: left;
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .schedule-details {
+                padding-left: 0;
+            }
+            
+            .talent-grid {
+                flex-direction: column;
+            }
+            
+            .carousel-slide {
+                flex: 0 0 50%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .countdown-container {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+            .countdown-box {
+                width: 70px;
+                height: 70px;
+                font-size: 36px;
+            }
+            
+            .countdown-separator {
+                font-size: 36px;
+            }
+            
+            .carousel-slide {
+                flex: 0 0 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Event Header Section -->
+    <section class="event-header">
+        <div class="container">
+            <h1 class="event-date">Wednesday, October 29, 2025</h1>
+            <h2 class="event-location">SHERATON GRAND CHICAGO RIVERWALK</h2>
+            <p class="event-address">301 E. North Water St, Chicago, Il 60611</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <div>
+                    <div class="countdown-box" id="days">35</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div>
+                    <div class="countdown-box" id="hours">16</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div>
+                    <div class="countdown-box" id="minutes">34</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div>
+                    <div class="countdown-box" id="seconds">20</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Event Agenda Section -->
+    <section class="event-agenda">
+        <div class="container">
+            <h2>Event Agenda</h2>
+            <p class="event-intro">
+                We're excited to welcome you to this year's Employment Champions Breakfast! As you prepare for your arrival,
+                please take a moment to review the key event details below.
+            </p>
+            
+            <div class="schedule-container">
+                <div class="schedule-item">
+                    <div class="schedule-time">7:30AM</div>
+                    <div class="schedule-details">
+                        <div class="schedule-title">CHECK-IN:</div>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="schedule-time">8:00AM - 9:00AM</div>
+                    <div class="schedule-details">
+                        <div class="schedule-title">BREAKFAST AND NETWORKING</div>
+                        <p>Breakfast will be promptly cleared from 8:45am – 9:00am</p>
+                    </div>
+                </div>
+                
+                <div class="schedule-item">
+                    <div class="schedule-time"></div>
+                    <div class="schedule-details">
+                        <div class="schedule-detail-item">
+                            <div class="schedule-title">WELCOMING REMARKS</div>
+                            <p class="schedule-person">Bridget Altenburg</p>
+                            <p class="schedule-subtitle">Chief Executive Officer, Skills for Chicagoland's Future</p>
+                        </div>
+                        
+                        <div class="schedule-detail-item">
+                            <div class="schedule-title">PRESENTING SPONSOR RECOGNITION</div>
+                            <p class="schedule-person">Jewel-Osco</p>
+                        </div>
+                        
+                        <div class="schedule-detail-item">
+                            <div class="schedule-title">2024 CHAMPION FOR EQUITABLE HIRING AWARD</div>
+                            <p class="schedule-person">Presented to Blue Cross and Blue Shield of Illinois</p>
+                            <p class="schedule-subtitle">Accepted by Shannon D. Fuller, VP Talent Solutions, Health Care Service Corporation</p>
+                        </div>
+                        
+                        <div class="schedule-detail-item">
+                            <div class="schedule-title">FEATURED SPEAKER</div>
+                            <p class="schedule-person">Carlos Perez</p>
+                            <p class="schedule-subtitle">Customer Advocate I, Blue Cross and Blue Shield of Illinois</p>
+                            <p class="schedule-subtitle">Placed by Skills for Chicagoland's Future</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Featured Speakers Section -->
+    <section class="featured-speakers">
+        <div class="container">
+            <h2 class="section-title">Featured Speakers</h2>
+            <h3 class="panel-title">Panel: Barriers To Bridges: Equitable Solutions For Scalable Hiring</h3>
+            
+            <div class="speakers-grid">
+                <div class="speaker-card">
+                    <div class="speaker-image"></div>
+                    <h3 class="speaker-name">Pamela Tully</h3>
+                    <p class="speaker-title">President & COO</p>
+                    <p class="speaker-company">Skills For Chicago</p>
+                    <p class="speaker-role">Moderator</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <div class="speaker-image"></div>
+                    <h3 class="speaker-name">Tracy Brown</h3>
+                    <p class="speaker-title">Sr. Director of People</p>
+                    <p class="speaker-company">SSP</p>
+                    <p class="speaker-role">Panelist</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <div class="speaker-image"></div>
+                    <h3 class="speaker-name">Justice Gathings</h3>
+                    <p class="speaker-title">Co-Founder</p>
+                    <p class="speaker-company">Just Act Partners</p>
+                    <p class="speaker-role">Panelist</p>
+                </div>
+                
+                <div class="speaker-card">
+                    <div class="speaker-image"></div>
+                    <h3 class="speaker-name">Norah Larke</h3>
+                    <p class="speaker-title">EVP & CHRO</p>
+                    <p class="speaker-company">Wintrust</p>
+                    <p class="speaker-role">Panelist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Sponsors Section -->
+    <section class="sponsors-section">
+        <div class="container">
+            <div class="sponsors-header">
+                <h2>Thank You To Our 2024 Sponsors</h2>
+                <p>A special thank you to the brands that have contributed funds, products, and time.</p>
+            </div>
+            
+            <div class="sponsor-tiers">
+                <button class="sponsor-tier">Presenting</button>
+                <button class="sponsor-tier">Champion</button>
+                <button class="sponsor-tier">Ambassador</button>
+                <button class="sponsor-tier">Advocate</button>
+                <button class="sponsor-tier">Supporter</button>
+                <button class="sponsor-tier">Partner</button>
+                <button class="sponsor-tier">Friend</button>
+            </div>
+            
+            <div class="sponsor-logos">
+                <img src="https://api.placeholder.com/150x50?text=ULTA" alt="ULTA Beauty" class="sponsor-logo">
+                <img src="https://api.placeholder.com/150x50?text=Allstate" alt="Allstate" class="sponsor-logo">
+                <img src="https://api.placeholder.com/150x50?text=AON" alt="AON" class="sponsor-logo">
+                <img src="https://api.placeholder.com/150x50?text=BDT&MSD" alt="BDT&MSD" class="sponsor-logo">
+                <img src="https://api.placeholder.com/150x50?text=BCBS" alt="BlueCross BlueShield of Illinois" class="sponsor-logo">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recap Section -->
+    <section class="recap-section">
+        <div class="container">
+            <h2 class="recap-title">2024 Employment Champions Breakfast Recap</h2>
+            <img src="https://api.placeholder.com/1200x400?text=Chicago+Skyline" alt="Chicago Skyline" class="recap-image">
+        </div>
+    </section>
+    
+    <!-- Talent Section -->
+    <section class="talent-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Hear From Our Talent</h2>
+                <a href="#" class="view-more-btn">
+                    View More Content
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="talent-grid">
+                <div class="talent-card">
+                    <img src="https://api.placeholder.com/500x350?text=Amiracle" alt="Amiracle Johnson" class="talent-image">
+                    <div class="talent-caption">
+                        <div class="talent-journey">
+                            <span style="color: #3BB9FF;">AMIRACLE JOHNSON'S</span><br>
+                            SKILLS JOURNEY
+                        </div>
+                    </div>
+                    <p class="talent-name">Candidate Spotlight: Amiracle's Story</p>
+                </div>
+                
+                <div class="talent-card">
+                    <img src="https://api.placeholder.com/500x350?text=Ngozi" alt="Ngozi Ibegbulem" class="talent-image">
+                    <div class="talent-caption">
+                        <div class="talent-journey">
+                            <span style="color: #3BB9FF;">NGOZI IBEGBULEM'S</span><br>
+                            SKILLS JOURNEY
+                        </div>
+                    </div>
+                    <p class="talent-name">Candidate Spotlight: Ngozi's Story</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Moments Section -->
+    <section class="moments-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Moments From 2024</h2>
+                <a href="#" class="view-more-btn">
+                    View 2024 Gallery
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="carousel-container">
+                <div class="carousel-wrapper" id="carousel">
+                    <div class="carousel-slide">
+                        <img src="https://api.placeholder.com/400x250?text=Moment+1" alt="Event Moment 1" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://api.placeholder.com/400x250?text=Moment+2" alt="Event Moment 2" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://api.placeholder.com/400x250?text=Moment+3" alt="Event Moment 3" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://api.placeholder.com/400x250?text=Moment+4" alt="Event Moment 4" class="carousel-image">
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="https://api.placeholder.com/400x250?text=Moment+5" alt="Event Moment 5" class="carousel-image">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-pagination" id="carousel-pagination">
+                <div class="carousel-dot active" data-index="0"></div>
+                <div class="carousel-dot" data-index="1"></div>
+                <div class="carousel-dot" data-index="2"></div>
+                <div class="carousel-dot" data-index="3"></div>
+                <div class="carousel-dot" data-index="4"></div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('October 29, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+            
+            // Fix the last "Minutes" label to "Seconds"
+            const labels = document.querySelectorAll('.countdown-label');
+            if (labels.length >= 4) {
+                labels[3].innerText = 'Seconds';
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Carousel Functionality
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.carousel-slide').length;
+        const carousel = document.getElementById('carousel');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        let slidesToShow = 4; // Default for desktop
+        
+        // Update slides to show based on window width
+        function updateSlidesToShow() {
+            if (window.innerWidth < 576) {
+                slidesToShow = 1;
+            } else if (window.innerWidth < 768) {
+                slidesToShow = 2;
+            } else if (window.innerWidth < 992) {
+                slidesToShow = 3;
+            } else {
+                slidesToShow = 4;
+            }
+        }
+        
+        function showSlide(index) {
+            if (index < 0) {
+                index = 0;
+            } else if (index > totalSlides - slidesToShow) {
+                index = totalSlides - slidesToShow;
+            }
+            
+            currentSlide = index;
+            const slideWidth = document.querySelector('.carousel-slide').offsetWidth;
+            const offset = -currentSlide * slideWidth;
+            carousel.style.transform = `translateX(${offset}px)`;
+            
+            // Update active dot
+            carouselDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+        
+        // Add event listeners to dots
+        carouselDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showSlide(i);
+            });
+        });
+        
+        // Auto slide
+        setInterval(() => {
+            if (currentSlide < totalSlides - slidesToShow) {
+                showSlide(currentSlide + 1);
+            } else {
+                showSlide(0);
+            }
+        }, 5000);
+        
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            updateSlidesToShow();
+            showSlide(currentSlide);
+        });
+        
+        // Initialize
+        updateSlidesToShow();
+        showSlide(0);
+    </script>
+</body>
+</html>

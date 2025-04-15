@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Container styles */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* Results count style */
+        .results-count {
+            font-size: 24px;
+            font-weight: 600;
+            color: #5a7d45;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Job listings grid */
+        .job-listings {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* Job card styles */
+        .job-card {
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .job-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Company logo */
+        .company-logo {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+            margin-bottom: 15px;
+        }
+
+        /* Job title */
+        .job-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #333;
+            line-height: 1.3;
+        }
+
+        /* Company name */
+        .company-name {
+            font-size: 16px;
+            color: #5a7d45;
+            margin-bottom: 8px;
+        }
+
+        /* Location */
+        .job-location {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        /* Requirements */
+        .job-requirement {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* Shift info */
+        .job-shift {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+
+        /* Days posted */
+        .days-posted {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Bookmark icon */
+        .bookmark-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #ccc;
+            transition: color 0.2s ease;
+        }
+
+        .bookmark-icon.active {
+            color: #5a7d45;
+        }
+
+        /* Tag styles */
+        .tag {
+            display: inline-block;
+            background-color: #e83e8c;
+            color: white;
+            font-size: 12px;
+            padding: 3px 8px;
+            border-radius: 15px;
+            position: absolute;
+            top: 55px;
+            right: 20px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .job-listings {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="results-count">65 Results</h2>
+        
+        <div class="job-listings" id="jobListingsContainer">
+            <!-- Job cards will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <script>
+        // Sample job data (in a real application, this would come from PHP)
+        const jobData = [
+            {
+                id: 1,
+                logoUrl: "https://placehold.co/50x50?text=NM",
+                jobTitle: "Patient Care Technician",
+                companyName: "Northwestern Memorial HealthCare",
+                location: "Chicago, IL",
+                requirement: "Certification/License",
+                shift: "Any Shift",
+                daysPosted: "3d",
+                tag: null
+            },
+            {
+                id: 2,
+                logoUrl: "https://placehold.co/50x50?text=DOT",
+                jobTitle: "Commercial Truck Driver",
+                companyName: "DOT Foods",
+                location: "University Park",
+                requirement: "Certification/License",
+                shift: "Any Shift:Weekends",
+                daysPosted: "5d",
+                tag: null
+            },
+            {
+                id: 3,
+                logoUrl: "https://placehold.co/50x50?text=C",
+                jobTitle: "Senior Claims Technician",
+                companyName: "BlueCross BlueShield",
+                location: "BCBS Morgan Park",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift",
+                daysPosted: "10d",
+                tag: null
+            },
+            {
+                id: 4,
+                logoUrl: "https://placehold.co/50x50?text=EH",
+                jobTitle: "Medical Assistant",
+                companyName: "Endeavor Health",
+                location: "Evanston",
+                requirement: "High School Diploma/GED",
+                shift: "Any Shift:Weekends",
+                daysPosted: "12d",
+                tag: null
+            },
+            {
+                id: 5,
+                logoUrl: "https://placehold.co/50x50?text=BCBS",
+                jobTitle: "Customer Advocate -Bilingual-English-Spanish",
+                companyName: "BlueCross BlueShield",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:2nd Shift:Weekends",
+                daysPosted: "15d",
+                tag: "3176"
+            },
+            {
+                id: 6,
+                logoUrl: "https://placehold.co/50x50?text=BCBS",
+                jobTitle: "Customer Advocate I-Bilingual-English-Spanish",
+                companyName: "BlueCross BlueShield",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:2nd Shift:Weekends",
+                daysPosted: "15d",
+                tag: null
+            },
+            {
+                id: 7,
+                logoUrl: "https://placehold.co/50x50?text=EH",
+                jobTitle: "Patient Care Technician",
+                companyName: "Endeavor Health",
+                location: "Evanston",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:2nd Shift:3rd Shift:Weekends",
+                daysPosted: "15d",
+                tag: null
+            },
+            {
+                id: 8,
+                logoUrl: "https://placehold.co/50x50?text=C",
+                jobTitle: "Retail Relationship Banker",
+                companyName: "BMO",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:Weekends",
+                daysPosted: "15d",
+                tag: null
+            }
+        ];
+
+        // Function to create job cards
+        function createJobCards() {
+            const container = document.getElementById('jobListingsContainer');
+            container.innerHTML = ''; // Clear container
+            
+            jobData.forEach(job => {
+                const jobCard = document.createElement('div');
+                jobCard.className = 'job-card';
+                
+                jobCard.innerHTML = `
+                    <img src="${job.logoUrl}" alt="${job.companyName} logo" class="company-logo">
+                    <h3 class="job-title">${job.jobTitle}</h3>
+                    <div class="company-name">${job.companyName}</div>
+                    <div class="job-location">${job.location}</div>
+                    <div class="job-requirement">${job.requirement}</div>
+                    <div class="job-shift">${job.shift}</div>
+                    <div class="days-posted">${job.daysPosted}</div>
+                    <i class="bookmark-icon" data-job-id="${job.id}">&#9734;</i>
+                    ${job.tag ? `<span class="tag">${job.tag}</span>` : ''}
+                `;
+                
+                container.appendChild(jobCard);
+            });
+            
+            // Add event listeners to bookmark icons
+            document.querySelectorAll('.bookmark-icon').forEach(icon => {
+                icon.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    
+                    if (this.classList.contains('active')) {
+                        this.innerHTML = '&#9733;'; // Filled star
+                    } else {
+                        this.innerHTML = '&#9734;'; // Empty star
+                    }
+                    
+                    const jobId = this.getAttribute('data-job-id');
+                    // In a real application, you'd save this to a database via AJAX
+                    console.log(`Job ${jobId} bookmark toggled`);
+                });
+            });
+        }
+
+        // Initialize the job cards
+        document.addEventListener('DOMContentLoaded', createJobCards);
+
+        // In a PHP environment, you would replace the sample data with your PHP data
+        /*
+        PHP Integration Example:
+
+        1. Create a PHP file that fetches job data from your database:
+        
+        <?php
+            // Database connection
+            $conn = new mysqli($servername, $username, $password, $dbname);
+            
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            
+            // Fetch job listings
+            $sql = "SELECT * FROM job_listings ORDER BY date_posted DESC LIMIT 65";
+            $result = $conn->query($sql);
+            
+            $jobs = array();
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()) {
+                    $jobs[] = $row;
+                }
+            }
+            
+            // Output as JSON
+            echo json_encode($jobs);
+            
+            $conn->close();
+        ?>
+
+        2. In your JavaScript, fetch the data:
+        
+        fetch('get_jobs.php')
+            .then(response => response.json())
+            .then(data => {
+                jobData = data;
+                createJobCards();
+            })
+            .catch(error => console.error('Error fetching job data:', error));
+        */
+    </script>
+</body>
+</html>

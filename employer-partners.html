@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Chicago - Community Partners</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-green: #4d7e32;
+            --dark-green: #234018;
+            --light-green: #a7c572;
+            --off-white: #f8f8f3;
+            --dark-gray: #333333;
+            --light-gray: #f0f0e8;
+            --button-green: #4d7e32;
+            --footer-green: #234018;
+        }
+
+        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+
+@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+
+        h1 {
+         font-family: Greycliff
+      }
+      h2 {
+         font-family: Greycliff
+      }
+      p {
+        font-family: Greycliff-thin
+      }
+      a {
+        font-family: Greycliff-thin
+      }
+      span {
+        font-family: Greycliff
+      }
+
+      h4 {
+        font-family: Greycliff
+      }
+
+      h5 {
+        font-family: Greycliff
+      }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--dark-gray);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            /* max-width: 1200px; */
+            margin: 0 auto;
+            /* padding: 0 20px; */
+        }
+
+        /* Header and Navigation */
+        .social-bar {
+            background-color: var(--dark-green);
+            padding: 8px 0;
+            text-align: right;
+        }
+
+        .social-icons {
+            margin-right: 20px;
+        }
+
+        .social-icons a {
+            color: white;
+            margin-left: 15px;
+            font-size: 16px;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            height: 50px;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-green);
+        }
+
+        .donate-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #8dc63f;
+            color: #333333;
+            padding: 7px 15px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            width: 120px;
+            border: 1px solid #707070;
+        }
+
+        .circle-icon {
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .donate-button .circle-icon i {
+            color: #333333;
+            font-size: 12px;
+            transform: rotate(-45deg);
+        }
+
+        .donate-button:hover {
+            background-color: #7db32e;
+            transform: translateY(-2px);
+        }
+
+        .donate-button:hover .circle-icon i {
+            transform: rotate(0deg);
+        }
+
+        /* Mobile menu toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        .hamburger span:nth-child(1) { top: 0px; }
+        .hamburger span:nth-child(2), .hamburger span:nth-child(3) { top: 10px; }
+        .hamburger span:nth-child(4) { top: 20px; }
+        
+        /* Hero Section */
+        .hero {
+            display: flex;
+            padding: 60px 0;
+            background-color: #ffffff;
+        }
+
+        .hero-content {
+            flex: 1;
+            padding: 0 40px 0 20px;
+        }
+
+        .hero-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            color: #4d7e32;
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Partners Section */
+        .partners-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #f9f9f9;
+        }
+
+        .partners-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #353232;
+            margin-bottom: 15px;
+        }
+
+        .partners-subtitle {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .partner-logo {
+            height: 100px;
+            background-color: #fff;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .partner-logo img {
+            max-width: 80%;
+            max-height: 70%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-content, .hero-image {
+                width: 100%;
+                padding: 0 20px;
+            }
+            
+            .hero-image {
+                margin-top: 30px;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .main-nav {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .header-container {
+                justify-content: space-between;
+            }
+            
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .engagement-content {
+    padding: 2% 0px 2% 0%;
+    margin-left: 5%;
+}
+
+.engagement-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background-color: var(--light-gray);
+        }
+        .engagement-content {
+            flex: 1;
+            padding: 2% 0px 2% 0%;
+        }
+
+        @media (max-width: 768px) {
+            
+            .hero-container, 
+            .engagement-section,
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 992px) {
+
+            .engagement-section {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .communities-image, .engagement-content {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .engagement-content {
+        /* margin-bottom: 4%; */
+    }
+        }
+
+        .engagement-section {
+            display: flex;
+            /* display: inline-flex; */
+            align-items: center;
+            justify-content: center;
+            /* padding-left: 2%; */
+            gap: 60px;
+            background-color: #FFFFFF;
+        }
+
+        .engagement-title {
+            font-size: 55px;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #041202;
+        }
+
+        .employer-partner-title {
+            font-size: 55px;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #FFFFFF;
+            width: 70%;
+        }
+
+        .employer-partner-section {
+            font-size: 55px;
+            color: var(--dark-green);
+            /* margin-bottom: 30px; */
+            font-weight: 700;
+            color: #041202;
+        }
+
+        .engagement-text {
+            margin-bottom: 30px;
+            font-size: 22px;
+            line-height: 1.7;
+            color: #353232;
+            width: 70%;
+        }
+
+        .communities-image {
+            flex: 1.2;
+        }
+
+        .communities-image img {
+    width: 100%;
+    height: 800px;
+    display: block;
+    object-fit: cover;
+}
+
+        @media (max-width: 992px) {
+            
+            .communities-image, .communities-content {
+                width: 100%;
+            }
+            .communities-image, .resources-content {
+                width: 100%;
+            }
+
+            .communities-image, .engagement-content {
+                width: 100%;
+            }
+            .engagement-section {
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .access-title, .communities-title {
+                font-size: 32px;
+            }
+            .hero-container, 
+            .engagement-section,
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        h4 {
+        color:#4d7e32;
+        font-size: 30px;
+      }
+
+          li::before {
+    content: "●"; /* Unicode bullet character */
+    color: #4F6B3A; /* Your specified green color */
+    display: inline-block;
+    /* width: 1%; */
+    margin-left: -1em;
+    margin-right: 1%;
+    font-size: 1em; /* Makes the bullet slightly larger */
+    align-items: center;
+    justify-content: center;
+}
+
+li {
+    font-family: Greycliff-thin
+}
+
+      .employer-partner-section {
+            display: flex;
+            /* display: inline-flex; */
+            align-items: center;
+            justify-content: center;
+            padding-right: 2%;
+            gap: 60px;
+            background-color: #041202;
+        }
+        .employer-partner-text {
+            color: #FFFFFF;
+            font-size: 22px;
+            width: 70%;
+        }
+        .resources-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .resources-container {
+            display: flex;
+            /* display: inline-flex; */
+            align-items: center;
+            justify-content: center;
+            padding-left: 2%;
+            gap: 60px;
+            background-color: #F2F0EF;
+        }
+        .resources-content {
+    padding: 2% 0px 2% 0%;
+    margin-left: 5%;
+}
+.resources-content {
+            flex: 1;
+            padding: 2% 0px 2% 0%;
+        }
+        .resources-content {
+            flex: 1;
+        }
+        #logo-1 {
+    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/A Safe Haven Foundation.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+    </style>
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo-link">
+                <img src="https://i.ibb.co/qWy6J3k/skills-chicago-logo.png" alt="Skills for Chicago Logo" class="logo">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Job Seekers</a>
+                    <a href="#">Employers</a>
+                    <a href="#">Community Partners</a>
+                    <a href="#">Donors</a>
+                    <a href="#">Events</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <a href="#" class="donate-button">
+                    <span>Donate</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>    
+            </nav>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Partnership Section -->
+    <section class="engagement-section">
+        <div class="engagement-section">
+            <div class="engagement-content">
+                <h2 class="engagement-title">Our Employer Partners</h2>
+                <h4 style="padding-bottom: 2%;">Expanding Talent Pipelines. Building a Stronger Workforce.</h4>
+                <p class="engagement-text">
+                    At Skills for Chicago, we know that meaningful employment starts with collaboration. Our partners—including employers, community organizations, and educational institutions—play a critical role in connecting job seekers to life-changing opportunities while driving economic growth across the city. Together, we are expanding access to employment and creating opportunities that strengthen Chicago’s workforce.
+                </p>
+            </div>
+            <div class="communities-image">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_462178768.jpeg" alt="People at a community event">
+            </div>
+        </div>
+    </section>
+    <!-- Why Employers Partner With Us Section -->
+    <section class="employer-partner-section">
+        
+        <div class="container employer-partner-section">
+            <div class="communities-image">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_462178768.jpeg" alt="People at a community event">
+            </div>
+            <div class="resources-content">
+                <h2 class="employer-partner-title">Why Employers Partner With Us</h2>
+                <ul>
+                <li class="employer-partner-text">
+                    Hire job-ready candidates who are prepared to contribute from day one.                </li>
+                <li class="employer-partner-text">
+                    Gain access to untapped talent that isn’t found through traditional hiring methods.                </li>
+                <li class="employer-partner-text">
+                    Strengthen teams with skilled and motivated employees.                </li>
+                <li class="employer-partner-text">
+                    Support economic growth by increasing access to employment                </li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="partners-section">
+        <h2 class="partners-title">Employer Partners</h2>
+        <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
+        
+        <div class="partners-grid">
+            <!-- Row 1 -->
+            <div class="partner-logo" id="logo-1">
+                <!-- A SafeHaven logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-2">
+                <!-- Arrupe College logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-3">
+                <!-- Association House logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-4">
+                <!-- Bethel logo will go here -->
+            </div>
+            
+            <!-- Row 2 -->
+            <div class="partner-logo" id="logo-5">
+                <!-- BUILD logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-6">
+                <!-- Cara Collective logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-7">
+                <!-- Center for Changing Lives logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-8">
+                <!-- CRED logo will go here -->
+            </div>
+            
+            <!-- Row 3 -->
+            <div class="partner-logo" id="logo-9">
+                <!-- Chicago Scholars logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-10">
+                <!-- Chicago Urban League logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-11">
+                <!-- Facing Forward logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-12">
+                <!-- Friends of the Children logo will go here -->
+            </div>
+            
+            <!-- Row 4 -->
+            <div class="partner-logo" id="logo-13">
+                <!-- Greater Englewood logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-14">
+                <!-- Goodwill logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-15">
+                <!-- Growing Home logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-16">
+                <!-- Heartland Alliance logo will go here -->
+            </div>
+            
+            <!-- Row 5 -->
+            <div class="partner-logo" id="logo-17">
+                <!-- Hope Center Foundation logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-18">
+                <!-- IDES logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-19">
+                <!-- KRA logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-20">
+                <!-- La Casa Norte logo will go here -->
+            </div>
+            
+            <!-- Row 6 -->
+            <div class="partner-logo" id="logo-21">
+                <!-- Lawrence Hall logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-22">
+                <!-- LIFT logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-23">
+                <!-- Life Collective logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-24">
+                <!-- Mercy Home logo will go here -->
+            </div>
+            
+            <!-- Row 7 -->
+            <div class="partner-logo" id="logo-25">
+                <!-- Metropolitan Family Services logo will go here -->
+            </div>
+            <div class="partner-logo" id="logo-26">
+                <!-- Bright Endeavors logo will go here -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const hamburger = document.querySelector('.hamburger');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    hamburger.classList.toggle('open');
+                    // Additional mobile menu functionality would go here
+                    alert('Mobile menu toggle clicked - functionality would be implemented here');
+                });
+            }
+            
+            // Add animation to partner logos when they come into view
+            const partnerLogos = document.querySelectorAll('.partner-logo');
+            
+            // Simple function to check if an element is in the viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+            
+            // Function to add animation class to visible logos
+            function animateLogosInView() {
+                partnerLogos.forEach(logo => {
+                    if (isInViewport(logo) && !logo.classList.contains('animated')) {
+                        logo.style.animation = 'fadeIn 0.5s ease forwards';
+                        logo.classList.add('animated');
+                    }
+                });
+            }
+            
+            // Add CSS animation
+            const style = document.createElement('style');
+            style.innerHTML = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(20px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+                
+                .partner-logo {
+                    opacity: 0;
+                }
+                
+                .partner-logo.animated {
+                    opacity: 1;
+                }
+            `;
+            document.head.appendChild(style);
+            
+            // Initialize animations
+            animateLogosInView();
+            
+            // Check for new logos in view on scroll
+            window.addEventListener('scroll', animateLogosInView);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Chicago - Find a Job</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f8f8;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Banner Styles */
+        .top-banner {
+            background-color: #1e3a14;
+            color: white;
+            padding: 12px 0;
+            position: relative;
+        }
+        
+        .banner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .banner-text {
+            text-align: center;
+            font-size: 14px;
+        }
+        
+        .learn-more-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 6px 16px;
+            font-size: 14px;
+            margin-left: 15px;
+            cursor: pointer;
+        }
+        
+        .social-icons {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 14px;
+        }
+        
+        /* Header Styles */
+        .main-header {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            width: 120px;
+        }
+        
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .donate-btn {
+            background-color: #8DC63F;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 14px;
+        }
+        
+        .btn-arrow {
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .btn-arrow i {
+            color: #8DC63F;
+            font-size: 10px;
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            padding: 40px 0;
+            position: relative;
+        }
+        
+        .job-search-container {
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .page-title {
+            font-size: 38px;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .page-subtitle {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        
+        .page-description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+        
+        /* Search Form */
+        .search-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .form-group {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .form-label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .form-label .required {
+            color: #cc0000;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .search-btn {
+            background-color: #8DC63F;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+        
+        .search-btn i {
+            font-size: 12px;
+        }
+        
+        /* Filter Buttons */
+        .filter-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .filter-btn {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 30px;
+            padding: 8px 15px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .filter-btn i {
+            font-size: 12px;
+        }
+        
+        .all-filters-btn {
+            background-color: #f5f5f5;
+        }
+        
+        /* Results Counter */
+        .results-counter {
+            text-align: left;
+            font-size: 20px;
+            font-weight: 700;
+            color: #4F6B3A;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        /* Job Listings Grid */
+        .job-listings {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+        
+        .job-card {
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid #e0e0e0;
+            padding: 20px;
+            position: relative;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        .job-card:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .company-logo {
+            width: 100px;
+            margin-bottom: 15px;
+        }
+        
+        .job-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        
+        .company-name {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .job-location {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .job-requirement {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .job-shift {
+            font-size: 13px;
+            color: #666;
+        }
+        
+        .days-posted {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+        
+        .bookmark-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            color: #ccc;
+        }
+        
+        .bookmark-btn.active {
+            color: #4F6B3A;
+        }
+        
+        /* Filter Overlay */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 100;
+            display: none;
+        }
+        
+        .filter-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 350px;
+            background-color: white;
+            z-index: 101;
+            overflow-y: auto;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+        }
+        
+        .filter-menu.active {
+            transform: translateX(0);
+        }
+        
+        .filter-header {
+            background-color: #1e3a14;
+            color: white;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .filter-section {
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .filter-section-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .filter-option {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .filter-radio {
+            margin-right: 10px;
+        }
+        
+        .filter-label {
+            font-size: 14px;
+        }
+        
+        .filter-actions {
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .reset-btn {
+            background: none;
+            border: none;
+            color: #666;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        
+        .apply-btn {
+            background-color: #8DC63F;
+            color: white;
+            border: none;
+            border-radius: 30px;
+            padding: 10px 20px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            background-color: #1e3a14;
+            color: white;
+            padding: 50px 0 0;
+        }
+        
+        .footer-top {
+            margin-bottom: 40px;
+        }
+        
+        .footer-logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-divider {
+            width: 100%;
+            height: 1px;
+            background-color: rgba(255,255,255,0.1);
+            margin: 20px 0;
+        }
+        
+        .footer-sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.8);
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            background-color: #1e3a14;
+            padding: 20px 0;
+            font-size: 13px;
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .footer-social a {
+            color: white;
+            font-size: 16px;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .job-listings {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                flex-direction: column;
+            }
+            
+            .search-btn {
+                margin-left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .social-icons {
+                position: relative;
+                right: 0;
+                top: 0;
+                transform: none;
+                justify-content: center;
+                margin-top: 10px;
+            }
+            
+            .filter-buttons {
+                gap: 5px;
+            }
+            
+            .filter-btn {
+                padding: 6px 12px;
+                font-size: 12px;
+            }
+            
+            .filter-menu {
+                width: 300px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .page-title {
+                font-size: 30px;
+            }
+            
+            .page-subtitle {
+                font-size: 16px;
+            }
+            
+            .page-description {
+                font-size: 14px;
+            }
+            
+            .filter-menu {
+                width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <div class="container banner-container">
+            <div class="banner-text">
+                Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!
+            </div>
+            <button class="learn-more-btn">Learn More</button>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <a href="#">
+                <img src="https://api.placeholder.com/150x50?text=Skills+Chicago" alt="Skills for Chicago Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Job Seekers</a>
+                    <a href="#">Employers</a>
+                    <a href="#">Community Partners</a>
+                    <a href="#">Donors</a>
+                    <a href="#">Events</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <a href="#" class="donate-btn">
+                    Donate
+                    <span class="btn-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+                </a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="job-search-container">
+                <h1 class="page-title">Find a Job</h1>
+                <h2 class="page-subtitle">Find Your Next Job. Build Your Future.</h2>
+                <p class="page-description">
+                    At Skills for Chicago, we connect job seekers with real job opportunities by partnering with employers ready to hire. 
+                    Whether you're looking for a new job, a better opportunity, or career support, we provide the resources, 
+                    guidance, and employer connections to help you succeed.
+                </p>
+                
+                <!-- Search Form -->
+                <form class="search-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Search Title or Keyword <span class="required">*</span></label>
+                            <input type="text" class="form-control" placeholder="Job Title, Company or Keyword">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Location <span class="required">*</span></label>
+                            <input type="text" class="form-control" placeholder="Greater Chicago Area">
+                        </div>
+                        <button type="button" class="search-btn">
+                            Search Jobs
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </form>
+                
+                <!-- Filter Buttons -->
+                <div class="filter-buttons">
+                    <button class="filter-btn">
+                        Date Posted <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="filter-btn">
+                        Job Category <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="filter-btn">
+                        Experience <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="filter-btn">
+                        Industry <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <button class="filter-btn">
+                        Onsite/Hybrid
+                    </button>
+                    <button class="filter-btn all-filters-btn" id="all-filters-btn">
+                        All Filters <i class="fas fa-sliders-h"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Results Section -->
+            <div class="results-counter">125 Results</div>
+            
+            <!-- Job Listings -->
+            <div class="job-listings" id="job-listings">
+                <!-- Job listings will be dynamically loaded here -->
+            </div>
+        </div>
+    </main>
+    
+    <!-- Filter Overlay -->
+    <div class="overlay" id="overlay"></div>
+    <div class="filter-menu" id="filter-menu">
+        <div class="filter-header">All Filters</div>
+        
+        <div class="filter-section">
+            <h3 class="filter-section-title">Date Posted</h3>
+            <div class="filter-option">
+                <input type="radio" name="date" id="date-24h" class="filter-radio">
+                <label for="date-24h" class="filter-label">Past 24 hours</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="date" id="date-3d" class="filter-radio">
+                <label for="date-3d" class="filter-label">Past 3 Days</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="date" id="date-week" class="filter-radio">
+                <label for="date-week" class="filter-label">Past Week</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="date" id="date-month" class="filter-radio">
+                <label for="date-month" class="filter-label">Past Month</label>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h3 class="filter-section-title">Job Category</h3>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-content" class="filter-radio">
+                <label for="cat-content" class="filter-label">Content</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-customer" class="filter-radio">
+                <label for="cat-customer" class="filter-label">Customer Success</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-cyber" class="filter-radio">
+                <label for="cat-cyber" class="filter-label">Cybersecurity + IT</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-data" class="filter-radio">
+                <label for="cat-data" class="filter-label">Data + Analytics</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-dev" class="filter-radio">
+                <label for="cat-dev" class="filter-label">Developer + Engineer</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-finance" class="filter-radio">
+                <label for="cat-finance" class="filter-label">Finance</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-hr" class="filter-radio">
+                <label for="cat-hr" class="filter-label">HR + Recruiting</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-internships" class="filter-radio">
+                <label for="cat-internships" class="filter-label">Internships</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-legal" class="filter-radio">
+                <label for="cat-legal" class="filter-label">Legal</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-marketing" class="filter-radio">
+                <label for="cat-marketing" class="filter-label">Marketing</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-operations" class="filter-radio">
+                <label for="cat-operations" class="filter-label">Operations</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-project" class="filter-radio">
+                <label for="cat-project" class="filter-label">Project Management</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="category" id="cat-sales" class="filter-radio">
+                <label for="cat-sales" class="filter-label">Sales</label>
+            </div>
+        </div>
+        
+        <div class="filter-section">
+            <h3 class="filter-section-title">Experience</h3>
+            <div class="filter-option">
+                <input type="radio" name="experience" id="exp-internship" class="filter-radio">
+                <label for="exp-internship" class="filter-label">Internship</label>
+            </div>
+            <div class="filter-option">
+                <input type="radio" name="experience" id="exp-entry" class="filter-radio">
+                <label for="exp-entry" class="filter-label">Entry Level (0 - 1 Year)</label>
+            </div>
+        </div>
+        
+        <div class="filter-actions">
+            <button class="reset-btn">Reset</button>
+            <button class="apply-btn">
+                Apply
+                <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <img src="https://api.placeholder.com/150x50?text=Skills+Chicago" alt="Skills for Chicago Logo" class="footer-logo">
+            </div>
+            
+            <div class="footer-sections">
+                <div class="footer-section">
+                    <h3 class="footer-section-title">About Us</h3>
+                    <div class="footer-links">
+                        <a href="#">Who We Are</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Annual Reports & Financials</a>
+                        <a href="#">Our Work in Action</a>
+                        <a href="#">Careers at Skills</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Job Seekers</h3>
+                    <div class="footer-links">
+                        <a href="#">Find a Job</a>
+                        <a href="#">Career Resources</a>
+                        <a href="#">FAQs for Job Seekers</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Employers</h3>
+                    <div class="footer-links">
+                        <a href="#">Partner With Us</a>
+                        <a href="#">Our Employer Partners</a>
+                        <a href="#">Community Impact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Community Partners</h3>
+                    <div class="footer-links">
+                        <a href="#">Collaborate With Us</a>
+                        <a href="#">Our Community Partners</a>
+                        <a href="#">Community Impact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Events & Highlights</h3>
+                    <div class="footer-links">
+                        <a href="#">Events & Highlights</a>
+                        <a href="#">Employment Champions Breakfast</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-section-title">National Expansion</h3>
+                    <div class="footer-links">
+                        <a href="#">National Expansion</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Donors</h3>
+                    <div class="footer-links">
+                        <a href="#">Donors</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-section-title">Contact Us</h3>
+                    <div class="footer-links">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                Copyright © 2025. | Skills For Chicago | All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Sample job data (In a real application, this would come from PHP/database)
+        const jobData = [
+            {
+                id: 1,
+                companyLogo: "https://api.placeholder.com/100x50?text=Allstate",
+                jobTitle: "Licensed Inside Sales Representative (REMOTE)",
+                companyName: "Allstate",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:2nd Shift:Weekends",
+                daysPosted: "3d"
+            },
+            {
+                id: 2,
+                companyLogo: "https://api.placeholder.com/100x50?text=Allstate",
+                jobTitle: "Licensed Inside Sales Representative (REMOTE)",
+                companyName: "Allstate",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:2nd Shift:Weekends",
+                daysPosted: "5d"
+            },
+            {
+                id: 3,
+                companyLogo: "https://api.placeholder.com/100x50?text=BCBS",
+                jobTitle: "Senior Claims Technician",
+                companyName: "BlueCross BlueShield",
+                location: "BCBS Morgan Park",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift",
+                daysPosted: "10d"
+            },
+            {
+                id: 4,
+                companyLogo: "https://api.placeholder.com/100x50?text=BCBS",
+                jobTitle: "Senior Claims Technician",
+                companyName: "BlueCross BlueShield",
+                location: "BCBS Morgan Park",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift",
+                daysPosted: "12d"
+            },
+            {
+                id: 5,
+                companyLogo: "https://api.placeholder.com/100x50?text=BCBS",
+                jobTitle: "Customer Advocate I-Bilingual-English-Spanish",
+                companyName: "Allstate",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:2nd Shift:Weekends",
+                daysPosted: "15d"
+            },
+            {
+                id: 6,
+                companyLogo: "https://api.placeholder.com/100x50?text=BCBS",
+                jobTitle: "Customer Advocate I-Bilingual-English-Spanish",
+                companyName: "Allstate",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:2nd Shift:Weekends",
+                daysPosted: "15d"
+            },
+            {
+                id: 7,
+                companyLogo: "https://api.placeholder.com/100x50?text=BMO",
+                jobTitle: "Retail Relationship Banker",
+                companyName: "BMO",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:Weekends",
+                daysPosted: "15d"
+            },
+            {
+                id: 8,
+                companyLogo: "https://api.placeholder.com/100x50?text=BMO",
+                jobTitle: "Retail Relationship Banker",
+                companyName: "BMO",
+                location: "Chicago, IL",
+                requirement: "High School Diploma/GED",
+                shift: "1st Shift:Weekends",
+                daysPosted: "15d"
+            },
+            {
+                id: 9,
+                companyLogo: "https://api.placeholder.com/100x50?text=CNO",
+                jobTitle: "Licensed Telesales Agent",
+                companyName: "CNO Financial Group",
+                location: "Chicago, IL",
+                requirement: "Certification/License",
+                shift: "1st Shift",
+                daysPosted: "20d"
+            },
+            {
+                id: 10,
+                companyLogo: "https://api.placeholder.com/100x50?text=CNO",
+                jobTitle: "Licensed Telesales Agent",
+                companyName: "CNO Financial Group",
+                location: "Chicago, IL",
+                requirement: "Certification/License",
+                shift: "1st Shift",
+                daysPosted: "30d+"
+            }
+        ];
+
+        // Function to render job listings
+        function renderJobListings(jobs) {
+            const listingsContainer = document.getElementById('job-listings');
+            listingsContainer.innerHTML = '';
+            
+            jobs.forEach(job => {
+                const jobCard = document.createElement('div');
+                jobCard.className = 'job-card';
+                
+                jobCard.innerHTML = `
+                    <img src="${job.companyLogo}" alt="${job.companyName} logo" class="company-logo">
+                    <h3 class="job-title">${job.jobTitle}</h3>
+                    <p class="company-name">${job.companyName}</p>
+                    <p class="job-location">${job.location}</p>
+                    <p class="job-requirement">${job.requirement}</p>
+                    <p class="job-shift">${job.shift}</p>
+                    <span class="days-posted">${job.daysPosted}</span>
+                    <button class="bookmark-btn" data-id="${job.id}">
+                        <i class="far fa-bookmark"></i>
+                    </button>
+                `;
+                
+                listingsContainer.appendChild(jobCard);
+            });
+            
+            // Add event listeners to bookmark buttons
+            document.querySelectorAll('.bookmark-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    if (this.classList.contains('active')) {
+                        this.innerHTML = '<i class="fas fa-bookmark"></i>';
+                    } else {
+                        this.innerHTML = '<i class="far fa-bookmark"></i>';
+                    }
+                });
+            });
+        }
+        
+        // Filter Overlay Functionality
+        const allFiltersBtn = document.getElementById('all-filters-btn');
+        const overlay = document.getElementById('overlay');
+        const filterMenu = document.getElementById('filter-menu');
+        
+        allFiltersBtn.addEventListener('click', function() {
+            overlay.style.display = 'block';
+            filterMenu.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+        
+        overlay.addEventListener('click', function() {
+            overlay.style.display = 'none';
+            filterMenu.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Enable scrolling
+        });
+        
+        // Apply and Reset buttons in filter menu
+        document.querySelector('.apply-btn').addEventListener('click', function() {
+            overlay.style.display = 'none';
+            filterMenu.classList.remove('active');
+            document.body.style.overflow = 'auto';
+            // In a real application, this would apply the selected filters
+        });
+        
+        document.querySelector('.reset-btn').addEventListener('click', function() {
+            // Reset all radio buttons
+            document.querySelectorAll('.filter-radio').forEach(radio => {
+                radio.checked = false;
+            });
+        });
+        
+        // Initialize job listings
+        document.addEventListener('DOMContentLoaded', function() {
+            renderJobListings(jobData);
+        });
+        
+        // In a real application, you would fetch job data from PHP/database:
+        /*
+        async function fetchJobs() {
+            try {
+                const response = await fetch('get_jobs.php');
+                if (!response.ok) {
+                    throw new Error('Failed to fetch jobs');
+                }
+                const data = await response.json();
+                renderJobListings(data);
+            } catch (error) {
+                console.error('Error:', error);
+                // Show error message to user
+            }
+        }
+        
+        // Call this instead of renderJobListings(jobData)
+        fetchJobs();
+        */
+    </script>
+</body>
+</html>

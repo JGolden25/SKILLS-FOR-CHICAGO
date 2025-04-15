@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Chicago - Events</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        /* Base Styles */
+        :root {
+            --primary-green: #4F6B3A;
+            --light-green: #e9f0df;
+            --dark-green: #234018;
+            --off-white: #f8f8f3;
+            --dark-gray: #333333;
+            --light-gray: #f0f0e8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            color: var(--dark-gray);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Why Attend Section */
+        .why-attend {
+            background-color: var(--light-green);
+            padding: 50px 0;
+        }
+
+        .why-attend-container {
+            display: flex;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .why-attend-image {
+            flex: 0 0 40%;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .why-attend-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 15px;
+        }
+
+        .why-attend-content {
+            flex: 0 0 60%;
+            padding-left: 50px;
+        }
+
+        .why-attend-title {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .why-attend-list {
+            list-style: none;
+        }
+
+        .why-attend-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .why-attend-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0.65em;
+            width: 10px;
+            height: 10px;
+            background-color: #4F6B3A;
+            border-radius: 50%;
+        }
+
+        .why-attend-list strong {
+            font-weight: 700;
+        }
+
+        /* Events Section */
+        .events-section {
+            padding: 60px 0;
+        }
+
+        .events-heading {
+            text-align: center;
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: #333;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Filter Options */
+        .filter-section {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .filter-option {
+            flex: 1;
+            margin: 0 5px;
+            min-width: 150px;
+        }
+
+        .filter-select {
+            width: 100%;
+            padding: 12px 20px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            background-color: white;
+            font-size: 14px;
+            cursor: pointer;
+            appearance: none;
+            text-align: center;
+            background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18px" height="18px"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/></svg>');
+            background-repeat: no-repeat;
+            background-position: right 15px center;
+        }
+
+        /* Event Cards */
+        .events-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            display: flex;
+            margin-bottom: 30px;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .event-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-image {
+            flex: 0 0 35%;
+            overflow: hidden;
+        }
+
+        .event-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .event-details {
+            flex: 0 0 65%;
+            padding: 20px;
+        }
+
+        .event-type {
+            color: var(--primary-green);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .event-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .event-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .event-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .event-date {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .event-link {
+            color: var(--primary-green);
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+        }
+
+        .event-link i {
+            margin-left: 5px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .why-attend-container {
+                flex-direction: column;
+            }
+            
+            .why-attend-image {
+                flex: 0 0 100%;
+                margin-bottom: 30px;
+                max-width: 500px;
+            }
+            
+            .why-attend-content {
+                flex: 0 0 100%;
+                padding-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .event-card {
+                flex-direction: column;
+            }
+            
+            .event-image {
+                flex: 0 0 200px;
+            }
+            
+            .event-details {
+                flex: 1;
+            }
+            
+            .filter-section {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .filter-option {
+                width: 100%;
+                margin: 5px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Why Attend Section -->
+    <section class="why-attend">
+        <div class="why-attend-container">
+            <div class="why-attend-image">
+                <img src="https://i.ibb.co/3Rd1jQH/job-seekers.jpg" alt="Job seekers at an event">
+            </div>
+            <div class="why-attend-content">
+                <h2 class="why-attend-title">Why Attend?</h2>
+                <ul class="why-attend-list">
+                    <li><strong>For Job Seekers:</strong> Access hiring managers, submit applications, and even interview on-site.</li>
+                    <li><strong>For Employers:</strong> Connect with motivated candidates and streamline your recruitment efforts.</li>
+                    <li><strong>For Partners & Community Organizations:</strong> Collaborate to expand employment access and workforce initiatives. Join us at our next event to take the next step in your career or hiring journey.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <div class="container">
+            <h2 class="events-heading">Join us at an upcoming event to take the next step in your career or hiring journey.</h2>
+            
+            <!-- Filter Options -->
+            <div class="filter-section">
+                <div class="filter-option">
+                    <select id="typeFilter" class="filter-select">
+                        <option value="">- Select Type -</option>
+                        <option value="Job Fair">Job Fair</option>
+                        <option value="Resume Building">Resume Building</option>
+                        <option value="Career Fair">Career Fair</option>
+                        <option value="Resource Fair">Resource Fair</option>
+                    </select>
+                </div>
+                <div class="filter-option">
+                    <select id="monthFilter" class="filter-select">
+                        <option value="">Month</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option>
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                    </select>
+                </div>
+                <div class="filter-option">
+                    <select id="jobSeekerFilter" class="filter-select">
+                        <option value="">Job Seeker</option>
+                        <option value="Entry Level">Entry Level</option>
+                        <option value="Experienced">Experienced</option>
+                        <option value="Career Change">Career Change</option>
+                        <option value="All Levels">All Levels</option>
+                    </select>
+                </div>
+                <div class="filter-option">
+                    <select id="hostFilter" class="filter-select">
+                        <option value="">Host</option>
+                        <option value="Skills for Chicago">Skills for Chicago</option>
+                        <option value="Community Partner">Community Partner</option>
+                        <option value="Employer">Employer</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Events List -->
+            <div class="events-list" id="eventsList">
+                <!-- Event Card 1 -->
+                <div class="event-card" data-type="Resume Building" data-month="April" data-job-seeker="All Levels" data-host="Skills for Chicago">
+                    <div class="event-image">
+                        <img src="https://i.ibb.co/LS6WMn8/event-1.jpg" alt="Skills Resume Building Resource Day">
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Community Resource Fair</div>
+                        <h3 class="event-title">Skills Resume Building Resource Day</h3>
+                        <p class="event-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-date">April 8, 2025 - 10:00 AM</div>
+                            <a href="#" class="event-link">
+                                View Event Details
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 2 -->
+                <div class="event-card" data-type="Career Fair" data-month="April" data-job-seeker="All Levels" data-host="Community Partner">
+                    <div class="event-image">
+                        <img src="https://i.ibb.co/6RjvnKS/event-2.jpg" alt="Spring City-wide Career Fair">
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Community Resource Fair</div>
+                        <h3 class="event-title">Spring City-wide Career Fair</h3>
+                        <p class="event-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-date">April 23, 2025 - 10:00 AM</div>
+                            <a href="#" class="event-link">
+                                View Event Details
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event Card 3 -->
+                <div class="event-card" data-type="Job Fair" data-month="April" data-job-seeker="Entry Level" data-host="Skills for Chicago">
+                    <div class="event-image">
+                        <img src="https://i.ibb.co/b5PwSZy/event-3.jpg" alt="North Loop Community Job Fair">
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Community Resource Fair</div>
+                        <h3 class="event-title">North Loop Community Job Fair</h3>
+                        <p class="event-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-date">April 29, 2025 - 10:00 AM</div>
+                            <a href="#" class="event-link">
+                                View Event Details
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add more event cards as needed -->
+                <div class="event-card" data-type="Resume Building" data-month="May" data-job-seeker="Career Change" data-host="Employer">
+                    <div class="event-image">
+                        <img src="https://i.ibb.co/LS6WMn8/event-1.jpg" alt="Resume Workshop">
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Community Resource Fair</div>
+                        <h3 class="event-title">Career Transition Resume Workshop</h3>
+                        <p class="event-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-date">May 15, 2025 - 10:00 AM</div>
+                            <a href="#" class="event-link">
+                                View Event Details
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="event-card" data-type="Job Fair" data-month="May" data-job-seeker="Experienced" data-host="Community Partner">
+                    <div class="event-image">
+                        <img src="https://i.ibb.co/6RjvnKS/event-2.jpg" alt="Tech Industry Job Fair">
+                    </div>
+                    <div class="event-details">
+                        <div class="event-type">Community Resource Fair</div>
+                        <h3 class="event-title">Tech Industry Job Fair</h3>
+                        <p class="event-description">
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.
+                        </p>
+                        <div class="event-footer">
+                            <div class="event-date">May 22, 2025 - 1:00 PM</div>
+                            <a href="#" class="event-link">
+                                View Event Details
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get filter elements
+            const typeFilter = document.getElementById('typeFilter');
+            const monthFilter = document.getElementById('monthFilter');
+            const jobSeekerFilter = document.getElementById('jobSeekerFilter');
+            const hostFilter = document.getElementById('hostFilter');
+            
+            // Get all event cards
+            const eventCards = document.querySelectorAll('.event-card');
+            
+            // Function to filter events
+            function filterEvents() {
+                const typeValue = typeFilter.value;
+                const monthValue = monthFilter.value;
+                const jobSeekerValue = jobSeekerFilter.value;
+                const hostValue = hostFilter.value;
+                
+                // Loop through each event card
+                eventCards.forEach(card => {
+                    // Get data attributes
+                    const cardType = card.getAttribute('data-type');
+                    const cardMonth = card.getAttribute('data-month');
+                    const cardJobSeeker = card.getAttribute('data-job-seeker');
+                    const cardHost = card.getAttribute('data-host');
+                    
+                    // Check if card should be displayed
+                    const typeMatch = !typeValue || cardType === typeValue;
+                    const monthMatch = !monthValue || cardMonth === monthValue;
+                    const jobSeekerMatch = !jobSeekerValue || cardJobSeeker === jobSeekerValue;
+                    const hostMatch = !hostValue || cardHost === hostValue;
+                    
+                    // Show or hide card based on filters
+                    if (typeMatch && monthMatch && jobSeekerMatch && hostMatch) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+                
+                // Check if no events are shown
+                checkNoEvents();
+            }
+            
+            // Function to check if no events are displayed and add a message
+            function checkNoEvents() {
+                const visibleEvents = document.querySelectorAll('.event-card[style="display: flex;"]');
+                const noEventsMessage = document.getElementById('noEventsMessage');
+                
+                if (visibleEvents.length === 0) {
+                    // If no message exists, create one
+                    if (!noEventsMessage) {
+                        const message = document.createElement('div');
+                        message.id = 'noEventsMessage';
+                        message.style.textAlign = 'center';
+                        message.style.padding = '30px';
+                        message.style.color = '#666';
+                        message.innerHTML = 'No events match your filter criteria. Please try different options.';
+                        
+                        // Add message to events list
+                        document.getElementById('eventsList').appendChild(message);
+                    }
+                } else {
+                    // Remove message if it exists
+                    if (noEventsMessage) {
+                        noEventsMessage.remove();
+                    }
+                }
+            }
+            
+            // Add event listeners to filters
+            typeFilter.addEventListener('change', filterEvents);
+            monthFilter.addEventListener('change', filterEvents);
+            jobSeekerFilter.addEventListener('change', filterEvents);
+            hostFilter.addEventListener('change', filterEvents);
+            
+            // Initialize with all events shown
+            filterEvents();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Chicago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+
+@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+h1 {
+ font-family: Greycliff
+}
+h2 {
+ font-family: Greycliff
+}
+h3 {
+ font-family: Greycliff
+}
+p {
+font-family: Greycliff-thin
+}
+a {
+font-family: Greycliff-thin
+}
+span {
+font-family: Greycliff
+}
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Banner Styles */
+        .banner {
+            background-color: #1e3a14;
+            color: white;
+            padding: 12px 0;
+            position: relative;
+        }
+        
+        .banner-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .exit-fullscreen {
+            position: absolute;
+            top: 0;
+            right: 50%;
+            transform: translateX(50%);
+            background-color: #3a86ff;
+            color: white;
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+        
+        .banner-text {
+            font-size: 15px;
+        }
+        
+        .learn-more-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 6px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+        }
+        
+        /* Header Styles */
+        .header {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px;
+        }
+        
+        .logo {
+            width: 180px;
+        }
+        
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .donate-btn {
+            background-color: #67b346;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .donate-btn-icon {
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .donate-btn-icon::after {
+            content: '→';
+            color: #67b346;
+            font-size: 12px;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            padding: 70px 0;
+        }
+        
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            margin: 0px 5% 0px 5%;
+        }
+        
+        .hero-content h1 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .hero-content h2 {
+            font-size: 48px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+        
+        .hero-content p {
+            font-size: 22px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        
+        .hero-image {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        
+        .hero-image img {
+            width: 100%;
+            height: 640px;
+            object-fit: cover;
+            border-radius: 75px;
+        }
+
+        /* Testimonial Dots */
+        .testimonial-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 40px 0;
+        }
+        
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+        }
+        
+        .dot.active {
+            background-color: #1e3a14;
+        }
+        
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            /* background-color: white; */
+            border-radius: 50%;
+        }
+        
+        /* Footer Content */
+        .modern-footer {
+    background-color: #1F3707;
+    color: white;
+    padding: 60px 0 0 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Keep the background logo contained within the footer */
+}
+
+/* Add the SC logo as a background on the left side */
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Position on the left side instead of right */
+    transform: translateY(-50%);
+    width: 60%; /* Large size to match the image */
+    height: 140%;
+    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.45; /* Dark but subtle appearance */
+}
+
+/* Ensure footer content stays on top of the background image */
+.footer-container, .footer-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modern-footer::before {
+        width: 100%;
+        left: -20%;
+    }
+}
+    .footer-container {
+        padding: 0 6%;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .footer-divider {
+        flex: 1;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 40px;
+    }
+
+    .footer-logo img {
+        height: 80px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        opacity: 0.8;
+    }
+
+    .hero-content h3 {
+        color:#355e0b;
+        margin-bottom: 6%;
+        font-size: 22px;
+    }
+
+    /* Updated footer navigation styles to fix vertical alignment */
+    .footer-nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start; /* Changed from center to flex-start */
+        margin-bottom: 60px;
+    }
+
+    .footer-nav-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+    }
+
+    .footer-nav-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        height: 22px; /* Fixed height for the heading */
+        line-height: 22px; /* Match the height to ensure consistent alignment */
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .footer-copyright {
+        background-color: #1F3707;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .footer-nav {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 75px;
+        }
+        
+        .footer-nav-section {
+            flex: 1 0 30%;
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-top {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-nav-section {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-nav {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+        .contact-info {
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        /* Copyright */
+        .copyright {
+            background-color: #1e3a14;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* Employer Support Section */
+        .employer-support {
+            padding: 70px 0;
+            background-color: #f2f4ea;
+            border-top: 1px solid black;
+        }
+        
+        .employer-support-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            margin: 0px 0px 0px 4%;
+        }
+        
+        .employer-image {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .employer-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .employer-content h2 {
+            font-size: 36px;
+            font-weight: 800;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+        
+        .support-list {
+            list-style-type: none;
+        }
+        
+        .support-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            align-items: flex-start;
+        }
+        
+        .support-icon {
+            width: 10px;
+            height: 10px;
+            background-color: #1e3a14;
+            border-radius: 50%;
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+        
+        .support-text {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        
+        .support-text strong {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+        
+        /* Network Section */
+        .network-section {
+            padding: 30px 0;
+            background-color: #1e3a14;
+            color: white;
+        }
+        
+        .network-container {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        
+        .network-heading {
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .network-subheading {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .partner-btn {
+            background-color: #67b346;
+            color: white;
+            border-radius: 50px;
+            padding: 12px 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .partner-btn-icon {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .partner-btn-icon::after {
+            content: '→';
+            color: #67b346;
+            font-size: 14px;
+        }
+        
+        /* Testimonial Carousel */
+        .testimonial-carousel {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            background-color: #E6F0DC;
+        }
+        
+        .carousel-container {
+            overflow: hidden;
+            position: relative;
+            padding: 60px 0 20px;
+        }
+        #intro-logo {
+            width: 100%;
+            height: auto;
+        }
+
+        .donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 7px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid black;
+}
+
+.donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.donate-button span {
+    margin-right: 5px; 
+}
+
+.donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+.donate-button i {
+    transform: rotate(-45deg);
+}
+
+.donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.circle-icon {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        
+        .testimonial-cards {
+            display: flex;
+            transition: transform 0.5s ease;
+            gap: 25px;
+        }
+        
+        .testimonial-card {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            margin-top: 60px;
+            flex: 0 0 calc(33.333% - 17px);
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+            border: 1px solid black;
+        }
+        
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #1e3a14;
+            cursor: pointer;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border: none;
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-arrow:hover {
+            background-color: #fff;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        }
+        
+        .carousel-arrow.left {
+            left: -10px;
+        }
+        
+        .carousel-arrow.right {
+            right: -10px;
+        }
+        
+        .testimonial-avatar {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            overflow: hidden;
+            position: absolute;
+            top: -45px;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid white;
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-logo {
+            height: 40px;
+            margin: 35px 0 10px;
+        }
+        
+        .testimonial-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid black;
+}
+
+.action-button span {
+    margin-right: 5px;
+}
+
+.action-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.action-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+.action-button i {
+    transform: rotate(-45deg);
+}
+
+.action-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.action-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+        
+        .testimonial-title {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-quote {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 1100px) {
+            .footer-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-logo-section {
+                grid-column: span 3;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .footer-logo {
+                margin: 0 auto 20px;
+            }
+            
+            .employer-support-container,
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .testimonial-card {
+                flex: 0 0 calc(50% - 13px);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .testimonial-card {
+                flex: 0 0 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .work-together-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            .work-together-content h2 {
+                font-size: 28px;
+            }
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .footer-nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .footer-heading {
+                margin-top: 20px;
+            }
+            
+            .hero-content h1,
+            .hero-content h2 {
+                font-size: 36px;
+            }
+            
+            .network-heading {
+                font-size: 30px;
+            }
+            
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+        /* PART 2: MIDDLE SECTION */
+        /* Work Together Section */
+        .work-together-section {
+            padding: 35px 0;
+            background-color: #1e3a14;
+            color: white;
+        }
+        
+        .work-together-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .work-together-content h2 {
+            font-size: 40px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+        
+        .work-together-description {
+            font-size: 20px;
+            /* margin-bottom: 30px; */
+        }
+          /* Testimonial Section Styles */
+   .testimonial-section {
+        padding: 80px 0;
+        background-color: #E6F0DC;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .testimonial-container {
+        max-width: 2400px;
+        margin: 0 auto;
+        padding: 0 20px;
+        position: relative;
+    }
+    
+    .testimonial-carousel {
+        position: relative;
+    }
+    
+    .testimonial-slide {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.6s ease-in-out;
+    }
+    
+    .testimonial-slide.active {
+        display: block;
+        opacity: 1;
+    }
+    
+    .testimonial-card {
+        background-color: #f2f3eb;
+        border-radius: 20px;
+        padding: 70px 50px 50px;
+        margin-top: 60px;
+        position: relative;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        border: 1px solid #e0e0d0;
+        min-height: 300px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .testimonial-profile {
+        position: absolute;
+        top: -60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 3px solid white;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        z-index: 2;
+    }
+    
+    .testimonial-profile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .testimonial-quote-mark {
+        position: absolute;
+        top: 60px;
+        left: 60px;
+        font-size: 180px;
+        line-height: 0;
+        font-family: Georgia, serif;
+        color: #2e4017;
+        opacity: 0.5;
+    }
+    
+    .testimonial-quote {
+        position: relative;
+        z-index: 1;
+        font-size: 24px;
+        line-height: 1.5;
+        color: #333;
+        margin-bottom: 30px;
+        text-align: center;
+        font-family: Greycliff-thin, 'Segoe UI', sans-serif;
+    }
+    
+    .testimonial-name {
+        font-size: 24px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 5px;
+        font-family: Greycliff, 'Segoe UI', sans-serif;
+    }
+    
+    .testimonial-title {
+        font-size: 18px;
+        color: #333;
+        margin-bottom: 5px;
+        font-family: Greycliff-thin, 'Segoe UI', sans-serif;
+    }
+    
+    .testimonial-program {
+        font-size: 16px;
+        color: #666;
+        font-family: Greycliff-thin, 'Segoe UI', sans-serif;
+    }
+    
+    .testimonial-dots {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 30px;
+    }
+    
+    .testimonial-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #ddd;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    
+    .testimonial-dot.active {
+        background-color: #2e4017;
+    }
+
+    .testimonial-controls {
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        left: 0;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        z-index: 3;
+    }
+
+    .testimonial-button {
+        background-color: #2e4017;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .testimonial-button:hover {
+        background-color: #3b5320;
+        transform: scale(1.05);
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .testimonial-card {
+            padding: 60px 30px 40px;
+        }
+        
+        .testimonial-quote-mark {
+            font-size: 120px;
+            top: 40px;
+            left: 30px;
+        }
+        
+        .testimonial-quote {
+            font-size: 20px;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .testimonial-card {
+            padding: 60px 20px 30px;
+        }
+        
+        .testimonial-quote-mark {
+            font-size: 100px;
+            top: 30px;
+            left: 20px;
+        }
+        
+        .testimonial-quote {
+            font-size: 18px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!-- Banner Section (pt1page) -->
+    <div class="banner">
+        <div class="container banner-container">
+            <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
+            <a href="#" class="learn-more-btn">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Header (pt1page) -->
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo">
+                <img id="intro-logo" src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/SFC_Logo Assets 2025_v1-2.png" alt="Skills for Chicago Logo">
+            </a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Job Seekers</a>
+                    <a href="#">Employers</a>
+                    <a href="#">Community Partners</a>
+                    <a href="#">Donors</a>
+                    <a href="#">Events</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <a href="#" class="donate-button">
+                    <span>Donate</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>   
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (pt1page) -->
+    <section class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Partner With Us</h1>
+                <h3>Find the Right Talent. Strengthen Your Workforce.</h3>
+                <p>
+                    At Skills for Chicago, we connect businesses with qualified, pre-screened talent they won't find anywhere else. Our employer partners gain access to job seekers with unique skills and experiences who are ready to contribute and grow. By working with us, companies fill critical roles while driving economic mobility in Chicago.
+                </p>
+            </div>
+            <div class="hero-image">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_134518160.jpeg" alt="Professional man in suit">
+            </div>
+        </div>
+    </section>
+
+    <!-- Employer Support Section (pt3page) -->
+    <section class="employer-support">
+        <div class="employer-support-container">
+            <div class="employer-image">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_1228393475.jpeg" alt="Woman with curly hair using laptop">
+            </div>
+            <div class="employer-content">
+                <h2>How We Support Employers</h2>
+                <ul class="support-list">
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            <strong>Curated Talent Pipelines</strong>
+                            Find job-ready candidates aligned with your hiring needs.
+                        </div>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            <strong>Tailored Recruitment Solutions</strong>
+                            Tap into flexible hiring support for various industries.
+                        </div>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            <strong>Exclusive Talent Access</strong>
+                            Connect with candidates who are not on traditional job boards
+                        </div>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            <strong>Hiring Expertise</strong>
+                            Access insights to streamline and improve your recruitment process.
+                        </div>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            <strong>Strategic Workforce Support</strong>
+                            Strengthen your team with motivated, skilled employees.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+      <!-- Work Together Section -->
+      <section class="work-together-section">
+        <div class="work-together-container">
+            <div class="work-together-content">
+                <h2>Join A Network Of Employers Making A Meaningful Impact in Our City.</h2>
+                <p class="work-together-description">Connect with top talent and build a stronger workforce.</p>
+            </div>
+            <a href="#" class="donate-button" style="width:195px; padding: 11px 1% 11px 1%;">
+                <span>Partner With Us</span>
+                <div class="circle-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>    
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <div class="testimonial-carousel" id="testimonialCarousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_372464583.jpeg" alt="Sammuel Jackson">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            During college, I was working in maintenance but was laid off when the pandemic hit. I have kids, so I had to make sure I was employed. I was worried about not having a job when I graduated, and then I learned about the College to Career program. I thought it would be a long process, but it was so quick! Terry interviewed me for the role at GoHealth, and I liked the ability to work from home.
+                        </p>
+                        <h3 class="testimonial-name">Sammuel Jackson</h3>
+                        <p class="testimonial-title">Member Services Representative, GoHealth</p>
+                        <p class="testimonial-program">Placed by Skills College to Career Program, Summer 2021</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_522944332.jpeg" alt="Maria Rodriguez">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            As a single mother of two, finding stable employment that could support my family was challenging. Skills for Chicago connected me with employers who valued my experience and provided training to fill the gaps. Now I have a career at Chase with benefits and growth opportunities. My children see what's possible when communities invest in each other.
+                        </p>
+                        <h3 class="testimonial-name">Maria Rodriguez</h3>
+                        <p class="testimonial-title">Customer Service Specialist, Chase Bank</p>
+                        <p class="testimonial-program">Placed by Skills Neighborhood Program, Fall 2022</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_372464583.jpeg" alt="James Washington">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            I was skeptical at first, having been through other job programs that made big promises. Skills for Chicago was different - they took the time to understand my background and connected me with employers looking for my exact skill set. Within three weeks, I was interviewing at Walgreens, and now I'm building a career I'm proud of.
+                        </p>
+                        <h3 class="testimonial-name">James Washington</h3>
+                        <p class="testimonial-title">Pharmacy Technician, Walgreens</p>
+                        <p class="testimonial-program">Placed by Skills Healthcare Pathway, Spring 2023</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_538810139.jpeg" alt="Lakisha Johnson">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            After being laid off during company restructuring, I wasn't sure where to turn. Skills for Chicago not only helped update my resume and interviewing skills but connected me with employers who were actively seeking candidates like me. What impressed me most was their continued support even after I was hired.
+                        </p>
+                        <h3 class="testimonial-name">Lakisha Johnson</h3>
+                        <p class="testimonial-title">Operations Manager, Blue Cross Blue Shield</p>
+                        <p class="testimonial-program">Placed by Skills Career Transition Program, Winter 2022</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_303533196.jpeg" alt="David Chen">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            I'd been working in retail for years with no clear path forward. The team at Skills for Chicago helped me identify my transferable skills and connected me with training opportunities that led to my current position. For the first time, I feel like I have a real career path and financial stability for my family.
+                        </p>
+                        <h3 class="testimonial-name">David Chen</h3>
+                        <p class="testimonial-title">IT Support Specialist, Hyatt Hotels</p>
+                        <p class="testimonial-program">Placed by Skills Tech Bootcamp, Summer 2023</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-button prev-button"><i class="fas fa-chevron-left"></i></button>
+                    <button class="testimonial-button next-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="testimonial-dots" id="testimonialDots">
+                    <span class="testimonial-dot active" data-index="0"></span>
+                    <span class="testimonial-dot" data-index="1"></span>
+                    <span class="testimonial-dot" data-index="2"></span>
+                    <span class="testimonial-dot" data-index="3"></span>
+                    <span class="testimonial-dot" data-index="4"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Content -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/SFC_Logo Assets 2025_v1-3.png" alt="Skills for Chicago Logo">
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-nav">
+                <div class="footer-nav-section">
+                    <h3>About</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">About</a>
+                        <a href="#">Our Impact</a>
+                        <a href="#">Our Reports</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Our Leadership</a>
+                        <a href="#">Our Careers</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>For Job Seekers</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Find A Job</a>
+                        <a href="#">View All Jobs</a>
+                        <a href="#">Consulting</a>
+                        <a href="#">Resources</a>
+                        <a href="#">Events</a>
+                        <a href="#">FAQs</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>For Employers</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Start Hiring</a>
+                        <a href="#">Neighborhood Impact</a>
+                        <a href="#">Consulting</a>
+                        <a href="#">Resources & Case Studies</a>
+                        <a href="#">Our Projects</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>For Partners</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Mission, Model & Impact</a>
+                        <a href="#">Board & Team</a>
+                        <a href="#">Locations</a>
+                        <a href="#">National Expansion</a>
+                        <a href="#">Employment Champions</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>Donate</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Donate Now</a>
+                        <a href="#">Work In Action</a>
+                        <a href="#">Annual Reports</a>
+                        <a href="#">Impact Reports</a>
+                        <a href="#">Funders</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <div class="footer-container">
+                Copyright @ 2025 Skills All rights reserved
+            </div>
+        </div>
+    </footer>
+
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+        // Testimonial Carousel
+        const carousel = document.getElementById('testimonialCarousel');
+        const slides = carousel.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        const prevButton = carousel.querySelector('.prev-button');
+        const nextButton = carousel.querySelector('.next-button');
+        let currentIndex = 0;
+        let interval;
+        const autoplayDelay = 35000; // 7 seconds between slides
+        
+        // Function to show a specific slide
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show the selected slide and activate corresponding dot
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            // Update current index
+            currentIndex = index;
+        }
+        
+        // Function to show the next slide
+        function nextSlide() {
+            let newIndex = currentIndex + 1;
+            if (newIndex >= slides.length) {
+                newIndex = 0; // Loop back to first slide
+            }
+            showSlide(newIndex);
+        }
+        
+        // Function to show the previous slide
+        function prevSlide() {
+            let newIndex = currentIndex - 1;
+            if (newIndex < 0) {
+                newIndex = slides.length - 1; // Loop to last slide
+            }
+            showSlide(newIndex);
+        }
+        
+        // Set up auto rotation
+        function startAutoplay() {
+            interval = setInterval(nextSlide, autoplayDelay);
+        }
+        
+        function stopAutoplay() {
+            clearInterval(interval);
+        }
+        
+        // Event listeners for buttons
+        nextButton.addEventListener('click', function() {
+            stopAutoplay();
+            nextSlide();
+            startAutoplay();
+        });
+        
+        prevButton.addEventListener('click', function() {
+            stopAutoplay();
+            prevSlide();
+            startAutoplay();
+        });
+        
+        // Event listeners for dots
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                stopAutoplay();
+                const index = parseInt(dot.getAttribute('data-index'));
+                showSlide(index);
+                startAutoplay();
+            });
+        });
+        
+        // Stop autoplay on hover
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+        
+        // Handle touch events for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carousel.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoplay();
+        }, { passive: true });
+        
+        carousel.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoplay();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const threshold = 75; // Minimum swipe distance
+            
+            if (touchEndX < touchStartX - threshold) {
+                // Swipe left, go to next slide
+                nextSlide();
+            } else if (touchEndX > touchStartX + threshold) {
+                // Swipe right, go to previous slide
+                prevSlide();
+            }
+        }
+        
+        // Initialize the carousel
+        showSlide(0);
+        startAutoplay();
+    });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Social Media Icons
+            const socialIcons = document.querySelectorAll('.social-icon');
+            
+            // Testimonial Carousel
+            const carousel = document.querySelector('.testimonial-cards');
+            const cards = document.querySelectorAll('.testimonial-card');
+            const prevBtn = document.querySelector('.carousel-arrow.left');
+            const nextBtn = document.querySelector('.carousel-arrow.right');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentIndex = 0;
+            const cardWidth = cards[0].offsetWidth;
+            const cardMargin = 25; // gap between cards
+            const totalCards = cards.length;
+            let visibleCards = 3;
+            
+            // Check how many cards should be visible based on screen width
+            function updateVisibleCards() {
+                if (window.innerWidth < 768) {
+                    visibleCards = 1;
+                } else if (window.innerWidth < 1100) {
+                    visibleCards = 2;
+                } else {
+                    visibleCards = 3;
+                }
+                
+                // Update carousel position after changing visible cards
+                goToSlide(currentIndex);
+            }
+            
+            // Initial check
+            updateVisibleCards();
+            
+            // Update on window resize
+            window.addEventListener('resize', updateVisibleCards);
+            
+            // Function to move carousel to specific slide
+            function goToSlide(index) {
+                // Enforce boundaries
+                if (index < 0) {
+                    index = 0;
+                } else if (index > totalCards - visibleCards) {
+                    index = totalCards - visibleCards;
+                }
+                
+                currentIndex = index;
+                
+                // Calculate position
+                const position = -(currentIndex * (cardWidth + cardMargin));
+                carousel.style.transform = `translateX(${position}px)`;
+                
+                // Update dots (if we have 5 dots for 5 testimonials)
+                dots.forEach((dot, i) => {
+                    dot.classList.remove('active');
+                    // Map the current slide index to the appropriate dot
+                    // This is a simplified approach - you might want to
+                    // adjust how dots correspond to carousel positions
+                    if (i === Math.min(currentIndex, dots.length - 1)) {
+                        dot.classList.add('active');
+                    }
+                });
+                
+                // Enable/disable arrows based on position
+                prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1";
+                nextBtn.style.opacity = currentIndex >= totalCards - visibleCards ? "0.5" : "1";
+            }
+            
+            // Next slide
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+            });
+            
+            // Previous slide
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+            });
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+            
+            // Banner exit fullscreen
+            const exitButton = document.querySelector('.exit-fullscreen');
+            exitButton.addEventListener('click', () => {
+                // This would normally exit fullscreen, but we'll just hide the button for demo
+                exitButton.style.display = 'none';
+            });
+            
+            // ESC key to exit fullscreen
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    exitButton.style.display = 'none';
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Touch swipe for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carousel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swiped left, go to next slide
+                    goToSlide(currentIndex + 1);
+                }
+                
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swiped right, go to previous slide
+                    goToSlide(currentIndex - 1);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Expansion | Skills for Chicago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Section Styles */
+        .expansion-header {
+            background-color: #fff;
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .header-text {
+            flex: 1;
+        }
+
+        .header-text h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .header-text h2 {
+            font-size: 22px;
+            color: #537a31;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .header-text p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .header-image {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .header-image img {
+            width: 100%;
+            border-radius: 4px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* What We Offer Section */
+        .what-we-offer {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #fbfbfb;
+        }
+
+        .what-we-offer h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .service-box {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 40px;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #537a31;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 80px;
+        }
+
+        .service-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Why Our Model Works Section */
+        .why-model-works {
+            background-color: #0F230F;
+            color: white;
+            padding: 60px 0;
+        }
+
+        .model-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .model-text {
+            flex: 1;
+            padding-left: 40px;
+        }
+
+        .model-text h2 {
+            font-size: 32px;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .model-features {
+            list-style: none;
+        }
+
+        .model-features li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .model-features li::before {
+            content: "•";
+            color: #4d7e32;
+            font-size: 24px;
+            margin-right: 10px;
+            line-height: 1;
+        }
+
+        .feature-title {
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+        .model-image {
+            flex: 1;
+        }
+
+        .model-image img {
+            width: 100%;
+            border-radius: 4px;
+        }
+
+        /* Cities Banner */
+        .cities-banner {
+            background-color: #fff;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #555;
+            border-top: 1px solid #e0e0e0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Our Vision Section */
+        .our-vision {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .our-vision h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .our-vision p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 16px;
+        }
+
+        .map-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .map-legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        .legend-item::before {
+            content: "";
+            display: inline-block;
+            width: 12px;
+            height: 16px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="%23537a31" d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg>') no-repeat center;
+            background-size: contain;
+            margin-right: 8px;
+        }
+
+        .saf-logo {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            max-width: 150px;
+        }
+
+        /* Proven Results Section */
+        .proven-results {
+            padding: 60px 0;
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        .proven-results h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .results-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .results-image {
+            flex: 1;
+        }
+
+        .results-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .stat-box {
+            background-color: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 25px 15px;
+            text-align: center;
+        }
+
+        .stat-box h3 {
+            font-size: 28px;
+            color: #537a31;
+            margin-bottom: 10px;
+        }
+
+        .stat-box p {
+            font-size: 14px;
+            color: #555;
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        /* Where We Are Now Section */
+        .where-we-are {
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .where-we-are h2 {
+            font-size: 32px;
+            margin-bottom: 40px;
+        }
+
+        .cities-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .cities-grid-bottom {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .city-card {
+            position: relative;
+            text-align: left;
+        }
+
+        .city-image {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .city-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .city-image::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 40px;
+            background-color: white;
+        }
+
+        .city-info {
+            margin-top: 20px;
+        }
+
+        .city-info h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .city-info p {
+            font-size: 14px;
+            color: #555;
+            line-height: 1.4;
+        }
+
+        /* Join the Movement Section */
+        .join-movement {
+            padding: 60px 0;
+            background-color: #f6f8f0;
+        }
+
+        .join-content {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .join-text {
+            flex: 1;
+        }
+
+        .join-text h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .join-text p {
+            margin-bottom: 30px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .join-text h3 {
+            font-size: 18px;
+            color: #537a31;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .join-text h3::before {
+            content: "";
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: #537a31;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .join-text ul {
+            margin-bottom: 20px;
+            padding-left: 20px;
+        }
+
+        .join-text li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #555;
+        }
+
+        .join-image {
+            flex: 1;
+        }
+
+        .join-image img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .header-content,
+            .model-content,
+            .results-container,
+            .join-content {
+                flex-direction: column;
+            }
+
+            .cities-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .map-legend {
+                position: static;
+                margin: 20px auto;
+                max-width: 200px;
+            }
+
+            .saf-logo {
+                position: static;
+                margin: 20px auto;
+                display: block;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services-grid,
+            .results-grid,
+            .cities-grid-bottom {
+                grid-template-columns: 1fr;
+            }
+
+            .cities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Custom green dollar sign for the stat box */
+        .money-prefix {
+            color: #537a31;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <section class="expansion-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-text">
+                    <h1>National Expansion</h1>
+                    <h2>Scaling Impact. Empowering Communities Nationwide.</h2>
+                    <p>Skills for America's Future, an initiative of Skills for Chicago, is bringing our proven jobs-first model to cities across the country. We connect employers with untapped talent, influence hiring practices to remove barriers, and create opportunities that lead to long-term economic mobility for job seekers.</p>
+                </div>
+                <div class="header-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Skills for Rhode Island's Future team">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Offer Section -->
+    <section class="what-we-offer">
+        <div class="container">
+            <h2>What We Offer</h2>
+            <div class="services-grid">
+                <div class="service-box">Customized consulting based on your local market</div>
+                <div class="service-box">Hands-on, expert-led training</div>
+                <div class="service-box">National network of employers</div>
+                <div class="service-box">Cutting edge AI driven technology</div>
+                <div class="service-box">Data analysis</div>
+                <div class="service-box">Peer network and community of practice</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Our Model Works Section -->
+    <section class="why-model-works">
+        <div class="container">
+            <div class="model-content">
+                <div class="model-text">
+                    <h2>Why Our Model Works</h2>
+                    <ul class="model-features">
+                        <li>
+                            <div>
+                                <span class="feature-title">Direct Employer Partnerships</span>
+                                – Connecting job seekers to companies ready to hire
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="feature-title">Hiring Practice Change</span>
+                                – Working with employers to eliminate barriers in the job search process
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="feature-title">Community-Driven Impact</span>
+                                – Partnering with organizations that know their local workforce needs
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <span class="feature-title">Hands-On Training</span>
+                                – Providing partners with the tools to execute Skills' jobs-first model, tailored to their needs/workforce needs
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="model-image">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Group of people at event">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Banner -->
+    <div class="cities-banner">
+        <div class="container">
+            BALTIMORE, MD • BOSTON, MA • CLEVELAND, OH • DALLAS, TX • DENVER, CO • HOUSTON, TX • INDIANAPOLIS, IN
+        </div>
+    </div>
+
+    <!-- Our Vision Section -->
+    <section class="our-vision">
+        <div class="container">
+            <h2>Our Vision</h2>
+            <p>To bring the Skills jobs-first model to more cities over the next decade, connecting job seekers with quality jobs in high-unemployment areas and driving meaningful change in hiring practices.</p>
+            <div class="map-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Map_of_USA_with_state_names.svg" alt="Map of the United States with Skills locations">
+                <div class="map-legend">
+                    <div class="legend-item">Target Markets</div>
+                    <div class="legend-item">Current Markets</div>
+                </div>
+                <img class="saf-logo" src="https://i.imgur.com/Gyx1vHP.png" alt="Skills for America's Future logo">
+            </div>
+        </div>
+    </section>
+
+    <!-- Proven Results Section -->
+    <section class="proven-results">
+        <div class="container">
+            <h2>Proven Results</h2>
+            <div class="results-container">
+                <div class="results-image">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1688&q=80" alt="Job seeker in an interview">
+                </div>
+                <div class="results-grid">
+                    <div class="stat-box">
+                        <h3>24,300+</h3>
+                        <p>job seekers placed into meaningful employment</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>270+</h3>
+                        <p>Employer partners engaged nationwide</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3>89%</h3>
+                        <p>of placements identify as BIPOC</p>
+                    </div>
+                    <div class="stat-box">
+                        <h3><span class="money-prefix">$</span>375M</h3>
+                        <p>in total wage impact</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Where We Are Now Section -->
+    <section class="where-we-are">
+        <div class="container">
+            <h2>Where We Are Now</h2>
+            <div class="cities-grid">
+                <div class="city-card">
+                    <div class="city-image">
+                        <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1844&q=80" alt="Chicago skyline">
+                    </div>
+                    <div class="city-info">
+                        <h3>Chicago, IL</h3>
+                        <p>Our flagship site, Skills for Chicago (formerly Skills for Chicagoland's Future), launched in 2012</p>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <div class="city-image">
+                        <img src="https://images.unsplash.com/photo-1582835233119-4b8892e5fdb6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" alt="Rhode Island skyline">
+                    </div>
+                    <div class="city-info">
+                        <h3>Rhode Island, IL</h3>
+                        <p>Skills for Rhode Island's Future, launched in 2016</p>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <div class="city-image">
+                        <img src="https://images.unsplash.com/photo-1589930950675-5aa15682336d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Phoenix skyline">
+                    </div>
+                    <div class="city-info">
+                        <h3>Phoenix, AZ</h3>
+                        <p>Connect to Work AZ, launched in partnership with the Greater Phoenix Chamber Foundation in 2023</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cities-grid-bottom">
+                <div class="city-card">
+                    <div class="city-image">
+                        <img src="https://images.unsplash.com/photo-1575931953324-fcac7084afc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Atlanta skyline">
+                    </div>
+                    <div class="city-info">
+                        <h3>Atlanta, GA</h3>
+                        <p>Connect to Work GA, launched in partnership with the Metro Atlanta Chamber in 2024</p>
+                    </div>
+                </div>
+                <div class="city-card">
+                    <div class="city-image">
+                        <img src="https://images.unsplash.com/photo-1617193334677-ef352aee781b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="Hartford skyline">
+                    </div>
+                    <div class="city-info">
+                        <h3>Hartford, CT</h3>
+                        <p>Workforce Solutions Collaborative of Metro Hartford, launched in 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Join the Movement Section -->
+    <section class="join-movement">
+        <div class="container">
+            <div class="join-content">
+                <div class="join-text">
+                    <h2>Join the Movement</h2>
+                    <p>We welcome employers, community partners, and donors to join us and help expand our impact. By working together, we can scale this model to bridge the gap between employers and job seekers.</p>
+                    
+                    <h3>Employers</h3>
+                    <p>Meet your company's talent needs with job-ready candidates while improving hiring outcomes.</p>
+                    
+                    <h3>Community Organizations</h3>
+                    <p>Partner with us to bring the Skills model to your city.</p>
+                    
+                    <h3>Donors</h3>
+                    <p>Invest in bridging the employment gap and driving economic mobility.</p>
+                </div>
+                <div class="join-image">
+                    <img src="https://images.unsplash.com/photo-1565793298669-0adf26c67cc1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1727&q=80" alt="People in a business meeting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Simple animation for the statistics numbers
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to animate counting up
+            function animateCounter(element, target, duration) {
+                let start = 0;
+                const increment = target / (duration / 16); // Update every 16ms (approx 60fps)
+                
+                function updateCounter() {
+                    start += increment;
+                    if (start >= target) {
+                        element.textContent = target;
+                        
+                        // Add + sign if data attribute exists
+                        if (element.dataset.suffix) {
+                            element.textContent += element.dataset.suffix;
+                        }
+                        
+                        // Add prefix if data attribute exists
+                        if (element.dataset.prefix) {
+                            element.textContent = element.dataset.prefix + element.textContent;
+                        }
+                        
+                        return;
+                    }
+                    
+                    element.textContent = Math.floor(start);
+                    requestAnimationFrame(updateCounter);
+                }
+                
+                updateCounter();
+            }
+            
+            // Get all stat boxes
+            const statHeadings = document.querySelectorAll('.stat-box h3');
+            
+            // Observe when they come into view
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Parse the number from the text
+                        let text = entry.target.textContent;
+                        let prefix = '';
+                        let suffix = '';
+                        
+                        // Check for $ sign
+                        if (text.includes('$')) {
+                            prefix = '$';
+                            text = text.replace('$', '');
+                        }
+                        
+                        // Check for + sign
+                        if (text.includes('+')) {
+                            suffix = '+';
+                            text = text.replace('+', '');
+                        }
+                        
+                        // Check for M (millions)
+                        if (text.includes('M')) {
+                            suffix = 'M' + suffix;
+                            text = text.replace('M', '');
+                        }
+                        
+                        // Parse number
+                        let value = parseFloat(text.replace(/,/g, ''));
+                        
+                        // Set the element's data attributes
+                        entry.target.dataset.prefix = prefix;
+                        entry.target.dataset.suffix = suffix;
+                        
+                        // Start the animation
+                        animateCounter(entry.target, value, 1500);
+                        
+                        // Unobserve after triggering
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            // Observe each statistic
+            statHeadings.forEach(heading => {
+                observer.observe(heading);
+            });
+        });
+    </script>
+</body>
+</html>

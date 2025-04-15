@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Skills for Chicago - Careers</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+
+        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+
+@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+h1 {
+ font-family: Greycliff
+}
+h2 {
+ font-family: Greycliff
+}
+h3 {
+ font-family: Greycliff
+}
+p {
+font-family: Greycliff-thin
+}
+a {
+font-family: Greycliff-thin
+}
+span {
+font-family: Greycliff
+}
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 10px;
+        }
+        
+        /* Banner Styles */
+        .banner {
+            background-color: #1e3a14;
+            color: white;
+            padding: 12px 0;
+        }
+        
+        .banner-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .banner-text {
+            font-size: 15px;
+        }
+        
+        .learn-more-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 6px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        
+        /* Header Styles */
+        .header {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px;
+        }
+        
+        .logo {
+            width: 150px;
+        }
+        
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 7px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid black;
+}
+
+.donate-button span {
+    margin-right: 5px; 
+}
+
+.donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+.donate-button i {
+    transform: rotate(-45deg);
+}
+
+.donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.circle-icon {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        
+        /* Careers Hero Section */
+        .careers-section {
+            padding: 0;
+            border-bottom: 1px solid black;
+        }
+        
+        .careers-container {
+            display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0px 0px 0px 80px;
+    border-bottom: 1px solid black;
+    min-height: 750px;
+        }
+        
+        .careers-content {
+            padding: 50px 40px 50px 60px;
+    display: grid;
+    align-items: center;
+        }
+        
+        .careers-content h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .careers-subtitle {
+            font-size: 20px;
+            color: #526e3f;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        
+        .careers-description {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 30px;
+        }
+        
+        .careers-image {
+            overflow: hidden;
+            height: 100%;
+            border-left: 1px solid black;
+        }
+        
+        .careers-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        
+        /* Call to Action Section */
+        .cta-section {
+            background-color: #1e3a14;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .cta-title {
+            font-size: 28px;
+            font-weight: 700;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Open Positions Section */
+        .positions-section {
+            padding: 50px 0 80px;
+        }
+        
+        .positions-title {
+            font-size: 34px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .no-positions {
+            font-size: 18px;
+            color: #666;
+            margin-top: 30px;
+        }
+        
+                /* Footer Content */
+                .modern-footer {
+    background-color: #1F3707;
+    color: white;
+    padding: 60px 0 0 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Keep the background logo contained within the footer */
+}
+
+/* Add the SC logo as a background on the left side */
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Position on the left side instead of right */
+    transform: translateY(-50%);
+    width: 60%; /* Large size to match the image */
+    height: 140%;
+    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.45; /* Dark but subtle appearance */
+}
+
+/* Ensure footer content stays on top of the background image */
+.footer-container, .footer-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modern-footer::before {
+        width: 100%;
+        left: -20%;
+    }
+}
+
+    .footer-container {
+        padding: 0 6%;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .footer-divider {
+        flex: 1;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 40px;
+    }
+
+    .footer-logo img {
+        height: 80px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        opacity: 0.8;
+    }
+
+    /* Updated footer navigation styles to fix vertical alignment */
+    .footer-nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start; /* Changed from center to flex-start */
+        margin-bottom: 60px;
+    }
+
+    .footer-nav-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+    }
+
+    .footer-nav-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        height: 22px; /* Fixed height for the heading */
+        line-height: 22px; /* Match the height to ensure consistent alignment */
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .footer-copyright {
+        background-color: #1F3707;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .footer-nav {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-nav-section {
+            flex: 1 0 30%;
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-top {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-nav-section {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-nav {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+        
+        .contact-info {
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        /* Copyright */
+        .copyright {
+            background-color: #1e3a14;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .footer-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-logo-section {
+                grid-column: span 3;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .footer-logo {
+                margin: 0 auto 20px;
+            }
+            .careers-container {
+   gap: 0px;
+    padding: 0px 0px 0px 0px;
+        }
+        }
+        
+        @media (max-width: 900px) {
+            .careers-container {
+                grid-template-columns: 1fr;
+                gap: 0px;
+            }
+            
+            .careers-image {
+                order: -1;
+                height: 300px;
+            }
+            
+            .careers-content {
+                padding: 10px 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .cta-title {
+                font-size: 24px;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .footer-nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .social-icons {
+                justify-content: center;
+            }
+            
+            .footer-heading {
+                margin-top: 20px;
+            }
+            
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="container banner-container">
+            <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
+            <a href="#" class="learn-more-btn">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/SFC_Logo Assets 2025_v1-2.png" alt="Skills for Chicago Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Job Seekers</a>
+                    <a href="#">Employers</a>
+                    <a href="#">Community Partners</a>
+                    <a href="#">Donors</a>
+                    <a href="#">Events</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <a href="#" class="donate-button">
+                    <span>Donate Now</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>   
+            </nav>
+        </div>
+    </header>
+
+    <!-- Careers Section -->
+    <section class="careers-section">
+        <div class="careers-container">
+            <div class="careers-content">
+                <h1>Careers at Skills</h1>
+                <div class="careers-subtitle">Make an Impact. Join Our Team.</div>
+                <p class="careers-description">
+                    Passionate about driving equity in employment? At Skills for Chicago, we're looking for changemakers who believe in the power of access, opportunity, and community impact.
+                </p>
+                <p class="careers-description">
+                    We offer a collaborative and mission-driven work environment, competitive benefits, and the opportunity to be part of a team that is shaping the future of workforce development in Chicago.
+                </p>
+            </div>
+            <div class="careers-image">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_134518160.jpeg" alt="Team members in a meeting">
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Explore open positions and help us create a more inclusive job market.</h2>
+        </div>
+    </section>
+
+    <!-- Open Positions Section -->
+    <section class="positions-section">
+        <div class="container">
+            <h2 class="positions-title">Open Positions</h2>
+            <p class="no-positions">Currently, there are no available opportunities. Please check back soon for updates</p>
+        </div>
+    </section>
+
+    <!-- Footer Navigation -->
+    <nav class="footer-nav">
+        <div class="container footer-nav-container">
+            <div class="footer-nav-links">
+                <a href="#">HOMEPAGE</a>
+                <a href="#">ABOUT US</a>
+                <a href="#">CAREERS</a>
+                <a href="#">IMPACT</a>
+                <a href="#">EVENTS</a>
+                <a href="#">NEWSROOM</a>
+                <a href="#">CONTACT</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon facebook"></a>
+                <a href="#" class="social-icon linkedin"></a>
+                <a href="#" class="social-icon youtube"></a>
+                <a href="#" class="social-icon instagram"></a>
+            </div>
+        </div>
+    </nav>
+
+ <!-- Footer Content -->
+ <footer class="modern-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/SFC_Logo Assets 2025_v1-3.png" alt="Skills for Chicago Logo">
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-nav">
+            <div class="footer-nav-section">
+                <h3>About</h3>
+                <div class="footer-nav-links">
+                    <a href="#">About</a>
+                    <a href="#">Our Impact</a>
+                    <a href="#">Our Reports</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Our Leadership</a>
+                    <a href="#">Our Careers</a>
+                </div>
+            </div>
+            
+            <div class="footer-nav-section">
+                <h3>For Job Seekers</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Find A Job</a>
+                    <a href="#">View All Jobs</a>
+                    <a href="#">Consulting</a>
+                    <a href="#">Resources</a>
+                    <a href="#">Events</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+            
+            <div class="footer-nav-section">
+                <h3>For Employers</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Start Hiring</a>
+                    <a href="#">Neighborhood Impact</a>
+                    <a href="#">Consulting</a>
+                    <a href="#">Resources & Case Studies</a>
+                    <a href="#">Our Projects</a>
+                </div>
+            </div>
+            
+            <div class="footer-nav-section">
+                <h3>For Partners</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Mission, Model & Impact</a>
+                    <a href="#">Board & Team</a>
+                    <a href="#">Locations</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Employment Champions</a>
+                </div>
+            </div>
+            
+            <div class="footer-nav-section">
+                <h3>Donate</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Donate Now</a>
+                    <a href="#">Work In Action</a>
+                    <a href="#">Annual Reports</a>
+                    <a href="#">Impact Reports</a>
+                    <a href="#">Funders</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-copyright">
+        <div class="footer-container">
+            Copyright @ 2025 Skills All rights reserved
+        </div>
+    </div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Banner click event
+            const banner = document.querySelector('.banner');
+            banner.addEventListener('click', function() {
+                window.location.href = "/events/job-fair";
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

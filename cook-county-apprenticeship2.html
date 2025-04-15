@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cook County Apprenticeship | Skills for Chicago</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top Bar with Social Links */
+        .top-bar {
+            background-color: #fff;
+            padding: 10px 0;
+            text-align: right;
+            border-bottom: 1px solid #eee;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: #333;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #4d7e32;
+        }
+
+        /* Banner Styles */
+        .banner {
+            background-color: #1e3a14;
+            color: white;
+            padding: 12px 0;
+        }
+        
+        .banner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .banner-text {
+            font-size: 15px;
+        }
+        
+        .learn-more-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 6px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .learn-more-btn:hover {
+            background-color: white;
+            color: #1e3a14;
+        }
+
+        /* Header Styles */
+        .header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            z-index: 100;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .logo {
+            width: 140px;
+        }
+        
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #4d7e32;
+        }
+        
+        .donate-btn {
+            background-color: #8dc63f;
+            color: #333;
+            border-radius: 25px;
+            padding: 8px 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            border: 1px solid #707070;
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .donate-btn:hover {
+            background-color: #7db32e;
+            transform: translateY(-2px);
+        }
+        
+        .donate-btn-icon {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .donate-btn i {
+            color: #333;
+            font-size: 12px;
+            transform: rotate(-45deg);
+            transition: transform 0.3s;
+        }
+
+        .donate-btn:hover i {
+            transform: rotate(0);
+        }
+
+        /* Main Content Styles */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .apprenticeship-header {
+            margin-bottom: 40px;
+        }
+
+        .apprenticeship-header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .logos-container {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .logo-item {
+            max-width: 250px;
+        }
+
+        .content-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .text-content {
+            flex: 1;
+        }
+
+        .text-content p {
+            font-size: 16px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .feature-list {
+            margin: 25px 0;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: baseline;
+            margin-bottom: 20px;
+            gap: 12px;
+        }
+
+        .feature-item::before {
+            content: "•";
+            color: #4d7e32;
+            font-size: 24px;
+            display: inline-block;
+        }
+
+        .image-content {
+            flex: 1;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .image-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .dual-section {
+            display: flex;
+            gap: 50px;
+            margin: 60px 0 30px;
+        }
+
+        .section-half {
+            flex: 1;
+        }
+
+        .section-half h2 {
+            font-size: 24px;
+            color: #4d7e32;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .section-half p {
+            margin-bottom: 15px;
+        }
+
+        .section-half a {
+            color: #4d7e32;
+            font-weight: 600;
+            text-decoration: underline;
+            transition: color 0.3s;
+        }
+
+        .section-half a:hover {
+            color: #396020;
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #1a4106;
+            color: white;
+            padding: 60px 0 0;
+            position: relative;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            padding: 0 20px;
+        }
+
+        .footer-logo {
+            width: 160px;
+        }
+
+        .footer-line {
+            flex: 1;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: 0 30px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 18px;
+            transition: opacity 0.3s;
+        }
+
+        .footer-social a:hover {
+            opacity: 0.8;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-bottom: 60px;
+        }
+
+        .footer-section {
+            max-width: 200px;
+        }
+
+        .footer-section h3 {
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: white;
+            font-size: 14px;
+            opacity: 0.9;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 992px) {
+            .content-container, 
+            .dual-section {
+                flex-direction: column;
+            }
+
+            .image-content {
+                order: -1;
+                margin-bottom: 30px;
+            }
+
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+
+            .footer-section {
+                flex: 1 0 40%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logos-container {
+                flex-direction: column;
+            }
+
+            .footer-top {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .footer-line {
+                width: 100%;
+                margin: 10px 0;
+            }
+
+            .footer-nav {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .footer-section {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar with Social Links -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="banner-container">
+            <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
+            <a href="#" class="learn-more-btn">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <img src="https://i.imgur.com/pBSVq8h.png" alt="Skills for Chicago Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Job Seekers</a>
+                    <a href="#">Employers</a>
+                    <a href="#">Community Partners</a>
+                    <a href="#">Donors</a>
+                    <a href="#">Events</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <a href="#" class="donate-btn">
+                    Donate
+                    <i class="fas fa-arrow-right"></i>
+                </a>    
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="apprenticeship-header">
+                <h1>Cook County Apprenticeship</h1>
+                <div class="logos-container">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/vna-foundation.jpg" alt="Cook County Manufacturing Apprenticeship Accelerator" class="logo-item">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/African American Legacy Foundation-Logo-688x387-c.png" alt="Cook County Bureau of Economic Development" class="logo-item">
+                </div>
+            </div>
+
+            <div class="content-container">
+                <div class="text-content">
+                    <p>The Cook County Bureau of Economic Development created the Manufacturing Apprenticeship Accelerator in collaboration with Skills for Chicagoland's Future to provide manufacturers with a "concierge service" to identify and screen candidates for employment programs that include all the following elements:</p>
+                    
+                    <ul class="feature-list">
+                        <li class="feature-item">An "earn and learn" model;</li>
+                        <li class="feature-item">On-the-job training plan or curriculum;</li>
+                        <li class="feature-item">Leads to industry recognized credentials</li>
+                        <li class="feature-item">Salary increases.</li>
+                    </ul>
+                    
+                    <div class="dual-section">
+                        <div class="section-half">
+                            <h2>Manufacturers</h2>
+                            <p>If you are seeking to accelerate talent acquisition, click <a href="#">here</a> to schedule a meeting with a client-services expert.</p>
+                        </div>
+                        <div class="section-half">
+                            <h2>Job seekers:</h2>
+                            <p>Click <a href="#">here</a> to learn more and take the next step in your career journey!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="image-content">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_134518160.jpeg" alt="HVAC Technician working on equipment">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <img src="https://i.imgur.com/Dp3WkUj.png" alt="Skills for Chicago Logo" class="footer-logo">
+                <div class="footer-line"></div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-nav">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <div class="footer-links">
+                        <a href="#">Who We Are</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Annual Reports & Financials</a>
+                        <a href="#">Our Work in Action</a>
+                        <a href="#">Careers at Skills</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Job Seekers</h3>
+                    <div class="footer-links">
+                        <a href="#">Find A Job</a>
+                        <a href="#">Career Resources</a>
+                        <a href="#">FAQs for Job Seekers</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Employers</h3>
+                    <div class="footer-links">
+                        <a href="#">Partner With Us</a>
+                        <a href="#">Our Employer Partners</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Community Partners</h3>
+                    <div class="footer-links">
+                        <a href="#">Collaborate With Us</a>
+                        <a href="#">Our Community Partners</a>
+                        <a href="#">Community Impact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Events & Highlights</h3>
+                    <div class="footer-links">
+                        <a href="#">Events & Highlights</a>
+                        <a href="#">Employment Champions Breakfast</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>National Expansion</h3>
+                    <div class="footer-links">
+                        <a href="#">National Expansion</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Donors</h3>
+                    <div class="footer-links">
+                        <a href="#">Donors</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="footer-links">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            Copyright © 2025. | Skills For Chicago | All Rights Reserved.
+        </div>
+    </footer>
+</body>
+</html>

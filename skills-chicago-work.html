@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Chicago - Our Work In Action</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+
+@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+h1 {
+ font-family: Greycliff
+}
+h2 {
+ font-family: Greycliff
+}
+h3 {
+ font-family: Greycliff
+}
+p {
+font-family: Greycliff-thin
+}
+a {
+font-family: Greycliff-thin
+}
+span {
+font-family: Greycliff
+}
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .stories-container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Banner Styles */
+        .banner {
+            background-color: #1e3a14;
+            color: white;
+            padding: 12px 0;
+        }
+        
+        .banner-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        
+        .banner-text {
+            font-size: 15px;
+        }
+        
+        .learn-more-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 6px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* Social Icons */
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        
+        /* Header Styles */
+        .header {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px;
+        }
+        
+        .logo {
+            width: 150px;
+        }
+        
+        .main-nav {
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            margin-right: 20px;
+        }
+        
+        .nav-links a {
+            color: #333;
+            font-size: 15px;
+            font-weight: 500;
+        }
+        
+        .donate-btn {
+            background-color: #67b346;
+            color: white;
+            border-radius: 25px;
+            padding: 8px 25px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        
+        .donate-btn-icon {
+            width: 16px;
+            height: 16px;
+            background-color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .donate-btn-icon::after {
+            content: '→';
+            color: #67b346;
+            font-size: 12px;
+        }
+        
+        /* Work In Action Section */
+        .work-section {
+            /* padding: 70px 0; */
+        }
+        
+        .work-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding: 0px 0px 0px 80px;
+            border-bottom: 1px solid black;
+            min-height: 750px;
+        }
+        
+        .work-content h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .work-subtitle {
+            font-size: 20px;
+            font-weight: 600;
+            color: #526e3f;
+            margin-bottom: 25px;
+        }
+        
+        .work-description {
+            font-size: 22px;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .work-image {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 5px; */
+            overflow: hidden;
+            border-left: 1px solid black;
+        }
+        
+        .work-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* Stories Section */
+        .stories-section {
+            padding: 50px 0;
+            background-color: #f0f4e6;
+        }
+        
+        .stories-title {
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+        
+        .stories-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .stories-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 20px;
+            grid-template-areas:
+                "featured featured small1"
+                "featured featured small2";
+        }
+        
+        .story-card {
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            height: 100%;
+        }
+        
+        .story-card.featured {
+            grid-area: featured;
+            height: 100%;
+        }
+        
+        .story-card.small1 {
+            grid-area: small1;
+        }
+        
+        .story-card.small2 {
+            grid-area: small2;
+        }
+        
+        .story-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .story-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
+            color: white;
+        }
+        
+        .story-title {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .story-subtitle {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        
+        .small-story-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .small-story-text {
+            font-size: 14px;
+            line-height: 1.4;
+        }
+        
+        /* News Section */
+        .news-section {
+            padding: 60px 0;
+        }
+        
+        .news-title {
+            font-size: 36px;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+        
+        .news-intro {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .news-slider-container {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+        
+        .news-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            gap: 20px;
+            padding: 10px 0;
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        .news-slider::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Opera */
+        }
+        
+        .news-card {
+            flex: 0 0 calc(33.333% - 14px);
+            max-width: calc(33.333% - 14px);
+            scroll-snap-align: start;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .news-source {
+            padding: 20px;
+            background-color: white;
+            flex-grow: 1;
+        }
+        
+        .news-logo {
+            margin-bottom: 15px;
+            height: 40px;
+        }
+        
+        .news-source-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .news-date {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .news-headline {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #333;
+        }
+        
+        .news-controls {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        
+        .news-dot {
+            width: 10px;
+            height: 10px;
+            background-color: #ccc;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+        
+        .news-dot.active {
+            background-color: #1e3a14;
+        }
+        
+              /* Footer Content */
+              .modern-footer {
+    background-color: #1F3707;
+    color: white;
+    padding: 60px 0 0 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Keep the background logo contained within the footer */
+}
+
+/* Add the SC logo as a background on the left side */
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Position on the left side instead of right */
+    transform: translateY(-50%);
+    width: 60%; /* Large size to match the image */
+    height: 140%;
+    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.45; /* Dark but subtle appearance */
+}
+
+/* Ensure footer content stays on top of the background image */
+.footer-container, .footer-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modern-footer::before {
+        width: 100%;
+        left: -20%;
+    }
+}
+
+    .footer-container {
+        padding: 0 6%;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .footer-divider {
+        flex: 1;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 40px;
+    }
+
+    .footer-logo img {
+        height: 80px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        opacity: 0.8;
+    }
+
+    /* Updated footer navigation styles to fix vertical alignment */
+    .footer-nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start; /* Changed from center to flex-start */
+        margin-bottom: 60px;
+    }
+
+    .footer-nav-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+    }
+
+    .footer-nav-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        height: 22px; /* Fixed height for the heading */
+        line-height: 22px; /* Match the height to ensure consistent alignment */
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .footer-copyright {
+        background-color: #1F3707;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .footer-nav {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-nav-section {
+            flex: 1 0 30%;
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-top {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-nav-section {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-nav {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+        
+        .contact-info {
+            margin-top: 15px;
+        }
+
+        .donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 7px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid black;
+}
+
+.donate-button span {
+    margin-right: 5px; 
+}
+
+.donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+.donate-button i {
+    transform: rotate(-45deg);
+}
+
+.donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.circle-icon {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+        
+        .contact-item {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        /* Copyright */
+        .copyright {
+            background-color: #1e3a14;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .work-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0px;
+            }
+
+            .work-content {
+                padding: 0px 0px 2% 5%;
+            }
+            
+            .work-image {
+                order: -1;
+            }
+            
+            .stories-grid {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "featured"
+                    "small1"
+                    "small2";
+            }
+            
+            .news-card {
+                flex: 0 0 calc(50% - 10px);
+                max-width: calc(50% - 10px);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-logo-section {
+                grid-column: span 3;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .footer-logo {
+                margin: 0 auto 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .news-card {
+                flex: 0 0 calc(100% - 20px);
+                max-width: calc(100% - 20px);
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .footer-nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-social-icons {
+                justify-content: center;
+            }
+            
+            .footer-heading {
+                margin-top: 20px;
+            }
+            
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Banner Section -->
+    <div class="banner">
+        <div class="container banner-container">
+            <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
+            <a href="#" class="learn-more-btn">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="logo-link">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/SFC_Logo Assets 2025_v1-2.png" alt="Skills for Chicago Logo" class="logo">
+            </a>
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Job Seekers</a>
+                    <a href="#">Employers</a>
+                    <a href="#">Community Partners</a>
+                    <a href="#">Donors</a>
+                    <a href="#">Events</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <a href="#" class="donate-button">
+                    <span>Donate</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a> 
+            </nav>
+        </div>
+    </header>
+
+    <!-- Work In Action Section -->
+    <section class="work-section">
+        <div class="work-container">
+            <div class="work-content">
+                <h1>Our Work In Action</h1>
+                <div class="work-subtitle">Real Impact. Real People. Real Change.</div>
+                <p class="work-description">
+                    At Skills for Chicago, we are creating pathways to success by expanding access to employment opportunities for underrepresented job seekers. Through firsthand stories and workforce insights, we highlight the success of individuals who have secured meaningful jobs, the latest updates on workforce trends, and the impact of employer and community partnerships. By sharing real experiences and workforce insights, we showcase the impact of equitable employment opportunities and the work being done to remove barriers for job seekers.
+                </p>
+            </div>
+            <div class="work-image">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_257469329.jpeg" alt="Diverse group of professionals in a meeting">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stories of Impact Section -->
+    <section class="stories-section">
+        <div class="stories-container">
+            <h2 class="stories-title">Stories of Impact</h2>
+            <p class="stories-intro">
+                Every job secured through Skills for Chicago represents more than just employment—it's a step toward financial stability and long-term success. Hear from job seekers who have overcome barriers, found new opportunities, and taken control of their futures.
+            </p>
+            
+            <div class="stories-grid">
+                <div class="story-card featured">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_592616405.jpeg" alt="Woman using smartphone" class="story-image">
+                    <div class="story-overlay">
+                        <h3 class="story-title">Welcome to the Energy Workforce Equity Portal</h3>
+                        <p class="story-subtitle">
+                            The Portal is an online source designed to help connect clean energy companies with Equity Eligible Persons looking to work in the clean energy sector in Illinois. Making these connections is a key aspect of ensuring that the clean energy industry in Illinois grows in an equitable manner.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="story-card small1">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_671308764.jpeg" alt="Person in office setting" class="story-image">
+                    <div class="story-overlay">
+                        <h3 class="small-story-title">From New York to Chicago: Maria's Determined Journey to Finding Confidence and Stability</h3>
+                    </div>
+                </div>
+                
+                <div class="story-card small2">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_538810139.jpeg" alt="Person in business attire" class="story-image">
+                    <div class="story-overlay">
+                        <h3 class="small-story-title">Khalil's Story: Cultivating Growth with Skills for Chicagoland's Future</h3>
+                    </div>
+                </div>
+                
+                <div class="story-card small3">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_536585555.jpeg" alt="Business meeting" class="story-image">
+                    <div class="story-overlay">
+                        <h3 class="small-story-title">3 Simple Solutions To Unlock Overlooked Talent</h3>
+                    </div>
+                </div>
+                
+                <div class="story-card small4">
+                    <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_303533196.jpeg" alt="Professional woman" class="story-image">
+                    <div class="story-overlay">
+                        <h3 class="small-story-title">Skills for Chicagoland's Future Announces New Board Chair, Dr. Monika Turnbull</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates Section -->
+    <section class="news-section">
+        <div class="container">
+            <h2 class="news-title">News & Updates</h2>
+            <p class="news-intro">
+                Stay informed on the latest developments in workforce equity, employer partnerships, and economic mobility. Explore insights on employment trends, policy shifts, and how businesses are working to create more inclusive hiring practices across Chicago.
+            </p>
+            
+            <div class="news-slider-container">
+                <div class="news-slider" id="newsSlider">
+                    <div class="news-card">
+                        <div class="news-source">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/37fce9bf0969b1c6ef115f6541b72ad2.png" alt="Forbes logo" class="news-logo">
+                            <h4 class="news-source-name">Forbes</h4>
+                            <p class="news-date">February 10, 2025</p>
+                            <a href="#" class="news-headline">3 Simple Solutions To Unlock Overlooked Talent</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-source">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/hd-lego-logo-transparent-background-701751694773038ttazskfwrq.png" alt="Daily Herald logo" class="news-logo">
+                            <h4 class="news-source-name">Daily Herald</h4>
+                            <p class="news-date">February 13, 2025</p>
+                            <a href="#" class="news-headline">Skills for Chicagoland's Future Talk What's Next</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-source">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/37fce9bf0969b1c6ef115f6541b72ad2.png" alt="Chicago Defender logo" class="news-logo">
+                            <h4 class="news-source-name">Chicago Defender</h4>
+                            <p class="news-date">February 23, 2025</p>
+                            <a href="#" class="news-headline">Skills' Chief Program Officer on the Perri Small Show</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-source">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/hd-lego-logo-transparent-background-701751694773038ttazskfwrq.png" alt="Chicago Tribune logo" class="news-logo">
+                            <h4 class="news-source-name">Chicago Tribune</h4>
+                            <p class="news-date">February 5, 2025</p>
+                            <a href="#" class="news-headline">Bridging the Gap: Skills for Chicago's Innovative Approach to Workforce Development</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-source">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/37fce9bf0969b1c6ef115f6541b72ad2.png" alt="WBEZ logo" class="news-logo">
+                            <h4 class="news-source-name">WBEZ</h4>
+                            <p class="news-date">January 28, 2025</p>
+                            <a href="#" class="news-headline">Interview: Expanding Economic Mobility in Chicago's Underserved Communities</a>
+                        </div>
+                    </div>
+                    
+                    <div class="news-card">
+                        <div class="news-source">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/hd-lego-logo-transparent-background-701751694773038ttazskfwrq.png" alt="Crain's Chicago Business logo" class="news-logo">
+                            <h4 class="news-source-name">Crain's Chicago Business</h4>
+                            <p class="news-date">January 15, 2025</p>
+                            <a href="#" class="news-headline">Local Employers Partner with Skills for Chicago to Address Workforce Gaps</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="news-controls">
+                    <span class="news-dot active" data-index="0"></span>
+                    <span class="news-dot" data-index="1"></span>
+                    <span class="news-dot" data-index="2"></span>
+                    <span class="news-dot" data-index="3"></span>
+                    <!-- <span class="news-dot" data-index="4"></span>
+                    <span class="news-dot" data-index="5"></span> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer Content -->
+  <footer class="modern-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/SFC_Logo Assets 2025_v1-3.png" alt="Skills for Chicago Logo">
+            </div>
+            <div class="footer-divider"></div>
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <div class="footer-nav">
+            <div class="footer-nav-section">
+                <h3>About</h3>
+                <div class="footer-nav-links">
+                    <a href="#">About</a>
+                    <a href="#">Our Impact</a>
+                    <a href="#">Our Reports</a>
+                    <a href="#">Our Team</a>
+                    <a href="#">Our Leadership</a>
+                    <a href="#">Our Careers</a>
+                </div>
+            </div>
+            
+            <div class="footer-nav-section">
+                <h3>For Job Seekers</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Find A Job</a>
+                    <a href="#">View All Jobs</a>
+                    <a href="#">Consulting</a>
+                    <a href="#">Resources</a>
+                    <a href="#">Events</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </div>
+            
+            <div class="footer-nav-section">
+                <h3>For Employers</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Start Hiring</a>
+                    <a href="#">Neighborhood Impact</a>
+                    <a href="#">Consulting</a>
+                    <a href="#">Resources & Case Studies</a>
+                    <a href="#">Our Projects</a>
+                </div>
+            </div>
+            
+            <div class="footer-nav-section">
+                <h3>For Partners</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Mission, Model & Impact</a>
+                    <a href="#">Board & Team</a>
+                    <a href="#">Locations</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Employment Champions</a>
+                </div>
+            </div>
+            
+            <div class="footer-nav-section">
+                <h3>Donate</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Donate Now</a>
+                    <a href="#">Work In Action</a>
+                    <a href="#">Annual Reports</a>
+                    <a href="#">Impact Reports</a>
+                    <a href="#">Funders</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer-copyright">
+        <div class="footer-container">
+            Copyright @ 2025 Skills All rights reserved
+        </div>
+    </div>
+</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // News Slider functionality
+            const slider = document.getElementById('newsSlider');
+            const dots = document.querySelectorAll('.news-dot');
+            const cardWidth = slider.querySelector('.news-card').offsetWidth + 20; // Card width + gap
+            
+            // Update active dot based on scroll position
+            const updateActiveDot = () => {
+                const scrollPosition = slider.scrollLeft;
+                const totalWidth = slider.scrollWidth;
+                const viewportWidth = slider.clientWidth;
+                
+                // Calculate which section is visible
+                const scrollRatio = scrollPosition / (totalWidth - viewportWidth);
+                const activeDotIndex = Math.min(
+                    Math.floor(scrollRatio * dots.length),
+                    dots.length - 1
+                );
+                
+                // Update active dot
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[activeDotIndex].classList.add('active');
+            };
+            
+            // Handle dot clicks
+            dots.forEach(dot => {
+                dot.addEventListener('click', () => {
+                    const index = parseInt(dot.getAttribute('data-index'));
+                    const scrollToPosition = index * cardWidth;
+                    
+                    slider.scrollTo({
+                        left: scrollToPosition,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update active dot
+                    dots.forEach(d => d.classList.remove('active'));
+                    dot.classList.add('active');
+                });
+            });
+            
+            // Update active dot on scroll
+            slider.addEventListener('scroll', () => {
+                updateActiveDot();
+            });
+            
+            // Auto-scroll functionality
+            let autoScrollInterval;
+            let currentIndex = 0;
+            
+            const startAutoScroll = () => {
+                autoScrollInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % dots.length;
+                    dots[currentIndex].click();
+                }, 5000); // Auto-scroll every 5 seconds
+            };
+            
+            const stopAutoScroll = () => {
+                clearInterval(autoScrollInterval);
+            };
+            
+            // Start auto-scroll
+            startAutoScroll();
+            
+            // Pause auto-scroll on hover
+            slider.addEventListener('mouseenter', stopAutoScroll);
+            slider.addEventListener('mouseleave', startAutoScroll);
+            
+            // Touch events to pause auto-scroll
+            slider.addEventListener('touchstart', stopAutoScroll);
+            slider.addEventListener('touchend', startAutoScroll);
+            
+            // Banner click event
+            const banner = document.querySelector('.banner');
+            banner.addEventListener('click', function() {
+                window.location.href = "/events/job-fair";
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Hover effects for story cards
+            const storyCards = document.querySelectorAll('.story-card');
+            storyCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.style.transition = 'transform 0.3s ease';
+                    this.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1)';
+                    this.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
