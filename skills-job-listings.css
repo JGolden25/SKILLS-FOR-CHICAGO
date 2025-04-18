@@ -1,0 +1,672 @@
+/* Font Families */
+h1, h2, h3, h4, h5, span {
+    font-family: Greycliff, sans-serif;
+}
+
+p, a {
+    font-family: Greycliff-thin, sans-serif;
+}
+
+/* Filter Section */
+.skills-job-listings-wrapper .filter-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    align-items: center;
+}
+
+.skills-job-listings-wrapper .filter-dropdown {
+    position: relative;
+}
+
+.skills-job-listings-wrapper .filter-btn {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    min-width: 120px;
+    justify-content: space-between;
+}
+
+.skills-job-listings-wrapper .reset-btn i {
+    color: #999;
+}
+
+.skills-job-listings-wrapper .all-reset-btn {
+    background-color: #f5f5f5;
+}
+
+.skills-job-listings-wrapper .filter-apply-btn {
+    background-color: #8DC63F;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skills-job-listings-wrapper .filter-apply-btn:hover {
+    background-color: #7BB32F;
+}
+
+/* Filter Dropdown Contents */
+.skills-job-listings-wrapper .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.skills-job-listings-wrapper .dropdown-content.active {
+    display: block;
+}
+
+.skills-job-listings-wrapper .dropdown-option {
+    padding: 8px 5px;
+}
+
+.skills-job-listings-wrapper .dropdown-option label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.skills-job-listings-wrapper .dropdown-option input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/* Results Count */
+.skills-job-listings-wrapper .results-count {
+    color: #4F6B3A;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Job Listings Grid */
+.skills-job-listings-wrapper .job-listings {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    margin-bottom: 40px;
+}
+
+.skills-job-listings-wrapper .job-card {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    position: relative;
+    transition: box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skills-job-listings-wrapper .job-card:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.skills-job-listings-wrapper .company-logo {
+    width: 100px;
+    height: 70px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.skills-job-listings-wrapper .job-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.skills-job-listings-wrapper .company-name {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.skills-job-listings-wrapper .job-location {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.skills-job-listings-wrapper .job-details {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.skills-job-listings-wrapper .days-posted {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #666;
+    font-size: 14px;
+}
+
+.skills-job-listings-wrapper .bookmark-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #ddd;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.skills-job-listings-wrapper .bookmark-btn.active {
+    color: #4F6B3A;
+}
+
+/* Filter Overlay */
+.skills-job-listings-wrapper .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 900;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.skills-job-listings-wrapper .overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.skills-job-listings-wrapper .filter-sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 380px;
+    height: 100%;
+    background-color: white;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+.skills-job-listings-wrapper .filter-sidebar.active {
+    right: 0;
+}
+
+.skills-job-listings-wrapper .filter-header {
+    background-color: #1E3707;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.skills-job-listings-wrapper .filter-content {
+    padding: 20px;
+}
+
+.skills-job-listings-wrapper .filter-group {
+    margin-bottom: 30px;
+}
+
+.skills-job-listings-wrapper .filter-group-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.skills-job-listings-wrapper .filter-option {
+    margin-bottom: 12px;
+}
+
+.skills-job-listings-wrapper .filter-option label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.skills-job-listings-wrapper .filter-option input[type="checkbox"] {
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+}
+
+.skills-job-listings-wrapper .filter-actions {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+}
+
+.skills-job-listings-wrapper .reset-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #666;
+    font-size: 14px;
+}
+
+.skills-job-listings-wrapper .apply-btn {
+    background-color: #8DC63F;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skills-job-listings-wrapper .apply-btn i {
+    font-size: 12px;
+}
+
+.skills-job-listings-wrapper .job-listings-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.skills-job-listings-wrapper .page-title-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills-job-listings-wrapper .page-title {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.skills-job-listings-wrapper .page-subtitle {
+    font-size: 18px;
+    color: #4F6B3A;
+    margin-bottom: 20px;
+}
+
+.skills-job-listings-wrapper .page-description {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Job Detail Page */
+.skills-job-listings-wrapper .job-detail-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    position: relative;
+}
+
+.skills-job-listings-wrapper .back-link {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #4F6B3A;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.skills-job-listings-wrapper .back-link i {
+    margin-right: 8px;
+}
+
+/* Job Title Header with Logo - NEW STYLE */
+.skills-job-listings-wrapper .job-title-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.skills-job-listings-wrapper .company-logo-container {
+    flex: 0 0 auto;
+    margin-right: 20px;
+}
+
+.skills-job-listings-wrapper .company-header-logo {
+    max-width: 150px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.skills-job-listings-wrapper .job-title-info {
+    flex: 1;
+}
+
+.skills-job-listings-wrapper .job-title-main {
+    font-size: 28px;
+    margin: 0 0 5px 0;
+    color: #333;
+    font-weight: 600;
+}
+
+.skills-job-listings-wrapper .job-company-name {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+.skills-job-listings-wrapper .apply-button-container {
+    flex: 0 0 auto;
+    margin-left: 20px;
+}
+
+.skills-job-listings-wrapper .apply-now-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #8DC63F;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.skills-job-listings-wrapper .apply-now-button i {
+    margin-left: 8px;
+}
+
+.skills-job-listings-wrapper .apply-now-button:hover {
+    background-color: #7BB32F;
+    text-decoration: none;
+    color: white;
+}
+
+/* Job Metadata Section - Two Column Layout */
+.skills-job-listings-wrapper .job-metadata-section {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+}
+
+.skills-job-listings-wrapper .job-metadata-left {
+    flex: 1;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.skills-job-listings-wrapper .job-metadata-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.skills-job-listings-wrapper .job-preview-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.skills-job-listings-wrapper .job-metadata-item {
+    margin-bottom: 20px;
+}
+
+.skills-job-listings-wrapper .metadata-label {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.skills-job-listings-wrapper .metadata-value {
+    font-size: 16px;
+    color: #555;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.skills-job-listings-wrapper .green-bullet {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #4F6B3A;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+/* Single Column Content */
+.skills-job-listings-wrapper .job-detail-single-column {
+    padding: 30px;
+    max-width: 1200px;
+    margin-left: 4%;
+}
+
+.skills-job-listings-wrapper .job-detail-section {
+    margin-bottom: 40px;
+}
+
+.skills-job-listings-wrapper .job-detail-heading {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    font-family: Greycliff, sans-serif;
+}
+
+.skills-job-listings-wrapper .job-detail-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-job-listings-wrapper .job-detail-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.skills-job-listings-wrapper .employer-description {
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Force Font Awesome icons to display */
+.fa,
+.fas,
+.far,
+.fal,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-light,
+.fa-thin,
+.fa-duotone,
+.fa-brands {
+    display: inline-block !important;
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands" !important;
+    font-weight: 900;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-style: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+
+.far,
+.fa-regular {
+    font-weight: 400 !important;
+}
+
+.fab,
+.fa-brands {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+}
+
+.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.has-global-padding {
+    padding-right: 1.85%;
+    padding-left: 1.85%;
+}
+
+.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)) {
+    max-width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Pagination styles */
+.skills-job-listings-wrapper .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    gap: 20px;
+}
+
+.skills-job-listings-wrapper .pagination-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #8DC63F;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.skills-job-listings-wrapper .pagination-btn:hover {
+    background-color: #7BB32F;
+    text-decoration: none;
+    color: white;
+}
+
+.skills-job-listings-wrapper .pagination-btn.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.skills-job-listings-wrapper .pagination-btn i {
+    font-size: 14px;
+}
+
+.skills-job-listings-wrapper .prev-page i {
+    margin-right: 8px;
+}
+
+.skills-job-listings-wrapper .next-page i {
+    margin-left: 8px;
+}
+
+.skills-job-listings-wrapper .pagination-info {
+    font-size: 16px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+    .skills-job-listings-wrapper .job-listings-container {
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    :root :where(.is-layout-constrained) > :last-child {
+        /* margin-block-end: 0; */
+        margin-left: .5%;
+        margin-right: .5%;
+    }
+
+    .skills-job-listings-wrapper .job-listings {
+        grid-template-columns: 1fr;
+    }
+    
+    .skills-job-listings-wrapper .job-metadata-section {
+        flex-direction: column;
+    }
+    
+    .skills-job-listings-wrapper .job-metadata-right {
+        order: -1;
+    }
+    
+    .skills-job-listings-wrapper .job-preview-image {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .skills-job-listings-wrapper .filter-section {
+        flex-wrap: wrap;
+    }
+    
+    .skills-job-listings-wrapper .filter-sidebar {
+        width: 300px;
+    }
+    
+    .skills-job-listings-wrapper .job-title-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .skills-job-listings-wrapper .company-logo-container {
+        margin-bottom: 15px;
+    }
+    
+    .skills-job-listings-wrapper .apply-button-container {
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+    
+    .skills-job-listings-wrapper .apply-now-button {
+        width: 100%;
+        justify-content: center;
+    }
+}

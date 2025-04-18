@@ -36,10 +36,6 @@ function skills_render_job_listings() {
         return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
     }
     
-    // Get current page
-    $current_page = isset($_GET['job_page']) ? max(1, intval($_GET['job_page'])) : 1;    $jobs_per_page = 20;
-    $offset = ($current_page - 1) * $jobs_per_page;
-    
     // Get filter parameters - updated to handle arrays
     $employer_filters = isset($_GET['employer']) ? (array)$_GET['employer'] : array();
     $job_type_filters = isset($_GET['job_type']) ? (array)$_GET['job_type'] : array();
@@ -55,73 +51,44 @@ function skills_render_job_listings() {
     
     // Build the SQL query with possible filters - using your actual column names
     $sql = "SELECT * FROM JobDetails WHERE Published = 1";
-    $count_sql = "SELECT COUNT(*) FROM JobDetails WHERE Published = 1";
     $params = array();
-    $where_clauses = array();
     
     // Handle multiple employer filters
     if (!empty($employer_filters)) {
         $placeholders = array_fill(0, count($employer_filters), '%s');
-        $where_clause = " Employer IN (" . implode(', ', $placeholders) . ")";
-        $where_clauses[] = $where_clause;
+        $sql .= " AND Employer IN (" . implode(', ', $placeholders) . ")";
         $params = array_merge($params, $employer_filters);
     }
     
     // Handle multiple job type filters
     if (!empty($job_type_filters)) {
         $placeholders = array_fill(0, count($job_type_filters), '%s');
-        $where_clause = " `Job Type` IN (" . implode(', ', $placeholders) . ")";
-        $where_clauses[] = $where_clause;
+        $sql .= " AND `Job Type` IN (" . implode(', ', $placeholders) . ")";
         $params = array_merge($params, $job_type_filters);
     }
     
     // Handle multiple location filters
     if (!empty($location_filters)) {
-        $location_subclauses = [];
+        $location_clauses = [];
         foreach ($location_filters as $location) {
-            $location_subclauses[] = "Location LIKE %s";
+            $location_clauses[] = "Location LIKE %s";
             $params[] = '%' . $wpdb->esc_like($location) . '%';
         }
-        $where_clauses[] = "(" . implode(' OR ', $location_subclauses) . ")";
-    }
-    
-    // Add where clauses to SQL
-    if (!empty($where_clauses)) {
-        $sql .= " AND " . implode(' AND ', $where_clauses);
-        $count_sql .= " AND " . implode(' AND ', $where_clauses);
+        $sql .= " AND (" . implode(' OR ', $location_clauses) . ")";
     }
     
     // Add ordering
     $sql .= " ORDER BY JN DESC";
     
-    // Add pagination
-    $sql .= " LIMIT %d OFFSET %d";
-    $params[] = $jobs_per_page;
-    $params[] = $offset;
-    
     // Prepare the query with WordPress functions
     if (!empty($params)) {
-        // For count query (without LIMIT and OFFSET)
-        $count_params = array_slice($params, 0, count($params) - 2);
-        $count_sql = $count_params ? $wpdb->prepare($count_sql, $count_params) : $count_sql;
-        
-        // For main query
         $sql = $wpdb->prepare($sql, $params);
     }
     
-    // Get total job count
-    $total_jobs = $wpdb->get_var($count_sql);
-    
-    // Get results for current page
+    // Get results
     $results = $wpdb->get_results($sql);
     $job_count = count($results);
     
-    // Calculate pagination info
-    $total_pages = ceil($total_jobs / $jobs_per_page);
-    $showing_from = min($total_jobs, $offset + 1);
-    $showing_to = min($total_jobs, $offset + $jobs_per_page);
-    
-    // Rest of your existing code...
     // Get unique values for filter options
     function skills_get_filter_options($column) {
         global $wpdb;
@@ -166,24 +133,24 @@ function skills_render_job_listings() {
     // Filter Section
     echo '<div class="filter-section">';
     
-// Employer Dropdown
-echo '<div class="filter-dropdown">';
-echo '<button type="button" class="filter-btn" id="employer-filter-btn">Employer <i class="fas fa-chevron-down"></i></button>';
-echo '<div class="dropdown-content" id="employer-dropdown">';
-
-foreach ($employers as $employer) {
-    echo '<div class="dropdown-option">';
-    echo '<label>';
-    // The key change is in how we check if an employer is selected
-    $checked = is_array($employer_filters) && in_array($employer, $employer_filters) ? ' checked' : '';
-    echo '<input type="checkbox" name="employer[]" value="' . skills_clean_output($employer) . '"' . $checked . '>';
-    echo skills_clean_output($employer);
-    echo '</label>';
+    // Employer Dropdown
+    echo '<div class="filter-dropdown">';
+    echo '<button type="button" class="filter-btn" id="employer-filter-btn">Employer <i class="fas fa-chevron-down"></i></button>';
+    echo '<div class="dropdown-content" id="employer-dropdown">';
+    
+    foreach ($employers as $employer) {
+        echo '<div class="dropdown-option">';
+        echo '<label>';
+        echo '<input type="checkbox" name="employer[]" value="' . skills_clean_output($employer) . '"';
+        if (in_array($employer, $employer_filters)) echo ' checked';
+        echo '>';
+        echo skills_clean_output($employer);
+        echo '</label>';
+        echo '</div>';
+    }
+    
     echo '</div>';
-}
-
-echo '</div>';
-echo '</div>';
+    echo '</div>';
     
     // Job Type Dropdown
     echo '<div class="filter-dropdown">';
@@ -228,7 +195,7 @@ echo '</div>';
     
     // All Filters Button
     echo '<div class="filter-dropdown">';
-    echo '<button class="filter-btn all-reset-btn" id="reset-btn">Reset<i class="fa-solid fa-rotate-left"></i></button>';
+    echo '<button type="button" class="filter-btn all-filters-btn" id="all-filters-btn">Reset<i class="fa-solid fa-rotate-left"></i></button>';
     echo '</div>';
     
     
@@ -236,7 +203,7 @@ echo '</div>';
     echo '</form>'; // End main filters form
     
     // Results Count
-    echo '<div class="results-count">Showing ' . $showing_from . '-' . $showing_to . ' of ' . $total_jobs . ' Results</div>';
+    echo '<div class="results-count">' . $job_count . ' Results</div>';
     
     // Job Listings Grid
     echo '<div class="job-listings">';
@@ -281,48 +248,8 @@ echo '</div>';
     }
     
     echo '</div>'; // End job-listings
-    
-   // Pagination
-   if ($total_pages > 1) {
-    echo '<div class="pagination">';
-    
-    // Build a base URL that preserves all current filters
-    $current_url = strtok($_SERVER["REQUEST_URI"], '?');
-    $query_params = $_GET;
-    
-    // Previous page button
-    if ($current_page > 1) {
-        $prev_query = $query_params;
-        $prev_query['job_page'] = $current_page - 1;
-        // Remove 'page' parameter if it exists
-        unset($prev_query['page']);
-        $prev_url = $current_url . '?' . http_build_query($prev_query);
-        echo '<a href="' . esc_url($prev_url) . '" class="pagination-btn prev-page"><i class="fas fa-chevron-left"></i> Previous</a>';
-    } else {
-        echo '<span class="pagination-btn prev-page disabled"><i class="fas fa-chevron-left"></i> Previous</span>';
-    }
-    
-    // Page number text
-    echo '<span class="pagination-info">Page ' . $current_page . ' of ' . $total_pages . '</span>';
-    
-    // Next page button
-    if ($current_page < $total_pages) {
-        $next_query = $query_params;
-        $next_query['job_page'] = $current_page + 1;
-        // Remove 'page' parameter if it exists
-        unset($next_query['page']);
-        $next_url = $current_url . '?' . http_build_query($next_query);
-        echo '<a href="' . esc_url($next_url) . '" class="pagination-btn next-page">Next <i class="fas fa-chevron-right"></i></a>';
-    } else {
-        echo '<span class="pagination-btn next-page disabled">Next <i class="fas fa-chevron-right"></i></span>';
-    }
-    
-    echo '</div>'; // End pagination
-}
-    
     echo '</div>'; // End job-listings-container
-
-    // Rest of your existing code...
+    
     // Filter Overlay
     echo '<div class="overlay" id="overlay"></div>';
     echo '<div class="filter-sidebar" id="filter-sidebar">';
@@ -386,7 +313,7 @@ echo '</div>';
     
     echo '</div>'; // End filter-sidebar
     
-    // Add JavaScript - same as your original
+    // Add JavaScript
     echo '<script>
     document.addEventListener("DOMContentLoaded", function() {
         // All Filters button
@@ -507,16 +434,16 @@ echo '</div>';
         
         // Reset filters
         if (resetBtn) {
-    resetBtn.addEventListener("click", function() {
-        const checkboxInputs = document.querySelectorAll("#main-filters-form input[type=\"checkbox\"]");
-        checkboxInputs.forEach(input => {
-            input.checked = false;
-        });
-        
-        // Clear current URL parameters and reload
-        window.location.href = window.location.pathname;
-    });
-}
+            resetBtn.addEventListener("click", function() {
+                const checkboxInputs = document.querySelectorAll("#sidebar-filter-form input[type=\"checkbox\"]");
+                checkboxInputs.forEach(input => {
+                    input.checked = false;
+                });
+                
+                // Clear current URL parameters and reload
+                window.location.href = window.location.pathname;
+            });
+        }
         
         // Bookmark functionality
         bookmarkBtns.forEach(btn => {
@@ -796,20 +723,12 @@ function skills_job_listings_rewrite_rules() {
         'index.php?pagename=jobs&job_id=$matches[1]',
         'top'
     );
-    
-    // Add rule for pagination
-    add_rewrite_rule(
-        'jobs/page/([0-9]+)/?$',
-        'index.php?pagename=jobs&job_page=$matches[1]',
-        'top'
-    );
 }
 add_action('init', 'skills_job_listings_rewrite_rules');
 
 // Add job_id as a query var
 function skills_job_listings_query_vars($vars) {
     $vars[] = 'job_id';
-    $vars[] = 'job_page';
     return $vars;
 }
 add_filter('query_vars', 'skills_job_listings_query_vars');
