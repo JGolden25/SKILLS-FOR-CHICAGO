@@ -136,12 +136,12 @@
             overflow-x: hidden;
         }
         .action-button {
-    display: inline-flex;
+            display: inline-flex;
     align-items: center;
     justify-content: space-between;
     background-color: #8dc63f; /* Light green */
     color: #333333; /* Black text color */
-    padding: 10px 15px;
+    padding: 7px 5px 7px 15px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -194,7 +194,7 @@
     justify-content: space-between;
     background-color: #8dc63f; /* Light green */
     color: #333333; /* Black text color */
-    padding: 7px 15px;
+    padding: 3px 5px 3px 13px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -219,8 +219,8 @@
 
 
 .circle-icon {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -557,6 +557,14 @@ padding-left: 7%;
             border-top: 1px solid black;
             /* margin-top: 40px; */
         }
+
+        .partnering-section-mobile {
+            display: none;
+            align-items: center;
+            gap: 40px;
+            border-top: 1px solid black;
+            /* margin-top: 40px; */
+        }
         
         .communities-image {
             flex: 1;
@@ -565,6 +573,10 @@ padding-left: 7%;
        
         
         .communities-content {
+            flex: 1;
+        }
+
+        .access-content {
             flex: 1;
         }
         
@@ -752,7 +764,7 @@ padding-left: 7%;
             flex: 1;
         }
 
-        .communities-content {
+        .access-content {
             flex: 1;
         }
 
@@ -932,7 +944,7 @@ padding-left: 7%;
         /* CTA Section */
         .cta {
             padding: 4% 10%;
-            background-color: var(--off-white);
+            background-color: #FFFFFF;
         }
 
         .cta-container {
@@ -1361,6 +1373,21 @@ padding-left: 7%;
 
         /* Responsive adjustments */
         @media (max-width: 1024px) {
+            .partnering-section-mobile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            border-top: 1px solid black;
+            /* margin-top: 40px; */
+        }
+
+        .partnering-section-mobile {
+            /* padding: 80px 0; */
+            background-color: var(--light-gray);
+        }
+        .partnering-section {
+            display: none;  
+        }
             .cta-text {
                 margin-bottom: 20px;
                 font-size: 22px;
@@ -1627,6 +1654,12 @@ padding-left: 7%;
             background-color: var(--light-gray);
         }
 
+        .partnering-section-mobile {
+            /* padding: 80px 0; */
+            background-color: var(--light-gray);
+            display: none;
+        }
+
         .communities-container {
             display: flex;
             /* display: inline-flex; */
@@ -1634,10 +1667,15 @@ padding-left: 7%;
             justify-content: center;
             padding-left: 2%;
             gap: 60px;
-            background-color: #F2F0EF;
+            background-color: #ECECEC
         }
 
         .communities-content {
+            flex: 1;
+            padding-left: 5%;
+        }
+
+        .access-content {
             flex: 1;
             padding-left: 5%;
         }
@@ -1708,6 +1746,10 @@ padding-left: 7%;
             .communities-image, .communities-content {
                 width: 100%;
             }
+
+            .communities-image, .access-content {
+                width: 100%;
+            }
         }
 
         @media (max-width: 768px) {
@@ -1753,7 +1795,7 @@ padding-left: 7%;
             right: auto; /* Remove the right positioning */
             top: 50%;
             transform: translateY(-50%);
-            background-color: white;
+            background-color: #F7F7F7;
             z-index: 2;
             padding: 80px;
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
@@ -1805,13 +1847,13 @@ padding-left: 7%;
         }
 
         .partner-button-2 .circle-icon {
-            width: 25px;
-            height: 25px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
         }
 
         .partner-button-2 .circle-icon i {
@@ -2087,7 +2129,15 @@ padding-left: 7%;
             .communities-content {
                 margin-bottom: 10%;
                 padding-right: 3%;
-                margin-left: 4%;
+                margin-left: 9%;
+                padding-right: 10%;
+            }
+
+            .access-content {
+                margin-bottom: 10%;
+                padding-right: 3%;
+                margin-left: 9%;
+                padding-right: 5%;
             }
             
             .mobile-menu-toggle {
@@ -2153,6 +2203,30 @@ padding-left: 7%;
     .stat-number {
         font-size: 28px;
     }
+}
+
+@media (max-width: 1024px) {
+            .partnering-section-mobile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            border-top: 1px solid black;
+            /* margin-top: 40px; */
+        }
+
+        .partnering-section-mobile {
+            /* padding: 80px 0; */
+            background-color: var(--light-gray);
+        }
+        .partnering-section {
+            display: none;  
+        }
+    }
+
+    .fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
 }
     </style>
 </head>
@@ -2301,11 +2375,11 @@ padding-left: 7%;
             <div class="communities-image">
                 <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_462178768.jpeg" alt="People at a community event">
             </div>
-            <div class="communities-content">
+            <div class="access-content">
                 <h2 class="communities-title">Creating Access To Employment</h2>
                 <p class="communities-text">
                     We connect underrepresented job seekers to meaningful work, offering direct access to employers ready to hire. Through personalized support and partnerships, we help individuals take the next step toward financial security.                </p>
-                <a href="#" class="action-button" style="width: 200px; padding: 12px;">
+                <a href="#" class="action-button" style="width: 200px;">
                     <span>Find A Job</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -2323,7 +2397,7 @@ padding-left: 7%;
                 <p class="partnering-text">
                     Through strategic employer partnerships, we help businesses tap into Chicago's diverse talent pool and develop hiring practices that remove barriers to employment
                 </p>
-                <a href="#" class="action-button" style="width: 200px; padding: 12px;">
+                <a href="#" class="action-button" style="width: 200px; ">
                     <span>Partner With Us</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -2333,6 +2407,25 @@ padding-left: 7%;
         </div>
         <div class="partnering-image">
             <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_790856154.jpeg" alt="Professional in a business setting">
+        </div>
+    </section>
+    <section class="partnering-section-mobile">
+        <div class="container communities-container">
+            <div class="communities-image">
+                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_790856154.jpeg" alt="People at a community event">
+            </div>
+            <div class="access-content">
+                <h2 class="communities-title">Partnering with Employers</h2>
+                <p class="communities-text">
+                    Through strategic employer partnerships, we help businesses tap into Chicago's diverse talent pool and develop hiring practices that remove barriers to employment.
+                    </p>
+                    <a href="#" class="action-button" style="width: 200px; ">
+                        <span>Partner With Us</span>
+                        <div class="circle-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>  
+            </div>
         </div>
     </section>
 
@@ -2347,7 +2440,7 @@ padding-left: 7%;
                     <p class="communities-text">
                         We bring hiring events, job opportunities, and career resources directly to Chicago's south and west sides. By working alongside community organizations, we ensure that access to employment reaches those who need it most.
                     </p>
-                    <a href="#" class="action-button" style="width: 200px; padding: 12px;">
+                    <a href="#" class="action-button" style="width: 200px;">
                         <span>Community Impact</span>
                         <div class="circle-icon">
                             <i class="fas fa-arrow-right"></i>

@@ -125,8 +125,8 @@ p, a {
 }
 
 .skills-job-listings-wrapper .company-logo {
-    width: 100px;
-    height: 70px;
+    width: 130px;
+    height: 90px;
     object-fit: contain;
     margin-bottom: 15px;
 }
@@ -336,6 +336,7 @@ p, a {
     text-decoration: none;
     font-weight: 500;
     font-size: 16px;
+    margin-left: 1%;
 }
 
 .skills-job-listings-wrapper .back-link i {
@@ -361,7 +362,7 @@ p, a {
 
 .skills-job-listings-wrapper .company-header-logo {
     max-width: 150px;
-    height: 50px;
+    height: 90px;
     object-fit: contain;
 }
 
@@ -390,14 +391,17 @@ p, a {
 .skills-job-listings-wrapper .apply-now-button {
     display: inline-flex;
     align-items: center;
-    background-color: #8DC63F;
-    color: white;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 7px 5px 7px 15px;
+    border-radius: 25px;
     text-decoration: none;
-    border-radius: 30px;
-    padding: 10px 25px;
-    font-size: 16px;
     font-weight: 600;
-    transition: background-color 0.3s;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
 }
 
 .skills-job-listings-wrapper .apply-now-button i {
@@ -405,11 +409,81 @@ p, a {
 }
 
 .skills-job-listings-wrapper .apply-now-button:hover {
-    background-color: #7BB32F;
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
     text-decoration: none;
     color: white;
 }
 
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 7px 5px 7px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+
+.action-button span {
+    margin-right: 5px;
+}
+
+.action-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.action-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+.action-button i {
+    transform: rotate(-45deg);
+}
+
+.action-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.action-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.circle-icon {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.action-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
 /* Job Metadata Section - Two Column Layout */
 .skills-job-listings-wrapper .job-metadata-section {
     display: flex;
@@ -460,8 +534,8 @@ p, a {
 
 .skills-job-listings-wrapper .green-bullet {
     display: inline-block;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background-color: #4F6B3A;
     border-radius: 50%;
     margin-right: 12px;
@@ -607,14 +681,97 @@ p, a {
     font-weight: 500;
 }
 
+/* Job Banner Image */
+.skills-job-listings-wrapper .job-banner-image {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    background-image: url('https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/AdobeStock_871917446_50-1.jpeg'); /* You'll need to add this image */
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.skills-job-listings-wrapper .job-banner-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4));
+}
+
+.skills-job-listings-wrapper .job-banner-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.skills-job-listings-wrapper .job-banner-logo {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.skills-job-listings-wrapper .banner-company-logo {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.skills-job-listings-wrapper .job-banner-title {
+    color: white;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.skills-job-listings-wrapper .job-banner-title h1 {
+    font-size: 32px;
+    margin: 0 0 5px 0;
+}
+
+.skills-job-listings-wrapper .job-banner-title p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skills-job-listings-wrapper .job-banner-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .skills-job-listings-wrapper .job-banner-title {
+        order: 1;
+    }
+    
+    .skills-job-listings-wrapper .job-banner-logo {
+        order: 2;
+    }
+    
+    .skills-job-listings-wrapper .job-banner-apply {
+        order: 3;
+        width: 100%;
+    }
+}
+
 /* Responsive styles */
 @media (max-width: 992px) {
     .skills-job-listings-wrapper .job-listings-container {
         max-width: 100%;
         margin: 0 auto;
-        padding: 0 20px;
-        margin-left: 2%;
-        margin-right: 2%;
+        padding: 0px;
+        margin-left: 0%;
+        margin-right: 0%;
     }
 
     :root :where(.is-layout-constrained) > :last-child {

@@ -586,9 +586,16 @@ function skills_render_job_detail($job_id) {
         esc_url($job->{'Account Logo'}) : 
         "https://api.placeholder.com/120x60?text=" . urlencode($job->Employer);
     
-    // Back to listings link
-    echo '<a href="' . esc_url(remove_query_arg('job_id')) . '" class="back-link"><i class="fas fa-arrow-left"></i> Back to all jobs</a>';
     
+    // Back to listings link
+echo '<a href="' . esc_url(remove_query_arg('job_id')) . '" class="back-link"><i class="fas fa-arrow-left"></i> Back to all jobs</a>';
+
+// Add the banner image section
+echo '<div class="job-banner-image">
+</div>';
+
+echo '<div class="job-detail-container">';
+
     echo '<div class="job-detail-container">';
     
     // Job Title Header with Logo - NEW LAYOUT
@@ -607,7 +614,12 @@ function skills_render_job_detail($job_id) {
     
     // Right - Apply Button
     echo '<div class="apply-button-container">';
-    echo '<a href="#" class="apply-now-button">Apply Now <i class="fas fa-arrow-right"></i></a>';
+    echo '<a href="#" class="action-button" style="width: 150px;">
+                    <span>Apply Now</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a> ';
     echo '</div>';
     
     echo '</div>'; // End job-title-header
