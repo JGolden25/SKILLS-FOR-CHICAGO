@@ -42,45 +42,45 @@
         font-family: Greycliff
       } */
         
-        #intro-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #ffffff;
-            z-index: 9999;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        #logo-container {
-            position: relative;
-            width: 80%;
-            max-width: 700px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s ease forwards;
-        }
-        
-        #intro-logo {
-            width: 100%;
-            height: auto;
-        }
-        
-        /* The circular mask creates the "zoom through" effect */
-        #circular-mask {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #E6F0DC;
-            /* Position targeted at the 'o' in Chicago - may need adjustment based on exact logo dimensions */
-            clip-path: circle(0% at 76% 67%);
-            animation: expandCircle 1.5s ease-in-out 2s forwards;
-        }
+      #intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-container {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+#intro-logo {
+    width: 100%;
+    height: auto;
+}
+
+
+
+@keyframes expandCircleSeparate {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 300%;
+        height: 300%;
+    }
+}
         
         #main-content {
             opacity: 0;
@@ -2238,6 +2238,8 @@ padding-left: 7%;
     <div id="intro-overlay">
         <div id="logo-container">
             <img id="intro-logo" src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo">
+        </div>
+        <div id="circular-mask-container">
             <div id="circular-mask"></div>
         </div>
     </div>
