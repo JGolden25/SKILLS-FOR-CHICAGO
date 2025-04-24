@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Chicago - Community Partners</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <title>Skills for Chicago - Annual Reports & Financials</title>
     <style>
         /* Reset and Base Styles */
         * {
@@ -15,6 +13,27 @@
             box-sizing: border-box;
             font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
         }
+        @font-face { font-family: Greycliff CF; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+
+@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+h1 {
+ font-family: Greycliff CF;
+}
+h2 {
+ font-family: Greycliff CF, bold;
+}
+p {
+font-family: Greycliff-thin, sans-serif;
+}
+a {
+            text-decoration: none;
+            color: inherit;
+            font-family: Greycliff CF, light;
+    font-weight: 300;
+        }
+span {
+font-family: Greycliff CF
+}
         
         body {
             line-height: 1.6;
@@ -28,55 +47,42 @@
 .elementor-column-gap-default>.elementor-column>.elementor-element-populated {
     padding: 0px;
 }
-
-        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
-
-@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
-h1 {
- font-family: Greycliff CF;
-}
-h2 {
- font-family: Greycliff CF;
-}
-h3 {
- font-family: Greycliff CF;
-}
-p {
-font-family: Greycliff CF, light;
-}
-a {
-font-family: Greycliff CF, light;
-}
-span {
-font-family: Greycliff CF;
-}
         
-        a {
+a {
             text-decoration: none;
             color: inherit;
+            font-family: Greycliff CF, light;
+    font-weight: 300;
         }
 
         .container {
-            /* max-width: 1300px; */
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0% 0% 0% 8%;
+            padding: 0 20px;
         }
-        
+
+        /* PART 1: TOP SECTION */
         /* Banner Styles */
         .banner {
             background-color: #1e3a14;
             color: white;
             padding: 12px 0;
+            text-align: center;
         }
         
         .banner-container {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         .banner-text {
             font-size: 15px;
+            flex-grow: 1;
+            text-align: center;
         }
         
         .learn-more-btn {
@@ -84,27 +90,17 @@ font-family: Greycliff CF;
             color: white;
             border: 1px solid white;
             border-radius: 25px;
-            padding: 6px 16px;
+            padding: 8px 16px;
             font-size: 14px;
             cursor: pointer;
             display: inline-block;
+            margin-left: 15px;
+            white-space: nowrap;
         }
 
-        /* Social Icons */
-        .social-icons {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .social-icon {
-            width: 20px;
-            height: 20px;
-            background-color: white;
-            border-radius: 50%;
-        }
-        
-        /* Header Styles */
-        .header {
+         /* Header Styles */
+         .header {
+            background-color: #ffffff;
             padding: 15px 0;
             border-bottom: 1px solid #eee;
             position: relative;
@@ -138,80 +134,27 @@ font-family: Greycliff CF;
             color: #333;
             font-size: 15px;
             font-weight: 500;
+            font-family: Greycliff-thin, sans-serif;
         }
         
-        .donate-btn {
-            background-color: #67b346;
-            color: white;
-            border-radius: 25px;
-            padding: 8px 25px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-weight: 500;
-        }
-        
-        .donate-btn-icon {
-            width: 16px;
-            height: 16px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .donate-btn-icon::after {
-            content: '→';
-            color: #67b346;
-            font-size: 12px;
-        }
-        
-        /* Reports Section */
-        .reports-section {
-            /* padding: 50px 0;  */
-        }
-        
-        .reports-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px; /* Reduced gap */
-            align-items: center;
-        }
-        
-        .reports-content h1 {
-            font-size: 42px;
-            font-weight: 800;
-            line-height: 1.2;
-            margin-bottom: 15px;
-            color: #1a1a1a;
-        }
-        
-        .reports-tagline {
-            font-size: 20px;
-            color: #526e3f;
-            margin-bottom: 25px;
-            font-weight: 600;
-        }
-
         .donate-button {
-    display: inline-flex;
+            display: inline-flex;
     align-items: center;
     justify-content: space-between;
     background-color: #8dc63f; /* Light green */
     color: #333333; /* Black text color */
-    padding: 5px 5px 5px 13px;
+    padding: 7px 5px 7px 15px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 18px;
     transition: all 0.3s ease;
-    width: 175px; /* Adjust width as needed */
-    border: 1px solid black;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
 }
 
 .donate-button span {
-    margin-right: 5px; 
+    margin-left: 3%; 
 }
 
 .donate-button:hover .circle-icon i {
@@ -248,426 +191,121 @@ font-family: Greycliff CF;
     justify-content: center;
 }
 
-.fiscal-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #8dc63f; /* Light green */
-    color: #333333; /* Black text color */
-    padding: 5px 5px 5px 13px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    width: 200px; /* Adjust width as needed */
-    border: 1px solid black;
-}
-
-.fiscal-button span {
-    margin-right: 5px; 
-}
-
-.fiscal-button:hover .circle-icon i {
-    color: #333333; /* Black arrow */
-    font-size: 12px;
-    transform: rotate(90deg);
-}
-
-.fiscal-button:hover {
-    background-color: #7db32e; /* Slightly darker on hover */
-    transform: translateY(-2px);
-}
-
-.fiscal-button i {
-    transform: rotate(0deg);
-}
-
-.fiscal-button > .circle-icon i:hover {
-    transform: rotate(90deg);
-}
-
-.fiscal-button i {
-    font-size: 14px;
-    transition: transform 0.3s ease;
-}
-
-.year-dropdown {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    margin-top: 10px;
-    width: 200px;
-    z-index: 100;
-    display: none;
-}
-
-.year-dropdown.active {
-    display: block;
-}
-
-.year-option {
-    padding: 12px 20px;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-}
-
-.year-option:hover {
-    background-color: #f5f5f5;
-}
-
-.year-option:last-child {
-    border-bottom: none;
-}
+    /* Collaborate Section */
+    .collaborate-section {
+            padding: 30px 0;
+            background-color: #fff;
+        }
         
-        .reports-description {
-            font-size: 22px;
+        .collaborate-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            max-width: 90%;
+            margin: 0 auto;
+            padding: 0 20px;
+            align-items: flex-start;
+        }
+
+        .collaborate-content {
+            margin-top: 6.5%;
+        }
+        
+        .collaborate-content h1 {
+            font-size: 48px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            line-height: 1.2;
+        }
+        
+        .collaborate-subtitle {
+            font-size: 24px;
+            font-weight: 600;
+            color: #526e3f;
+            margin-bottom: 30px;
+        }
+        
+        .collaborate-description {
+            font-size: 18px;
             line-height: 1.7;
             color: #444;
-            margin-bottom: 30px;
-            width: 70%;
+            margin-bottom: 40px;
         }
         
-        .select-year-btn {
-            background-color: #8cc063;
-            color: #333;
-            border-radius: 50px;
-            padding: 12px 30px 12px 25px;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
+        .how-we-work {
+            font-size: 24px;
             font-weight: 600;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
+            color: #526e3f;
+            margin-bottom: 30px;
         }
         
-        .select-year-icon {
-            width: 24px;
-            height: 24px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        
+        .how-we-work {
+            font-size: 24px;
+            font-weight: 600;
+            color: #526e3f;
+            margin-bottom: 30px;
         }
         
-        .select-year-icon::after {
-            content: '↓';
-            font-size: 14px;
-        }
-        
-        .reports-image {
-            width: 100%;
-            height: 0;
-            padding-bottom: 100%; /* Makes the container square */
-            position: relative;
-            /* border-radius: 5px; */
-            overflow: hidden;
-            border-left: 1px solid black;
-        }
-        
-        .reports-image img {
-            position: absolute;
-            top: 0;
-            left: 0;
+        .collaborate-image {
             width: 100%;
             height: 100%;
+            overflow: hidden;
+        }
+        
+        .collaborate-image img {
+            width: 100%;
+            height: 725px;
+            border-radius: 35px;
             object-fit: cover;
         }
-        
-           /* Footer Content */
-           .modern-footer {
-    background-color: #1F3707;
-    color: white;
-    padding: 60px 0 0 0;
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    position: relative;
-    overflow: hidden; /* Keep the background logo contained within the footer */
-}
 
-/* Add the SC logo as a background on the left side */
-.modern-footer::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -10%; /* Position on the left side instead of right */
-    transform: translateY(-50%);
-    width: 60%; /* Large size to match the image */
-    height: 140%;
-    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    z-index: 0;
-    opacity: 0.45; /* Dark but subtle appearance */
-}
-
-/* Ensure footer content stays on top of the background image */
-.footer-container, .footer-copyright {
-    position: relative;
-    z-index: 1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .modern-footer::before {
-        width: 100%;
-        left: -20%;
-    }
-}
-
-    .footer-container {
-        padding: 0 6%;
-    }
-
-    .footer-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-        position: relative;
-    }
-    
-    .footer-divider {
-        flex: 1;
-        height: 1px;
-        background-color: #ffffff;
-        margin: 0 40px;
-    }
-
-    .footer-logo img {
-        height: 80px;
-    }
-
-    .footer-social {
-        display: flex;
-        gap: 20px;
-    }
-
-    .footer-social a {
-        color: white;
-        font-size: 20px;
-        transition: opacity 0.3s ease;
-    }
-
-    .footer-social a:hover {
-        opacity: 0.8;
-    }
-
-    /* Updated footer navigation styles to fix vertical alignment */
-    .footer-nav {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start; /* Changed from center to flex-start */
-        margin-bottom: 60px;
-    }
-
-    .footer-nav-section {
-        display: flex;
-        flex-direction: column;
-        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
-    }
-
-    .footer-nav-section h3 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 25px;
-        text-transform: uppercase;
-        height: 22px; /* Fixed height for the heading */
-        line-height: 22px; /* Match the height to ensure consistent alignment */
-    }
-
-    .footer-nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .footer-nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        transition: opacity 0.3s ease;
-    }
-
-    .footer-nav-links a:hover {
-        opacity: 0.8;
-        text-decoration: underline;
-    }
-
-    .footer-copyright {
-        background-color: #1F3707;
-        padding: 20px 0;
-        text-align: center;
-        font-size: 14px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-        .reports-description {
-            font-size: 22px;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 30px;
-            width: 100%;
-        }
-        .footer-nav {
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .footer-nav-section {
-            flex: 1 0 30%;
-            min-height: auto;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .footer-top {
-            flex-direction: column;
-            gap: 30px;
-            text-align: center;
-        }
-
-        .footer-nav {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .footer-nav-section {
-            width: 100%;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .footer-nav {
-            grid-template-columns: 1fr;
-            text-align: center;
-        }
-    }
-        
-        .contact-info {
-            margin-top: 15px;
-        }
-        
-        .contact-item {
-            margin-bottom: 10px;
-            font-size: 15px;
-        }
-        
-        /* Copyright */
-        .copyright {
-            background-color: #1e3a14;
+        /* PART 2: MIDDLE SECTION */
+        /* Work Together Section */
+        .work-together-section {
+            padding: 35px 0;
+            background-color: #000000;
             color: white;
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
         }
         
-        /* Year Dropdown */
-        .year-dropdown {
-            position: absolute;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-top: 10px;
-            width: 200px;
-            z-index: 100;
-            display: none;
+        .work-together-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
-        .year-dropdown.active {
-            display: block;
+        .work-together-content h2 {
+            font-size: 50px;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    width: 1000px;
         }
         
-        .year-option {
-            padding: 12px 20px;
-            border-bottom: 1px solid #eee;
-            cursor: pointer;
+        .work-together-description {
+            font-size: 28px;
         }
         
-        .year-option:hover {
-            background-color: #f5f5f5;
+        .partner-button {
+            display: inline-flex;
+            align-items: center;
+            background-color: #8dc63f;
+            color: #1e3a14;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 16px;
+            gap: 10px;
+            transition: all 0.3s ease;
         }
         
-        .year-option:last-child {
-            border-bottom: none;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 1024px) {
-            .footer-container {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .footer-logo-section {
-                grid-column: span 3;
-                text-align: center;
-                margin-bottom: 30px;
-            }
-            
-            .footer-logo {
-                margin: 0 auto 20px;
-            }
-        }
-        
-        @media (max-width: 900px) {
-            .reports-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 0px;
-            }
-
-            .reports-content {
-                padding: 0px 5% 10% 6%;
-            }
-            
-            .reports-image {
-                padding-bottom: 80%; /* Slightly less square on mobile */
-                order: -1;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .footer-container {
-                grid-template-columns: 1fr;
-                text-align: center;
-            }
-            
-            .footer-nav-links {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .footer-nav-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .social-icons {
-                justify-content: center;
-            }
-            
-            .footer-heading {
-                margin-top: 20px;
-            }
-            
-            .banner-container {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
+        .partner-button:hover {
+            background-color: #a2d552;
+            transform: translateY(-2px);
         }
 
         .fa-arrow-right:before {
@@ -675,9 +313,35 @@ font-family: Greycliff CF;
     color: #7D7E7E;
     font-size: 18px;
 }
+        
+        /* PART 3: BOTTOM SECTION */
+        /* How We Work List */
+        .partner-list {
+            list-style: none;
+            margin-top: 20px;
+        }
+        
+        .partner-list li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        
+        .partner-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #526e3f;
+        }
 
-     /* Responsive */
-     @media (max-width: 1024px) {
+        /* Responsive */
+        @media (max-width: 1024px) {
             .collaborate-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
@@ -1031,23 +695,28 @@ font-family: Greycliff CF;
             opacity: 1;
             text-decoration: underline;
         }
+
     </style>
 </head>
 <body>
-    <!-- Banner Section -->
-    <div class="banner">
-        <div class="banner-container">
-            <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
-            <a href="#" class="learn-more-btn">Learn More</a>
+    <!-- PART 1: TOP SECTION (pt1ofpg) -->
+    <section id="pt1ofpg">
+        <!-- Banner Section -->
+        <div class="banner">
+            <div class="banner-container">
+                <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
+                <a href="#" class="learn-more-btn">Learn More</a>
+            </div>
         </div>
-    </div>
 
-    <!-- Header -->
-    <header class="header">
+     <!-- Header -->
+     <header class="header">
         <div class="header-container">
             <a href="#" class="logo-link">
                 <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo" class="logo">
             </a>
+            
+            <!-- Desktop Navigation -->
             <nav class="main-nav">
                 <div class="nav-links">
                     <a href="#">Home</a>
@@ -1060,45 +729,97 @@ font-family: Greycliff CF;
                     <a href="#">National Expansion</a>
                     <a href="#">Contact Us</a>
                 </div>
-                <a href="#" class="donate-button">
-                    <span>Donate Now</span>
+                <a href="#" class="donate-button" style="padding: 4px 5px 4px 10px; font-size: 13px;">
+                    <span>Donate</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
                     </div>
-                </a>   
+                </a>    
             </nav>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            
+            <!-- Mobile Navigation Panel -->
+            <div class="mobile-nav">
+                <div class="mobile-nav-links">
+                    <a href="#">Home</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Job Seekers</a>
+                    <a href="#">Employers</a>
+                    <a href="#">Community Partners</a>
+                    <a href="#">Donors</a>
+                    <a href="#">Events</a>
+                    <a href="#">National Expansion</a>
+                    <a href="#">Contact Us</a>
+                </div>
+                <a href="#" class="donate-button mobile-donate-button">
+                    <span>Donate</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Overlay for mobile menu -->
+            <div class="overlay"></div>
         </div>
     </header>
+    </section>
 
-    <!-- Reports Section -->
-    <section class="reports-section">
-        <div class="container reports-container">
-            <div class="reports-content">
-                <h1>Annual Reports & Financials</h1>
-                <div class="reports-tagline">Transparency. Accountability. Impact.</div>
-                <p class="reports-description">
-                    At Skills for Chicago, we are committed to responsible stewardship of our resources and ensuring that every dollar contributes to expanding access to employment for underrepresented job seekers. Our annual reports and financial statements provide a detailed look at our progress, partnerships, and the lives we impact each year. Explore our reports to see how we're driving economic mobility and advancing equitable hiring in Chicago.
+    <!-- PART 2: MIDDLE SECTION (pt2ofpg) - Combined Collaborate and Partner Details -->
+    <section id="pt2ofpg" class="collaborate-section">
+        <div class="collaborate-container">
+            <div class="collaborate-content">
+                <h1>Collaborate With Us</h1>
+                <div class="collaborate-subtitle">Stronger Partnerships. Greater Impact.</div>
+                <p class="collaborate-description">
+                    At Skills for Chicago, we believe that meaningful employment starts with strong community connections. By working with nonprofits, workforce organizations, and educational institutions, we expand access to job opportunities, training, and career resources for job seekers across Chicago's south and west sides.
                 </p>
-                <div style="position: relative;">
-                    <button id="yearDropdownBtn" class="fiscal-button">
-                        <span>Select Fiscal Year</span>
-                        <div class="circle-icon">
-                            <i class="fas fa-arrow-right"></i> <!-- Changed to down arrow -->
-                        </div>
-                    </button>
-                    <div class="year-dropdown" id="yearDropdown">
-                        <div class="year-option">2024</div>
-                        <div class="year-option">2023</div>
-                        <div class="year-option">2022</div>
-                    </div>
-                </div>
+                <h2 class="how-we-work">How We Work with Community Partners</h2>
+                
+                <ul class="partner-list">
+                    <li>
+                        Connecting Job Seekers to Employment – Linking individuals to open roles and hiring employers
+                    </li>
+                    <li>
+                        Partnering with Local Hiring & Networking Events – Creating opportunities for job seekers to connect directly with employers
+                    </li>
+                    <li>
+                        Strengthening Local Networks – Collaborating to expand career pathways career opportunities and reduce employment barriers
+                    </li>
+                </ul>
             </div>
-            <div class="reports-image">
-                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_220790389.jpeg" alt="Professional in meeting">
+            <div class="collaborate-image">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/AdobeStock_497164805_20.jpeg" alt="Two people collaborating with tablet">
             </div>
         </div>
     </section>
 
+        <!-- Work Together Section -->
+        <section class="work-together-section">
+            <div class="work-together-container">
+                <div class="work-together-content">
+                    <h2>Let's Work Together To Build A Stronger Workforce And Create Economic Mobility.</h2>
+                    <p class="work-together-description">Support job seekers and drive local impact.</p>
+                </div>
+                <a href="#" class="donate-button" style="width:275px;">
+                    <span>Partner With Us</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>    
+            </div>
+        </section>
+    </section>
+        
     <!-- Footer Content -->
     <footer class="modern-footer">
         <div class="footer-container">
@@ -1326,72 +1047,48 @@ font-family: Greycliff CF;
             </div>
         </div>
     </footer>
+</div>
 
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    // Year dropdown functionality
-    const yearDropdownBtn = document.getElementById('yearDropdownBtn');
-    const yearDropdown = document.getElementById('yearDropdown');
-    const yearOptions = document.querySelectorAll('.year-option');
-    
-    // Define PDF paths for each year
-    const pdfPaths = {
-        '2024': '/Users/josephchretien/Downloads/SKILLSWEBPAGES/2024_IAP_Project_Budget_Joseph_Chretien-Golden.pdf',
-        '2023': 'https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/2023-Impact-Report.pdf',
-        '2022': 'https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/2022-Impact-Report.pdf'
-    };
-    
-    // Toggle dropdown when button is clicked
-    yearDropdownBtn.addEventListener('click', function() {
-        yearDropdown.classList.toggle('active');
-        // Toggle the arrow direction when dropdown is opened/closed
-        const arrow = this.querySelector('.fas');
-        if (yearDropdown.classList.contains('active')) {
-            arrow.classList.remove('fa-arrow-right');
-            arrow.classList.add('fa-arrow-down');
-        } else {
-            arrow.classList.remove('fa-arrow-down');
-            arrow.classList.add('fa-arrow-right');
-        }
-    });
-    
-    
-    // Close dropdown when clicking outside
-    document.addEventListener('click', function(event) {
-        if (!yearDropdownBtn.contains(event.target) && !yearDropdown.contains(event.target)) {
-            yearDropdown.classList.remove('active');
-            const arrow = yearDropdownBtn.querySelector('.fas');
-            arrow.classList.remove('fa-arrow-down');
-            arrow.classList.add('fa-arrow-right');
-        }
-    });
-    
-    // Select year when an option is clicked
-    yearOptions.forEach(option => {
-        option.addEventListener('click', function() {
-            const selectedYear = this.textContent;
-            // Update the button text
-            yearDropdownBtn.querySelector('span').textContent = `Fiscal Year ${selectedYear}`;
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
             
-            // Close the dropdown
-            yearDropdown.classList.remove('active');
+            // Add animation to sections when they come into view
+            const animateSections = () => {
+                const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const isVisible = rect.top <= window.innerHeight * 0.8;
+                    
+                    if (isVisible) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            };
             
-            // Reset the arrow to right
-            const arrow = yearDropdownBtn.querySelector('.fas');
-            arrow.classList.remove('fa-arrow-down');
-            arrow.classList.add('fa-arrow-right');
+            // Set initial styles for animation
+            const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
             
-            // Open the PDF for the selected year
-            console.log(`Opening annual report for ${selectedYear}`);
-            
-            if (pdfPaths[selectedYear]) {
-                // Open the PDF in a new tab
-                window.open(pdfPaths[selectedYear], '_blank');
-            }
-        });
-    });
-     // Run on load and scroll
-     animateSections();
+            // Run on load and scroll
+            animateSections();
             window.addEventListener('scroll', animateSections);
             
             // Mobile menu toggle functionality
@@ -1427,7 +1124,7 @@ font-family: Greycliff CF;
                     });
                 });
             });
-});
+        });
     </script>
 </body>
 </html>

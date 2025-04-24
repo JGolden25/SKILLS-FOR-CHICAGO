@@ -25,24 +25,30 @@
 
 @font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
 h1 {
- font-family: Greycliff
+ font-family: Greycliff CF, Bold;
 }
 h2 {
- font-family: Greycliff
+ font-family: Greycliff CF, Bold;
 }
 h3 {
- font-family: Greycliff
+ font-family: Greycliff CF, Bold;
 }
 p {
-font-family: Greycliff-thin
+font-family: Greycliff CF, Light;
 }
 a {
-font-family: Greycliff-thin
+font-family: Greycliff CF, Light;
 }
 span {
-font-family: Greycliff
+font-family: Greycliff CF, Bold;
 }
-        
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100%;
+}
+
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0px;
+} 
         a {
             text-decoration: none;
             color: inherit;
@@ -209,7 +215,7 @@ font-family: Greycliff
         }
         
         .careers-content h1 {
-            font-size: 42px;
+            font-size: 52px;
             font-weight: 800;
             line-height: 1.2;
             margin-bottom: 15px;
@@ -217,17 +223,18 @@ font-family: Greycliff
         }
         
         .careers-subtitle {
-            font-size: 20px;
+            font-size: 26px;
             color: #526e3f;
             margin-bottom: 25px;
             font-weight: 600;
         }
         
         .careers-description {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 30px;
+            font-size: 22px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 30px;
+    font-weight: 400;
         }
         
         .careers-image {
@@ -278,8 +285,8 @@ font-family: Greycliff
             margin-top: 30px;
         }
         
-                /* Footer Content */
-                .modern-footer {
+         /* Footer Content */
+         .modern-footer {
     background-color: #1F3707;
     color: white;
     padding: 60px 0 0 0;
@@ -408,6 +415,29 @@ font-family: Greycliff
 
     /* Responsive adjustments */
     @media (max-width: 1024px) {
+        .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0px;
+            }
+            .profile-social-link-big {
+    position: absolute;
+    top: 290px;
+    right: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 0.3seas;
+}
+            .team-description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+            width: 100%;
+        }
+
+            .team-content {
+                padding: 0px 5% 5% 5%;
+            }
         .footer-nav {
             flex-wrap: wrap;
             gap: 30px;
@@ -467,6 +497,31 @@ font-family: Greycliff
         
         /* Responsive Adjustments */
         @media (max-width: 1024px) {
+            .profile-social-link {
+            position: absolute;
+    top: 165px;
+    right: 295px; }
+            .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .team-image {
+                order: -1;
+            }
+            
+            .staff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .staff-grid-small {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .board-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
             .footer-container {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -480,26 +535,6 @@ font-family: Greycliff
             .footer-logo {
                 margin: 0 auto 20px;
             }
-            .careers-container {
-   gap: 0px;
-    padding: 0px 0px 0px 0px;
-        }
-        }
-        
-        @media (max-width: 900px) {
-            .careers-container {
-                grid-template-columns: 1fr;
-                gap: 0px;
-            }
-            
-            .careers-image {
-                order: -1;
-                height: 300px;
-            }
-            
-            .careers-content {
-                padding: 10px 20px;
-            }
         }
         
         @media (max-width: 768px) {
@@ -507,10 +542,30 @@ font-family: Greycliff
                 display: none;
             }
             
-            .cta-title {
-                font-size: 24px;
+            .staff-grid {
+                grid-template-columns: 1fr;
             }
             
+            .staff-grid-small {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .featured-board-member {
+                grid-template-columns: 1fr;
+            }
+            
+            .board-member-image {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .board-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
             .footer-container {
                 grid-template-columns: 1fr;
                 text-align: center;
@@ -526,7 +581,7 @@ font-family: Greycliff
                 gap: 20px;
             }
             
-            .social-icons {
+            .footer-social-icons {
                 justify-content: center;
             }
             
@@ -540,6 +595,860 @@ font-family: Greycliff
                 text-align: center;
             }
         }
+        
+        @media (max-width: 480px) {
+            .staff-grid-small {
+                grid-template-columns: 1fr;
+            }
+            
+            .board-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chair-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        p {
+            font-size: 22px;
+        }
+
+        .board-intro {
+            font-size: 22px;
+        }
+        .board-member-bio {
+            font-size: 22px;
+        }
+
+        .fa-linkedin-in2:before {
+    content: "\f0e1";
+    font-size: 30px;
+}
+
+.fa-linkedin-in2:before {
+    content: "\f0e1";
+}
+
+        /* Footer Content */
+        .modern-footer {
+    background-color: #1F3707;
+    color: white;
+    padding: 60px 0 0 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Keep the background logo contained within the footer */
+}
+
+/* Add the SC logo as a background on the left side */
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Position on the left side instead of right */
+    transform: translateY(-50%);
+    width: 60%; /* Large size to match the image */
+    height: 140%;
+    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.45; /* Dark but subtle appearance */
+}
+
+/* Ensure footer content stays on top of the background image */
+.footer-container, .footer-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+.partner-list {
+    margin-left: 2%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modern-footer::before {
+        width: 100%;
+        left: -20%;
+    }
+}
+
+    .footer-container {
+        padding: 0 6%;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+
+    .employer-partner-text {
+        margin-bottom: 2%;
+        font-size: 22px;
+        font-family: Greycliff CF, Light;
+    }
+    
+    .footer-divider {
+        flex: 1;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 40px;
+    }
+
+    .footer-logo img {
+        height: 80px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        opacity: 0.8;
+    }
+
+    /* Updated footer navigation styles to fix vertical alignment */
+    .footer-nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start; /* Changed from center to flex-start */
+        margin-bottom: 60px;
+    }
+
+    .footer-nav-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+    }
+
+    .footer-nav-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        height: 22px; /* Fixed height for the heading */
+        line-height: 22px; /* Match the height to ensure consistent alignment */
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .footer-copyright {
+        background-color: #1F3707;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0px;
+            }
+            .profile-social-link-big {
+    position: absolute;
+    top: 290px;
+    right: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 0.3seas;
+}
+            .team-description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+            width: 100%;
+            margin-bottom: 5%;
+        }
+
+            .team-content {
+                padding: 0px 5% 5% 5%;
+            }
+        .footer-nav {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-nav-section {
+            flex: 1 0 30%;
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-top {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-nav-section {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-nav {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+        
+        .contact-info {
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            margin-bottom: 10px;
+            font-size: 15px;
+        }
+        
+        /* Copyright */
+        .copyright {
+            background-color: #1e3a14;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .team-image {
+                order: -1;
+            }
+            
+            .staff-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .staff-grid-small {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .board-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .footer-logo-section {
+                grid-column: span 3;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            .footer-logo {
+                margin: 0 auto 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .staff-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .staff-grid-small {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .featured-board-member {
+                grid-template-columns: 1fr;
+            }
+            
+            .board-member-image {
+                max-width: 250px;
+                margin: 0 auto;
+            }
+            
+            .chairs-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .board-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-nav-links {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .footer-nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-social-icons {
+                justify-content: center;
+            }
+            
+            .footer-heading {
+                margin-top: 20px;
+            }
+            
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .staff-grid-small {
+                grid-template-columns: 1fr;
+            }
+            
+            .board-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .chair-card {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
+        p {
+            font-size: 22px;
+        }
+
+        .board-intro {
+            font-size: 22px;
+        }
+        .board-member-bio {
+            font-size: 22px;
+        }
+        .two-column-section {
+        padding: 60px 0;
+        border-bottom: 1px solid black;
+        background-color: #FFFFFF;
+        margin-left: 2%;
+    }
+
+    li.employer-partner-text::marker {
+        display: hidden;
+        font-size: 0px;
+    }
+    
+    .container2 {
+        max-width: 2800px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    .columns-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+    }
+    
+    .column {
+        padding: 0 20px;
+    }
+    
+    .column-title {
+        font-family: Greycliff, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 36px;
+        font-weight: 800;
+        color: #4F6B3A;
+        margin-bottom: 25px;
+    }
+    
+    .column-text {
+        font-family: Greycliff-thin, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 22px;
+        line-height: 1.7;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .text-link {
+        color: #4F6B3A;
+        font-weight: bold;
+        text-decoration: underline;
+        font-family: Greycliff, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    .emphasis {
+        font-weight: 600;
+    }
+    
+    @media (max-width: 1024px) {
+        .columns-container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        .column {
+            padding: 0 5%;
+        }
+    }
+
+     /* Responsive */
+ @media (max-width: 1024px) {
+            .collaborate-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .collaborate-content {
+                order: 1;
+            }
+            
+            .collaborate-image {
+                order: 0;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .footer-nav {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .work-together-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .footer-nav {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .footer-top {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .footer-divider {
+                width: 100%;
+                margin: 20px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer-nav {
+                grid-template-columns: 1fr;
+            }
+            
+            .collaborate-content h1 {
+                font-size: 32px;
+            }
+            
+            .collaborate-subtitle,
+            .how-we-work {
+                font-size: 20px;
+            }
+            
+            .work-together-content h2 {
+                font-size: 28px;
+            }
+        }
+
+          /* Footer Content */
+          .modern-footer {
+            background-color: #1F3707;
+            color: white;
+            padding: 60px 0 0 0;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            position: relative;
+            overflow: hidden; /* Keep the background logo contained within the footer */
+        }
+
+        /* Add the SC logo as a background on the left side */
+        .modern-footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10%; /* Position on the left side instead of right */
+            transform: translateY(-50%);
+            width: 60%; /* Large size to match the image */
+            height: 140%;
+            background-image: url('https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Artboard-1-copy.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 0;
+            opacity: 0.20; /* Dark but subtle appearance */
+        }
+
+        /* Ensure footer content stays on top of the background image */
+        .footer-container, .footer-copyright {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-container {
+            padding: 0 6%;
+            font-weight: 600;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .footer-divider {
+            flex: 1;
+            height: 1px;
+            background-color: #ffffff;
+            margin: 0 40px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            opacity: 0.8;
+        }
+
+         /* Updated footer navigation styles to fix vertical alignment */
+         .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Changed from center to flex-start */
+            margin-bottom: 60px;
+        }
+
+        .footer-nav-section {
+            display: flex;
+            flex-direction: column;
+            min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+        }
+
+        .footer-nav-section h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            height: 22px; /* Fixed height for the heading */
+            line-height: 22px; /* Match the height to ensure consistent alignment */
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            font-weight: 300;
+            font-family: Greycliff-thin, sans-serif;
+        }
+
+        .footer-nav-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            background-color: #1F3707;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #DCDCDC;
+        }
+
+        /* NEW STYLES FOR MOBILE FOOTER ACCORDION */
+        .footer-accordion {
+            display: none; /* Hide on desktop */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-accordion-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-accordion-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+
+        .footer-accordion-icon {
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .footer-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .footer-accordion.active .footer-accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .footer-accordion.active .footer-accordion-content {
+            max-height: 300px; /* Adjust as needed */
+            padding-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1354px) {
+            .collaborate-image img {
+            width: 100%;
+            height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+
+        .work-together-content h2 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-container {
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+
+            .header {
+            padding: 15px 15px;
+            }
+            /* .partnering-section-mobile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            border-top: 1px solid black;
+        }
+
+        .partnering-section-mobile {
+            background-color: var(--light-gray);
+        }
+        .partnering-section {
+            display: none;  
+        }
+            .cta-text {
+                margin-bottom: 20px;
+                font-size: 22px;
+                width: 60%;
+            }
+            .hero-image {
+                flex: 1;
+                text-align: right;
+                object-fit: cover;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+                border-radius: 70px;
+                height: 400px;
+                object-fit: cover;
+            } */
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+            .footer-nav-section {
+                flex: 1 0 30%;
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-top {
+                flex-direction: column;
+                gap: 0px;
+                text-align: center;
+                margin-bottom: 0px;
+            }
+
+            /* Hide desktop footer navigation and show accordion */
+            .footer-nav {
+                display: none;
+            }
+
+            .footer-accordion {
+                display: block;
+            }
+
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-nav {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Mobile Footer Links */
+        .footer-mobile-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-mobile-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-mobile-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            opacity: 0.9;
+            text-align: left;
+        }
+
+        .footer-mobile-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+/* Job Listings Styles */
+.job-listings {
+    margin-top: 30px;
+}
+
+.job-listing {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+.job-title {
+    font-size: 28px;
+    font-weight: 700;
+    font-family: Greycliff CF, Bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.job-meta {
+    font-size: 18px;
+    color: #7D7E7E;
+    margin-bottom: 15px;
+    font-family: Greycliff CF, Light;
+}
+
+.job-description {
+    font-size: 22px;
+    line-height: 1.6;
+    color: #7D7E7E;
+    margin-bottom: 15px;
+    font-family: Greycliff CF, Light;
+}
+
+.job-divider {
+    height: 1px;
+    background-color: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .job-title {
+        font-size: 24px;
+    }
+    
+    .job-meta {
+        font-size: 16px;
+    }
+    
+    .job-description {
+        font-size: 18px;
+    }
+}
     </style>
 </head>
 <body>
@@ -613,6 +1522,46 @@ font-family: Greycliff
         </div>
     </section>
 
+    <!-- Open Positions Section -->
+<!-- <section class="positions-section">
+    <div class="container">
+        <h2 class="positions-title">Open Positions</h2> -->
+        
+        <!-- Job Listing Container -->
+        <!-- <div class="job-listings"> -->
+            <!-- Job 1 -->
+            <!-- <div class="job-listing">
+                <h3 class="job-title">Employment Engagement Manager</h3>
+                <div class="job-meta">Chicago, IL | Posting Date: 03/15/2025</div>
+                <div class="job-description">
+                    <strong>Description:</strong> This role focuses on building relationships with employees and stakeholders to create a positive workplace culture. The ability to combine strategic planning and project management to deliver value to our clients is key for success.
+                </div>
+                <div class="job-divider"></div>
+            </div> -->
+            
+            <!-- Job 2 -->
+            <!-- <div class="job-listing">
+                <h3 class="job-title">Unity Partnerships Associate</h3>
+                <div class="job-meta">Chicago, IL | Posting Date: 03/15/2025</div>
+                <div class="job-description">
+                    <strong>Description:</strong> This role targets our partnerships associate at Skills. The role manages and develops partnerships with clients, and helps with sales and marketing
+                </div>
+                <div class="job-divider"></div>
+            </div> -->
+            
+            <!-- Job 3 -->
+            <!-- <div class="job-listing">
+                <h3 class="job-title">Talent Acquisition Lead</h3>
+                <div class="job-meta">Chicago, IL | Posting Date: 02/25/2025</div>
+                <div class="job-description">
+                    <strong>Description:</strong> Our talent acquisition lead is responsible for developing and carrying out hiring strategies to attract and hire new employees for a company. They also work to create a brand that will appeal to top talent.
+                </div>
+                <div class="job-divider"></div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
     <!-- Footer Navigation -->
     <nav class="footer-nav">
         <div class="container footer-nav-container">
@@ -634,12 +1583,12 @@ font-family: Greycliff
         </div>
     </nav>
 
- <!-- Footer Content -->
- <footer class="modern-footer">
+   <!-- Footer Content -->
+   <footer class="modern-footer">
     <div class="footer-container">
         <div class="footer-top">
             <div class="footer-logo">
-                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/SFC_Logo Assets 2025_v1-3.png" alt="Skills for Chicago Logo">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-3_optimized.png" alt="Skills for Chicago Logo">
             </div>
             <div class="footer-divider"></div>
             <div class="footer-social">
@@ -650,25 +1599,25 @@ font-family: Greycliff
             </div>
         </div>
         
+        <!-- Desktop Footer Navigation -->
         <div class="footer-nav">
             <div class="footer-nav-section">
-                <h3>About</h3>
+                <h3>About Us</h3>
                 <div class="footer-nav-links">
-                    <a href="#">About</a>
-                    <a href="#">Our Impact</a>
-                    <a href="#">Our Reports</a>
+                    <a href="#">Who We Are</a>
                     <a href="#">Our Team</a>
-                    <a href="#">Our Leadership</a>
-                    <a href="#">Our Careers</a>
+                    <a href="#">Annual Reports & Financials</a>
+                    <a href="#">Our Work in Action</a>
+                    <a href="#">Careers at Skills</a>
                 </div>
             </div>
             
             <div class="footer-nav-section">
-                <h3>For Job Seekers</h3>
+                <h3>Job Seekers</h3>
                 <div class="footer-nav-links">
                     <a href="#">Find A Job</a>
-                    <a href="#">View All Jobs</a>
-                    <a href="#">Consulting</a>
+                    <a href="#">Career Resources</a>
+                    <a href="#">FAQs for Job Seekers</a>
                     <a href="#">Resources</a>
                     <a href="#">Events</a>
                     <a href="#">FAQs</a>
@@ -676,35 +1625,187 @@ font-family: Greycliff
             </div>
             
             <div class="footer-nav-section">
-                <h3>For Employers</h3>
+                <h3>Employers</h3>
                 <div class="footer-nav-links">
-                    <a href="#">Start Hiring</a>
-                    <a href="#">Neighborhood Impact</a>
+                    <a href="#">Partner With Us</a>
+                    <a href="#">Our Employer Partners</a>
                     <a href="#">Consulting</a>
                     <a href="#">Resources & Case Studies</a>
                     <a href="#">Our Projects</a>
                 </div>
             </div>
-            
+
             <div class="footer-nav-section">
-                <h3>For Partners</h3>
+                <h3>COMMUNITY PARTNERS</h3>
                 <div class="footer-nav-links">
-                    <a href="#">Mission, Model & Impact</a>
-                    <a href="#">Board & Team</a>
-                    <a href="#">Locations</a>
-                    <a href="#">National Expansion</a>
-                    <a href="#">Employment Champions</a>
+                    <a href="#">Collaborate With Us</a>
+                    <a href="#">Community Impact</a>
+                    <a href="#">Our Community Partners</a>
                 </div>
             </div>
             
             <div class="footer-nav-section">
-                <h3>Donate</h3>
+                <h3>EVENTS</h3>
                 <div class="footer-nav-links">
-                    <a href="#">Donate Now</a>
-                    <a href="#">Work In Action</a>
-                    <a href="#">Annual Reports</a>
-                    <a href="#">Impact Reports</a>
-                    <a href="#">Funders</a>
+                    <a href="#">Events & Highlights</a>
+                    <a href="#">Employment Champions Breakfast</a>
+                </div>
+            </div>
+            <div class="footer-nav-section">
+                <h3>NATIONAL EXPANSION</h3>
+                <div class="footer-nav-links">
+                    <a href="#">National Expansion</a>
+                </div>
+            </div>
+            <div class="footer-nav-section">
+                <h3>Donors</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Donors</a>
+                </div>
+            </div>
+            <div class="footer-nav-section">
+                <h3>CONTACT US</h3>
+                <div class="footer-nav-links">
+                    <a href="#">Contact Us</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Footer Accordion -->
+        <div class="mobile-footer">
+            <!-- ABOUT US Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">ABOUT US</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="#">Who We Are</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Annual Reports & Financials</a></li>
+                        <li><a href="#">Our Work in Action</a></li>
+                        <li><a href="#">Careers at Skills</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- JOB SEEKERS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">JOB SEEKERS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="#">Find A Job</a></li>
+                        <li><a href="#">Career Resources</a></li>
+                        <li><a href="#">FAQs for Job Seekers</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#">Events</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- EMPLOYERS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">EMPLOYERS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="#">Partner With Us</a></li>
+                        <li><a href="#">Our Employer Partners</a></li>
+                        <li><a href="#">Consulting</a></li>
+                        <li><a href="#">Resources & Case Studies</a></li>
+                        <li><a href="#">Our Projects</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- COMMUNITY PARTNERS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">COMMUNITY PARTNERS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="#">Collaborate With Us</a></li>
+                        <li><a href="#">Community Impact</a></li>
+                        <li><a href="#">Our Community Partners</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- EVENTS & HIGHLIGHTS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">EVENTS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="#">Events & Highlights</a></li>
+                        <li><a href="#">Employment Champions Breakfast</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- NATIONAL EXPANSION Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">NATIONAL EXPANSION</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="#">National Expansion</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- DONORS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">DONORS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="#">Donors</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CONTACT US Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">CONTACT US</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -735,6 +1836,83 @@ font-family: Greycliff
                             behavior: 'smooth'
                         });
                     }
+                });
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation to sections when they come into view
+            const animateSections = () => {
+                const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const isVisible = rect.top <= window.innerHeight * 0.8;
+                    
+                    if (isVisible) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial styles for animation
+            const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            // Run on load and scroll
+            animateSections();
+            window.addEventListener('scroll', animateSections);
+            
+            // Mobile menu toggle functionality
+            const mobileMenuToggle = () => {
+                const navLinks = document.querySelector('.nav-links');
+                const isMobile = window.innerWidth <= 1024;
+                
+                if (isMobile) {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                }
+            };
+            
+            // Run on load and resize
+            mobileMenuToggle();
+            window.addEventListener('resize', mobileMenuToggle);
+            // Footer Accordion Functionality
+            const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordion = this.parentElement;
+                    
+                    // Toggle active class
+                    accordion.classList.toggle('active');
+                    
+                    // Close all other accordions (optional - comment out if you want multiple open)
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== this) {
+                            otherHeader.parentElement.classList.remove('active');
+                        }
+                    });
                 });
             });
         });
