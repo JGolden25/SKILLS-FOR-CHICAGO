@@ -15,36 +15,29 @@
            that zooms through the 'o' in Chicago
            =============================================== */
            body {
-    overflow: auto; /* Change from 'hidden' to 'auto' */
-    background-color: #E6F0DC; /* Use your normal background color */
-}
-        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+            overflow: hidden; /* Initially prevent scrolling during animation */
+            background-color: hsl(5, 15%, 5%);
+
+        }
+        @font-face { font-family: Greycliff CF; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
 
         @font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
       h1 {
-         font-family: Greycliff CF, Bold;
+         font-family: Greycliff CF, bold;
       }
       h2 {
-         font-family: Greycliff CF, Bold;
+         font-family: Greycliff CF, bold;
       }
       p {
-        font-family: Greycliff CF, Light;
+        font-family: Greycliff CF, light;
       }
       a {
-        font-family: Greycliff CF, Light;
+        font-family: Greycliff CF, light;
       }
       span {
-        font-family: Greycliff CF, Bold;
+        font-family: Greycliff CF, light;
       }
 
-      h4 {
-        font-family: Greycliff CF, Bold;
-      }
-
-      /* div {
-        font-family: Greycliff
-      } */
-        
       .elementor-section.elementor-section-boxed > .elementor-container {
     max-width: 100%;
 }
@@ -52,38 +45,55 @@
 .elementor-column-gap-default>.elementor-column>.elementor-element-populated {
     padding: 0px;
 }
+
+      /* div {
+        font-family: Greycliff
+      } */
         
-        #logo-container {
-            position: relative;
-            width: 80%;
-            max-width: 700px;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeIn 1s ease forwards;
-        }
-        
-        #intro-logo {
-            width: 100%;
-            height: auto;
-        }
-        
-        /* The circular mask creates the "zoom through" effect */
-        #circular-mask {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: #E6F0DC;
-            /* Position targeted at the 'o' in Chicago - may need adjustment based on exact logo dimensions */
-            clip-path: circle(0% at 76% 67%);
-            animation: expandCircle 1.5s ease-in-out 2s forwards;
-        }
+      #intro-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-container {
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
+}
+
+#intro-logo {
+    width: 100%;
+    height: auto;
+}
+
+
+
+@keyframes expandCircleSeparate {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    100% {
+        width: 300%;
+        height: 300%;
+    }
+}
         
         #main-content {
-    opacity: 1; /* Change from '0' to '1' */
-    visibility: visible; /* Change from 'hidden' to 'visible' */
-}
+            opacity: 0;
+            visibility: hidden;
+        }
         
         @keyframes fadeIn {
             0% {
@@ -134,7 +144,7 @@
             overflow-x: hidden;
         }
         .action-button {
-    display: inline-flex;
+            display: inline-flex;
     align-items: center;
     justify-content: space-between;
     background-color: #A2C466; /* Light green */
@@ -155,7 +165,7 @@
     justify-content: space-between;
     background-color: #A2C466; /* Light green */
     color: #333333; /* Black text color */
-    padding: 7px 5px 7px 15px;
+    padding: 10px 15px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -185,14 +195,13 @@
 
 }
 
-
 .donate-button {
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #A2C466; /* Light green */
+    background-color: #8dc63f; /* Light green */
     color: #333333; /* Black text color */
-    padding: 7px 5px 7px 15px;
+    padding: 3px 5px 3px 13px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -204,20 +213,17 @@
 
 .action-button span {
     margin-right: 5px;
+    font-family: Greycliff-thin, sans-serif;
 }
 
 .donate-button span {
-    margin-right: 5px; 
+    margin-right: 5px;
+    font-family: Greycliff-thin, sans-serif; 
 }
 
 .secondary-button span {
     margin-right: 5px;
 
-}
-
-.resources-content {
-    padding: 2% 0px 2% 0%;
-    margin-left: 5%;
 }
 
 
@@ -268,7 +274,7 @@
 
 
         h1, h2, h3, h4, h5, h6 {
-            font-weight: 700;
+            font-weight: 600;
             line-height: 1.2;
             color: var(--dark-green);
         }
@@ -281,6 +287,8 @@
         a {
             text-decoration: none;
             color: inherit;
+            font-family: Greycliff CF, light;
+    font-weight: 300;
         }
 
         ul {
@@ -461,6 +469,7 @@ padding-left: 7%;
             color: var(--dark-green);
             margin-bottom: 20px;
             line-height: 1.2;
+            font-weight: 700;
         }
 
         .hero-description {
@@ -561,10 +570,12 @@ padding-left: 7%;
             /* margin-top: 40px; */
         }
 
-        .resources-section {
-            display: flex;
+        .partnering-section-mobile {
+            display: none;
             align-items: center;
             gap: 40px;
+            border-top: 1px solid black;
+            /* margin-top: 40px; */
         }
         
         .communities-image {
@@ -575,12 +586,10 @@ padding-left: 7%;
         
         .communities-content {
             flex: 1;
-            padding: 2% 0px 2% 0%;
         }
 
-        .resources-content {
+        .access-content {
             flex: 1;
-            padding: 2% 0px 2% 0%;
         }
         
         .feature-card:hover {
@@ -663,7 +672,7 @@ padding-left: 7%;
         .feature-card h3 {
             color: white;
             font-size: 16px;
-            font-weight: 600;
+            font-weight: 700;
             line-height: 1.3;
         }
         
@@ -727,11 +736,13 @@ padding-left: 7%;
     font-weight: 700;
     color: var(--dark-green);
     margin-bottom: 8px;
+    font-family: Greycliff CF;
 }
 
 .stat-label {
     font-size: 14px;
     color: #666;
+    font-weight: 550;
 }
 
 /* Responsive adjustments */
@@ -763,21 +774,11 @@ padding-left: 7%;
             align-items: center;
         }
 
-        .resources-container {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
-
         .communities-image {
             flex: 1;
         }
 
-        .communities-content {
-            flex: 1;
-        }
-
-        .resources-content {
+        .access-content {
             flex: 1;
         }
 
@@ -803,7 +804,7 @@ padding-left: 7%;
     background-color: #A2C466;
     color: #333;
     font-weight: 600;
-    padding: 7px 5px 7px 15px;
+    padding: 12px 25px;
     border-radius: 30px;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -956,8 +957,8 @@ padding-left: 7%;
 
         /* CTA Section */
         .cta {
-            padding: 4% 10%;
-            background-color: var(--off-white);
+            padding: 4% 7%;
+            background-color: #FFFFFF;
         }
 
         .cta-container {
@@ -971,9 +972,10 @@ padding-left: 7%;
         }
 
         .cta-title {
-            font-size: 36px;
-            color: var(--dark-green);
+            font-size: 32px;
+            color: #4F6B3A;
             margin-bottom: 15px;
+            font-weight: 700;
         }
 
         .cta-text {
@@ -985,7 +987,7 @@ padding-left: 7%;
         .search-box {
     display: flex;
     position: relative;
-    max-width: 400px;
+    max-width: 800px;
 }
 
 .search-icon-wrapper {
@@ -1017,7 +1019,7 @@ padding-left: 7%;
 
         .cta-buttons {
             flex: 1;
-            max-width: 500px;
+            max-width: 800px;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -1108,7 +1110,7 @@ padding-left: 7%;
     gap: 8px;
     background-color: #A2C466;
     color: #fff;
-    padding: 7px 5px 7px 15px;
+    padding: 12px 24px;
     border-radius: 25px;
     font-weight: 600;
     text-decoration: none;
@@ -1169,1304 +1171,8 @@ padding-left: 7%;
             font-size: 14px;
         }
 
-                   /* Footer Content */
-                   .modern-footer {
-    background-color: #1F3707;
-    color: white;
-    padding: 60px 0 0 0;
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    position: relative;
-    overflow: hidden; /* Keep the background logo contained within the footer */
-}
-
-/* Add the SC logo as a background on the left side */
-.modern-footer::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -10%; /* Position on the left side instead of right */
-    transform: translateY(-50%);
-    width: 60%; /* Large size to match the image */
-    height: 140%;
-    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    z-index: 0;
-    opacity: 0.45; /* Dark but subtle appearance */
-}
-
-/* Ensure footer content stays on top of the background image */
-.footer-container, .footer-copyright {
-    position: relative;
-    z-index: 1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .modern-footer::before {
-        width: 100%;
-        left: -20%;
-    }
-}
-
-    .footer-container {
-        padding: 0 6%;
-    }
-
-    .footer-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-        position: relative;
-    }
-    
-    .footer-divider {
-        flex: 1;
-        height: 1px;
-        background-color: #ffffff;
-        margin: 0 40px;
-    }
-
-    .footer-logo img {
-        height: 80px;
-    }
-
-    .footer-social {
-        display: flex;
-        gap: 20px;
-    }
-
-    .footer-social a {
-        color: white;
-        font-size: 20px;
-        transition: opacity 0.3s ease;
-    }
-
-    .footer-social a:hover {
-        opacity: 0.8;
-    }
-
-    /* Banner Styles */
-    .banner {
-            background-color: #1e3a14;
-            color: white;
-            padding: 12px 0;
-        }
-        
-        .banner-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .banner-text {
-            font-size: 15px;
-            margin-right: 2%;
-        }
-
-        .learn-more-btn {
-            background-color: transparent;
-            color: white;
-            border: 1px solid white;
-            border-radius: 25px;
-            padding: 6px 16px;
-            font-size: 14px;
-            cursor: pointer;
-            display: inline-block;
-        }
-
-    /* Updated footer navigation styles to fix vertical alignment */
-    .footer-nav {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start; /* Changed from center to flex-start */
-        margin-bottom: 60px;
-    }
-
-    .footer-nav-section {
-        display: flex;
-        flex-direction: column;
-        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
-    }
-
-    .footer-nav-section h3 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 25px;
-        text-transform: uppercase;
-        height: 22px; /* Fixed height for the heading */
-        line-height: 22px; /* Match the height to ensure consistent alignment */
-    }
-
-    .footer-nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .footer-nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        transition: opacity 0.3s ease;
-    }
-
-    .footer-nav-links a:hover {
-        opacity: 0.8;
-        text-decoration: underline;
-    }
-
-    .footer-copyright {
-        background-color: #1F3707;
-        padding: 20px 0;
-        text-align: center;
-        font-size: 14px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-        .cta-text {
-            margin-bottom: 20px;
-            font-size: 22px;
-            width: 60%;
-        }
-        .hero-image {
-            flex: 1;
-            text-align: right;
-            object-fit: cover;
-        }
-
-        .hero-image img {
-            max-width: 100%;
-            border-radius: 70px;
-            height: 400px;
-            object-fit: cover;
-        }
-        .footer-nav {
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-        
-        .footer-nav-section {
-            flex: 1 0 30%;
-            min-height: auto;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .footer-top {
-            flex-direction: column;
-            gap: 30px;
-            text-align: center;
-        }
-
-        .footer-nav {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .footer-nav-section {
-            width: 100%;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        .banner-container {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-    }
-
-    @media (max-width: 576px) {
-        .footer-nav {
-            grid-template-columns: 1fr;
-            text-align: center;
-        }
-    }
-
-        /* Responsive Styles */
-        @media (max-width: 1354px) {
-            .audiences {
-                position: static;
-                width: 100%;
-                margin-top: 30px;
-            }
-
-            .partnership-content {
-                max-width: none;
-            }
-            .communities-image img {
-            width: 100%;
-            height: 400px;
-            display: block;
-        }
-        }
-
-        @media (max-width: 768px) {
-            .hero-container, 
-            .communities-container,
-            .cta-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-container, 
-            .resources-container,
-            .cta-container {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .hero-image {
-                order: -1;
-                margin-bottom: 30px;
-            }
-
-            .audiences {
-                grid-template-columns: 1fr;
-            }
-
-            .stats {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .stat {
-                width: 100%;
-                max-width: 300px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .feature-cards {
-                grid-template-columns: 1fr;
-            }
-
-            .partnership-card {
-                padding: 30px 20px;
-            }
-
-            .hero-title {
-                font-size: 28px;
-            }
-
-            .section-title {
-                font-size: 24px;
-            }
-            .feature-card {
-    width: 100%;
-    height: 100px;
-    border-radius: 10px;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-        
-        .feature-card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        /* Background image with green overlay */
-        .feature-card-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://media.istockphoto.com/id/1444291518/photo/black-woman-working-from-home-office.jpg?s=612x612&w=0&k=20&c=ruHb87Ryd6uOr7sRnqfOussQihY89gnGDLeisJnVi-M=');
-    background-size: cover;
-    background-position: center;
-    /* background-color: red; */
-    z-index: 1;
-}
-
-.feature-card-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-.feature-card-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(77, 126, 50, 0.7);
-    z-index: 2; /* Higher than the image */
-    display: flex;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-.feature-card i {
-    transform: rotate(-45deg);
-}
-
-.feature-card i:hover {
-    transform: rotate(0deg);
-}
-        
-        .feature-card-content {
-            flex: 1;
-        }
-        
-        .feature-card h3 {
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 1.3;
-        }
-        
-        .feature-card-icon {
-            width: 30px;
-            height: 30px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .feature-card-icon i {
-            color: #4d7e32;
-            font-size: 14px;
-        }
-        
-      
-        }
-
-        .partnering-section-wrapper {
-    background-color: #f0f1e8; /* Light green background */
-    width: 100%;
-    padding: 40px 0;
-}
-
-/* Main section container */
-
-
- /* Stats Section - New */
- .stats-row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 40px;
-        }
-
-        .stat-column {
-            flex: 1;
-            min-width: 200px;
-            /* margin-bottom: 20px; */
-        }
-
-        .stat-item {
-            margin-bottom: 30px;
-        }
-
-        .stat-number {
-            font-size: 36px;
-            font-weight: 700;
-            color: var(--dark-green);
-            margin-bottom: 5px;
-        }
-
-        .stat-label {
-            font-size: 14px;
-            color: #666;
-        }
-
-        .access-section {
-            padding: 80px 0;
-            background-color: white;
-            text-align: center;
-        }
-
-        .access-title {
-            font-size: 42px;
-            color: var(--dark-green);
-            margin-bottom: 25px;
-        }
-
-        .access-text {
-            max-width: 800px;
-            margin: 0 auto 40px;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-        }
-
-        .communities-section {
-            /* padding: 80px 0; */
-            background-color: var(--light-gray);
-        }
-
-        .resources-section {
-            /* padding: 80px 0; */
-            background-color: var(--light-gray);
-        }
-
-        .communities-container {
-            display: flex;
-            /* display: inline-flex; */
-            align-items: center;
-            justify-content: center;
-            /* padding-left: 2%; */
-            gap: 60px;
-            background-color: #F2F0EF;
-        }
-
-        .resources-container {
-            display: flex;
-            /* display: inline-flex; */
-            align-items: center;
-            justify-content: center;
-            padding-left: 2%;
-            gap: 60px;
-            background-color: #F2F0EF;
-        }
-
-
-        .communities-title {
-            font-size: 55px;
-            color: var(--dark-green);
-            margin-bottom: 30px;
-            font-weight: 700;
-            color: #000000;
-        }
-
-        .communities-text {
-            margin-bottom: 30px;
-            font-size: 22px;
-            line-height: 1.7;
-            color: #444;
-            width: 70%;
-        }
-
-        .communities-image {
-            flex: 1.2;
-        }
-
-        .communities-image img {
-            width: 100%;
-            height: 750px;
-            display: block;
-            object-fit: cover;
-        }
-
-        .impact-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background-color: var(--skills-green);
-            color: #333;
-            font-weight: 600;
-            padding: 12px 30px;
-            border-radius: 30px;
-            border: none;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .impact-button span {
-            margin-right: 10px;
-        }
-
-        .impact-button i {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            background-color: white;
-            border-radius: 50%;
-            color: #333;
-            font-size: 12px;
-        }
-
-        /* Responsive styles */
-        @media (max-width: 992px) {
-            .communities-container {
-                flex-direction: column;
-                gap: 40px;
-            }
-
-            .resources-container {
-                flex-direction: column;
-                gap: 40px;
-            }
-            
-            .communities-image, .communities-content {
-                width: 100%;
-            }
-            .communities-image, .resources-content {
-                width: 100%;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .access-title, .communities-title {
-                font-size: 32px;
-            }
-        }
-        /* Partnering Section */
-        .partnering-section {
-    position: relative;
-    width: 100%;
-    min-height: 700px;
-    display: block;
-    margin: 0;
-    padding: 0;
-    background-color: #1a1a1a;
-    overflow: hidden;
-    border-top: 1px solid black;
-}
-
-.partnering-image {
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    position: absolute;
-    right: 0; /* Position image on the right side */
-    top: 0;
-}
-
-.partnering-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-.partnering-content {
-    position: absolute;
-    width: 40%;
-    max-width: 800px;
-    left: 12%;
-    right: auto; /* Remove the right positioning */
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: white;
-    z-index: 2;
-    padding: 80px;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    border-radius: 0;
-    margin: 0;
-    float: none;
-}
-
-
-.partnering-content-inner {
-    padding: 0;
-    width: 100%;
-}
-
-.partnering-title {
-    font-size: 36px;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-.partnering-text {
-    font-size: 22px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 30px;
-}
-
-/* Style the button to match the image */
-.partner-button-2 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #A2C466;
-    color: #333333;
-    padding: 7px 5px 7px 15px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    width: 180px; /* Fixed width as shown in image */
-    border: none;
-}
-
-.partner-button-2 span {
-    margin-right: 5px;
-}
-
-.partner-button-2 .circle-icon {
-    width: 25px;
-    height: 25px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.partner-button-2 .circle-icon i {
-    color: #333;
-    font-size: 12px;
-    transform: rotate(-45deg);
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .partnering-content {
-        width: 60%;
-        left: 5%;
-    }
-}
-
-@media (max-width: 768px) {
-    .partnering-section {
-        min-height: 400px;
-    }
-    
-    .partnering-content {
-        width: 80%;
-        padding: 30px;
-    }
-    
-    .partnering-title {
-        font-size: 28px;
-    }
-}
-
-@media (max-width: 576px) {
-    .partnering-section {
-        min-height: 350px;
-    }
-    
-    .partnering-content {
-        width: 90%;
-        left: 5%;
-        padding: 25px;
-    }
-    
-    .partnering-title {
-        font-size: 24px;
-    }
-    
-    .partnering-text {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 1354px) {
-            .audiences {
-                position: static;
-                width: 100%;
-                margin-top: 30px;
-            }
-
-            .partnership-content {
-                max-width: none;
-            }
-            .communities-image img {
-            width: 100%;
-            height: 400px;
-            display: block;
-        }
-        }
-/* Updated button style to match the design in image 2 */
-.partner-button-2 {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #A2C466; /* Light green */
-    color: #333333; /* Black text color */
-    padding: 7px 5px 7px 15px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    width: 200px; /* Adjust width as needed */
-    border: 1px solid #707070;
-}
-
-.partner-button-2 span {
-    margin-right: 10px;
-}
-
-
-.partner-button-2 .circle-icon i {
-    color: #333;
-    font-size: 12px;
-    transform: rotate(-45deg);
-
-}
-
-/* Make sure the container is full width */
-.container {
-    width: 100%;
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .partnering-section {
-        flex-direction: column;
-    }
-    
-    .partnering-image, .partnering-content {
-        width: 100%;
-    }
-    
-    .partnering-image {
-        height: 300px;
-    }
-}
-
-@media (max-width: 768px) {
-    .partnering-title {
-        font-size: 28px;
-    }
-    
-    .partnering-content-inner {
-        padding: 30px;
-    }
-}
-.stats-wrapper {
-    padding-top: 0;
-padding-right: 35%;
-padding-bottom: 0;
-padding-left: 0%;
-}
-@media (max-width: 1024px) {
-            .communities-text {
-            margin-bottom: 30px;
-            font-size: 16px;
-            line-height: 1.7;
-            color: #444;
-            width: 100%;
-        }
-        .partnering-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 30px;
-}
-        }
-
-/* ===============================================
-   MOBILE MENU STYLES - NEW ADDITION
-   These styles control the hamburger menu for mobile devices
-   =============================================== */
-        
-/* Hamburger Menu Button */
-.mobile-menu-toggle {
-    display: none; /* Hidden by default, shown in media query */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
-}
-
-.hamburger {
-    width: 30px;
-    height: 20px;
-    position: relative;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #333;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-}
-
-/* Hamburger icon bars positioning */
-.hamburger span:nth-child(1) {
-    top: 0px;
-}
-
-.hamburger span:nth-child(2),
-.hamburger span:nth-child(3) {
-    top: 10px;
-}
-
-.hamburger span:nth-child(4) {
-    top: 20px;
-}
-
-/* Hamburger animation to X */
-.hamburger.open span:nth-child(1) {
-    top: 10px;
-    width: 0%;
-    left: 50%;
-}
-
-.hamburger.open span:nth-child(2) {
-    transform: rotate(45deg);
-}
-
-.hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg);
-}
-
-.hamburger.open span:nth-child(4) {
-    top: 10px;
-    width: 0%;
-    left: 50%;
-}
-
-/* Mobile Navigation Panel */
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 400px;
-    height: 100%;
-    background-color: white;
-    padding: 80px 40px 40px;
-    z-index: 1000;
-    overflow-y: auto;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-nav.open {
-    right: 0;
-}
-
-.mobile-nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.mobile-nav-links a {
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    transition: color 0.3s ease;
-}
-
-.mobile-nav-links a:hover {
-    color: #4d7e32;
-}
-
-.mobile-donate-button {
-    margin-top: 30px;
-    width: 100%;
-    justify-content: center;
-}
-
-/* Dark overlay when mobile menu is open */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    display: none;
-}
-
-.overlay.active {
-    display: block;
-}
-
-/* Media queries for responsive behavior */
-@media (max-width: 1024px) {
-    .main-nav {
-        display: none; /* Hide desktop nav */
-    }
-
-    .communities-content {
-        margin-bottom: 10%;
-        padding: 0px 6% 0px 7%;
-    }
-
-    .resources-content {
-        /* margin-bottom: 4%; */
-    }
-    
-    .mobile-menu-toggle {
-        display: block; /* Show hamburger icon */
-    }
-    
-    .header-container {
-        justify-content: space-between;
-        padding: 0 20px;
-    }
-}
-
-/* Additional mobile-specific adjustments */
-@media (max-width: 576px) {
-    .mobile-nav {
-        width: 100%;
-        max-width: none;
-    }
-}
-
-.nav-links a:hover {
-        color: #4d7e32;
-      }
-
-      h4 {
-        color:#4d7e32;
-        font-size: 30px;
-      }
-             /* Modern Footer Styles */
-             .modern-footer {
-    background-color: #1F3707;
-    color: white;
-    padding: 60px 0 0 0;
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-    position: relative;
-    overflow: hidden; /* Keep the background logo contained within the footer */
-}
-
-/* Add the SC logo as a background on the left side */
-.modern-footer::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -10%; /* Position on the left side instead of right */
-    transform: translateY(-50%);
-    width: 60%; /* Large size to match the image */
-    height: 140%;
-    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    z-index: 0;
-    opacity: 0.45; /* Dark but subtle appearance */
-}
-
-/* Ensure footer content stays on top of the background image */
-.footer-container, .footer-copyright {
-    position: relative;
-    z-index: 1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .modern-footer::before {
-        width: 100%;
-        left: -20%;
-    }
-}
-
-    .footer-container {
-        padding: 0 6%;
-    }
-
-    .footer-top {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 40px;
-        position: relative;
-    }
-    
-    .footer-divider {
-        flex: 1;
-        height: 1px;
-        background-color: #ffffff;
-        margin: 0 40px;
-    }
-
-    .footer-logo img {
-        height: 80px;
-    }
-
-    .footer-social {
-        display: flex;
-        gap: 20px;
-    }
-
-    .footer-social a {
-        color: white;
-        font-size: 20px;
-        transition: opacity 0.3s ease;
-    }
-
-    .footer-social a:hover {
-        opacity: 0.8;
-    }
-
-    /* Updated footer navigation styles to fix vertical alignment */
-    .footer-nav {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-start; /* Changed from center to flex-start */
-        margin-bottom: 60px;
-    }
-
-    .footer-nav-section {
-        display: flex;
-        flex-direction: column;
-        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
-    }
-
-    .footer-nav-section h3 {
-        font-size: 18px;
-        font-weight: 700;
-        margin-bottom: 25px;
-        text-transform: uppercase;
-        height: 22px; /* Fixed height for the heading */
-        line-height: 22px; /* Match the height to ensure consistent alignment */
-    }
-
-    .footer-nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .footer-nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        transition: opacity 0.3s ease;
-    }
-
-    .footer-nav-links a:hover {
-        opacity: 0.8;
-        text-decoration: underline;
-    }
-
-    .footer-copyright {
-        background-color: #1F3707;
-        padding: 20px 0;
-        text-align: center;
-        font-size: 14px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    /* Responsive adjustments */
-    @media (max-width: 1024px) {
-        .footer-nav {
-            flex-wrap: wrap;
-            gap: 30px;
-        }
-
-        .hero-description {
-            font-size: 18px;
-            line-height: 1.7;
-            color: #444;
-            margin-bottom: 30px;
-            width: 100%;
-        }
-        
-        .footer-nav-section {
-            flex: 1 0 30%;
-            min-height: auto;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .footer-top {
-            flex-direction: column;
-            gap: 30px;
-            text-align: center;
-        }
-
-        .footer-nav {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        
-        .footer-nav-section {
-            width: 100%;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-    }
-
-    @media (max-width: 576px) {
-        .footer-nav {
-            grid-template-columns: 1fr;
-            text-align: center;
-        }
-    }
-        
-        .contact-info {
-            margin-top: 15px;
-        }
-        
-        .contact-item {
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
-        
-        /* Copyright */
-        .copyright {
-            background-color: #1e3a14;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 14px;
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .service-box {
-                border-bottom: 1px solid #eee;
-                border-right: none;
-            }
-            
-            .service-box:nth-child(odd) {
-                border-right: 1px solid #eee;
-            }
-            
-            .service-box:nth-last-child(-n+2) {
-                border-bottom: none;
-            }
-            
-        }
-        
-        @media (max-width: 900px) {
-            .locations-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-left: 10%;
-        }
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 0px;
-            }
-
-            .contact-section {
-                margin-right: 0%;
-            }
-
-            .hero-content {
-                padding: 0px 0px 0% 5%;
-            }
-            .hero-image {
-                order: -1;
-            }
-            
-            .contact-section {
-                grid-template-columns: 1fr;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .locations-column {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            margin-left: 3%;
-        }
-            .nav-links {
-                display: none;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .service-box {
-                border-right: none;
-                border-bottom: 1px solid #eee;
-            }
-            
-            .service-box:last-child {
-                border-bottom: none;
-            }
-            
-            .form-column {
-                grid-template-columns: 1fr;
-            }
-            
-            .form-group {
-                grid-column: span 1 !important;
-            }
-            
-            .banner-container {
-                flex-direction: column;
-                gap: 10px;
-                text-align: center;
-            }
-        }
-
-        .action-button {
-            display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #A2C466; /* Light green */
-    color: #333333; /* Black text color */
-    padding: 7px 5px 7px 15px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    width: 150px; /* Adjust width as needed */
-    border: 1px solid #707070;
-}
-.action-button span {
-    margin-right: 5px;
-    font-family: Greycliff CF, Light;
-}
-.action-button:hover .circle-icon i {
-    color: #333333; /* Black arrow */
-    font-size: 12px;
-    transform: rotate(0deg);
-}
-.action-button:hover {
-    background-color: #7db32e; /* Slightly darker on hover */
-    transform: translateY(-2px);
-}
-.action-button i {
-    transform: rotate(-45deg);
-}
-.action-button > .circle-icon i:hover {
-    transform: rotate(0deg);
-}
-.action-button i {
-    font-size: 14px;
-    transition: transform 0.3s ease;
-}
-.fa-arrow-right:before {
-    content: "\f061";
-    color: #7D7E7E;
-    font-size: 18px;
-}
-/* Footer Content */
-.modern-footer {
+        /* Footer Content */
+        .modern-footer {
             background-color: #1F3707;
             color: white;
             padding: 60px 0 0 0;
@@ -2500,7 +1206,7 @@ padding-left: 0%;
 
         .footer-container {
             padding: 0 6%;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .footer-top {
@@ -2537,8 +1243,37 @@ padding-left: 0%;
             opacity: 0.8;
         }
 
-         /* Updated footer navigation styles to fix vertical alignment */
-         .footer-nav {
+        /* Banner Styles */
+        .banner {
+            background-color: #1e3a14;
+            color: white;
+            padding: 12px 0;
+        }
+        
+        .banner-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .banner-text {
+            font-size: 15px;
+            margin-right: 2%;
+        }
+
+        .learn-more-btn {
+            background-color: transparent;
+            color: white;
+            border: 1px solid white;
+            border-radius: 25px;
+            padding: 6px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        /* Updated footer navigation styles to fix vertical alignment */
+        .footer-nav {
             display: flex;
             justify-content: space-between;
             align-items: flex-start; /* Changed from center to flex-start */
@@ -2572,7 +1307,6 @@ padding-left: 0%;
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -2631,39 +1365,41 @@ padding-left: 0%;
             padding-bottom: 15px;
         }
 
-        /* Responsive adjustments */
-        @media (max-width: 1354px) {
-            .collaborate-image img {
-            width: 100%;
-            max-height: 400px;
-            border-radius: 35px;
-            object-fit: cover;
+        /* Mobile Footer Links */
+        .footer-mobile-links {
+            list-style: none;
+            padding: 0;
         }
 
-        .work-together-content h2 {
-    font-size: 50px;
-    font-weight: 800;
-    line-height: 1.2;
-    margin-bottom: 20px;
-    width: 100%;
-}
+        .footer-mobile-links li {
+            margin-bottom: 12px;
+        }
 
-.header-container {
-                justify-content: space-between;
-                padding: 0 20px;
-            }
+        .footer-mobile-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            opacity: 0.9;
+        }
 
-            .header {
-            padding: 15px 15px;
-            }
-            /* .partnering-section-mobile {
+        .footer-mobile-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1354px) {
+            .partnering-section-mobile {
             display: flex;
             align-items: center;
             gap: 40px;
             border-top: 1px solid black;
+            /* margin-top: 40px; */
         }
 
         .partnering-section-mobile {
+            /* padding: 80px 0; */
             background-color: var(--light-gray);
         }
         .partnering-section {
@@ -2672,7 +1408,7 @@ padding-left: 0%;
             .cta-text {
                 margin-bottom: 20px;
                 font-size: 22px;
-                width: 60%;
+                width: 100%;
             }
             .hero-image {
                 flex: 1;
@@ -2685,7 +1421,7 @@ padding-left: 0%;
                 border-radius: 70px;
                 height: 400px;
                 object-fit: cover;
-            } */
+            }
             .footer-nav {
                 flex-wrap: wrap;
                 gap: 30px;
@@ -2728,89 +1464,774 @@ padding-left: 0%;
             }
         }
 
-        /* Mobile Footer Links */
-        .footer-mobile-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-mobile-links li {
-            margin-bottom: 12px;
-        }
-
-        .footer-mobile-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 15px;
-            display: block;
-            opacity: 0.9;
-        }
-
-        .footer-mobile-links a:hover {
-            opacity: 1;
-            text-decoration: underline;
-        }
-        @media (max-width: 992px) {
-    .resources-container {
-        flex-direction: column-reverse !important; /* Reverses the order in mobile view */
-    }
-}
-.partnering-section-mobile {
-            display: none;
-            align-items: center;
-            gap: 40px;
-            border-top: 1px solid black;
-            /* margin-top: 40px; */
-        }
+        /* Responsive Styles */
         @media (max-width: 1354px) {
-            .partnering-section-mobile {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            border-top: 1px solid black;
-            /* margin-top: 40px; */
-        }
-
-        .partnering-section-mobile {
-            /* padding: 80px 0; */
-            background-color: var(--light-gray);
-        }
-        .partnering-section {
-            display: none;  
-        }
-            .cta-text {
-                margin-bottom: 20px;
-                font-size: 22px;
+            .audiences {
+                position: static;
                 width: 100%;
-            }
-            .hero-image {
-                flex: 1;
-                text-align: right;
-                object-fit: cover;
+                margin-top: 30px;
             }
 
-            .hero-image img {
-                max-width: 100%;
-                border-radius: 70px;
-                height: 400px;
-                object-fit: cover;
+            .partnership-content {
+                max-width: none;
             }
-            .footer-nav {
-                flex-wrap: wrap;
-                gap: 30px;
+        }
+
+        @media (max-width: 1024px) {
+            .hero-container, 
+            .communities-container,
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-image {
+                order: -1;
+                margin-bottom: 30px;
+            }
+
+            .audiences {
+                grid-template-columns: 1fr;
+            }
+
+            .stats {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .stat {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .feature-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .partnership-card {
+                padding: 30px 20px;
+            }
+
+            .hero-title {
+                font-size: 32px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+            .feature-card {
+                width: 100%;
+                height: 100px;
+                border-radius: 10px;
+                overflow: hidden;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.3s ease;
             }
             
-            .footer-nav-section {
-                flex: 1 0 30%;
-                min-height: auto;
+            .feature-card:hover {
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            }
+            
+            /* Background image with green overlay */
+            .feature-card-bg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url('https://media.istockphoto.com/id/1444291518/photo/black-woman-working-from-home-office.jpg?s=612x612&w=0&k=20&c=ruHb87Ryd6uOr7sRnqfOussQihY89gnGDLeisJnVi-M=');
+                background-size: cover;
+                background-position: center;
+                /* background-color: red; */
+                z-index: 1;
+            }
+
+            .feature-card-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                z-index: 1;
+            }
+
+            .feature-card-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(77, 126, 50, 0.7);
+                z-index: 2; /* Higher than the image */
+                display: flex;
+                align-items: center;
+                padding: 15px 20px;
+            }
+
+            .feature-card i {
+                transform: rotate(-45deg);
+            }
+
+            .feature-card i:hover {
+                transform: rotate(0deg);
+            }
+                
+            .feature-card-content {
+                flex: 1;
+            }
+            
+            .feature-card h3 {
+                color: white;
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 1.3;
+            }
+            
+            .feature-card-icon {
+                width: 30px;
+                height: 30px;
+                background-color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .feature-card-icon i {
+                color: #4d7e32;
+                font-size: 14px;
             }
         }
+
+        .partnering-section-wrapper {
+            background-color: #f0f1e8; /* Light green background */
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        /* Main section container */
+
+
+        /* Stats Section - New */
+        .stats-row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .stat-column {
+            flex: 1;
+            min-width: 200px;
+            /* margin-bottom: 20px; */
+        }
+
+        .stat-item {
+            margin-bottom: 30px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: #041202;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .access-section {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+        }
+
+        .access-title {
+            font-size: 42px;
+            color: var(--dark-green);
+            margin-bottom: 25px;
+        }
+
+        .access-text {
+            max-width: 800px;
+            margin: 0 auto 40px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .communities-section {
+            /* padding: 80px 0; */
+            background-color: var(--light-gray);
+        }
+
         .partnering-section-mobile {
             /* padding: 80px 0; */
             background-color: var(--light-gray);
             display: none;
         }
+
+        .communities-container {
+            display: flex;
+            /* display: inline-flex; */
+            align-items: center;
+            justify-content: center;
+            padding-left: 2%;
+            gap: 60px;
+            background-color: #ECECEC
+        }
+
+        .communities-content {
+            flex: 1;
+            padding-left: 5%;
+        }
+
+        .access-content {
+            flex: 1;
+            padding-left: 5%;
+        }
+
+        .communities-title {
+            font-size: 52px;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #000000;
+        }
+
+        .communities-text {
+            margin-bottom: 30px;
+            font-size: 22px;
+            line-height: 1.7;
+            color: #444;
+            width: 70%;
+        }
+
+        .communities-image {
+            flex: 1.2;
+        }
+
+        .communities-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .impact-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--skills-green);
+            color: #333;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 30px;
+            border: none;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .impact-button span {
+            margin-right: 10px;
+        }
+
+        .impact-button i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border-radius: 50%;
+            color: #333;
+            font-size: 12px;
+        }
+
+        /* Responsive styles */
         @media (max-width: 1354px) {
+            .communities-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .communities-image, .communities-content {
+                width: 100%;
+            }
+
+            .communities-image, .access-content {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .access-title, .communities-title {
+                font-size: 32px;
+            }
+        }
+        /* Partnering Section */
+        .partnering-section {
+            position: relative;
+            width: 100%;
+            min-height: 700px;
+            display: block;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            overflow: hidden;
+            border-top: 1px solid black;
+        }
+
+        .partnering-image {
+            width: 52%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            position: absolute;
+            right: 0; /* Position image on the right side */
+            top: 0;
+        }
+
+        .partnering-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .partnering-content {
+            position: absolute;
+            width: 40%;
+            max-width: 800px;
+            left: 12%;
+            right: auto; /* Remove the right positioning */
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #F7F7F7;
+            z-index: 2;
+            padding: 80px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+            border-radius: 0;
+            margin: 0;
+            float: none;
+        }
+
+
+        .partnering-content-inner {
+            padding: 0;
+            width: 100%;
+        }
+
+        .partnering-title {
+            font-size: 52px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        .partnering-text {
+            font-size: 22px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        /* Style the button to match the image */
+        .partner-button-2 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #A2C466;
+            color: #333333;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            width: 180px; /* Fixed width as shown in image */
+            border: none;
+        }
+
+        .partner-button-2 span {
+            margin-right: 5px;
+        }
+
+        .partner-button-2 .circle-icon {
+            width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+        }
+
+        .partner-button-2 .circle-icon i {
+            color: #333;
+            font-size: 12px;
+            transform: rotate(-45deg);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1354px) {
+            .partnering-content {
+                width: 60%;
+                left: 5%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .partnering-section {
+                min-height: 400px;
+            }
+            
+            .partnering-content {
+                width: 80%;
+                padding: 30px;
+            }
+            
+            .partnering-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .partnering-section {
+                min-height: 350px;
+            }
+            
+            .partnering-content {
+                width: 90%;
+                left: 5%;
+                padding: 25px;
+            }
+            
+            .partnering-title {
+                font-size: 24px;
+            }
+            
+            .partnering-text {
+                font-size: 14px;
+            }
+        }
+        /* Updated button style to match the design in image 2 */
+        .partner-button-2 {
+            display: inline-flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #A2C466; /* Light green */
+            color: #333333; /* Black text color */
+            padding: 10px 15px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            width: 200px; /* Adjust width as needed */
+            border: 1px solid #707070;
+        }
+
+        .partner-button-2 span {
+            margin-right: 10px;
+        }
+
+
+        .partner-button-2 .circle-icon i {
+            color: #333;
+            font-size: 12px;
+            transform: rotate(-45deg);
+
+        }
+
+        /* Make sure the container is full width */
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1354px) {
+            .partnering-section {
+                flex-direction: column;
+            }
+            
+            .partnering-image, .partnering-content {
+                width: 100%;
+            }
+            
+            .partnering-image {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .partnering-title {
+                font-size: 28px;
+            }
+            
+            .partnering-content-inner {
+                padding: 30px;
+            }
+        }
+        .stats-wrapper {
+            padding-top: 0;
+        padding-right: 35%;
+        padding-bottom: 0;
+        padding-left: 0%;
+        }
+        @media (max-width: 1354px) {
+            .communities-text {
+                margin-bottom: 30px;
+                font-size: 16px;
+                line-height: 1.7;
+                color: #444;
+                width: 100%;
+            }
+            .partnering-text {
+                font-size: 16px;
+                line-height: 1.6;
+                color: #333;
+                margin-bottom: 30px;
+            }
+        }
+
+        /* ===============================================
+        MOBILE MENU STYLES - NEW ADDITION
+        These styles control the hamburger menu for mobile devices
+        =============================================== */
+            
+        /* Hamburger Menu Button */
+        .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        /* Mobile Navigation Panel */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Media queries for responsive behavior */
+        @media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .communities-content {
+                margin-bottom: 10%;
+                padding-right: 3%;
+                margin-left: 9%;
+                padding-right: 10%;
+            }
+
+            .access-content {
+                margin-bottom: 10%;
+                padding-right: 3%;
+                margin-left: 9%;
+                padding-right: 10%;
+            }
+            
+            .mobile-menu-toggle {
+                display: block; /* Show hamburger icon */
+            }
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+        }
+
+        /* Additional mobile-specific adjustments */
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
+            }
+        }
+
+        .nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        @media (max-width: 768px) {
+    .stats-row {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        width: 100%;
+    }
+    
+    .stat-column {
+        width: 100%;
+        flex: none;
+        min-width: auto;
+    }
+    
+    .stat-item {
+        margin-bottom: 20px;
+    }
+    
+    .stat-number {
+        font-size: 30px;
+    }
+    
+    .stat-label {
+        font-size: 12px;
+    }
+    
+    /* This ensures the stats don't get too wide padding on mobile */
+    .stats-wrapper {
+        padding-right: 0;
+    }
+}
+
+@media (min-width: 1478px) { 
+    .communities-image img {
+    width: 100%;
+    height: 700px;
+    display: block;
+    object-fit: cover;
+}
+}
+
+@media (max-width: 576px) {
+    /* Keep two column layout for stats even at smallest screen */
+    .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stat-number {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 1354px) {
             .partnering-section-mobile {
             display: flex;
             align-items: center;
@@ -2832,107 +2253,37 @@ padding-left: 0%;
             display: none;  
         }
     }
-    .communities-container {
-            display: flex;
-            gap: 40px;
-            align-items: center;
-        }
 
-        @media (max-width: 1024px) {
-            .hero-container, 
-            .communities-container,
-            .cta-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-        .communities-container {
-            display: flex;
-            /* display: inline-flex; */
-            align-items: center;
-            justify-content: center;
-            padding-left: 2%;
-            gap: 60px;
-            background-color: #ECECEC
-        }
-        @media (max-width: 1354px) {
-            .communities-container {
-                flex-direction: column;
-                gap: 40px;
-            }
-            
-            .communities-image, .communities-content {
-                width: 100%;
-            }
+    .fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
 
-            .communities-image, .access-content {
-                width: 100%;
+@media (max-width: 1478px) { 
+           .stats-wrapper {
+            padding-right: 0%;
+           }
+
+           .header {
+            padding: 15px 15px;
             }
-            .access-content {
-                margin-bottom: 10%;
-                padding-right: 3%;
-                margin-left: 9%;
-                padding-right: 10%;
-            }
-        }
-        .communities-image {
-            flex: 1.2;
-        }
-        .communities-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        @media (min-width: 1478px) { 
-    .communities-image img {
-    width: 100%;
-    height: 700px;
-    display: block;
-    object-fit: cover;
-}
-}
-.access-content {
-            flex: 1;
-            padding-left: 5%;
-        }
-        .communities-title {
-            font-size: 52px;
-            color: var(--dark-green);
-            margin-bottom: 30px;
-            font-weight: 700;
-            color: #000000;
-        }
-        @media (max-width: 768px) {
-            .access-title, .communities-title {
-                font-size: 32px;
+            .banner {
+                padding: 12px 15px;
             }
         }
-        .communities-text {
-            margin-bottom: 30px;
-            font-size: 22px;
-            line-height: 1.7;
-            color: #444;
-            width: 70%;
-        }
-        @media (max-width: 1354px) {
-            .communities-text {
-                margin-bottom: 30px;
-                font-size: 16px;
-                line-height: 1.7;
-                color: #444;
-                width: 100%;
-            }
-            .partnering-text {
-                font-size: 16px;
-                line-height: 1.6;
-                color: #333;
-                margin-bottom: 30px;
-            }
-        }
+        
     </style>
 </head>
 <body>
-   
+    <div id="intro-overlay">
+        <div id="logo-container">
+            <img id="intro-logo" src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo">
+        </div>
+        <div id="circular-mask-container">
+            <div id="circular-mask"></div>
+        </div>
+    </div>
     <div id="main-content">
     <!-- Banner Section -->
     <div class="banner">
@@ -2946,7 +2297,7 @@ padding-left: 0%;
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo-link">
-                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/SFC_Logo Assets 2025_v1-2.png" alt="Skills for Chicago Logo" class="logo">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo" class="logo">
             </a>
             
             <!-- Desktop Navigation -->
@@ -3005,95 +2356,78 @@ padding-left: 0%;
             <div class="overlay"></div>
         </div>
     </header>
-    <!-- Communities Section -->
-    <section class="resources-section">
-        <div class="container resources-container">
-            <div class="resources-content">
-                <h2 class="communities-title">Career Resources</h2>
-                <h4 style="padding-bottom: 2%; color: #4F6B3A;">Gain the Skills. Secure the Job</h4>
-                <p class="communities-text">
-                    At Skills for Chicago, we go beyond job placement—we help to equip you with the tools, resources, and confidence to succeed in today’s workforce. Whether you’re preparing for an interview, exploring new career paths, or looking to strengthen your resume, we provide the resources and expert guidance to help you stand out.                
+    
+    <!-- Rest of the page content remains unchanged -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Breaking Barriers.<br>Expanding Opportunity.<br>Empowering Chicago.</h1>
+                <p class="hero-description">
+                    At Skills for Chicago, we are more than a job placement organization—we are a movement
+                    committed to creating pathways to success through equitable employment opportunities.
+                    Our mission is clear: to stand as a life-changing employment resource by connecting
+                    underrepresented job seekers to employers with opportunities across industries.
                 </p>
-            </div>
-            <div class="communities-image">
-                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_462178768.jpeg" alt="People at a community event">
-            </div>
-        </div>
-    </section>
-     <!-- Communities Section -->
-     <section class="communities-section">
-        <div class="container communities-container">
-            <div class="communities-image">
-                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_305701791.jpeg" alt="People at a community event">
-            </div>
-            <div class="communities-content">
-                <h2 class="communities-title">Strengthening Communities</h2>
-                <p class="communities-text">
-                    Career Highways and Skills for Chicago built a custom, AI-driven resource to allow job seekers to visualize a path to their dream job, find training programs, and access resume-building tools. Whether you’re just starting out or making a career transition, we provide the support and direction you need to move forward.
-                </p>
-                <p class="communities-text">
-                Create a Career Highways Profile and take control of your future.
-            </p>
-                <a href="#" class="action-button" style="width: 200px;">
-                    <span>Community Impact</span>
-                    <div class="circle-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a> 
-            </div>
-        </div>
-    </section>
-    <!-- Partnership Section -->
-    <section class="partnering-section">
-        <div class="partnering-content">
-            <div class="partnering-content-inner">
-                <h2 class="partnering-title">Cook County Manufacturing Apprentice Accelerator</h2>
-                <p class="partnering-text">
-                    The Cook County Manufacturing Apprenticeship Accelerator connects job seekers with U.S. Department of Labor-registered apprenticeships in the manufacturing industry. This “concierge service” helps manufacturers identify and screen apprentices while providing participants with career support, transportation assistance, and other resources during their first 90 days.                </p>
-                <a href="#" class="action-button" style="width: 200px;">
-                    <span>Learn More</span>
-                    <div class="circle-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>  
-            </div>
-        </div>
-        <div class="partnering-image">
-            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_790856154.jpeg" alt="Professional in a business setting">
-        </div>
-    </section>
-    <section class="partnering-section-mobile">
-        <div class="container communities-container">
-            <div class="communities-image">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/AdobeStock_790856154_50.jpeg" alt="People at a community event">
-            </div>
-            <div class="access-content">
-                <h2 class="communities-title">Cook County Manufacturing Apprentice Accelerator</h2>
-                <p class="communities-text">
-                    The Cook County Manufacturing Apprenticeship Accelerator connects job seekers with U.S. Department of Labor-registered apprenticeships in the manufacturing industry. This “concierge service” helps manufacturers identify and screen apprentices while providing participants with career support, transportation assistance, and other resources during their first 90 days.
-                 </p>
-                    <a href="#" class="action-button" style="width: 200px; ">
-                        <span>Learn More</span>
-                        <div class="circle-icon">
-                            <i class="fas fa-arrow-right"></i>
+                
+                <!-- Stats Row - Matching SC3.png -->
+                 <div class="stats-wrapper">
+                <div class="stats-row">
+                    <div class="stat-column">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="13000" data-suffix="+">0</div>
+                            <div class="stat-label">lifetime placements</div>
                         </div>
-                    </a>  
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="91" data-suffix="%">0</div>
+                            <div class="stat-label">placements are BIPOC</div>
+                        </div>
+                    </div>
+                    <div class="stat-column">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="145">0</div>
+                            <div class="stat-label">employer partners</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="76" data-suffix="%">0</div>
+                            <div class="stat-label">placements who live on Chicago's south and west sides</div>
+                        </div>
+                    </div>
+                    <div class="stat-column">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="98">0</div>
+                            <div class="stat-label">community partners</div>
+                        </div>
+                       
+                    </div>
+                    <div class="stat-column">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="310.4" data-prefix="$" data-suffix="M">0</div>
+                            <div class="stat-label">annualized wages earned</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/AdobeStock_279223587_50-scaled.jpeg" alt="Professional woman smiling">
             </div>
         </div>
     </section>
+
+    <!-- Communities Section -->
     <section class="communities-section">
         <div class="container communities-container">
             <div class="communities-image">
-                    <!-- Partnership Section Image -->
-                <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_305701791.jpeg" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/AdobeStock_462178768_2_30.jpeg" alt="People at a community event">
             </div>
-            <div class="communities-content">
-                <h2 class="communities-title">Strengthening Communities</h2>
+            <div class="access-content">
+                <h2 class="communities-title">Creating Access to <br> Employment</h2>
                 <p class="communities-text">
-                    Our Credential & Career Coaching team supports individuals who have recently earned certifications, as well as those seeking to obtain credentials. The program provides job readiness training, including resume building, interview preparation, and personalized guidance throughout the hiring process. Participants also benefit from coaching and mentorship to strengthen their employment prospects. Upon completion, qualified candidates are connected with employer partners actively hiring in their field. Like all services provided by Skills for Chicago, this program is free for job seekers.
-                </p>
+                    We connect underrepresented job seekers to meaningful work, offering direct access to employers ready to hire. Through personalized support and partnerships, we help individuals take the next step toward financial security.                </p>
                 <a href="#" class="action-button" style="width: 200px;">
-                    <span>Learn More</span>
+                    <span>Find A Job</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
                     </div>
@@ -3102,8 +2436,91 @@ padding-left: 0%;
         </div>
     </section>
 
-      <!-- Footer Content -->
-      <footer class="modern-footer">
+    <!-- Partnership Section -->
+    <section class="partnering-section">
+        <div class="partnering-content">
+            <div class="partnering-content-inner">
+                <h2 class="partnering-title">Partnering with Employers</h2>
+                <p class="partnering-text">
+                    Through strategic employer partnerships, we help businesses tap into Chicago's diverse talent pool and develop hiring practices that remove barriers to employment
+                </p>
+                <a href="#" class="action-button" style="width: 200px; ">
+                    <span>Partner With Us</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>  
+            </div>
+        </div>
+        <div class="partnering-image">
+            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/AdobeStock_790856154_50.jpeg" alt="Professional in a business setting">
+        </div>
+    </section>
+    <section class="partnering-section-mobile">
+        <div class="container communities-container">
+            <div class="communities-image">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/AdobeStock_790856154_50.jpeg" alt="People at a community event">
+            </div>
+            <div class="access-content">
+                <h2 class="communities-title">Partnering with Employers</h2>
+                <p class="communities-text">
+                    Through strategic employer partnerships, we help businesses tap into Chicago's diverse talent pool and develop hiring practices that remove barriers to employment.
+                    </p>
+                    <a href="#" class="action-button" style="width: 200px; ">
+                        <span>Partner With Us</span>
+                        <div class="circle-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>  
+            </div>
+        </div>
+    </section>
+
+        <!-- Communities Section -->
+        <section class="communities-section">
+            <div class="container communities-container">
+                <div class="communities-image">
+                    <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/1691242931374.webp" alt="People at a community event">
+                </div>
+                <div class="communities-content">
+                    <h2 class="communities-title">Strengthening <br> Communities</h2>
+                    <p class="communities-text">
+                        We bring hiring events, job opportunities, and career resources directly to Chicago's south and west sides. By working alongside community organizations, we ensure that access to employment reaches those who need it most.
+                    </p>
+                    <a href="#" class="action-button" style="width: 200px;">
+                        <span>Community Impact</span>
+                        <div class="circle-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a> 
+                </div>
+            </div>
+        </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container cta-container">
+            <div class="cta-content">
+                <h2 class="cta-title">Your Next Opportunity<br>Starts Here</h2>
+                <p class="cta-text">
+                    Discover new job opportunities, connect with hiring employers, and gain the support you
+                    need to move forward.
+                </p>
+            </div>
+            <div class="cta-buttons">
+                <div class="search-box">
+                    <div class="search-icon-wrapper">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <input type="text" class="search-input" placeholder="Search by job title, skill, or company">
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Content -->
+    <footer class="modern-footer">
         <div class="footer-container">
             <div class="footer-top">
                 <a href="#"><div class="footer-logo">
@@ -3432,7 +2849,28 @@ $(document).ready(function() {
 });
         $(document).ready(function() {
     // Function to complete the animation and show the main content
- 
+    function completeIntroAnimation() {
+        // After the circle expands, fade out the overlay
+        setTimeout(function() {
+            // Make main content visible but still transparent
+            $('#main-content').css({
+                'visibility': 'visible',
+                'opacity': '0'
+            });
+            
+            // Fade out the intro overlay
+            $('#intro-overlay').fadeOut(800, function() {
+                // Fade in the main content
+                $('#main-content').animate({ opacity: 1 }, 800);
+                
+                // Enable scrolling
+                $('body').addClass('content-loaded');
+                
+                // Remove the intro overlay from DOM
+                $(this).remove();
+            });
+        }, 2000); // Time after animation starts when we begin transitioning to main content
+    }
 
     // Start the animation sequence
     completeIntroAnimation();
@@ -3441,7 +2879,28 @@ $(document).ready(function() {
     // Wrap your existing content in a div with id="main-content" if not already done
     
     // Function to complete the animation and show the main content
-    
+    function completeIntroAnimation() {
+        // After the circle expands, fade out the overlay
+        setTimeout(function() {
+            // Make main content visible but still transparent
+            $('#main-content').css({
+                'visibility': 'visible',
+                'opacity': '0'
+            });
+            
+            // Fade out the intro overlay
+            $('#intro-overlay').fadeOut(800, function() {
+                // Fade in the main content
+                $('#main-content').animate({ opacity: 1 }, 800);
+                
+                // Enable scrolling
+                $('body').addClass('content-loaded');
+                
+                // Remove the intro overlay from DOM
+                $(this).remove();
+            });
+        }, 3500); // Time after animation starts when we begin transitioning to main content
+    }
 
     // Start the animation sequence
     completeIntroAnimation();
@@ -3576,7 +3035,7 @@ $(document).ready(function() {
                 });
             });
             
-            // NEW - Mobile Menu Functionality
+            // Mobile Menu Functionality
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const hamburger = document.querySelector('.hamburger');
             const mobileNav = document.querySelector('.mobile-nav');
@@ -3621,65 +3080,7 @@ $(document).ready(function() {
                     toggleMobileMenu();
                 }
             });
-        });
-    </script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Smooth scrolling for anchor links
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function(e) {
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        e.preventDefault();
-                        target.scrollIntoView({
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-            
-            // Add animation to sections when they come into view
-            const animateSections = () => {
-                const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
-                
-                sections.forEach(section => {
-                    const rect = section.getBoundingClientRect();
-                    const isVisible = rect.top <= window.innerHeight * 0.8;
-                    
-                    if (isVisible) {
-                        section.style.opacity = '1';
-                        section.style.transform = 'translateY(0)';
-                    }
-                });
-            };
-            
-            // Set initial styles for animation
-            const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
-            sections.forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-            });
-            
-            // Run on load and scroll
-            animateSections();
-            window.addEventListener('scroll', animateSections);
-            
-            // Mobile menu toggle functionality
-            const mobileMenuToggle = () => {
-                const navLinks = document.querySelector('.nav-links');
-                const isMobile = window.innerWidth <= 1024;
-                
-                if (isMobile) {
-                    navLinks.style.display = 'none';
-                } else {
-                    navLinks.style.display = 'flex';
-                }
-            };
-            
-            // Run on load and resize
-            mobileMenuToggle();
-            window.addEventListener('resize', mobileMenuToggle);
+
             // Footer Accordion Functionality
             const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
             

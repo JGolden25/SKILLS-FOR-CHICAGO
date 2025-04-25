@@ -19,32 +19,33 @@
             --footer-green: #234018;
         }
 
-        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+        @font-face { font-family: Greycliff CF, Bold; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
 
-@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+@font-face { font-family: Greycliff CF, Light; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
 
         h1 {
-         font-family: Greycliff
+         font-family: Greycliff CF, Bold;
       }
       h2 {
-         font-family: Greycliff
+         font-family: Greycliff CF, Bold;
       }
       p {
-        font-family: Greycliff-thin
+        font-family: Greycliff CF, Light;
       }
       a {
-        font-family: Greycliff-thin
+        font-family: Greycliff CF, Light;
       }
       span {
-        font-family: Greycliff
+        font-family: Greycliff CF, Bold;
       }
 
       h4 {
-        font-family: Greycliff
+        font-family: Greycliff CF, Bold;
+        color: #4F6B3A;
       }
 
       h5 {
-        font-family: Greycliff
+        font-family: Greycliff CF, Bold;
       }
 
         * {
@@ -255,20 +256,21 @@
         .partners-section {
             padding: 60px 0;
             text-align: center;
-            background-color: #f9f9f9;
+            background-color: #ffffff;
         }
 
         .partners-title {
-            font-size: 36px;
+            font-size: 52px;
             font-weight: 700;
             color: #353232;
             margin-bottom: 15px;
         }
 
         .partners-subtitle {
-            font-size: 18px;
+            font-size: 24px;
             color: #666;
             margin-bottom: 40px;
+            font-weight: 400;
         }
 
         .partners-grid {
@@ -282,12 +284,12 @@
 
         .partner-logo {
             height: 100px;
-            background-color: #fff;
+            /* background-color: #fff; */
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
@@ -384,12 +386,20 @@
             .communities-image, .engagement-content {
                 width: 100%;
             }
+
         }
 
         @media (max-width: 1024px) {
             .engagement-content {
         /* margin-bottom: 4%; */
     }
+
+    .communities-image img {
+    width: 100%;
+    max-height: 1200px;
+    display: block;
+    object-fit: cover;
+}
         }
 
         .engagement-section {
@@ -481,20 +491,28 @@
         font-size: 30px;
       }
 
-          li::before {
+      .employer-partner-text::before {
     content: "●"; /* Unicode bullet character */
     color: #4F6B3A; /* Your specified green color */
     display: inline-block;
     /* width: 1%; */
     margin-left: -1em;
     margin-right: 1%;
-    font-size: 1em; /* Makes the bullet slightly larger */
+    font-size: 1.5em; /* Makes the bullet slightly larger */
     align-items: center;
     justify-content: center;
 }
 
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100%;
+}
+
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0px;
+}
+
 li {
-    font-family: Greycliff-thin
+    font-family: Greycliff CF, Light
 }
 
       .employer-partner-section {
@@ -510,6 +528,7 @@ li {
             color: #FFFFFF;
             font-size: 22px;
             width: 70%;
+            font-weight: 100;
         }
         .resources-container {
             display: flex;
@@ -537,10 +556,476 @@ li {
             flex: 1;
         }
         #logo-1 {
-    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/A Safe Haven Foundation.png');
+    /* background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/A Safe Haven Foundation.png');
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
+}
+
+  /* Footer Content */
+  .modern-footer {
+            background-color: #1F3707;
+            color: white;
+            padding: 60px 0 0 0;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            position: relative;
+            overflow: hidden; /* Keep the background logo contained within the footer */
+        }
+
+        /* Add the SC logo as a background on the left side */
+        .modern-footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10%; /* Position on the left side instead of right */
+            transform: translateY(-50%);
+            width: 60%; /* Large size to match the image */
+            height: 140%;
+            background-image: url('https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Artboard-1-copy.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 0;
+            opacity: 0.20; /* Dark but subtle appearance */
+        }
+
+        /* Ensure footer content stays on top of the background image */
+        .footer-container, .footer-copyright {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-container {
+            padding: 0 6%;
+            font-weight: 600;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .footer-divider {
+            flex: 1;
+            height: 1px;
+            background-color: #ffffff;
+            margin: 0 40px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            opacity: 0.8;
+        }
+
+         /* Updated footer navigation styles to fix vertical alignment */
+         .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Changed from center to flex-start */
+            margin-bottom: 60px;
+        }
+
+        .footer-nav-section {
+            display: flex;
+            flex-direction: column;
+            min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+        }
+
+        .footer-nav-section h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            height: 22px; /* Fixed height for the heading */
+            line-height: 22px; /* Match the height to ensure consistent alignment */
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            font-weight: 300;
+            font-family: Greycliff-thin, sans-serif;
+        }
+
+        .footer-nav-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            background-color: #1F3707;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #DCDCDC;
+        }
+
+        /* NEW STYLES FOR MOBILE FOOTER ACCORDION */
+        .footer-accordion {
+            display: none; /* Hide on desktop */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-accordion-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-accordion-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+
+        .footer-accordion-icon {
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .footer-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .footer-accordion.active .footer-accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .footer-accordion.active .footer-accordion-content {
+            max-height: 300px; /* Adjust as needed */
+            padding-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1354px) {
+            .collaborate-image img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+
+        .work-together-content h2 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-container {
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+
+            .header {
+            padding: 15px 15px;
+            }
+            /* .partnering-section-mobile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            border-top: 1px solid black;
+        }
+
+        .partnering-section-mobile {
+            background-color: var(--light-gray);
+        }
+        .partnering-section {
+            display: none;  
+        }
+            .cta-text {
+                margin-bottom: 20px;
+                font-size: 22px;
+                width: 60%;
+            }
+            .hero-image {
+                flex: 1;
+                text-align: right;
+                object-fit: cover;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+                border-radius: 70px;
+                height: 400px;
+                object-fit: cover;
+            } */
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+            .footer-nav-section {
+                flex: 1 0 30%;
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-top {
+                flex-direction: column;
+                gap: 0px;
+                text-align: center;
+                margin-bottom: 0px;
+            }
+
+            /* Hide desktop footer navigation and show accordion */
+            .footer-nav {
+                display: none;
+            }
+
+            .footer-accordion {
+                display: block;
+            }
+
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-nav {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Mobile Footer Links */
+        .footer-mobile-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-mobile-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-mobile-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .footer-mobile-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        @media (max-width: 1354px) {
+            .collaborate-image img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+    }
+    /* Add these styles to your existing CSS */
+@media (max-width: 1354px) {
+    .employer-partner-section {
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .employer-partner-section .communities-image {
+        width: 100%;
+        order: -1; /* Move image to the top */
+    }
+    
+    .employer-partner-section .communities-image img {
+        max-height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .employer-partner-section .resources-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 25px 40px 48px;
+        background-color: #041202;
+    }
+    
+    .employer-partner-title {
+        font-size: 38px;
+        width: 100%;
+    }
+    
+   
+    
+    /* Fix background color for the entire section on mobile */
+    section.employer-partner-section {
+        background-color: transparent;
+    }
+    
+    .container.employer-partner-section {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 1354px) {
+    /* First section (Our Employer Partners) mobile styling */
+    .engagement-section > .engagement-section {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .engagement-section > .engagement-section .communities-image {
+        order: -1; /* Move image to top */
+        width: 100%;
+    }
+    
+    .engagement-section > .engagement-section .communities-image img {
+        max-height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .engagement-section > .engagement-section .engagement-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 25px;
+        background-color: #f5f5f5; /* Light gray background */
+    }
+    
+    .engagement-section > .engagement-section .engagement-title {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+    
+    .engagement-section > .engagement-section h4 {
+        font-size: 24px;
+    }
+    
+    .engagement-section > .engagement-section .engagement-text {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+@media (max-width: 1354px) {
+            .collaborate-image img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+    }
+    /* Add these styles to your existing CSS */
+@media (max-width: 776px) {
+    .employer-partner-section {
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .employer-partner-section .communities-image {
+        width: 100%;
+        order: -1; /* Move image to the top */
+    }
+    
+    .employer-partner-section .communities-image img {
+        max-height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .employer-partner-section .resources-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 25px 40px 48px;
+        background-color: #041202;
+    }
+    
+    .employer-partner-title {
+        font-size: 38px;
+        width: 100%;
+    }
+    
+   
+    
+    /* Fix background color for the entire section on mobile */
+    section.employer-partner-section {
+        background-color: transparent;
+    }
+    
+    .container.employer-partner-section {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 776px) {
+    /* First section (Our Employer Partners) mobile styling */
+    .engagement-section > .engagement-section {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .engagement-section > .engagement-section .communities-image {
+        order: -1; /* Move image to top */
+        width: 100%;
+    }
+    
+    .engagement-section > .engagement-section .communities-image img {
+        max-height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .engagement-section > .engagement-section .engagement-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 25px;
+        background-color: #f5f5f5; /* Light gray background */
+    }
+    
+    .engagement-section > .engagement-section .engagement-title {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+    
+    .engagement-section > .engagement-section h4 {
+        font-size: 24px;
+    }
+    
+    .engagement-section > .engagement-section .engagement-text {
+        width: 100%;
+        font-size: 18px;
+    }
 }
     </style>
 </head>
@@ -631,97 +1116,332 @@ li {
         <div class="partners-grid">
             <!-- Row 1 -->
             <div class="partner-logo" id="logo-1">
-                <!-- A SafeHaven logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-2">
-                <!-- Arrupe College logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-3">
-                <!-- Association House logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-4">
-                <!-- Bethel logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
             </div>
             
             <!-- Row 2 -->
             <div class="partner-logo" id="logo-5">
-                <!-- BUILD logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/CNO_LOGO_400x160.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-6">
-                <!-- Cara Collective logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/DOT_Official_Logo_Blue.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-7">
-                <!-- Center for Changing Lives logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Endeavor-Health-Black-Stacked-scaled.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-8">
-                <!-- CRED logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Ferrara-Logo.png" alt="People at a community event">
             </div>
             
             <!-- Row 3 -->
             <div class="partner-logo" id="logo-9">
-                <!-- Chicago Scholars logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/2a34d8_dfab924ee70641918b494f873b941e9emv2.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-10">
-                <!-- Chicago Urban League logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/freedman-seating-logo-color.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-11">
-                <!-- Facing Forward logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Go-health-logo-color.jpg" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-12">
-                <!-- Friends of the Children logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/HAH_LOGO_NO_TAGLINE_COLOR-002.png" alt="People at a community event">
             </div>
             
             <!-- Row 4 -->
             <div class="partner-logo" id="logo-13">
-                <!-- Greater Englewood logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/HUB-Horizontal-Full-Colour-RGB.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-14">
-                <!-- Goodwill logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Hyatt-color-logo-large.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-15">
-                <!-- Growing Home logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Jewel-Osco-logo-color.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-16">
-                <!-- Heartland Alliance logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/MIS-logo15x42-scaled.png" alt="People at a community event">
             </div>
             
             <!-- Row 5 -->
             <div class="partner-logo" id="logo-17">
-                <!-- Hope Center Foundation logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Northwestern-Medicine-Logo-RGB-1-scaled.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-18">
-                <!-- IDES logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/ONBank.Flag_-scaled.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-19">
-                <!-- KRA logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/rush-logo-color.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-20">
-                <!-- La Casa Norte logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Shirley-Ryan.png" alt="People at a community event">
             </div>
             
             <!-- Row 6 -->
             <div class="partner-logo" id="logo-21">
-                <!-- Lawrence Hall logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/ssp-america-logo-color.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-22">
-                <!-- LIFT logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/UChicago_Facilities-Services_Vertical_Color-RGB.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-23">
-                <!-- Life Collective logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/UCM_Logo_color.jpg" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-24">
-                <!-- Mercy Home logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Ulta-Beauty_1000x800.png" alt="People at a community event">
             </div>
             
             <!-- Row 7 -->
             <div class="partner-logo" id="logo-25">
-                <!-- Metropolitan Family Services logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Wintrust-large-logo_1000x700.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-26">
-                <!-- Bright Endeavors logo will go here -->
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Walgreens_2020_primary_logo.png" alt="People at a community event">
             </div>
         </div>
     </section>
+
+      <!-- Footer Content -->
+      <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-3_optimized.png" alt="Skills for Chicago Logo">
+                </div>
+                <div class="footer-divider"></div>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Desktop Footer Navigation -->
+            <div class="footer-nav">
+                <div class="footer-nav-section">
+                    <h3>About Us</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Who We Are</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Annual Reports & Financials</a>
+                        <a href="#">Our Work in Action</a>
+                        <a href="#">Careers at Skills</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>Job Seekers</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Find A Job</a>
+                        <a href="#">Career Resources</a>
+                        <a href="#">FAQs for Job Seekers</a>
+                        <a href="#">Resources</a>
+                        <a href="#">Events</a>
+                        <a href="#">FAQs</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>Employers</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Partner With Us</a>
+                        <a href="#">Our Employer Partners</a>
+                        <a href="#">Consulting</a>
+                        <a href="#">Resources & Case Studies</a>
+                        <a href="#">Our Projects</a>
+                    </div>
+                </div>
+
+                <div class="footer-nav-section">
+                    <h3>COMMUNITY PARTNERS</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Collaborate With Us</a>
+                        <a href="#">Community Impact</a>
+                        <a href="#">Our Community Partners</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>EVENTS</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Events & Highlights</a>
+                        <a href="#">Employment Champions Breakfast</a>
+                    </div>
+                </div>
+                <div class="footer-nav-section">
+                    <h3>NATIONAL EXPANSION</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">National Expansion</a>
+                    </div>
+                </div>
+                <div class="footer-nav-section">
+                    <h3>Donors</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Donors</a>
+                    </div>
+                </div>
+                <div class="footer-nav-section">
+                    <h3>CONTACT US</h3>
+                    <div class="footer-nav-links">
+                        <a href="#">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Footer Accordion -->
+            <div class="mobile-footer">
+                <!-- ABOUT US Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">ABOUT US</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Annual Reports & Financials</a></li>
+                            <li><a href="#">Our Work in Action</a></li>
+                            <li><a href="#">Careers at Skills</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- JOB SEEKERS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">JOB SEEKERS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="#">Find A Job</a></li>
+                            <li><a href="#">Career Resources</a></li>
+                            <li><a href="#">FAQs for Job Seekers</a></li>
+                            <li><a href="#">Resources</a></li>
+                            <li><a href="#">Events</a></li>
+                            <li><a href="#">FAQs</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EMPLOYERS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">EMPLOYERS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="#">Partner With Us</a></li>
+                            <li><a href="#">Our Employer Partners</a></li>
+                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Resources & Case Studies</a></li>
+                            <li><a href="#">Our Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- COMMUNITY PARTNERS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">COMMUNITY PARTNERS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="#">Collaborate With Us</a></li>
+                            <li><a href="#">Community Impact</a></li>
+                            <li><a href="#">Our Community Partners</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EVENTS & HIGHLIGHTS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">EVENTS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="#">Events & Highlights</a></li>
+                            <li><a href="#">Employment Champions Breakfast</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NATIONAL EXPANSION Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">NATIONAL EXPANSION</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="#">National Expansion</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- DONORS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">DONORS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="#">Donors</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- CONTACT US Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">CONTACT US</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <div class="footer-container">
+                Copyright @ 2025 Skills All rights reserved
+            </div>
+        </div>
+    </footer>
 
     <script>
         // Mobile menu functionality
@@ -784,6 +1504,83 @@ li {
             
             // Check for new logos in view on scroll
             window.addEventListener('scroll', animateLogosInView);
+        });
+    </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation to sections when they come into view
+            const animateSections = () => {
+                const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const isVisible = rect.top <= window.innerHeight * 0.8;
+                    
+                    if (isVisible) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial styles for animation
+            const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            // Run on load and scroll
+            animateSections();
+            window.addEventListener('scroll', animateSections);
+            
+            // Mobile menu toggle functionality
+            const mobileMenuToggle = () => {
+                const navLinks = document.querySelector('.nav-links');
+                const isMobile = window.innerWidth <= 1024;
+                
+                if (isMobile) {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                }
+            };
+            
+            // Run on load and resize
+            mobileMenuToggle();
+            window.addEventListener('resize', mobileMenuToggle);
+            // Footer Accordion Functionality
+            const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordion = this.parentElement;
+                    
+                    // Toggle active class
+                    accordion.classList.toggle('active');
+                    
+                    // Close all other accordions (optional - comment out if you want multiple open)
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== this) {
+                            otherHeader.parentElement.classList.remove('active');
+                        }
+                    });
+                });
+            });
         });
     </script>
 </body>
