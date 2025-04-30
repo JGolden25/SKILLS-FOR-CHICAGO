@@ -1,0 +1,2741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - Skills for Chicago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        :root {
+            --primary-green: #4d7e32;
+            --dark-green: #234018;
+            --light-green: #a7c572;
+            --off-white: #f8f8f3;
+            --dark-gray: #333333;
+            --light-gray: #f0f0e8;
+            --button-green: #4d7e32;
+            --footer-green: #234018;
+            --text-color: #333333;
+            --banner-green: #234018;
+        }
+
+        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+
+@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+h1 {
+         font-family: Greycliff CF, bold;
+      }
+      h2 {
+         font-family: Greycliff CF, bold;
+      }
+      h3 {
+         font-family: Greycliff CF, bold;
+      }
+      p {
+        font-family: Greycliff CF, Light;
+      }
+      a {
+        font-family: Greycliff CF, Light;
+      }
+      span {
+        font-family: Greycliff CF, bold;
+      }
+      .elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100%;
+}
+
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0px;
+}
+
+.partner-list {
+    margin-left: 2%;
+}
+
+.employer-partner-text::before {
+    content: "●"; /* Unicode bullet character */
+    color: #4F6B3A; /* Your specified green color */
+    display: inline-block;
+    /* width: 1%; */
+    margin-left: -1em;
+    margin-right: 1%;
+    font-size: 1.25em; /* Makes the bullet slightly larger */
+    align-items: center;
+    justify-content: center;
+}
+
+.employer-partner-text {
+        margin-bottom: 2%;
+        font-size: 22px;
+        font-family: Greycliff CF, Light;
+    }
+
+    li.employer-partner-text::marker {
+        display: hidden;
+        font-size: 0px;
+    }
+    .team-container {
+            display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0px 0px 0px 80px;
+    background-color: #FFFFFF;
+    min-height: 800px;
+        }
+        .team-content {
+            margin-bottom: 10%;
+        }
+    .team-content h1 {
+            font-size: 52px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+            letter-spacing: 1px;
+            margin-top: 10%;
+        }
+    .team-description {
+            font-size: 24px;
+    line-height: 1.7;
+    color: #444;
+    width: 80%;
+    margin-bottom: 5%;
+        }
+
+        .team-image {
+            width: 100%;
+            height: 100%;
+            /* border-radius: 5px; */
+            overflow: hidden;
+            border-left: 1px solid black;
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @media (max-width: 1024px) {
+        .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0px;
+            }
+
+            .team-image {
+                order: -1;
+            }
+            
+            .profile-social-link-big {
+    position: absolute;
+    top: 290px;
+    right: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 0.3seas;
+}
+            .team-description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+            width: 100%;
+            margin-bottom: 5%;
+        }
+        .team-content {
+                padding: 0px 5% 5% 5%;
+            }
+    }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+        }
+
+        body {
+            color: var(--text-color);
+            background-color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            color: var(--dark-green);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--button-green);
+            color: white;
+        }
+
+        .btn-outline {
+            background-color: var(--light-green);
+            color: var(--dark-green);
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .btn-outline i {
+            font-size: 12px;
+        }
+
+        /* Top Announcement Bar */
+        .announcement-bar {
+            background-color: var(--primary-green);
+            color: white;
+            padding: 8px 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .announcement-bar a {
+            color: white;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+
+        /* Header */
+        .header {
+            background-color: white;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            height: 40px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .nav-link {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--dark-gray);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-green);
+        }
+
+        .donate-btn {
+            background-color: var(--button-green);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Who We Are Section */
+        .who-we-are {
+            padding: 60px 0;
+        }
+
+        .who-we-are-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .who-we-are-content {
+            flex: 1;
+        }
+
+        .who-we-are-title {
+            font-size: 32px;
+            color: var(--dark-gray);
+            margin-bottom: 20px;
+        }
+
+        .who-we-are-text {
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .who-we-are-image {
+            flex: 1;
+        }
+
+        .who-we-are-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Banner Section */
+        .banner {
+            background-color: var(--banner-green);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .banner-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 24px;
+            line-height: 1.4;
+        }
+
+        /* Start with the Job Section */
+        .job-section {
+            /* padding: 60px 0; */
+            background-color: white;
+        }
+
+        .job-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .job-image {
+            flex: 1;
+        }
+
+        .job-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .job-content {
+            flex: 1;
+        }
+
+        .job-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .job-section h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: var(--dark-green);
+        }
+
+        .job-text {
+            margin-bottom: 30px;
+            font-size: 15px;
+        }
+
+        /* Approach Section */
+        .approach {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .approach-container {
+            display: flex;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .approach-content {
+            flex: 1;
+        }
+
+        .approach-title {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .approach-subtitle {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--dark-green);
+        }
+
+        .approach-text {
+            margin-bottom: 20px;
+            font-size: 15px;
+        }
+
+        .approach-image {
+            flex: 1;
+        }
+
+        .approach-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Impact Section */
+        .impact {
+            padding: 60px 0;
+            background-color: #f9f9f9;
+        }
+
+        .impact-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .impact-content {
+            flex: 1;
+        }
+
+        .impact-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+
+        .impact-subtitle {
+            font-size: 18px;
+            color: var(--dark-green);
+            margin-bottom: 20px;
+        }
+
+        .impact-text {
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .impact-stat {
+            margin-top: 40px;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 16px;
+            color: var(--dark-gray);
+        }
+
+        .impact-image {
+            flex: 1;
+        }
+
+        .impact-image img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+
+        .contact-item i {
+            width: 20px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-icon {
+            color: white;
+            font-size: 16px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+
+         /* Modern Footer Styles */
+         .modern-footer {
+    background-color: #1F3707;
+    color: white;
+    padding: 60px 0 0 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Keep the background logo contained within the footer */
+}
+
+/* Add the SC logo as a background on the left side */
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Position on the left side instead of right */
+    transform: translateY(-50%);
+    width: 60%; /* Large size to match the image */
+    height: 140%;
+    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.45; /* Dark but subtle appearance */
+}
+
+/* Ensure footer content stays on top of the background image */
+.footer-container, .footer-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modern-footer::before {
+        width: 100%;
+        left: -20%;
+    }
+}
+
+    .footer-container {
+        padding: 0 6%;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .footer-divider {
+        flex: 1;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 40px;
+    }
+
+    .footer-logo img {
+        height: 80px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        opacity: 0.8;
+    }
+
+    /* Updated footer navigation styles to fix vertical alignment */
+    .footer-nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start; /* Changed from center to flex-start */
+        margin-bottom: 60px;
+    }
+
+    .footer-nav-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+    }
+
+    .footer-nav-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        height: 22px; /* Fixed height for the heading */
+        line-height: 22px; /* Match the height to ensure consistent alignment */
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .footer-copyright {
+        background-color: #1F3707;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .footer-nav {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-nav-section {
+            flex: 1 0 30%;
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-top {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-nav-section {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-nav {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+        /* Responsive Styles */
+        @media (max-width: 1024px) {
+            .who-we-are-container,
+            .job-container,
+            .approach-container,
+            .impact-container {
+                flex-direction: column;
+            }
+
+            .who-we-are-image,
+            .job-image,
+            .approach-image,
+            .impact-image {
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .banner-text {
+                font-size: 20px;
+            }
+
+            .who-we-are-title,
+            .job-title,
+            .approach-title,
+            .impact-title {
+                font-size: 24px;
+            }
+        }
+        .mission-container {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Image section */
+.image-section {
+    flex: 1;
+    max-width: 50%;
+}
+
+.image-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Content section */
+.content-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+/* Headings */
+.section-heading {
+    color: #546f41;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    margin-top: 30px;
+}
+
+.section-heading:first-child {
+    margin-top: 0;
+}
+
+/* Paragraphs */
+.section-content {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+/* Job section container */
+.job-section {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .mission-container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        max-width: 100%;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+}
+        .fullscreen-container {
+            min-height: 100vh;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+            background-color: #f8f8f8;
+            z-index: 10; /* Higher than normal content but lower than fixed elements */
+        }
+
+        /* Background image with overlay */
+        .bg-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/api/placeholder/1200/800');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        /* Sections container */
+        .sections-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Fixed height view */
+            z-index: 10;
+        }
+
+        /* Individual section styling */
+        .section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.8s ease, visibility 0.8s ease, transform 0.8s ease;
+            transform: translateY(30px);
+            padding: 0 20px;
+        }
+
+        .section.active {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .section-content {
+            max-width: 800px;
+            text-align: left;
+        }
+
+        .section-heading {
+            color: #546f41;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .section-text {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #444;
+        }
+
+        /* Navigation dots */
+        .dots-navigation {
+            position: fixed;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            z-index: 100;
+            opacity: 0; /* Start hidden */
+            transition: opacity 0.5s ease;
+        }
+
+        .dots-navigation.visible {
+            opacity: 1;
+        }
+
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(84, 111, 65, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: rgba(84, 111, 65, 1);
+            transform: scale(1.2);
+        }
+
+        /* Scroll indication */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #546f41;
+            font-size: 12px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            opacity: 0.7;
+        }
+
+        .scroll-indicator i {
+            font-size: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Additional styles for parallax control */
+        body.parallax-active {
+            overflow: hidden; /* Prevent page scrolling when parallax is active */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .section-heading {
+                font-size: 32px;
+            }
+            
+            .section-text {
+                font-size: 16px;
+            }
+            
+            .dots-navigation {
+                right: 15px;
+            }
+        }
+        /* .image-section {
+            flex: 1;
+            max-width: 50%;
+        } */
+
+        .image-section img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .content-section {
+  opacity: 0; /* Start hidden */
+  transition: opacity 1s ease-in-out;
+  will-change: opacity; /* Optimizes animation performance */
+}
+
+/* Fallback for browsers without JavaScript */
+.no-js .content-section {
+  opacity: 1;
+}
+
+.footer-nav-section h3 {
+    color: #ffffff;
+
+}
+
+       /* Modern Footer Styles */
+       .modern-footer {
+    background-color: #1F3707;
+    color: white;
+    padding: 60px 0 0 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Keep the background logo contained within the footer */
+}
+
+/* Add the SC logo as a background on the left side */
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Position on the left side instead of right */
+    transform: translateY(-50%);
+    width: 60%; /* Large size to match the image */
+    height: 140%;
+    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.45; /* Dark but subtle appearance */
+}
+
+/* Ensure footer content stays on top of the background image */
+.footer-container, .footer-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .modern-footer::before {
+        width: 100%;
+        left: -20%;
+    }
+}
+
+    .footer-container {
+        padding: 0 6%;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .footer-divider {
+        flex: 1;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 40px;
+    }
+
+    .footer-logo img {
+        height: 80px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        opacity: 0.8;
+    }
+
+    /* Updated footer navigation styles to fix vertical alignment */
+    .footer-nav {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: flex-start; /* Changed from center to flex-start */
+        margin-bottom: 60px;
+    }
+
+    .footer-nav-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+    }
+
+    .footer-nav-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        height: 22px; /* Fixed height for the heading */
+        line-height: 22px; /* Match the height to ensure consistent alignment */
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .footer-copyright {
+        background-color: #1F3707;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .footer-nav {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .hero-description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+        
+        .footer-nav-section {
+            flex: 1 0 30%;
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .footer-top {
+            flex-direction: column;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .footer-nav {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .footer-nav-section {
+            width: 100%;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-nav {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+        
+        .contact-info {
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        /* Copyright */
+        .copyright {
+            background-color: #1e3a14;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 14px;
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 1024px) {
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .service-box {
+                border-bottom: 1px solid #eee;
+                border-right: none;
+            }
+            
+            .service-box:nth-child(odd) {
+                border-right: 1px solid #eee;
+            }
+            
+            .service-box:nth-last-child(-n+2) {
+                border-bottom: none;
+            }
+            
+        }
+        
+        @media (max-width: 900px) {
+            .locations-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-left: 10%;
+        }
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0px;
+            }
+
+            .contact-section {
+                margin-right: 0%;
+            }
+
+            .hero-content {
+                padding: 0px 0px 0% 5%;
+            }
+            .hero-image {
+                order: -1;
+            }
+            
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .locations-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-left: 3%;
+        }
+            .nav-links {
+                display: none;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-box {
+                border-right: none;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .service-box:last-child {
+                border-bottom: none;
+            }
+            
+            .form-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group {
+                grid-column: span 1 !important;
+            }
+            
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        .action-button {
+            display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 7px 5px 7px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+.action-button span {
+    margin-right: 5px;
+    font-family: Greycliff-thin, sans-serif;
+}
+.action-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+.action-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+.action-button i {
+    transform: rotate(-45deg);
+}
+.action-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+.action-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
+/* Footer Content */
+.modern-footer {
+            background-color: #1F3707;
+            color: white;
+            padding: 60px 0 0 0;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            position: relative;
+            overflow: hidden; /* Keep the background logo contained within the footer */
+        }
+
+        /* Add the SC logo as a background on the left side */
+        .modern-footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10%; /* Position on the left side instead of right */
+            transform: translateY(-50%);
+            width: 60%; /* Large size to match the image */
+            height: 140%;
+            background-image: url('https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Artboard-1-copy.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 0;
+            opacity: 0.20; /* Dark but subtle appearance */
+        }
+
+        /* Ensure footer content stays on top of the background image */
+        .footer-container, .footer-copyright {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-container {
+            padding: 0 6%;
+            font-weight: 600;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .footer-divider {
+            flex: 1;
+            height: 1px;
+            background-color: #ffffff;
+            margin: 0 40px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            opacity: 0.8;
+        }
+
+         /* Updated footer navigation styles to fix vertical alignment */
+         .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Changed from center to flex-start */
+            margin-bottom: 60px;
+        }
+
+        .footer-nav-section {
+            display: flex;
+            flex-direction: column;
+            min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+        }
+
+        .footer-nav-section h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            height: 22px; /* Fixed height for the heading */
+            line-height: 22px; /* Match the height to ensure consistent alignment */
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            font-weight: 300;
+            font-family: Greycliff-thin, sans-serif;
+        }
+
+        .footer-nav-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            background-color: #1F3707;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #DCDCDC;
+        }
+
+        /* NEW STYLES FOR MOBILE FOOTER ACCORDION */
+        .footer-accordion {
+            display: none; /* Hide on desktop */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-accordion-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-accordion-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+
+        .footer-accordion-icon {
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .footer-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .footer-accordion.active .footer-accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .footer-accordion.active .footer-accordion-content {
+            max-height: 300px; /* Adjust as needed */
+            padding-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1354px) {
+            .collaborate-image img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+
+        .work-together-content h2 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-container {
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+
+            .header {
+            padding: 15px 15px;
+            }
+            /* .partnering-section-mobile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            border-top: 1px solid black;
+        }
+
+        .partnering-section-mobile {
+            background-color: var(--light-gray);
+        }
+        .partnering-section {
+            display: none;  
+        }
+            .cta-text {
+                margin-bottom: 20px;
+                font-size: 22px;
+                width: 60%;
+            }
+            .hero-image {
+                flex: 1;
+                text-align: right;
+                object-fit: cover;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+                border-radius: 70px;
+                height: 400px;
+                object-fit: cover;
+            } */
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+            .footer-nav-section {
+                flex: 1 0 30%;
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .footer-top {
+                flex-direction: column;
+                gap: 0px;
+                text-align: center;
+                margin-bottom: 0px;
+            }
+
+            /* Hide desktop footer navigation and show accordion */
+            .footer-nav {
+                display: none;
+            }
+
+            .footer-accordion {
+                display: block;
+            }
+
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-nav {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Mobile Footer Links */
+        .footer-mobile-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-mobile-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-mobile-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .footer-mobile-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <div class="container">
+            Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. <a href="#">Click here to register!</a> <a href="#">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <a href="https://skillsforchicago.org/" class="logo-link">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo" class="logo">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="main-nav">
+                <div class="nav-links">
+                    <a href="https://skillsforchicago.org/">Home</a>
+                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
+                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
+                    <a href="https://skillsforchicago.org/partner/">Employers</a>
+                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
+                    <a href="https://skillsforchicago.org/donors/">Donors</a>
+                    <a href="https://skillsforchicago.org/events/">Events</a>
+                    <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
+                    <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
+                </div>
+                <a href="#" class="donate-button">
+                    <span>Donate</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>    
+            </nav>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            
+            <!-- Mobile Navigation Panel -->
+            <div class="mobile-nav">
+                <div class="mobile-nav-links">
+                    <a href="https://skillsforchicago.org/">Home</a>
+                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
+                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
+                    <a href="https://skillsforchicago.org/partner/">Employers</a>
+                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
+                    <a href="https://skillsforchicago.org/donors/">Donors</a>
+                    <a href="https://skillsforchicago.org/events/">Events</a>
+                    <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
+                    <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
+                </div>
+                <a href="#" class="donate-button mobile-donate-button">
+                    <span>Donate</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Overlay for mobile menu -->
+            <div class="overlay"></div>
+        </div>
+    </header>
+
+   <!-- Team Section -->
+   <section class="team-section">
+    <div class="team-container">
+        <div class="team-content">
+            <h1>Who We Are</h1>
+            <p class="team-description">
+                Skills for Chicago is a life-changing employment resource dedicated to helping overlooked job seekers—including those aspiring to grow and those currently unemployed or underemployed—gain access to meaningful career opportunities. Through strategic employer partnerships, we drive economic mobility and create pathways to long-term career success.
+            </p>
+            <p class="team-description">
+                We serve as a trusted partner for underrepresented job seekers, supporting their career journeys and positioning them for upward mobility in a competitive job market. Our work is rooted in equity and access, offering:
+             </p>
+            <ul class="partner-list">
+                <li class="employer-partner-text">
+                    Career services in community-based locations across Chicago’s south and west sides.                </li>
+                <li class="employer-partner-text">
+                    Job fairs and hiring events in economically disinvested communities.                </li>
+                <li class="employer-partner-text">
+                    Connections to education, skill-building, and resume-enhancing opportunities.                </li>
+                <li class="employer-partner-text">
+                    Expert support for employers to remove barriers to hiring and promote inclusive employment practices.                </li>
+            </ul>
+        </div>
+        <div class="team-image">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Who-we-are-1.png">
+        </div>
+    </div>
+</section>
+
+    <!-- Banner Section -->
+    <section class="banner">
+        <div class="container">
+            <p class="banner-text">
+                At Skills for Chicago, we don't just connect people to jobs—
+                we create pathways that empower individuals to achieve
+                lasting financial and professional success.
+            </p>
+        </div>
+    </section>
+
+    <!-- Start with the Job Section -->
+    <section class="job-section">
+        <div class="mission-container">
+            <div class="image-section">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Who-We-are-2c-scaled.jpg" alt="Two people in a job interview, one person in a white shirt reviewing a document with another person in a blue shirt">
+            </div>
+            <div class="content-section">
+                <h2 class="section-heading">Our Mission</h2>
+                <p class="section-content">
+                    To stand as a life-changing employment resource by connecting underrepresented job seekers to employers with opportunities across industries.
+                </p>
+                
+                <h2 class="section-heading">Our Vision</h2>
+                <p class="section-content">
+                    To create a future where all job seekers—regardless of background—have equitable access to employment opportunities that lead to long-term financial stability. We envision a more inclusive job market that recognizes and values the potential of overlooked talent in Chicago and beyond.
+                </p>
+                
+                <h2 class="section-heading">Our Impact</h2>
+                <p class="section-content">
+                    We remove barriers to employment by bridging the gap between job seekers and employers, driving economic mobility in historically disinvested communities. Through direct hiring connections, advocacy for inclusive hiring practices, and community partnerships, we help job seekers secure stable employment that leads to upward mobility.
+                </p>
+            </div>
+        </div>
+    </section>
+        <!-- Footer Content -->
+    <footer class="modern-footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <a href="https://skillsforchicago.org/"><div class="footer-logo">
+                    <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-3_optimized.png" alt="Skills for Chicago Logo">
+                </div></a>
+                <div class="footer-divider"></div>
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            
+            <!-- Desktop Footer Navigation -->
+            <div class="footer-nav">
+                <div class="footer-nav-section">
+                    <h3>Home</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/">Home</a>
+                    </div>
+                </div>
+                <div class="footer-nav-section">
+                    <h3>About Us</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                        <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                        <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                        <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                        <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>Job Seekers</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                        <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                        <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                    </div>
+                </div>
+                
+                <div class="footer-nav-section">
+                    <h3>Employers</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                        <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                    </div>
+                </div>
+
+                <div class="footer-nav-section">
+                    <h3>COMMUNITY PARTNERS</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                        <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                        <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                    </div>
+                </div>
+                <div class="footer-nav-section">
+                    <h3>Donors</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/donors/">Donors</a>
+                    </div>
+                </div>
+                <div class="footer-nav-section">
+                    <h3>EVENTS</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                        <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                    </div>
+                </div>
+                <div class="footer-nav-section">
+                    <h3>NATIONAL EXPANSION</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
+                    </div>
+                </div>
+                <div class="footer-nav-section">
+                    <h3>CONTACT US</h3>
+                    <div class="footer-nav-links">
+                        <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Footer Accordion -->
+            <div class="mobile-footer">
+                <!-- ABOUT US Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">ABOUT US</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                        <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                        <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                        <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                        <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                        <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- JOB SEEKERS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">JOB SEEKERS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                        <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                        <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                        <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EMPLOYERS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">EMPLOYERS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                           <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                        <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- COMMUNITY PARTNERS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">COMMUNITY PARTNERS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                        <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                        <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                        <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                        </ul>
+                    </div>
+                </div>
+                <!-- DONORS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">DONORS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="https://skillsforchicago.org/donors/">Donors</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- EVENTS & HIGHLIGHTS Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">EVENTS</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                        <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                        <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- NATIONAL EXPANSION Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">NATIONAL EXPANSION</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+                <!-- CONTACT US Section -->
+                <div class="footer-accordion">
+                    <div class="footer-accordion-header">
+                        <h3 class="footer-accordion-title">CONTACT US</h3>
+                        <span class="footer-accordion-icon">
+                            <i class="fas fa-chevron-down"></i>
+                        </span>
+                    </div>
+                    <div class="footer-accordion-content">
+                        <ul class="footer-mobile-links">
+                            <li><a href="https://skillsforchicago.org/contactus/">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-copyright">
+            <div class="footer-container">
+                Copyright @ 2025 Skills All rights reserved
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+  // Select the existing bullet points container
+  const bulletContainer = document.querySelector('.who-we-are-content ul');
+  const bulletPoints = Array.from(bulletContainer.querySelectorAll('li'));
+  const bulletTexts = bulletPoints.map(li => li.textContent);
+  
+  // Get references to important sections
+  const whoWeAreSection = document.querySelector('.who-we-are');
+  const bannerSection = document.querySelector('.banner');
+  
+  // Create the structure for the parallax effect
+  function createParallaxStructure() {
+    // Remove the existing bullets
+    bulletContainer.remove();
+    
+    // Create parallax container
+    const parallaxContainer = document.createElement('div');
+    parallaxContainer.className = 'parallax-bullets-container';
+    
+    // Create sticky container that will hold our bullet points
+    const stickyContainer = document.createElement('div');
+    stickyContainer.className = 'sticky-bullets-container';
+    
+    // Create a new list that will hold all bullet points
+    const newList = document.createElement('ul');
+    newList.className = 'parallax-bullet-list';
+    
+    // Add each bullet point as a list item, initially hidden
+    bulletTexts.forEach((text, index) => {
+      const li = document.createElement('li');
+      li.textContent = text;
+      li.className = 'parallax-bullet';
+      li.setAttribute('data-index', index);
+      li.style.opacity = '0'; // Start hidden
+      li.style.transform = 'translateY(10px)'; // Start slightly below final position
+      newList.appendChild(li);
+    });
+    
+    // Create scroll spacers that will trigger the bullet points
+    const spacerContainer = document.createElement('div');
+    spacerContainer.className = 'scroll-spacers';
+    
+    // Add a spacer for each bullet point transition + one for exit
+    for (let i = 0; i <= bulletTexts.length; i++) {
+      const spacer = document.createElement('div');
+      spacer.className = 'scroll-spacer';
+      spacer.setAttribute('data-index', i);
+      spacerContainer.appendChild(spacer);
+    }
+    
+    // Add navigation dots
+    const dotsContainer = document.createElement('div');
+    dotsContainer.className = 'bullet-progress-dots';
+    
+    bulletTexts.forEach((_, index) => {
+      const dot = document.createElement('div');
+      dot.className = 'progress-dot';
+      dot.setAttribute('data-index', index);
+      dotsContainer.appendChild(dot);
+    });
+    
+    // Assemble the structure
+    stickyContainer.appendChild(newList);
+    parallaxContainer.appendChild(stickyContainer);
+    parallaxContainer.appendChild(spacerContainer);
+    
+    // Insert into the page
+    const contentSection = document.querySelector('.who-we-are-content');
+    contentSection.appendChild(parallaxContainer);
+    whoWeAreSection.appendChild(dotsContainer);
+    
+    return {
+      container: parallaxContainer,
+      sticky: stickyContainer,
+      list: newList,
+      bullets: Array.from(newList.querySelectorAll('.parallax-bullet')),
+      spacers: Array.from(spacerContainer.querySelectorAll('.scroll-spacer')),
+      dots: Array.from(dotsContainer.querySelectorAll('.progress-dot'))
+    };
+  }
+  
+  // Add the necessary CSS styles
+  function addStyles() {
+    const css = `
+      /* Container for the parallax effect */
+      .parallax-bullets-container {
+        position: relative;
+        height: ${bulletTexts.length * 120 + 50}px; /* Height for scroll range */
+      }
+      
+      /* Container that sticks while scrolling */
+      .sticky-bullets-container {
+        position: sticky;
+        top: calc(50vh - 25px); /* Center in viewport */
+        z-index: 10;
+        padding: 20px 0;
+        height: 80px; /* Fixed height for the container */
+        display: flex;
+        align-items: center;
+      }
+      
+      /* Bullet list styling */
+      .parallax-bullet-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        position: relative;
+        height: 40px;
+      }
+      
+      /* Individual bullet point */
+      .parallax-bullet {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding-left: 25px;
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--dark-gray);
+        transition: opacity 0.6s ease, transform 0.6s ease;
+      }
+      
+      /* Bullet point icon */
+      .parallax-bullet::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--primary-green);
+        font-size: 20px;
+      }
+      
+      /* Scroll spacers that trigger animations */
+      .scroll-spacers {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 5;
+      }
+      
+      .scroll-spacer {
+        height: ${100/(bulletTexts.length+1)}%;
+        width: 100%;
+      }
+      
+      /* Progress indicator dots */
+      .bullet-progress-dots {
+        position: fixed;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 1000;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+      
+      .who-we-are:hover .bullet-progress-dots,
+      .parallax-bullets-container:hover + .bullet-progress-dots {
+        opacity: 1;
+      }
+      
+      .progress-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: rgba(77, 126, 50, 0.3);
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .progress-dot.active {
+        background-color: var(--primary-green);
+        transform: scale(1.3);
+      }
+      
+      /* Responsive styles */
+      @media (max-width: 768px) {
+        .bullet-progress-dots {
+          right: 15px;
+        }
+        
+        .parallax-bullet {
+          font-size: 15px;
+        }
+      }
+    `;
+    
+    const styleElement = document.createElement('style');
+    styleElement.textContent = css;
+    document.head.appendChild(styleElement);
+  }
+
+  // Set up the intersection observers
+  function setupObservers(elements) {
+    // Observer for each spacer to trigger bullet reveals
+    const spacerObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = parseInt(entry.target.getAttribute('data-index'));
+          updateBulletVisibility(index, elements);
+        }
+      });
+    }, {
+      threshold: 0.6,
+      rootMargin: '-10% 0px -10% 0px' // Adjust based on desired trigger point
+    });
+    
+    elements.spacers.forEach(spacer => {
+      spacerObserver.observe(spacer);
+    });
+    
+    // Observer for the overall section to show/hide progress dots
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelector('.bullet-progress-dots').style.opacity = '1';
+        } else {
+          document.querySelector('.bullet-progress-dots').style.opacity = '0';
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+    
+    sectionObserver.observe(elements.container);
+    
+    // Observer to detect when we're leaving the section
+    const exitObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          // We're approaching the banner section
+          // Make sure all bullets are hidden for a clean transition
+          elements.bullets.forEach(bullet => {
+            bullet.style.opacity = '0';
+            bullet.style.transform = 'translateY(10px)';
+          });
+        }
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '50px 0px 0px 0px' // Start a bit before reaching the banner
+    });
+    
+    exitObserver.observe(bannerSection);
+  }
+  
+  // Update which bullets are visible based on scroll position
+  function updateBulletVisibility(index, elements) {
+    // Special case for the last spacer (exit)
+    if (index >= elements.bullets.length) {
+      // Hide all bullets
+      elements.bullets.forEach(bullet => {
+        bullet.style.opacity = '0';
+        bullet.style.transform = 'translateY(10px)';
+      });
+      
+      // Deactivate all dots
+      elements.dots.forEach(dot => {
+        dot.classList.remove('active');
+      });
+      
+      return;
+    }
+    
+    // Hide all bullets first
+    elements.bullets.forEach(bullet => {
+      bullet.style.opacity = '0';
+      bullet.style.transform = 'translateY(10px)';
+    });
+    
+    // Show only the current bullet
+    elements.bullets[index].style.opacity = '1';
+    elements.bullets[index].style.transform = 'translateY(0)';
+    
+    // Update progress dots
+    elements.dots.forEach((dot, i) => {
+      if (i === index) {
+        dot.classList.add('active');
+      } else {
+        dot.classList.remove('active');
+      }
+    });
+  }
+  
+  // Add click handlers to dots for navigation
+  function setupNavigation(elements) {
+    elements.dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        // Calculate position to scroll to
+        const targetSpacer = elements.spacers[index];
+        const containerTop = elements.container.getBoundingClientRect().top + window.scrollY;
+        const spacerHeight = elements.container.offsetHeight / elements.spacers.length;
+        const targetPosition = containerTop + (spacerHeight * index) - (window.innerHeight * 0.4);
+        
+        // Smooth scroll to position
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      });
+    });
+  }
+  
+  // Initialize everything
+  function init() {
+    addStyles();
+    const elements = createParallaxStructure();
+    setupObservers(elements);
+    setupNavigation(elements);
+    
+    // Position spacers equally
+    elements.spacers.forEach((spacer, index) => {
+      spacer.style.position = 'absolute';
+      spacer.style.top = `${(index / elements.spacers.length) * 100}%`;
+      spacer.style.height = `${100 / elements.spacers.length}%`;
+    });
+  }
+  
+  // Let's start!
+  init();
+});
+  document.addEventListener('DOMContentLoaded', function() {
+    // Elements
+    const parallaxContainer = document.getElementById('parallax-container');
+    const sections = document.querySelectorAll('.section');
+    const sectionContents = document.querySelectorAll('.section-content');
+    const dots = document.querySelectorAll('.dot');
+    const dotsNavigation = document.querySelector('.dots-navigation');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    const footerSection = document.querySelector('.footer');
+    const bannerSection = document.querySelector('.banner');
+    
+    // Variables for control
+    let currentIndex = 0;
+    let isScrolling = false;
+    let touchStartY = 0;
+    let touchEndY = 0;
+    let isParallaxActive = false;
+    let lastScrollTop = 0;
+    let scrollingToFooter = false;
+    let scrollingToBanner = false;
+    
+    // NEW: Check if the content sections are centered in viewport
+    function isContentCentered(element) {
+        if (!element) return false;
+        
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        
+        // Calculate the center position of the element
+        const elementCenter = rect.top + (rect.height / 2);
+        const windowCenter = windowHeight / 2;
+        
+        // Define a threshold for how close to center we consider "centered"
+        const threshold = windowHeight * 0.2; // 20% of window height
+        
+        return Math.abs(elementCenter - windowCenter) < threshold;
+    }
+    
+    // Modified: Check if the parallax section is in viewport AND content is centered
+    function shouldActivateParallax() {
+        if (!isInViewport(parallaxContainer)) return false;
+        
+        // For initial activation, check if any section content is centered
+        for (let i = 0; i < sectionContents.length; i++) {
+            if (isContentCentered(sectionContents[i])) {
+                return true;
+            }
+        }
+        
+        return false;
+    }
+    
+    // Check if the parallax section is in viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 1 &&
+            rect.bottom >= 1
+        );
+    }
+    
+    // Initialize the sections
+    function initSections() {
+        sections.forEach((section, index) => {
+            if (index === 0) {
+                section.classList.add('active');
+            } else {
+                section.classList.remove('active');
+            }
+        });
+        
+        updateDots(0);
+    }
+    
+    // Update active section
+    function goToSection(index) {
+        if (index < 0) {
+            // If trying to go before the first section, scroll to banner
+            scrollToBanner();
+            return;
+        }
+        
+        if (index >= sections.length) {
+            // If trying to go after the last section, scroll to footer
+            scrollToFooter();
+            return;
+        }
+        
+        if (currentIndex !== index) {
+            // Hide current section
+            sections[currentIndex].classList.remove('active');
+            
+            // Show new section
+            sections[index].classList.add('active');
+            
+            // Update dots
+            updateDots(index);
+            
+            // Update index
+            currentIndex = index;
+            
+            // Hide scroll indicator if on last section
+            if (index === sections.length - 1) {
+                scrollIndicator.style.opacity = '0';
+            } else {
+                scrollIndicator.style.opacity = '0.7';
+            }
+        }
+    }
+    
+    // Update navigation dots
+    function updateDots(index) {
+        dots.forEach((dot, i) => {
+            if (i === index) {
+                dot.classList.add('active');
+            } else {
+                dot.classList.remove('active');
+            }
+        });
+    }
+    
+    // Scroll to footer
+    function scrollToFooter() {
+        if (scrollingToFooter) return;
+        scrollingToFooter = true;
+        
+        // Deactivate parallax mode
+        deactivateParallax();
+        
+        // Scroll to the footer
+        const footerPosition = footerSection.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: footerPosition,
+            behavior: 'smooth'
+        });
+        
+        // Reset flag after scrolling completes
+        setTimeout(() => {
+            scrollingToFooter = false;
+        }, 800);
+    }
+    
+    // Scroll to banner
+    function scrollToBanner() {
+        if (scrollingToBanner) return;
+        scrollingToBanner = true;
+        
+        // Deactivate parallax mode
+        deactivateParallax();
+        
+        // Scroll to the Who We Are section instead of banner
+        const whoWeAreSection = document.querySelector('.who-we-are');
+        const whoWeArePosition = whoWeAreSection.getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo({
+            top: whoWeArePosition,
+            behavior: 'smooth'
+        });
+        
+        // Reset flag after scrolling completes
+        setTimeout(() => {
+            scrollingToBanner = false;
+        }, 800);
+    }
+    
+    // Activate parallax mode
+    function activateParallax() {
+        if (!isParallaxActive) {
+            isParallaxActive = true;
+            document.body.classList.add('parallax-active');
+            dotsNavigation.classList.add('visible');
+            scrollIndicator.style.opacity = '0.7';
+        }
+    }
+    
+    // Deactivate parallax mode
+    function deactivateParallax() {
+        if (isParallaxActive) {
+            isParallaxActive = false;
+            document.body.classList.remove('parallax-active');
+            dotsNavigation.classList.remove('visible');
+            scrollIndicator.style.opacity = '0';
+        }
+    }
+    
+    // Handle wheel event - MODIFIED to check for centered content
+    function handleWheel(e) {
+        // Activate parallax only when content is centered
+        if (shouldActivateParallax()) {
+            // If we're not already in parallax mode, activate it
+            if (!isParallaxActive) {
+                activateParallax();
+                return;
+            }
+            
+            // If at the last section (Impact) and scrolling down, 
+            // allow normal scrolling past the section
+            if (currentIndex === sections.length - 1 && e.deltaY > 0) {
+                deactivateParallax();
+                return;
+            }
+            
+            // If at the first section (Mission) and scrolling up, 
+            // allow normal scrolling past the section
+            if (currentIndex === 0 && e.deltaY < 0) {
+                deactivateParallax();
+                return;
+            }
+            
+            // For regular section navigation, prevent default
+            e.preventDefault();
+            
+            if (isScrolling) return;
+            
+            isScrolling = true;
+            setTimeout(() => { isScrolling = false; }, 600);
+            
+            if (e.deltaY > 0) {
+                // Scrolling down
+                goToSection(currentIndex + 1);
+            } else {
+                // Scrolling up
+                goToSection(currentIndex - 1);
+            }
+        } else if (isParallaxActive) {
+            // If content is no longer centered, deactivate parallax
+            deactivateParallax();
+        }
+    }
+    
+    // Handle touch events for mobile - MODIFIED for centered content
+    function handleTouchStart(e) {
+        touchStartY = e.touches[0].clientY;
+    }
+    
+    function handleTouchMove(e) {
+        // Store current touch position
+        touchEndY = e.touches[0].clientY;
+        const touchDiff = touchStartY - touchEndY;
+        
+        // Only process if content is centered
+        if (shouldActivateParallax()) {
+            // If parallax is active
+            if (isParallaxActive) {
+                const isAtFirstSectionScrollingUp = currentIndex === 0 && touchDiff < 0;
+                const isAtLastSectionScrollingDown = currentIndex === sections.length - 1 && touchDiff > 0;
+                
+                // Only prevent default if we're not at boundaries trying to scroll past
+                if (!isAtFirstSectionScrollingUp && !isAtLastSectionScrollingDown) {
+                    e.preventDefault();
+                } else {
+                    // At boundaries, allow scrolling
+                    deactivateParallax();
+                }
+            } else {
+                // Activate parallax if not already active
+                activateParallax();
+            }
+        }
+    }
+    
+    function handleTouchEnd() {
+        // Only process if content is centered
+        if (shouldActivateParallax()) {
+            // If we're not already in parallax mode, activate it
+            if (!isParallaxActive) {
+                activateParallax();
+                return;
+            }
+            
+            const touchDiff = touchStartY - touchEndY;
+            
+            // If at boundaries, allow scrolling past
+            if (currentIndex === sections.length - 1 && touchDiff > 50) {
+                deactivateParallax();
+                return;
+            }
+            
+            if (currentIndex === 0 && touchDiff < -50) {
+                deactivateParallax();
+                return;
+            }
+            
+            // Normal section navigation
+            if (isScrolling || Math.abs(touchDiff) < 50) return;
+            
+            isScrolling = true;
+            setTimeout(() => { isScrolling = false; }, 600);
+            
+            if (touchDiff > 0) {
+                // Swipe up (next section)
+                goToSection(currentIndex + 1);
+            } else {
+                // Swipe down (previous section)
+                goToSection(currentIndex - 1);
+            }
+        } else if (isParallaxActive) {
+            // If content is no longer centered, deactivate parallax
+            deactivateParallax();
+        }
+    }
+    
+    // Handle keyboard navigation - MODIFIED for centered content
+    function handleKeydown(e) {
+        // Only process if parallax is active and content is centered
+        if (!isParallaxActive || !shouldActivateParallax()) return;
+        
+        // If at boundaries, deactivate parallax and allow scrolling
+        if (currentIndex === sections.length - 1 && (e.key === 'ArrowDown' || e.key === 'PageDown')) {
+            deactivateParallax();
+            return;
+        }
+        
+        if (currentIndex === 0 && (e.key === 'ArrowUp' || e.key === 'PageUp')) {
+            deactivateParallax();
+            return;
+        }
+        
+        if (isScrolling) return;
+        
+        isScrolling = true;
+        setTimeout(() => { isScrolling = false; }, 600);
+        
+        if (e.key === 'ArrowDown' || e.key === 'PageDown') {
+            e.preventDefault();
+            goToSection(currentIndex + 1);
+        } else if (e.key === 'ArrowUp' || e.key === 'PageUp') {
+            e.preventDefault();
+            goToSection(currentIndex - 1);
+        }
+    }
+    
+    // Main scroll handler - MODIFIED to check for centered content
+    function handleScroll() {
+        // Check if the content is centered and should activate parallax
+        if (shouldActivateParallax()) {
+            if (!isParallaxActive) {
+                activateParallax();
+            }
+        } else if (isParallaxActive) {
+            // If content is no longer centered, deactivate parallax
+            deactivateParallax();
+        }
+    }
+    
+    // Add click event listeners to dots
+    dots.forEach(dot => {
+        dot.addEventListener('click', function() {
+            const index = parseInt(this.getAttribute('data-index'));
+            goToSection(index);
+        });
+    });
+    
+    // Initialize
+    initSections();
+    
+    // Add event listeners with proper passive settings
+    window.addEventListener('wheel', handleWheel, { passive: false });
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: false });
+    window.addEventListener('touchend', handleTouchEnd);
+    window.addEventListener('keydown', handleKeydown);
+    window.addEventListener('scroll', handleScroll);
+    
+    // Check initial state
+    setTimeout(() => {
+        if (shouldActivateParallax()) {
+            activateParallax();
+        }
+    }, 500);
+});
+document.addEventListener('DOMContentLoaded', function() {
+  // Select the job section
+  const jobSection = document.querySelector('.content-section');
+  
+  // Initially set opacity to 0
+  jobSection.style.opacity = '0';
+  jobSection.style.transition = 'opacity 1s ease-in-out';
+  
+  // Create an Intersection Observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      // If the element is in view, fade it in
+      if (entry.isIntersecting) {
+        jobSection.style.opacity = '1';
+      } else {
+        // If the element is not in view, fade it out
+        jobSection.style.opacity = '0';
+      }
+    });
+  }, {
+    // Trigger when element enters or exits the viewport
+    // You can adjust this threshold value to control when the fade happens
+    threshold: 0.1,
+    // Add a root margin to trigger the effect slightly before/after the element enters/exits the viewport
+    rootMargin: '0px 0px -20% 0px'
+  });
+  
+  // Start observing the job section
+  observer.observe(jobSection);
+});
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation to sections when they come into view
+            const animateSections = () => {
+                const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const isVisible = rect.top <= window.innerHeight * 0.8;
+                    
+                    if (isVisible) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial styles for animation
+            const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            // Run on load and scroll
+            animateSections();
+            window.addEventListener('scroll', animateSections);
+            
+            // Mobile menu toggle functionality
+            const mobileMenuToggle = () => {
+                const navLinks = document.querySelector('.nav-links');
+                const isMobile = window.innerWidth <= 1024;
+                
+                if (isMobile) {
+                    navLinks.style.display = 'none';
+                } else {
+                    navLinks.style.display = 'flex';
+                }
+            };
+            
+            // Run on load and resize
+            mobileMenuToggle();
+            window.addEventListener('resize', mobileMenuToggle);
+            // Footer Accordion Functionality
+            const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordion = this.parentElement;
+                    
+                    // Toggle active class
+                    accordion.classList.toggle('active');
+                    
+                    // Close all other accordions (optional - comment out if you want multiple open)
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== this) {
+                            otherHeader.parentElement.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
