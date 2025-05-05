@@ -8,7 +8,7 @@
     <title>Skills for Chicago - Breaking Barriers, Expanding Opportunity</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* All your existing styles remain unchanged */
+        /* All  existing styles remain unchanged */
         /* ===============================================
            INTRO ANIMATION STYLES
            The following styles control the logo intro animation
@@ -16,7 +16,7 @@
            =============================================== */
            body {
     overflow: auto; /* Change from 'hidden' to 'auto' */
-    background-color: #E6F0DC; /* Use your normal background color */
+    background-color: #E6F0DC; /* Use  normal background color */
 }
         @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
 
@@ -190,9 +190,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #A2C466; /* Light green */
+    background-color: #95C561;
     color: #333333; /* Black text color */
-    padding: 7px 5px 7px 15px;
+    padding: 5px 5px 5px 13px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
@@ -217,6 +217,12 @@
 }
 
 .resources-content {
+    /* padding: 2% 0px 2% 0%; */
+    margin-left: 5%;
+    
+}
+
+.national-content {
     padding: 2% 0px 2% 0%;
     margin-left: 5%;
     
@@ -298,7 +304,7 @@
             width: 100%;
             /* max-width: 1200px; */
             margin: 0px auto;
-            padding: 0 20px;
+            /* padding: 0 20px; */
         }
 
         .container-2 {
@@ -401,12 +407,12 @@
         
         .nav-links {
             display: flex;
-            gap: 25px;
-            margin-right: 20px;
+            gap: 65px;
+    margin-right: 45px;
         }
         
         .nav-links a {
-            color: #333;
+            color: #7D7E7E;
             font-size: 15px;
             font-weight: 500;
         }
@@ -574,6 +580,9 @@ padding-left: 7%;
             flex: 1;
         }
         
+        .national-image {
+            flex: 1;
+        }
        
         
         .communities-content {
@@ -582,6 +591,11 @@ padding-left: 7%;
         }
 
         .resources-content {
+            flex: 1;
+            /* padding: 2% 0px 2% 0%; */
+        }
+
+        .national-content {
             flex: 1;
             padding: 2% 0px 2% 0%;
         }
@@ -774,7 +788,18 @@ padding-left: 7%;
             background-color: #E8EFDD;
         }
 
+        .national-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            background-color: #E8EFDD;
+        }
+
         .communities-image {
+            flex: 1;
+        }
+
+        .national-image {
             flex: 1;
         }
 
@@ -783,6 +808,10 @@ padding-left: 7%;
         }
 
         .resources-content {
+            flex: 1;
+        }
+
+        .national-content {
             flex: 1;
         }
 
@@ -1208,7 +1237,7 @@ padding-left: 7%;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 976px) {
     .modern-footer::before {
         width: 100%;
         left: -20%;
@@ -1262,13 +1291,18 @@ padding-left: 7%;
         
         .banner-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         .banner-text {
-            font-size: 15px;
-            margin-right: 2%;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.4;
         }
 
         .learn-more-btn {
@@ -1312,11 +1346,12 @@ padding-left: 7%;
     }
 
     .footer-nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        transition: opacity 0.3s ease;
-    }
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            font-weight: 300;
+        }
 
     .footer-nav-links a:hover {
         opacity: 0.8;
@@ -1361,7 +1396,7 @@ padding-left: 7%;
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 976px) {
         .footer-top {
             flex-direction: column;
             gap: 30px;
@@ -1409,6 +1444,11 @@ padding-left: 7%;
             height: 400px;
             display: block;
         }
+        .national-image img {
+            width: 100%;
+            height: 250px;
+            display: block;
+        }
         }
 
         @media (max-width: 768px) {
@@ -1421,6 +1461,13 @@ padding-left: 7%;
 
             .hero-container, 
             .resources-container,
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-container, 
+            .national-container,
             .cta-container {
                 flex-direction: column;
                 align-items: center;
@@ -1634,6 +1681,16 @@ padding-left: 7%;
             /* display: inline-flex; */
             align-items: center;
             justify-content: center;
+            /* padding-left: 2%; */
+            gap: 60px;
+            background-color: #E8EFDD;
+        }
+
+        .national-container {
+            display: flex;
+            /* display: inline-flex; */
+            align-items: center;
+            justify-content: center;
             padding-left: 2%;
             gap: 60px;
             background-color: #E8EFDD;
@@ -1641,11 +1698,11 @@ padding-left: 7%;
 
 
         .communities-title {
-            font-size: 55px;
-            color: var(--dark-green);
-            margin-bottom: 30px;
-            font-weight: 700;
-            color: #000000;
+            font-size: 45px;
+    color: var(--dark-green);
+    margin-bottom: 12px;
+    font-weight: 700;
+    color: #000000;
         }
 
         .communities-text {
@@ -1660,11 +1717,24 @@ padding-left: 7%;
             flex: 1.2;
         }
 
+        .national-image {
+            flex: 1.2;
+        }
+
         .communities-image img {
             width: 100%;
-            height: 825px;
+            height: 625px;
             display: block;
             object-fit: cover;
+            object-position: center 90%;
+        }
+
+        .national-image img {
+            width: 100%;
+            height: 625px;
+            display: block;
+            object-fit: cover;
+            object-position: center 90%;
         }
 
         .impact-button {
@@ -1710,11 +1780,31 @@ padding-left: 7%;
                 gap: 40px;
                 background-color: #FFFFFF;
             }
+
+            .national-container {
+                flex-direction: column;
+                gap: 40px;
+                background-color: #FFFFFF;
+            }
             
             .communities-image, .communities-content {
                 width: 100%;
             }
             .communities-image, .resources-content {
+                width: 100%;
+            }
+
+            .communities-image, .national-content {
+                width: 100%;
+            }
+
+            .national-image, .communities-content {
+                width: 100%;
+            }
+            .national-image, .resources-content {
+                width: 100%;
+            }
+            .national-image, .national-content {
                 width: 100%;
             }
         }
@@ -1885,6 +1975,11 @@ padding-left: 7%;
             .communities-image img {
             width: 100%;
             height: 400px;
+            display: block;
+        }
+        .national-image img {
+            width: 100%;
+            height: 250px;
             display: block;
         }
         }
@@ -2118,6 +2213,10 @@ padding-left: 0%;
     .resources-content {
         /* margin-bottom: 4%; */
     }
+
+    .national-content {
+        margin-bottom: 0%;
+    }
     
     .mobile-menu-toggle {
         display: block; /* Show hamburger icon */
@@ -2179,7 +2278,7 @@ padding-left: 0%;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 976px) {
     .modern-footer::before {
         width: 100%;
         left: -20%;
@@ -2254,11 +2353,12 @@ padding-left: 0%;
     }
 
     .footer-nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        transition: opacity 0.3s ease;
-    }
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            font-weight: 300;
+        }
 
     .footer-nav-links a:hover {
         opacity: 0.8;
@@ -2294,7 +2394,7 @@ padding-left: 0%;
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 976px) {
         .footer-top {
             flex-direction: column;
             gap: 30px;
@@ -2342,6 +2442,10 @@ padding-left: 0%;
         
         /* Responsive Adjustments */
         @media (max-width: 1024px) {
+            .where-we-are-section {
+            padding: 30px 0px 0px 0px;
+            background-color: #FFFFFF;
+        }
             .services-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
@@ -2390,7 +2494,7 @@ padding-left: 0%;
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             .locations-column {
             display: flex;
             flex-direction: column;
@@ -2471,16 +2575,16 @@ padding-left: 0%;
 
         /* New styles for "Proven Results" section */
         .proven-results-section {
-            padding: 60px 0;
+            /* padding: 60px 0; */
             background-color: #FFFFFF;
         }
 
         .proven-results-container {
             display: flex;
             flex-wrap: wrap;
-            max-width: 1200px;
+            /* max-width: 1200px; */
             margin: 0 auto;
-            padding: 0 20px;
+            /* padding: 0 20px; */
             gap: 30px;
         }
 
@@ -2491,8 +2595,8 @@ padding-left: 0%;
 
         .proven-results-image img {
             width: 100%;
-            height: auto;
-            border-radius: 10px;
+            height: 100%;
+            /* border-radius: 10px; */
             object-fit: cover;
         }
 
@@ -2538,7 +2642,7 @@ padding-left: 0%;
 
         /* New styles for "Where We Are Now" section */
         .where-we-are-section {
-            padding: 60px 0;
+            padding: 40px 0px;
             background-color: #FFFFFF;
         }
 
@@ -2551,18 +2655,19 @@ padding-left: 0%;
 
         .location-cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
         }
 
         .location-card {
             border-radius: 20px;
-            overflow: hidden;
-            background-color: #FFFFFF;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    overflow: hidden;
+    background-color: #FFFFFF;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); */
+    width: 550px;
         }
 
         .location-image {
@@ -2571,7 +2676,7 @@ padding-left: 0%;
 
         .location-image img {
             width: 100%;
-            height: 250px;
+            height: 100%;
             object-fit: cover;
         }
 
@@ -2637,10 +2742,34 @@ padding-left: 0%;
             width: 70%;
         }
         @media (max-width: 1354px) {
+            .location-cards {
+        /* display: grid; */
+grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+        gap: 30px;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0px;
+     }
+       
+
+
+.location-card {
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); */
+    width: 100%;
+}
             .resources-content {
-    /* padding: 80px 0; */
+                padding: 80px 0 0px 0px;
     background-color: #FFFFFF;
     margin-bottom: 8%;
+}
+
+.national-content {
+    /* padding: 80px 0; */
+    background-color: #FFFFFF;
+    margin-bottom: 0%;
 }
             .communities-text {
                 margin-bottom: 30px;
@@ -2998,7 +3127,7 @@ padding-left: 0%;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             .footer-top {
                 flex-direction: column;
                 gap: 0px;
@@ -3045,11 +3174,490 @@ padding-left: 0%;
             font-size: 15px;
             display: block;
             opacity: 0.9;
+            text-align: left;
+            font-weight: 300;
         }
 
         .footer-mobile-links a:hover {
             opacity: 1;
             text-decoration: underline;
+        }
+ .social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+         /* Hamburger Menu Button */
+         .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+@media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+            
+            /* .mobile-menu-toggle {
+                display: block;
+            } */
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 0px;
+            }
+        }
+@media (max-width: 1500px) { 
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+    margin-right: 45px;
+        }
+    }
+@media (max-width: 1478px) { 
+
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+         /* Mobile Navigation Panel */
+         .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        .fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
+@media (max-width: 976px) {
+    .careers-section {
+        padding: 0;
+    }
+
+    .mobile-menu-toggle {
+                display: block;
+            }
+    
+    .careers-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        min-height: auto;
+        border-bottom: none;
+    }
+    
+    .careers-image {
+        order: -1; /* This puts the image on top */
+        height: 315px;
+        border-left: none;
+        width: 100%;
+    }
+    
+    .careers-image img {
+        height: auto;
+        max-height: 325px;
+    }
+    
+    .careers-content {
+        padding: 20px 15px 40px;
+        background-color: #f5f5f5; /* Light gray background like in  image */
+        width: 100%;
+    }
+    
+    .careers-content h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .careers-subtitle {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+    .careers-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+}
+.social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+         /* Hamburger Menu Button */
+         .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+@media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            
+            /* .mobile-menu-toggle {
+                display: block;
+            } */
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 0px;
+            }
+        }
+@media (max-width: 1500px) { 
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+    margin-right: 45px;
+        }
+    }
+@media (max-width: 1478px) { 
+    .banner-text {
+            font-size: 15px;
+            margin-right: 0%;
+        }
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+         /* Mobile Navigation Panel */
+         .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
+            }
         }
         .social-strip {
     background-color: #ffffff;
@@ -3079,57 +3687,547 @@ padding-left: 0%;
 .social-icons-top a:hover {
     color: #4d7e32;
 }
-    </style>
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.skills-dropdown-nav {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 0px 85px 0px 25px; */
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4d7e32;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f3;
+    color: #4d7e32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+    .skills-dropdown-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    /* You would need to implement mobile dropdown separately or
+       integrate with  existing mobile menu system */
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 15px !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+    padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #4d7e32 !important;
+}
+
+/* Update existing mobile-nav styles */
+.mobile-nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.mobile-nav {
+    padding-top: 70px; /* Adjust if needed to make room for the header */
+}
+
+.hamburger.open {
+  position: fixed;
+  top: 20px;      /* Move it higher (decrease this value to move up) */
+  right: 20px;    /* Move it more to the right (decrease this value to move right) */
+  z-index: 1002;  /* Ensure it stays above other elements */
+}
+
+/* If the X is created by the transformed hamburger icon, make sure the spans align properly */
+.hamburger.open span:nth-child(2),
+.hamburger.open span:nth-child(3) {
+  right: 0;       /* Ensure the X is properly centered when transformed */
+}
+
+/* Optionally, if the mobile nav panel needs adjustment */
+.mobile-nav {
+  padding-top: 60px; /* Adjust top padding to ensure content doesn't go under the X */
+}
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 60px 0px 35px;
+        }
+        @media (max-width: 976px) {
+.mobile-menu-toggle {
+                display: block; 
+            }
+.donate-button {
+    display: none;
+}
+
+
+}
+        .mobile-donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 3px 5px 3px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+.mobile-donate-button span {
+    margin-right: 5px;
+    font-family: Greycliff-thin, sans-serif; 
+}
+.mobile-donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+.mobile-donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+.mobile-donate-button i {
+    transform: rotate(-45deg);
+}
+.mobile-donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+.mobile-donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+        @media (max-width: 1636px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 15px;
+            }
+            .header-container {
+                padding: 0px 30px 0px 30px;
+            }
+        }
+        @media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            .header-container {
+                padding: 0px;
+            }
+        }
+        /* Proven Results Section CSS modifications */
+.proven-results-section {
+    background-color: #F9F9F9;
+    padding: 0;
+}
+
+.proven-results-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+.proven-results-image {
+    flex: 1;
+    min-width: 300px;
+}
+
+.proven-results-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.proven-results-content {
+    flex: 1;
+    min-width: 300px;
+    padding: 60px 40px;
+    background-color: #F9F9F9;
+}
+
+.proven-results-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.proven-results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.result-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    width: auto;
+    border: 1px solid #707070;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+}
+
+.result-card h3 {
+    font-size: 36px;
+    color: #4F6B3A;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.result-card p {
+    font-size: 22px;
+    color: #666;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* Mobile adjustments */
+@media (max-width: 991px) {
+    .proven-results-container {
+        flex-direction: column;
+    }
+    
+    .proven-results-image {
+        height: 300px;
+    }
+    
+    .proven-results-content {
+        padding: 40px 20px;
+    }
+    
+    .proven-results-title {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .proven-results-grid {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .proven-results-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .result-card {
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 25px 15px;
+    }
+}
+
+.proven-results-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proven-results-title {
+    font-size: 42px;
+    margin-bottom: 40px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.communities-image {
+    flex: 1.35;
+    height: 100%; /* Added to ensure the container takes full height */
+}
+
+.communities-image img {
+    width: 100%;
+    height: 100%; /* Changed from fixed 625px to 100% */
+    display: block;
+    object-fit: cover;
+    object-position: center center; /* Changed from center 90% to center center */
+}
+
+.map-container {
+    /* height: 500px; */
+    /* background-color: #fff; */
+    /* border-radius: 8px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+    /* transition: transform 0.3sease, box-shadow 0.3sease; */
+}
+
+.map-img {
+    max-width: 100% !important;
+    height: 950px !important;
+    width: 100% !important;
+}
+
+@media (max-width: 1024px) {
+        .map-img {
+    max-width: 100% !important;
+    height: 275px !important;
+    width: 100% !important;
+}
+}
+        </style>
 </head>
 <body>
    
     <div id="main-content">
-<div class="social-strip">
+        <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     <!-- Banner Section -->
-    <div class="banner">
+    <!-- <div class="banner">
         <div class="banner-container">
             <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
             <a href="#" class="learn-more-btn">Learn More</a>
         </div>
-    </div>
+    </div> -->
 
     <!-- Header -->
     <header class="header">
+        
         <div class="header-container">
             <a href="https://skillsforchicago.org/" class="logo-link">
                 <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo" class="logo">
             </a>
             
             <!-- Desktop Navigation -->
-            <nav class="main-nav">
-                <div class="nav-links">
-                    <a href="https://skillsforchicago.org/">Home</a>
-                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
-                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
-                    <a href="https://skillsforchicago.org/partner/">Employers</a>
-                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
-                    <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    <a href="https://skillsforchicago.org/events/">Events</a>
-                    <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
-                    <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
-                </div>
-                <a href="#" class="donate-button">
-                    <span>Donate</span>
-                    <div class="circle-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>    
+            <nav class="skills-dropdown-nav">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="https://skillsforchicago.org/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/" class="dropdown-item">Who We Are</a>
+                        <a href="https://skillsforchicago.org/ourteam/" class="dropdown-item">Our Team</a>
+                        <a href="https://skillsforchicago.org/annualreports/" class="dropdown-item">Annual Reports & Financials</a>
+                        <a href="https://skillsforchicago.org/ourwork/" class="dropdown-item">Our Work in Action</a>
+                        <a href="https://skillsforchicago.org/careers/" class="dropdown-item">Careers at Skills</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Job Seekers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/" class="dropdown-item">Find A Job</a>
+                        <a href="https://skillsforchicago.org/careerresources/" class="dropdown-item">Career Resources</a>
+                        <a href="https://skillsforchicago.org/faqs/" class="dropdown-item">FAQs for Job Seekers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Employers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/" class="dropdown-item">Partner With Us</a>
+                        <a href="https://skillsforchicago.org/employerpartners/" class="dropdown-item">Our Employer Partners</a>
+                        </div>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Community Partners <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/collaborate/" class="dropdown-item">Collaborate With Us</a>
+                        <a href="https://skillsforchicago.org/communityimpact/" class="dropdown-item">Community Impact</a>
+                        <a href="https://skillsforchicago.org/communitypartners/" class="dropdown-item">Our Community Partners</a>
+                               
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/donors/" class="nav-link">Donors</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Events <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/events/" class="dropdown-item">Events & Highlights</a>
+                        <a href="https://skillsforchicago.org/ecb/" class="dropdown-item">Employment Champions Breakfast</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/nationalexpansion/" class="nav-link">National Expansion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/contactus/" class="nav-link">Contact Us</a>
+                        </li>
+                    </li>
+                </ul>
+                
             </nav>
-            
+            <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="donate-button">
+                <span>Donate</span>
+                <div class="circle-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>  
             <!-- Mobile Menu Toggle Button -->
             <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
                 <div class="hamburger">
@@ -3144,16 +4242,78 @@ padding-left: 0%;
             <div class="mobile-nav">
                 <div class="mobile-nav-links">
                     <a href="https://skillsforchicago.org/">Home</a>
-                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
-                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
-                    <a href="https://skillsforchicago.org/partner/">Employers</a>
-                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>About Us</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                            <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                            <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                            <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                            <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Job Seekers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Job Seekers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                            <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                            <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Employers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Employers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                            <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Partners Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Community Partners</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                            <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                            <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                        </div>
+                    </div>
+                    
                     <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    <a href="https://skillsforchicago.org/events/">Events</a>
+                    
+                    <!-- Events Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Events</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                            <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                        </div>
+                    </div>
+                    
                     <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
                     <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
                 </div>
-                <a href="#" class="donate-button mobile-donate-button">
+                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="mobile-donate-button">
                     <span>Donate</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -3167,15 +4327,15 @@ padding-left: 0%;
     </header>
     <!-- Communities Section -->
     <section class="resources-section" style="background-color: white;">
-        <div class="container resources-container" style="background-color: white;">
-            <div class="resources-content">
+        <div class="container national-container" style="background-color: white;">
+            <div class="national-content">
                 <h2 class="communities-title">National Expansion</h2>
-                <h4 style="padding-bottom: 4%; color: #4F6B3A; font-size: 22px;">Scaling Impact. Empowering Communities Nationwide.</h4>
+                <h4 style="padding-bottom: 4%; color: #4F6B3A; font-size: 28px;">Scaling Impact. Empowering Communities Nationwide.</h4>
                 <p class="communities-text">
                     Skills for America’s Future, an initiative of Skills for Chicago, is bringing our proven jobs-first model to cities across the country. We connect employers with untapped talent, influence hiring practices to remove barriers, and create opportunities that lead to long-term economic mobility for job seekers.
                 </p>
             </div>
-            <div class="communities-image">
+            <div class="national-image">
                 <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/SAF-Redesign-Option-_1-1.png" alt="People at a community event">
             </div>
         </div>
@@ -3209,6 +4369,14 @@ padding-left: 0%;
                 <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/IMG_2052v3-scaled.webp" alt="People at a community event">
             </div>
         </div>
+    </section>
+    <!-- Where We Are Now Section -->
+    <section class="where-we-are-section">
+        <h2 class="where-we-are-title">Our Vision</h2>
+        <p style="text-align: center; max-width: 1200px; margin: auto;">To bring the Skills jobs-first model to more cities over the next decade, connecting job seekers with quality jobs in high-unemployment areas and driving meaningful change in hiring practices.</p>
+        <div class="map-container">
+        <img class="map-img" src="https://skillsforchicago.org/wp-content/uploads/2025/05/Map_Version-One-1-1-scaled.png" alt="Skills for Chicago Logo" class="logo">
+    </div>
     </section>
       <!-- Proven Results Section -->
       <section class="proven-results-section" style="background-color: #ECECEC;">
@@ -3246,10 +4414,10 @@ padding-left: 0%;
             <!-- Location 1 -->
             <div class="location-card">
                 <div class="location-image">
-                    <img src="/api/placeholder/400/300" alt="Chicago skyline">
-                    <div class="location-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Chicago-IL.png" alt="Chicago skyline">
+                    <!-- <div class="location-logo">
                         <img src="/api/placeholder/120/50" alt="Skills for Chicago logo">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="location-info">
                     <h3>Chicago, IL</h3>
@@ -3260,10 +4428,10 @@ padding-left: 0%;
             <!-- Location 2 -->
             <div class="location-card">
                 <div class="location-image">
-                    <img src="/api/placeholder/400/300" alt="Rhode Island cityscape">
-                    <div class="location-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Rhode-Island.png" alt="Rhode Island cityscape">
+                    <!-- <div class="location-logo">
                         <img src="/api/placeholder/120/50" alt="Skills for Rhode Island's Future logo">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="location-info">
                     <h3>Rhode Island</h3>
@@ -3274,10 +4442,10 @@ padding-left: 0%;
             <!-- Location 3 -->
             <div class="location-card">
                 <div class="location-image">
-                    <img src="/api/placeholder/400/300" alt="Phoenix skyline">
-                    <div class="location-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Phoenix-AZ.png" alt="Phoenix skyline">
+                    <!-- <div class="location-logo">
                         <img src="/api/placeholder/120/50" alt="Connect to Work AZ logo">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="location-info">
                     <h3>Phoenix, AZ</h3>
@@ -3287,28 +4455,28 @@ padding-left: 0%;
              <!-- Location 1 -->
              <div class="location-card">
                 <div class="location-image">
-                    <img src="/api/placeholder/400/300" alt="Chicago skyline">
-                    <div class="location-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Atlanta-GA.png" alt="Chicago skyline">
+                    <!-- <div class="location-logo">
                         <img src="/api/placeholder/120/50" alt="Skills for Chicago logo">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="location-info">
-                    <h3>Chicago, IL</h3>
-                    <p>Our flagship site, Skills for Chicago (formerly Skills for Chicagoland's Future), launched in 2012</p>
+                    <h3>Atlanta, GA</h3>
+                    <p>Connect to Work GA, launched in partnership with the Metro Atlanta Chamber in 2024</p>
                 </div>
             </div>
             
             <!-- Location 2 -->
             <div class="location-card">
                 <div class="location-image">
-                    <img src="/api/placeholder/400/300" alt="Rhode Island cityscape">
-                    <div class="location-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Rhode-Island.png" alt="Rhode Island cityscape">
+                    <!-- <div class="location-logo">
                         <img src="/api/placeholder/120/50" alt="Skills for Rhode Island's Future logo">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="location-info">
-                    <h3>Rhode Island</h3>
-                    <p>Skills for Rhode Island's Future, launched in 2016</p>
+                    <h3>Hartford, CT</h3>
+                    <p>Workforce Solutions Collaborative of Metro Hartford, launched in 2024</p>
                 </div>
             </div>
         </div>
@@ -3322,9 +4490,9 @@ padding-left: 0%;
                     We welcome employers, community partners, and donors to join us and help expand our impact. By working together, we can scale this model to bridge the gap between employers and job seekers.
                 </p>
                 <h3 class="movement-title">Employers</h3>
-                <li class="movement-bullet"><span style="margin-left: 2%">Meet</span> your company’s talent needs with job-ready candidates while improving hiring outcomes.</li>
+                <li class="movement-bullet"><span style="margin-left: 2%">Meet</span>  company’s talent needs with job-ready candidates while improving hiring outcomes.</li>
                 <h3 class="movement-title">Community Organizations</h3>
-                <li class="movement-bullet"><span style="margin-left: 2%">Partner</span> with us to bring the Skills model to your city.</li>
+                <li class="movement-bullet"><span style="margin-left: 2%">Partner</span> with us to bring the Skills model to  city.</li>
                 <h3 class="movement-title">Donors</h3>
                 <li class="movement-bullet" style="margin-bottom: 4%"><span style="margin-left: 2%">Invest</span> in bridging the employment gap and driving economic mobility.</li>
             </div>
@@ -3340,7 +4508,7 @@ padding-left: 0%;
                 <h2  style="color: #FFFFFF">Together, We Can Open Doors To Employment And Empower Communities Nationwide.</h2>
                 <p class="work-together-description">Learn how you can be part of this transformative expansion.</p>
             </div>
-            <a href="#" class="donate-button" style="width:305px;">
+            <a href="https://skillsforchicago.org/contactus/" class="donate-button" style="width:305px;">
                 <span>Contact Us</span>
                 <div class="circle-icon">
                     <i class="fas fa-arrow-right"></i>
@@ -3357,10 +4525,10 @@ padding-left: 0%;
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             
@@ -3684,7 +4852,7 @@ $(document).ready(function() {
     completeIntroAnimation();
 });
         $(document).ready(function() {
-    // Wrap your existing content in a div with id="main-content" if not already done
+    // Wrap  existing content in a div with id="main-content" if not already done
     
     // Function to complete the animation and show the main content
     
@@ -3774,7 +4942,7 @@ $(document).ready(function() {
             // But for this demo we'll use JavaScript to show how it might work
             const bgDiv = document.querySelector('.feature-card-bg');
             
-            // Using a placeholder image for demonstration - replace with your actual image
+            // Using a placeholder image for demonstration - replace with  actual image
             const demoImageUrl = 'https://source.unsplash.com/random/300x200?office,meeting';
             bgDiv.style.backgroundImage = `url('${demoImageUrl}')`;
         });
@@ -3789,7 +4957,7 @@ $(document).ready(function() {
                 searchBtn.addEventListener('click', function() {
                     if (searchInput.value.trim() !== '') {
                         console.log('Searching for:', searchInput.value);
-                        // Add your search functionality here
+                        // Add  search functionality here
                         alert('Search feature would be implemented here for: ' + searchInput.value);
                     } else {
                         searchInput.focus();
@@ -3804,7 +4972,7 @@ $(document).ready(function() {
             if (videoPlay && videoThumb) {
                 videoPlay.addEventListener('click', function() {
                     console.log('Video would play here');
-                    // Add your video functionality here
+                    // Add  video functionality here
                     alert('Video playback feature would be implemented here');
                 });
             }
@@ -3869,7 +5037,7 @@ $(document).ready(function() {
             });
         });
     </script>
-    <script>
+     <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -3911,21 +5079,52 @@ $(document).ready(function() {
             animateSections();
             window.addEventListener('scroll', animateSections);
             
-            // Mobile menu toggle functionality
-            const mobileMenuToggle = () => {
-                const navLinks = document.querySelector('.nav-links');
-                const isMobile = window.innerWidth <= 1024;
-                
-                if (isMobile) {
-                    navLinks.style.display = 'none';
-                } else {
-                    navLinks.style.display = 'flex';
-                }
-            };
+                        // Mobile Menu Functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const overlay = document.querySelector('.overlay');
+        const body = document.querySelector('body');
+        
+        // Function to toggle mobile menu
+        function toggleMobileMenu() {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            overlay.classList.toggle('active');
             
-            // Run on load and resize
-            mobileMenuToggle();
-            window.addEventListener('resize', mobileMenuToggle);
+            // Prevent body scrolling when menu is open
+            if (mobileNav.classList.contains('open')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+        }
+        
+        // Event listeners for menu toggling
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu when clicking overlay
+        if (overlay) {
+            overlay.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu when clicking a mobile navigation link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                toggleMobileMenu();
+            });
+        });
+        
+        // Close menu on window resize if screen becomes larger than mobile breakpoint
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && mobileNav.classList.contains('open')) {
+                toggleMobileMenu();
+            }
+        });
+
             // Footer Accordion Functionality
             const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
             
@@ -3945,6 +5144,63 @@ $(document).ready(function() {
                 });
             });
         });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+// Mobile Dropdown Functionality
+const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+
+mobileDropdowns.forEach(dropdown => {
+    const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+    
+    dropdownToggle.addEventListener('click', function() {
+        // Toggle active class on clicked dropdown
+        dropdown.classList.toggle('active');
+        
+        // Optionally close other dropdowns when one is opened
+        // Comment this out if you want multiple dropdowns to be open simultaneously
+        mobileDropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                otherDropdown.classList.remove('active');
+            }
+        });
+    });
+});
+
+// Close dropdowns when a link inside is clicked
+const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+dropdownLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Optionally close the dropdown when a link is clicked
+        // Comment this out if you want the dropdown to stay open after a link is clicked
+        const parentDropdown = this.closest('.mobile-dropdown');
+        setTimeout(() => {
+            parentDropdown.classList.remove('active');
+            
+            // Also close the mobile menu
+            document.querySelector('.hamburger').classList.remove('open');
+            document.querySelector('.mobile-nav').classList.remove('open');
+            document.querySelector('.overlay').classList.remove('active');
+            document.querySelector('body').style.overflow = '';
+        }, 100); // Small delay to allow the click to register
+    });
+});
+
+// Make sure mobile dropdowns are closed when menu is closed
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', function() {
+        // If closing the mobile menu, close all dropdowns
+        if (document.querySelector('.mobile-nav').classList.contains('open')) {
+            setTimeout(() => {
+                mobileDropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }, 300); // Delay to match the mobile menu closing animation
+        }
+    });
+}
+});
     </script>
 </body>
 </html>

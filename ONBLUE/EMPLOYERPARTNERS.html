@@ -19,15 +19,15 @@
             --footer-green: #234018;
         }
 
-        @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+        @font-face { font-family: Greycliff CF, Bold; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
 
-@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+@font-face { font-family: Greycliff CF, Light; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
 
         h1 {
-            font-family: Greycliff CF, Bold;
+         font-family: Greycliff CF, Bold;
       }
       h2 {
-        font-family: Greycliff CF, Bold;
+         font-family: Greycliff CF, Bold;
       }
       p {
         font-family: Greycliff CF, Light;
@@ -41,23 +41,12 @@
 
       h4 {
         font-family: Greycliff CF, Bold;
-        color: #4d7e32;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 2%;
+        color: #4F6B3A;
       }
 
       h5 {
         font-family: Greycliff CF, Bold;
       }
-
-      .elementor-section.elementor-section-boxed > .elementor-container {
-    max-width: 100%;
-}
-
-.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
-    padding: 0px;
-}
 
         * {
             margin: 0;
@@ -83,9 +72,9 @@
 
         .container {
             width: 100%;
-            max-width: 1200px;
+            /* max-width: 1200px; */
             margin: 0 auto;
-            padding: 0 20px;
+            /* padding: 0 20px; */
         }
 
         /* Header and Navigation */
@@ -132,8 +121,8 @@
 
         .nav-links {
             display: flex;
-            gap: 65px;
-    margin-right: 45px;
+            gap: 25px;
+            margin-right: 20px;
         }
 
         .nav-links a {
@@ -147,20 +136,20 @@
         }
 
         .donate-button {
-            display: inline-flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #8dc63f;
-            color: #333333;
-            padding: 7px 15px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s ease;
-            width: 120px;
-            border: 1px solid #707070;
-        }
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #95C561;
+    color: #333333; /* Black text color */
+    padding: 5px 5px 5px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
 
         .circle-icon {
             width: 25px;
@@ -278,9 +267,10 @@
         }
 
         .partners-subtitle {
-            font-size: 26px;
+            font-size: 24px;
             color: #666;
             margin-bottom: 40px;
+            font-weight: 400;
         }
 
         .partners-grid {
@@ -377,7 +367,7 @@
             padding: 2% 0px 2% 0%;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             
             .hero-container, 
             .engagement-section,
@@ -396,12 +386,20 @@
             .communities-image, .engagement-content {
                 width: 100%;
             }
+
         }
 
         @media (max-width: 1024px) {
             .engagement-content {
         /* margin-bottom: 4%; */
     }
+
+    .communities-image img {
+    width: 100%;
+    max-height: 1200px;
+    display: block;
+    object-fit: cover;
+}
         }
 
         .engagement-section {
@@ -409,7 +407,7 @@
             /* display: inline-flex; */
             align-items: center;
             justify-content: center;
-            padding-left: 2%;
+            /* padding-left: 2%; */
             gap: 60px;
             background-color: #FFFFFF;
         }
@@ -419,16 +417,33 @@
             color: var(--dark-green);
             margin-bottom: 30px;
             font-weight: 700;
-            color: #353232;
+            color: #041202;
+        }
+
+        .employer-partner-title {
+            font-size: 55px;
+            color: var(--dark-green);
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #FFFFFF;
+            width: 70%;
+        }
+
+        .employer-partner-section {
+            font-size: 55px;
+            color: var(--dark-green);
+            /* margin-bottom: 30px; */
+            font-weight: 700;
+            color: #041202;
         }
 
         .engagement-text {
-    margin-bottom: 30px;
-    font-size: 25px;
-    line-height: 1.7;
-    color: #353232;
-    width: 85%;
-}
+            margin-bottom: 30px;
+            font-size: 22px;
+            line-height: 1.7;
+            color: #353232;
+            width: 70%;
+        }
 
         .communities-image {
             flex: 1.2;
@@ -453,101 +468,102 @@
             .communities-image, .engagement-content {
                 width: 100%;
             }
+            .engagement-section {
+                flex-direction: column;
+                gap: 40px;
+            }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             .access-title, .communities-title {
                 font-size: 32px;
+            }
+            .hero-container, 
+            .engagement-section,
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
             }
         }
 
         h4 {
-        font-family: Greycliff CF, Bold;
-        color: #4d7e32;
-    font-size: 28px;
-    font-weight: 600;
-    margin-bottom: 2%;
+        color:#4d7e32;
+        font-size: 30px;
       }
 
-        #logo-1 {
-    background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/A Safe Haven Foundation.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+      .employer-partner-text::before {
+    content: "●"; /* Unicode bullet character */
+    color: #4F6B3A; /*  specified green color */
+    display: inline-block;
+    /* width: 1%; */
+    margin-left: -1em;
+    margin-right: 1%;
+    font-size: 1.5em; /* Makes the bullet slightly larger */
+    align-items: center;
+    justify-content: center;
 }
 
- /* Responsive */
- @media (max-width: 1024px) {
-            .collaborate-container {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .collaborate-content {
-                order: 1;
-            }
-            
-            .collaborate-image {
-                order: 0;
-            }
-            
-            .nav-links {
-                display: none;
-            }
-            
-            .footer-nav {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 976px) {
-            .banner-container {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .work-together-container {
-                flex-direction: column;
-                text-align: center;
-                gap: 20px;
-            }
-            
-            .footer-nav {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .footer-top {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .footer-divider {
-                width: 100%;
-                margin: 20px 0;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .footer-nav {
-                grid-template-columns: 1fr;
-            }
-            
-            .collaborate-content h1 {
-                font-size: 32px;
-            }
-            
-            .collaborate-subtitle,
-            .how-we-work {
-                font-size: 20px;
-            }
-            
-            .work-together-content h2 {
-                font-size: 28px;
-            }
-        }
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100%;
+}
 
-          /* Footer Content */
-          .modern-footer {
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0px;
+}
+
+li {
+    font-family: Greycliff CF, Light
+}
+
+      .employer-partner-section {
+            display: flex;
+            /* display: inline-flex; */
+            align-items: center;
+            justify-content: center;
+            padding-right: 2%;
+            gap: 60px;
+            background-color: #041202;
+        }
+        .employer-partner-text {
+            color: #FFFFFF;
+            font-size: 22px;
+            width: 70%;
+            font-weight: 100;
+        }
+        .resources-container {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .resources-container {
+            display: flex;
+            /* display: inline-flex; */
+            align-items: center;
+            justify-content: center;
+            padding-left: 2%;
+            gap: 60px;
+            background-color: #F2F0EF;
+        }
+        .resources-content {
+    padding: 2% 0px 2% 0%;
+    margin-left: 5%;
+}
+.resources-content {
+            flex: 1;
+            padding: 2% 0px 2% 0%;
+        }
+        .resources-content {
+            flex: 1;
+        }
+        #logo-1 {
+    /* background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/A Safe Haven Foundation.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+  /* Footer Content */
+  .modern-footer {
             background-color: #1F3707;
             color: white;
             padding: 60px 0 0 0;
@@ -716,7 +732,7 @@
         @media (max-width: 1354px) {
             .collaborate-image img {
             width: 100%;
-            height: 400px;
+            max-height: 400px;
             border-radius: 35px;
             object-fit: cover;
         }
@@ -825,7 +841,6 @@
             font-size: 15px;
             display: block;
             opacity: 0.9;
-            text-align: left;
             font-weight: 300;
         }
 
@@ -833,7 +848,354 @@
             opacity: 1;
             text-decoration: underline;
         }
- .social-strip {
+        @media (max-width: 1354px) {
+            .collaborate-image img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+    }
+    /* Add these styles to  existing CSS */
+@media (max-width: 1354px) {
+    .employer-partner-section {
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .employer-partner-section .communities-image {
+        width: 100%;
+        order: -1; /* Move image to the top */
+    }
+    
+    .employer-partner-section .communities-image img {
+        max-height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .employer-partner-section .resources-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 25px 40px 48px;
+        background-color: #041202;
+    }
+    
+    .employer-partner-title {
+        font-size: 38px;
+        width: 100%;
+    }
+    
+   
+    
+    /* Fix background color for the entire section on mobile */
+    section.employer-partner-section {
+        background-color: transparent;
+    }
+    
+    .container.employer-partner-section {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 1354px) {
+    /* First section (Our Employer Partners) mobile styling */
+    .engagement-section > .engagement-section {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .engagement-section > .engagement-section .communities-image {
+        order: -1; /* Move image to top */
+        width: 100%;
+    }
+    
+    .engagement-section > .engagement-section .communities-image img {
+        max-height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .engagement-section > .engagement-section .engagement-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 25px;
+        background-color: #f5f5f5; /* Light gray background */
+    }
+    
+    .engagement-section > .engagement-section .engagement-title {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+    
+    .engagement-section > .engagement-section h4 {
+        font-size: 24px;
+    }
+    
+    .engagement-section > .engagement-section .engagement-text {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+@media (max-width: 1354px) {
+            .collaborate-image img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+    }
+    /* Add these styles to  existing CSS */
+@media (max-width: 776px) {
+    .employer-partner-section {
+        flex-direction: column !important;
+        gap: 0 !important;
+        padding-right: 0 !important;
+    }
+    
+    .employer-partner-section .communities-image {
+        width: 100%;
+        order: -1; /* Move image to the top */
+    }
+    
+    .employer-partner-section .communities-image img {
+        max-height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .employer-partner-section .resources-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 25px 40px 48px;
+        background-color: #041202;
+    }
+    
+    .employer-partner-title {
+        font-size: 38px;
+        width: 100%;
+    }
+    
+   
+    
+    /* Fix background color for the entire section on mobile */
+    section.employer-partner-section {
+        background-color: transparent;
+    }
+    
+    .container.employer-partner-section {
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 776px) {
+    /* First section (Our Employer Partners) mobile styling */
+    .engagement-section > .engagement-section {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .engagement-section > .engagement-section .communities-image {
+        order: -1; /* Move image to top */
+        width: 100%;
+    }
+    
+    .engagement-section > .engagement-section .communities-image img {
+        max-height: 350px;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .engagement-section > .engagement-section .engagement-content {
+        width: 100%;
+        margin-left: 0;
+        padding: 40px 25px;
+        background-color: #f5f5f5; /* Light gray background */
+    }
+    
+    .engagement-section > .engagement-section .engagement-title {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+    
+    .engagement-section > .engagement-section h4 {
+        font-size: 24px;
+    }
+    
+    .engagement-section > .engagement-section .engagement-text {
+        width: 100%;
+        font-size: 18px;
+    }
+}
+/* Banner Styles */
+.banner {
+    background-color: #1e3a14;
+    color: white;
+    padding: 12px 0;
+}
+
+.banner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+.banner-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+.learn-more-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 6px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 8%;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Header Styles */
+.header {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+.logo {
+    width: 150px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 65px;
+    margin-right: 45px;
+}
+
+.nav-links a {
+    color: #7D7E7E;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.donate-btn {
+    background-color: #67b346;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.donate-btn-icon {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate-btn-icon::after {
+    content: '→';
+    color: #67b346;
+    font-size: 12px;
+}
+
+.donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 5px 5px 5px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 175px; /* Adjust width as needed */
+    border: 1px solid black;
+}
+
+.donate-button span {
+    margin-right: 5px; 
+}
+
+.donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+.donate-button i {
+    transform: rotate(-45deg);
+}
+
+.donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.circle-icon {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-strip {
     background-color: #ffffff;
     padding: 5px 0;
     border-bottom: 1px solid #f0f0f0;
@@ -1611,461 +1973,7 @@
                 padding: 0px;
             }
         }
-        /* Banner Styles */
-.banner {
-    background-color: #1e3a14;
-    color: white;
-    padding: 12px 0;
-}
-
-.banner-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-.banner-text {
-            max-width: 800px;
-            margin: 0 auto;
-            font-size: 16px;
-            line-height: 1.4;
-        }
-
-.learn-more-btn {
-    background-color: transparent;
-    color: white;
-    border: 1px solid white;
-    border-radius: 25px;
-    padding: 6px 16px;
-    font-size: 14px;
-    cursor: pointer;
-    display: inline-block;
-    margin-right: 8%;
-}
-
-/* Social Icons */
-.social-icons {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    width: 20px;
-    height: 20px;
-    background-color: white;
-    border-radius: 50%;
-}
-
-/* Header Styles */
-.header {
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    z-index: 100;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
-}
-
-.header-container {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 0px 60px 0px 35px;
-        }
-
-.logo {
-    width: 175px;
-}
-
-.main-nav {
-    display: flex;
-    align-items: center;
-    margin-left: 1%;
-}
-
-.nav-links {
-    display: flex;
-    gap: 65px;
-    margin-right: 45px;
-}
-
-.nav-links a {
-    color: #7D7E7E;
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.donate-btn {
-    background-color: #67b346;
-    color: white;
-    border-radius: 25px;
-    padding: 8px 25px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
-}
-
-.donate-btn-icon {
-    width: 16px;
-    height: 16px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.donate-btn-icon::after {
-    content: '→';
-    color: #67b346;
-    font-size: 12px;
-}
-
-.donate-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #8dc63f; /* Light green */
-    color: #333333; /* Black text color */
-    padding: 5px 5px 5px 13px;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    width: 175px; /* Adjust width as needed */
-    border: 1px solid black;
-}
-
-.donate-button span {
-    margin-right: 5px; 
-}
-
-.donate-button:hover .circle-icon i {
-    color: #333333; /* Black arrow */
-    font-size: 12px;
-    transform: rotate(0deg);
-}
-
-.donate-button:hover {
-    background-color: #7db32e; /* Slightly darker on hover */
-    transform: translateY(-2px);
-}
-
-.donate-button i {
-    transform: rotate(-45deg);
-}
-
-.donate-button > .circle-icon i:hover {
-    transform: rotate(0deg);
-}
-
-.donate-button i {
-    font-size: 14px;
-    transition: transform 0.3s ease;
-}
-
-.circle-icon {
-    width: 35px;
-    height: 35px;
-    background-color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.social-strip {
-    background-color: #ffffff;
-    padding: 5px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.social-strip-container {
-    display: flex;
-    justify-content: flex-end;
-    max-width: 83%;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-.social-icons-top {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons-top a {
-    color: #333;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.social-icons-top a:hover {
-    color: #4d7e32;
-}
-
-/* START MOBILE CSS */
-.mobile-menu-toggle {
-    display: none; /* Hidden by default, shown in media query */
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
-}
-
-.hamburger {
-    width: 30px;
-    height: 20px;
-    position: relative;
-    transform: rotate(0deg);
-    transition: .5s ease-in-out;
-    cursor: pointer;
-}
-
-.hamburger span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #333;
-    border-radius: 3px;
-    opacity: 1;
-    left: 0;
-    transform: rotate(0deg);
-    transition: .25s ease-in-out;
-}
-
-/* Hamburger icon bars positioning */
-.hamburger span:nth-child(1) {
-    top: 0px;
-}
-
-.hamburger span:nth-child(2),
-.hamburger span:nth-child(3) {
-    top: 10px;
-}
-
-.hamburger span:nth-child(4) {
-    top: 20px;
-}
-
-/* Hamburger animation to X */
-.hamburger.open span:nth-child(1) {
-    top: 10px;
-    width: 0%;
-    left: 50%;
-}
-
-.hamburger.open span:nth-child(2) {
-    transform: rotate(45deg);
-}
-
-.hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg);
-}
-
-.hamburger.open span:nth-child(4) {
-    top: 10px;
-    width: 0%;
-    left: 50%;
-}
-
-/* Mobile Navigation Panel */
-.mobile-nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 400px;
-    height: 100%;
-    background-color: white;
-    padding: 80px 40px 40px;
-    z-index: 1000;
-    overflow-y: auto;
-    transition: right 0.3s ease-in-out;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-}
-
-.mobile-nav.open {
-    right: 0;
-}
-
-.mobile-nav-links {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.mobile-nav-links a {
-    color: #333;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 0;
-    border-bottom: 1px solid #eee;
-    transition: color 0.3s ease;
-}
-
-.mobile-nav-links a:hover {
-    color: #4d7e32;
-}
-
-.mobile-donate-button {
-    margin-top: 30px;
-}
-
-/* Dark overlay when mobile menu is open */
-.overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    display: none;
-}
-
-.overlay.active {
-    display: block;
-}
-
-/* Media Queries */
-@media (max-width: 1500px) { 
-    .header-container {
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        padding: 0px 0px 0px 0px;
-    }
-    .nav-links {
-        display: flex;
-        gap: 25px;
-        margin-right: 45px;
-    }
-}
-
-@media (max-width: 1478px) { 
-    .header {
-        padding: 15px 15px;
-    }
-    .banner {
-        padding: 12px 15px;
-    }
-}
-
-@media (max-width: 1354px) {
-    .main-nav {
-        display: none; /* Hide desktop nav */
-    }
-    
-    /* .mobile-menu-toggle {
-        display: block;
-    } */
-    
-    .header-container {
-        justify-content: space-between;
-        padding: 0 20px;
-    }
-}
-
-@media (max-width: 976px) {
-    .nav-links {
-        display: none;
-    }
-
-    .mobile-menu-toggle {
-        display: block;
-    }
-
-    .donate-button {
-        display: none;
-    }
-    
-    .banner-container {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 576px) {
-    .mobile-nav {
-        width: 100%;
-        max-width: none;
-    }
-}
-.fa-arrow-right:before {
-    content: "\f061";
-    color: #7D7E7E;
-    font-size: 18px;
-}
-@media (max-width: 1024px) {
-    .engagement-section {
-        padding: 0;
-        gap: 0px;
-    }
-    
-    .engagement-container {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        padding: 0;
-        min-height: auto;
-        border-bottom: none;
-    }
-    
-    .careers-image {
-        order: -1; /* This puts the image on top */
-        height: auto;
-        border-left: none;
-        width: 100%;
-    }
-    
-    .communities-image img {
-        height: auto;
-        max-height: 325px;
-    }
-    
-    .engagement-content {
-        padding: 20px 15px 40px !important;
-        background-color: #f5f5f5; /* Light gray background like in  image */
-        width: 100%;
-        margin-left: 0px;
-        text-align: center;
-    }
-    
-    .careers-content h1 {
-        font-size: 28px;
-        margin-bottom: 15px;
-        font-family: serif; /* Matches the style in  image */
-    }
-    
-    .careers-subtitle {
-        font-size: 22px;
-        font-weight: 500;
-        margin-bottom: 15px;
-    }
-    
-    .careers-description {
-        font-size: 16px;
-        line-height: 1.5;
-        margin-bottom: 15px;
-    }
-
-    .engagement-text {
-        margin-bottom: 30px;
-    font-size: 25px;
-    line-height: 1.7;
-    color: #353232;
-    width: 100%;
-    text-align: center;
-    }
-}
-        </style>
+    </style>
 </head>
 <body>
     <div id="main-content">
@@ -2258,429 +2166,386 @@
             <div class="overlay"></div>
         </div>
     </header>
-    </section>
 
     <!-- Partnership Section -->
     <section class="engagement-section">
         <div class="engagement-section">
             <div class="engagement-content">
-                <h2 class="engagement-title">Community Partners</h2>
-                <h4 style="padding-bottom: 2%;">Stronger Partnerships. Greater Workforce Impact.</h4>
+                <h2 class="engagement-title">Our Employer Partners</h2>
+                <h4 style="padding-bottom: 2%;">Expanding Talent Pipelines. Building a Stronger Workforce.</h4>
                 <p class="engagement-text">
                     At Skills for Chicago, we know that meaningful employment starts with collaboration. Our partners—including employers, community organizations, and educational institutions—play a critical role in connecting job seekers to life-changing opportunities while driving economic growth across the city. Together, we are expanding access to employment and creating opportunities that strengthen Chicago’s workforce.
                 </p>
             </div>
             <div class="communities-image">
-                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_482240148-1-scaled.jpeg" alt="People at a community event">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_506288089-scaled.jpeg" alt="People at a community event">
+            </div>
+        </div>
+    </section>
+    <!-- Why Employers Partner With Us Section -->
+    <section class="employer-partner-section">
+        
+        <div class="container employer-partner-section">
+            <div class="communities-image">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_305701791-scaled.jpeg" alt="People at a community event">
+            </div>
+            <div class="resources-content">
+                <h2 class="employer-partner-title">Why Employers Partner With Us</h2>
+                <ul>
+                <li class="employer-partner-text">
+                    Hire job-ready candidates who are prepared to contribute from day one.                </li>
+                <li class="employer-partner-text">
+                    Gain access to untapped talent that isn’t found through traditional hiring methods.                </li>
+                <li class="employer-partner-text">
+                    Strengthen teams with skilled and motivated employees.                </li>
+                <li class="employer-partner-text">
+                    Support economic growth by increasing access to employment                </li>
+            </ul>
             </div>
         </div>
     </section>
 
     <!-- Partners Section -->
     <section class="partners-section">
-        <h2 class="partners-title">Community Partners</h2>
-        <p class="partners-subtitle">Explore the organizations making a difference.</p>
+        <h2 class="partners-title">Employer Partners</h2>
+        <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
         
         <div class="partners-grid">
             <!-- Row 1 -->
             <div class="partner-logo" id="logo-1">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/A-Safe-Haven-Foundation.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-2">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Arrupe-College-of-Loyola-University.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-3">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Association-House-of-Chicago.jpg" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-4">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Bethel-New-Life.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
             </div>
             
             <!-- Row 2 -->
             <div class="partner-logo" id="logo-5">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BUILD-Chicago-1.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/CNO_LOGO_400x160.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-6">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Cara-Collective.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/DOT_Official_Logo_Blue.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-7">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Center-for-Changing-Lives.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Endeavor-Health-Black-Stacked-scaled.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-8">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chicago-Cred.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Ferrara-Logo.png" alt="People at a community event">
             </div>
             
             <!-- Row 3 -->
             <div class="partner-logo" id="logo-9">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/OAI-Inc.jpg" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/2a34d8_dfab924ee70641918b494f873b941e9emv2.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-10">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chicago-Urban-League.jpg" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/freedman-seating-logo-color.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-11">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Facing-Forward-Chicago.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Go-health-logo-color.jpg" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-12">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Friends-of-the-Children.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/HAH_LOGO_NO_TAGLINE_COLOR-002.png" alt="People at a community event">
             </div>
             
             <!-- Row 4 -->
             <div class="partner-logo" id="logo-13">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/GECDC.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/HUB-Horizontal-Full-Colour-RGB.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-14">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Goodwill.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Hyatt-color-logo-large.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-15">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Growing-Home-Inc.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Jewel-Osco-logo-color.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-16">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Heartland-Human-Care-Services.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/MIS-logo15x42-scaled.png" alt="People at a community event">
             </div>
             
             <!-- Row 5 -->
             <div class="partner-logo" id="logo-17">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Hope-Center-Foundation.jpg" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Northwestern-Medicine-Logo-RGB-1-scaled.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-18">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/IDES.jpg" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/ONBank.Flag_-scaled.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-19">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/KRA-American-Job-Center.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/rush-logo-color.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-20">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/La-Casa-Norte.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Shirley-Ryan.png" alt="People at a community event">
             </div>
             
             <!-- Row 6 -->
             <div class="partner-logo" id="logo-21">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Lawrence-Hall.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/ssp-america-logo-color.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-22">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/LIFT-Chicago.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/UChicago_Facilities-Services_Vertical_Color-RGB.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-23">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Lyte-Collective.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/UCM_Logo_color.jpg" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-24">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Mercy-Home-for-Boys-and-Girls.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Ulta-Beauty_1000x800.png" alt="People at a community event">
             </div>
             
             <!-- Row 7 -->
             <div class="partner-logo" id="logo-25">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Metropolitan-Family-Services.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Wintrust-large-logo_1000x700.png" alt="People at a community event">
             </div>
             <div class="partner-logo" id="logo-26">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/New-Moms-Bright-Endeavors.png" alt="People at a community event">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Walgreens_2020_primary_logo.png" alt="People at a community event">
             </div>
-            <div class="partner-logo" id="logo-27">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/NLEN.jpg" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-28">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Noble-Network.png" alt="People at a community event">
-            </div>
-            
-            <!-- Row 8 -->
-            <div class="partner-logo" id="logo-29">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/OAI-Inc.jpg" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-30">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Of-Color-Inc.jpg" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-31">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/POAH.jpg" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-32">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Salt-Light-Coalition.png" alt="People at a community event">
-            </div>
-            
-            <!-- Row 9 -->
-            <div class="partner-logo" id="logo-33">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/St.-Augustine.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-34">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/St.-Sabina-ERC.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-35">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/SWOP-Southwest-Organizing-Project.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-36">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Teamwork-Englewood.png" alt="People at a community event">
-            </div>
-            
-            <!-- Row 10 -->
-            <div class="partner-logo" id="logo-37">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/The-Chicago-Lighthouse.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-38">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/The-Community-Builders.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-39">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Trellus-Asian-Human-Services.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-40">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/UCAN.png" alt="People at a community event">
-            </div>
-            
-            <!-- Row 11 -->
-            <div class="partner-logo" id="logo-41">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/ULON-Life.jpg" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-42">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Urban-Alliance.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-43">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Year-Up.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-44">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Youth-Guidance.png" alt="People at a community event">
-            </div>
-            
-            <!-- Row 12 -->
-            <div class="partner-logo" id="logo-45">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Youth-Job-Center.png" alt="People at a community event">
-            </div>
-            <div class="partner-logo" id="logo-46">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/YWCA.png" alt="People at a community event">
-            </div>
-            
         </div>
     </section>
 
-        <!-- Footer Content -->
-    <footer class="modern-footer">
-        <div class="footer-container">
-            <div class="footer-top">
-                <a href="https://skillsforchicago.org/"><div class="footer-logo">
-                    <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-3_optimized.png" alt="Skills for Chicago Logo">
-                </div></a>
-                <div class="footer-divider"></div>
-                <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+<!-- Footer Content -->
+<footer class="modern-footer">
+    <div class="footer-container">
+        <div class="footer-top">
+            <a href="https://skillsforchicago.org/"><div class="footer-logo">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-3_optimized.png" alt="Skills for Chicago Logo">
+            </div></a>
+            <div class="footer-divider"></div>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        
+        <!-- Desktop Footer Navigation -->
+        <div class="footer-nav">
+            <div class="footer-nav-section">
+                <h3>Home</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/">Home</a>
+                </div>
+            </div>
+            <div class="footer-nav-section">
+                <h3>About Us</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                    <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                    <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                    <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                    <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
                 </div>
             </div>
             
-            <!-- Desktop Footer Navigation -->
-            <div class="footer-nav">
-                <div class="footer-nav-section">
-                    <h3>Home</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/">Home</a>
-                    </div>
-                </div>
-                <div class="footer-nav-section">
-                    <h3>About Us</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
-                        <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
-                        <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
-                        <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
-                        <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
-                    </div>
-                </div>
-                
-                <div class="footer-nav-section">
-                    <h3>Job Seekers</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
-                        <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
-                        <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
-                    </div>
-                </div>
-                
-                <div class="footer-nav-section">
-                    <h3>Employers</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
-                        <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
-                    </div>
-                </div>
-
-                <div class="footer-nav-section">
-                    <h3>COMMUNITY PARTNERS</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
-                        <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
-                        <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
-                    </div>
-                </div>
-                <div class="footer-nav-section">
-                    <h3>Donors</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    </div>
-                </div>
-                <div class="footer-nav-section">
-                    <h3>EVENTS</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
-                        <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
-                    </div>
-                </div>
-                <div class="footer-nav-section">
-                    <h3>NATIONAL EXPANSION</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
-                    </div>
-                </div>
-                <div class="footer-nav-section">
-                    <h3>CONTACT US</h3>
-                    <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
-                    </div>
+            <div class="footer-nav-section">
+                <h3>Job Seekers</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                    <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                    <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
                 </div>
             </div>
             
-            <!-- Mobile Footer Accordion -->
-            <div class="mobile-footer">
-                <!-- ABOUT US Section -->
-                <div class="footer-accordion">
-                    <div class="footer-accordion-header">
-                        <h3 class="footer-accordion-title">ABOUT US</h3>
-                        <span class="footer-accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    <div class="footer-accordion-content">
-                        <ul class="footer-mobile-links">
-                        <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
-                        <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
-                        <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
-                        <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
-                        <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
-                        </ul>
-                    </div>
+            <div class="footer-nav-section">
+                <h3>Employers</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                    <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
                 </div>
+            </div>
 
-                <!-- JOB SEEKERS Section -->
-                <div class="footer-accordion">
-                    <div class="footer-accordion-header">
-                        <h3 class="footer-accordion-title">JOB SEEKERS</h3>
-                        <span class="footer-accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    <div class="footer-accordion-content">
-                        <ul class="footer-mobile-links">
-                        <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
-                        <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
-                        <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
-                        </ul>
-                    </div>
+            <div class="footer-nav-section">
+                <h3>COMMUNITY PARTNERS</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                    <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                    <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
                 </div>
-
-                <!-- EMPLOYERS Section -->
-                <div class="footer-accordion">
-                    <div class="footer-accordion-header">
-                        <h3 class="footer-accordion-title">EMPLOYERS</h3>
-                        <span class="footer-accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    <div class="footer-accordion-content">
-                        <ul class="footer-mobile-links">
-                           <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
-                        <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
-                        </ul>
-                    </div>
+            </div>
+            <div class="footer-nav-section">
+                <h3>Donors</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/donors/">Donors</a>
                 </div>
-
-                <!-- COMMUNITY PARTNERS Section -->
-                <div class="footer-accordion">
-                    <div class="footer-accordion-header">
-                        <h3 class="footer-accordion-title">COMMUNITY PARTNERS</h3>
-                        <span class="footer-accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    <div class="footer-accordion-content">
-                        <ul class="footer-mobile-links">
-                        <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
-                        <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
-                        <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
-                        </ul>
-                    </div>
+            </div>
+            <div class="footer-nav-section">
+                <h3>EVENTS</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                    <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
                 </div>
-                <!-- DONORS Section -->
-                <div class="footer-accordion">
-                    <div class="footer-accordion-header">
-                        <h3 class="footer-accordion-title">DONORS</h3>
-                        <span class="footer-accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    <div class="footer-accordion-content">
-                        <ul class="footer-mobile-links">
-                            <li><a href="https://skillsforchicago.org/donors/">Donors</a></li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="footer-nav-section">
+                <h3>NATIONAL EXPANSION</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
                 </div>
-
-                <!-- EVENTS & HIGHLIGHTS Section -->
-                <div class="footer-accordion">
-                    <div class="footer-accordion-header">
-                        <h3 class="footer-accordion-title">EVENTS</h3>
-                        <span class="footer-accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    <div class="footer-accordion-content">
-                        <ul class="footer-mobile-links">
-                        <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
-                        <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- NATIONAL EXPANSION Section -->
-                <div class="footer-accordion">
-                    <div class="footer-accordion-header">
-                        <h3 class="footer-accordion-title">NATIONAL EXPANSION</h3>
-                        <span class="footer-accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    <div class="footer-accordion-content">
-                        <ul class="footer-mobile-links">
-                            <li><a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-                <!-- CONTACT US Section -->
-                <div class="footer-accordion">
-                    <div class="footer-accordion-header">
-                        <h3 class="footer-accordion-title">CONTACT US</h3>
-                        <span class="footer-accordion-icon">
-                            <i class="fas fa-chevron-down"></i>
-                        </span>
-                    </div>
-                    <div class="footer-accordion-content">
-                        <ul class="footer-mobile-links">
-                            <li><a href="https://skillsforchicago.org/contactus/">Contact Us</a></li>
-                        </ul>
-                    </div>
+            </div>
+            <div class="footer-nav-section">
+                <h3>CONTACT US</h3>
+                <div class="footer-nav-links">
+                    <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
                 </div>
             </div>
         </div>
         
-        <div class="footer-copyright">
-            <div class="footer-container">
-                Copyright @ 2025 Skills All rights reserved
+        <!-- Mobile Footer Accordion -->
+        <div class="mobile-footer">
+            <!-- ABOUT US Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">ABOUT US</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                    <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                    <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                    <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                    <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                    <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- JOB SEEKERS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">JOB SEEKERS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                    <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                    <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                    <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- EMPLOYERS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">EMPLOYERS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                       <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                    <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- COMMUNITY PARTNERS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">COMMUNITY PARTNERS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                    <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                    <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                    <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                    </ul>
+                </div>
+            </div>
+            <!-- DONORS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">DONORS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="https://skillsforchicago.org/donors/">Donors</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- EVENTS & HIGHLIGHTS Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">EVENTS</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                    <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                    <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- NATIONAL EXPANSION Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">NATIONAL EXPANSION</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!-- CONTACT US Section -->
+            <div class="footer-accordion">
+                <div class="footer-accordion-header">
+                    <h3 class="footer-accordion-title">CONTACT US</h3>
+                    <span class="footer-accordion-icon">
+                        <i class="fas fa-chevron-down"></i>
+                    </span>
+                </div>
+                <div class="footer-accordion-content">
+                    <ul class="footer-mobile-links">
+                        <li><a href="https://skillsforchicago.org/contactus/">Contact Us</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </footer>
-<!-- </div> -->
+    </div>
+    
+    <div class="footer-copyright">
+        <div class="footer-container">
+            Copyright @ 2025 Skills All rights reserved
+        </div>
+    </div>
+</footer>
 
     <script>
         // Mobile menu functionality
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
             const hamburger = document.querySelector('.hamburger');
+            
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    hamburger.classList.toggle('open');
+                    // Additional mobile menu functionality would go here
+                    alert('Mobile menu toggle clicked - functionality would be implemented here');
+                });
+            }
             
             // Add animation to partner logos when they come into view
             const partnerLogos = document.querySelectorAll('.partner-logo');
@@ -2731,7 +2596,7 @@
             window.addEventListener('scroll', animateLogosInView);
         });
     </script>
-     <script>
+      <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2808,62 +2673,62 @@
             });
         });
     </script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-        // Mobile Dropdown Functionality
-        const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+// Mobile Dropdown Functionality
+const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+
+mobileDropdowns.forEach(dropdown => {
+    const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+    
+    dropdownToggle.addEventListener('click', function() {
+        // Toggle active class on clicked dropdown
+        dropdown.classList.toggle('active');
         
-        mobileDropdowns.forEach(dropdown => {
-            const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+        // Optionally close other dropdowns when one is opened
+        // Comment this out if you want multiple dropdowns to be open simultaneously
+        mobileDropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                otherDropdown.classList.remove('active');
+            }
+        });
+    });
+});
+
+// Close dropdowns when a link inside is clicked
+const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+dropdownLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Optionally close the dropdown when a link is clicked
+        // Comment this out if you want the dropdown to stay open after a link is clicked
+        const parentDropdown = this.closest('.mobile-dropdown');
+        setTimeout(() => {
+            parentDropdown.classList.remove('active');
             
-            dropdownToggle.addEventListener('click', function() {
-                // Toggle active class on clicked dropdown
-                dropdown.classList.toggle('active');
-                
-                // Optionally close other dropdowns when one is opened
-                // Comment this out if you want multiple dropdowns to be open simultaneously
-                mobileDropdowns.forEach(otherDropdown => {
-                    if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
-                        otherDropdown.classList.remove('active');
-                    }
+            // Also close the mobile menu
+            document.querySelector('.hamburger').classList.remove('open');
+            document.querySelector('.mobile-nav').classList.remove('open');
+            document.querySelector('.overlay').classList.remove('active');
+            document.querySelector('body').style.overflow = '';
+        }, 100); // Small delay to allow the click to register
+    });
+});
+
+// Make sure mobile dropdowns are closed when menu is closed
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', function() {
+        // If closing the mobile menu, close all dropdowns
+        if (document.querySelector('.mobile-nav').classList.contains('open')) {
+            setTimeout(() => {
+                mobileDropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
                 });
-            });
-        });
-        
-        // Close dropdowns when a link inside is clicked
-        const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
-        dropdownLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                // Optionally close the dropdown when a link is clicked
-                // Comment this out if you want the dropdown to stay open after a link is clicked
-                const parentDropdown = this.closest('.mobile-dropdown');
-                setTimeout(() => {
-                    parentDropdown.classList.remove('active');
-                    
-                    // Also close the mobile menu
-                    document.querySelector('.hamburger').classList.remove('open');
-                    document.querySelector('.mobile-nav').classList.remove('open');
-                    document.querySelector('.overlay').classList.remove('active');
-                    document.querySelector('body').style.overflow = '';
-                }, 100); // Small delay to allow the click to register
-            });
-        });
-        
-        // Make sure mobile dropdowns are closed when menu is closed
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', function() {
-                // If closing the mobile menu, close all dropdowns
-                if (document.querySelector('.mobile-nav').classList.contains('open')) {
-                    setTimeout(() => {
-                        mobileDropdowns.forEach(dropdown => {
-                            dropdown.classList.remove('active');
-                        });
-                    }, 300); // Delay to match the mobile menu closing animation
-                }
-            });
+            }, 300); // Delay to match the mobile menu closing animation
         }
     });
-            </script>
+}
+});
+    </script>
 </body>
 </html>

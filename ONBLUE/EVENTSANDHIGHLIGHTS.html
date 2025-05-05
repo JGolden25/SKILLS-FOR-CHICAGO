@@ -21,7 +21,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-family: Greycliff CF;
         }
 
         body {
@@ -48,7 +48,7 @@ h3 {
 h4 {
  font-family: Greycliff CF, Bold;
  font-size: 28px;
- font-weight: 600;
+ font-weight: 700;
 }
 p {
 font-family: Greycliff CF, Light;
@@ -293,7 +293,7 @@ font-family: Greycliff CF, Bold;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             .event-card {
                 flex-direction: column;
             }
@@ -342,8 +342,11 @@ font-family: Greycliff CF, Bold;
         
         .banner-container {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
         .exit-fullscreen {
@@ -358,7 +361,10 @@ font-family: Greycliff CF, Bold;
         }
         
         .banner-text {
-            font-size: 15px;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.4;
         }
         
         .learn-more-btn {
@@ -399,15 +405,19 @@ font-family: Greycliff CF, Bold;
         
         .nav-links {
             display: flex;
-            gap: 25px;
-            margin-right: 20px;
+            gap: 65px;
+    margin-right: 45px;
         }
         
         .nav-links a {
-            color: #333;
+            color: #7D7E7E;
             font-size: 15px;
             font-weight: 500;
         }
+
+        .nav-links a:hover {
+        color: #4d7e32;
+      }
         
         .donate-btn {
             background-color: #67b346;
@@ -551,7 +561,7 @@ font-family: Greycliff CF, Bold;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 976px) {
     .modern-footer::before {
         width: 100%;
         left: -20%;
@@ -631,11 +641,12 @@ font-family: Greycliff CF, Bold;
     }
 
     .footer-nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        transition: opacity 0.3s ease;
-    }
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            font-weight: 300;
+        }
 
     .footer-nav-links a:hover {
         opacity: 0.8;
@@ -674,7 +685,7 @@ font-family: Greycliff CF, Bold;
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 976px) {
         .footer-top {
             flex-direction: column;
             gap: 30px;
@@ -861,16 +872,16 @@ font-family: Greycliff CF, Bold;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #8dc63f; /* Light green */
+    background-color: #95C561;
     color: #333333; /* Black text color */
-    padding: 7px 15px;
+    padding: 5px 5px 5px 13px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px; /* Adjust width as needed */
-    border: 1px solid black;
+    border: 1px solid #707070;
 }
 
 .donate-button i {
@@ -908,8 +919,8 @@ font-family: Greycliff CF, Bold;
 }
 
 .circle-icon {
-    width: 25px;
-    height: 25px;
+    width: 35px;
+    height: 35px;
     background-color: white;
     border-radius: 50%;
     display: flex;
@@ -1003,7 +1014,7 @@ font-family: Greycliff CF, Bold;
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #8dc63f; /* Light green */
+    background-color: #A2C466; /* Light green */
     color: #333333; /* Black text color */
     padding: 10px 15px;
     border-radius: 25px;
@@ -1088,7 +1099,7 @@ font-family: Greycliff CF, Bold;
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             .work-together-container {
                 flex-direction: column;
                 text-align: center;
@@ -1550,7 +1561,7 @@ padding: 0px;
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             .banner-container {
                 flex-direction: column;
                 gap: 10px;
@@ -1844,7 +1855,7 @@ padding: 0px;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             .footer-top {
                 flex-direction: column;
                 gap: 0px;
@@ -1895,6 +1906,7 @@ padding: 0px;
             display: block;
             opacity: 0.9;
             text-align: left;
+            font-weight: 300;
         }
 
         .footer-mobile-links a:hover {
@@ -1936,7 +1948,7 @@ padding: 0px;
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
+@media (max-width: 976px) {
     .modern-footer::before {
         width: 100%;
         left: -20%;
@@ -2016,11 +2028,12 @@ padding: 0px;
     }
 
     .footer-nav-links a {
-        color: white;
-        text-decoration: none;
-        font-size: 15px;
-        transition: opacity 0.3s ease;
-    }
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            font-weight: 300;
+        }
 
     .footer-nav-links a:hover {
         opacity: 0.8;
@@ -2055,7 +2068,7 @@ padding: 0px;
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 976px) {
         .footer-top {
             flex-direction: column;
             /* gap: 30px; */
@@ -2113,7 +2126,759 @@ padding: 0px;
 .social-icons-top a:hover {
     color: #4d7e32;
 }
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+         /* Hamburger Menu Button */
+         .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
 
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+@media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+            
+            /* .mobile-menu-toggle {
+                display: block;
+            } */
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 0px;
+            }
+        }
+@media (max-width: 1500px) { 
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+    margin-right: 45px;
+        }
+    }
+@media (max-width: 1478px) { 
+
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+         /* Mobile Navigation Panel */
+         .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        .fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
+@media (max-width: 976px) {
+    .careers-section {
+        padding: 0;
+    }
+
+    .mobile-menu-toggle {
+                display: block;
+            }
+    
+    .careers-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        min-height: auto;
+        border-bottom: none;
+    }
+    
+    .careers-image {
+        order: -1; /* This puts the image on top */
+        height: 315px;
+        border-left: none;
+        width: 100%;
+    }
+    
+    .careers-image img {
+        height: auto;
+        max-height: 325px;
+    }
+    
+    .careers-content {
+        padding: 20px 15px 40px;
+        background-color: #f5f5f5; /* Light gray background like in  image */
+        width: 100%;
+    }
+    
+    .careers-content h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .careers-subtitle {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+    .careers-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+}
+.social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+         /* Hamburger Menu Button */
+         .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+@media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            
+            /* .mobile-menu-toggle {
+                display: block;
+            } */
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 0px;
+            }
+        }
+@media (max-width: 1500px) { 
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+    margin-right: 45px;
+        }
+    }
+@media (max-width: 1478px) { 
+    .banner-text {
+            font-size: 15px;
+            margin-right: 0%;
+        }
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+         /* Mobile Navigation Panel */
+         .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        .social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.skills-dropdown-nav {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 0px 85px 0px 25px; */
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4d7e32;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f3;
+    color: #4d7e32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+    .skills-dropdown-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    /* You would need to implement mobile dropdown separately or
+       integrate with  existing mobile menu system */
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 15px !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+    padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #4d7e32 !important;
+}
+
+/* Update existing mobile-nav styles */
+.mobile-nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.mobile-nav {
+    padding-top: 70px; /* Adjust if needed to make room for the header */
+}
+
+.hamburger.open {
+  position: fixed;
+  top: 20px;      /* Move it higher (decrease this value to move up) */
+  right: 20px;    /* Move it more to the right (decrease this value to move right) */
+  z-index: 1002;  /* Ensure it stays above other elements */
+}
+
+/* If the X is created by the transformed hamburger icon, make sure the spans align properly */
+.hamburger.open span:nth-child(2),
+.hamburger.open span:nth-child(3) {
+  right: 0;       /* Ensure the X is properly centered when transformed */
+}
+
+/* Optionally, if the mobile nav panel needs adjustment */
+.mobile-nav {
+  padding-top: 60px; /* Adjust top padding to ensure content doesn't go under the X */
+}
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 60px 0px 35px;
+        }
+        @media (max-width: 976px) {
+.mobile-menu-toggle {
+                display: block; 
+            }
+.donate-button {
+    display: none;
+}
+
+
+}
+        .mobile-donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 3px 5px 3px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+.mobile-donate-button span {
+    margin-right: 5px;
+    font-family: Greycliff-thin, sans-serif; 
+}
+.mobile-donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+.mobile-donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+.mobile-donate-button i {
+    transform: rotate(-45deg);
+}
+.mobile-donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+.mobile-donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+        @media (max-width: 1636px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 15px;
+            }
+            .header-container {
+                padding: 0px 30px 0px 30px;
+            }
+        }
+        @media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            .header-container {
+                padding: 0px;
+            }
+        }
+        .nav-links a:hover {
+        color: #4d7e32;
+      }
     </style>
 </head>
 <body>
@@ -2121,49 +2886,95 @@ padding: 0px;
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     <!-- Banner Section -->
-    <div class="banner">
+    <!-- <div class="banner">
         <div class="banner-container">
             <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
             <a href="#" class="learn-more-btn">Learn More</a>
         </div>
-    </div>
-    
-        <!-- Header (pt1page) -->
-        <header class="header">
+    </div> -->
+
+    <!-- Header -->
+    <header class="header">
+        
         <div class="header-container">
             <a href="https://skillsforchicago.org/" class="logo-link">
                 <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo" class="logo">
             </a>
             
             <!-- Desktop Navigation -->
-            <nav class="main-nav">
-                <div class="nav-links">
-                    <a href="https://skillsforchicago.org/">Home</a>
-                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
-                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
-                    <a href="https://skillsforchicago.org/partner/">Employers</a>
-                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
-                    <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    <a href="https://skillsforchicago.org/events/">Events</a>
-                    <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
-                    <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
-                </div>
-                <a href="#" class="donate-button">
-                    <span>Donate</span>
-                    <div class="circle-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>    
+            <nav class="skills-dropdown-nav">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="https://skillsforchicago.org/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/" class="dropdown-item">Who We Are</a>
+                        <a href="https://skillsforchicago.org/ourteam/" class="dropdown-item">Our Team</a>
+                        <a href="https://skillsforchicago.org/annualreports/" class="dropdown-item">Annual Reports & Financials</a>
+                        <a href="https://skillsforchicago.org/ourwork/" class="dropdown-item">Our Work in Action</a>
+                        <a href="https://skillsforchicago.org/careers/" class="dropdown-item">Careers at Skills</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Job Seekers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/" class="dropdown-item">Find A Job</a>
+                        <a href="https://skillsforchicago.org/careerresources/" class="dropdown-item">Career Resources</a>
+                        <a href="https://skillsforchicago.org/faqs/" class="dropdown-item">FAQs for Job Seekers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Employers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/" class="dropdown-item">Partner With Us</a>
+                        <a href="https://skillsforchicago.org/employerpartners/" class="dropdown-item">Our Employer Partners</a>
+                        </div>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Community Partners <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/collaborate/" class="dropdown-item">Collaborate With Us</a>
+                        <a href="https://skillsforchicago.org/communityimpact/" class="dropdown-item">Community Impact</a>
+                        <a href="https://skillsforchicago.org/communitypartners/" class="dropdown-item">Our Community Partners</a>
+                               
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/donors/" class="nav-link">Donors</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Events <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/events/" class="dropdown-item">Events & Highlights</a>
+                        <a href="https://skillsforchicago.org/ecb/" class="dropdown-item">Employment Champions Breakfast</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/nationalexpansion/" class="nav-link">National Expansion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/contactus/" class="nav-link">Contact Us</a>
+                        </li>
+                    </li>
+                </ul>
+                
             </nav>
-            
+            <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="donate-button">
+                <span>Donate</span>
+                <div class="circle-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>  
             <!-- Mobile Menu Toggle Button -->
             <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
                 <div class="hamburger">
@@ -2178,16 +2989,78 @@ padding: 0px;
             <div class="mobile-nav">
                 <div class="mobile-nav-links">
                     <a href="https://skillsforchicago.org/">Home</a>
-                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
-                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
-                    <a href="https://skillsforchicago.org/partner/">Employers</a>
-                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>About Us</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                            <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                            <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                            <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                            <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Job Seekers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Job Seekers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                            <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                            <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Employers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Employers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                            <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Partners Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Community Partners</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                            <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                            <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                        </div>
+                    </div>
+                    
                     <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    <a href="https://skillsforchicago.org/events/">Events</a>
+                    
+                    <!-- Events Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Events</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                            <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                        </div>
+                    </div>
+                    
                     <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
                     <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
                 </div>
-                <a href="#" class="donate-button mobile-donate-button">
+                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="mobile-donate-button">
                     <span>Donate</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -2236,14 +3109,14 @@ padding: 0px;
                             <div class="support-icon"></div>
                             <div class="support-text">
                                 <span style="font-weight: 700;">For Employers:</span>
-                                 Connect with motivated candidates and streamline your recruitment efforts.
+                                 Connect with motivated candidates and streamline  recruitment efforts.
                                 </div>
                         </li>
                         <li class="support-item">
                             <div class="support-icon"></div>
                             <div class="support-text">
                                 <span style="font-weight: 700;">For Partners & Community Organizations:</span>
-                                 Collaborate to expand employment access and workforce initiatives. Join us at our next event to take the next step in your career or hiring journey.
+                                 Collaborate to expand employment access and workforce initiatives. Join us at our next event to take the next step in  career or hiring journey.
                             </div>
                         </li>
                     </ul>
@@ -2253,7 +3126,7 @@ padding: 0px;
     <!-- Events Section -->
     <section class="events-section">
         <div class="container join-container">
-            <h2 class="events-heading">Take the next step in your career or hiring journey and join us at an upcoming event.</h2>
+            <h2 class="events-heading">Take the next step in  career or hiring journey and join us at an upcoming event.</h2>
             
             <!-- Filter Options -->
             <div class="filter-section">
@@ -2419,10 +3292,10 @@ padding: 0px;
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             
@@ -2695,7 +3568,7 @@ padding: 0px;
                         message.style.textAlign = 'center';
                         message.style.padding = '30px';
                         message.style.color = '#666';
-                        message.innerHTML = 'No events match your filter criteria. Please try different options.';
+                        message.innerHTML = 'No events match  filter criteria. Please try different options.';
                         
                         // Add message to events list
                         document.getElementById('eventsList').appendChild(message);
@@ -2718,7 +3591,7 @@ padding: 0px;
             filterEvents();
         });
     </script>
-          <script>
+           <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // Smooth scrolling for anchor links
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2760,21 +3633,52 @@ padding: 0px;
                 animateSections();
                 window.addEventListener('scroll', animateSections);
                 
-                // Mobile menu toggle functionality
-                const mobileMenuToggle = () => {
-                    const navLinks = document.querySelector('.nav-links');
-                    const isMobile = window.innerWidth <= 1024;
-                    
-                    if (isMobile) {
-                        navLinks.style.display = 'none';
-                    } else {
-                        navLinks.style.display = 'flex';
-                    }
-                };
+                            // Mobile Menu Functionality
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            const hamburger = document.querySelector('.hamburger');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.overlay');
+            const body = document.querySelector('body');
+            
+            // Function to toggle mobile menu
+            function toggleMobileMenu() {
+                hamburger.classList.toggle('open');
+                mobileNav.classList.toggle('open');
+                overlay.classList.toggle('active');
                 
-                // Run on load and resize
-                mobileMenuToggle();
-                window.addEventListener('resize', mobileMenuToggle);
+                // Prevent body scrolling when menu is open
+                if (mobileNav.classList.contains('open')) {
+                    body.style.overflow = 'hidden';
+                } else {
+                    body.style.overflow = '';
+                }
+            }
+            
+            // Event listeners for menu toggling
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+            }
+            
+            // Close menu when clicking overlay
+            if (overlay) {
+                overlay.addEventListener('click', toggleMobileMenu);
+            }
+            
+            // Close menu when clicking a mobile navigation link
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    toggleMobileMenu();
+                });
+            });
+            
+            // Close menu on window resize if screen becomes larger than mobile breakpoint
+            window.addEventListener('resize', function() {
+                if (window.innerWidth > 1024 && mobileNav.classList.contains('open')) {
+                    toggleMobileMenu();
+                }
+            });
+
                 // Footer Accordion Functionality
                 const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
                 
@@ -2844,7 +3748,7 @@ padding: 0px;
                 message.style.textAlign = 'center';
                 message.style.padding = '30px';
                 message.style.color = '#666';
-                message.innerHTML = 'No events match your filter criteria. Please try different options.';
+                message.innerHTML = 'No events match  filter criteria. Please try different options.';
                 
                 // Add message to events list
                 document.getElementById('eventsList').appendChild(message);
@@ -2863,6 +3767,63 @@ padding: 0px;
     
     // Initialize with all events shown
     filterEvents();
+});
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Dropdown Functionality
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    
+    mobileDropdowns.forEach(dropdown => {
+        const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+        
+        dropdownToggle.addEventListener('click', function() {
+            // Toggle active class on clicked dropdown
+            dropdown.classList.toggle('active');
+            
+            // Optionally close other dropdowns when one is opened
+            // Comment this out if you want multiple dropdowns to be open simultaneously
+            mobileDropdowns.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                    otherDropdown.classList.remove('active');
+                }
+            });
+        });
+    });
+    
+    // Close dropdowns when a link inside is clicked
+    const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Optionally close the dropdown when a link is clicked
+            // Comment this out if you want the dropdown to stay open after a link is clicked
+            const parentDropdown = this.closest('.mobile-dropdown');
+            setTimeout(() => {
+                parentDropdown.classList.remove('active');
+                
+                // Also close the mobile menu
+                document.querySelector('.hamburger').classList.remove('open');
+                document.querySelector('.mobile-nav').classList.remove('open');
+                document.querySelector('.overlay').classList.remove('active');
+                document.querySelector('body').style.overflow = '';
+            }, 100); // Small delay to allow the click to register
+        });
+    });
+    
+    // Make sure mobile dropdowns are closed when menu is closed
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            // If closing the mobile menu, close all dropdowns
+            if (document.querySelector('.mobile-nav').classList.contains('open')) {
+                setTimeout(() => {
+                    mobileDropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }, 300); // Delay to match the mobile menu closing animation
+            }
+        });
+    }
 });
         </script>
 </body>

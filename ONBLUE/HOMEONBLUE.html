@@ -8,7 +8,6 @@
     <title>Skills for Chicago - Breaking Barriers, Expanding Opportunity</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* All your existing styles remain unchanged */
         /* ===============================================
            INTRO ANIMATION STYLES
            The following styles control the logo intro animation
@@ -134,7 +133,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', 'Helvetica', sans-serif;
+            font-family: Greycliff CF;
         }
 
         body {
@@ -211,14 +210,38 @@
     border: 1px solid #707070;
 }
 
+.mobile-donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 3px 5px 3px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+
 .action-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: Greycliff CF, Light;
+    font-weight: 700;
 }
 
 .donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: Greycliff CF, Light;
+    font-weight: 700;
+}
+
+.mobile-donate-button span {
+    margin-right: 5px;
+    font-family: Greycliff CF, Light;
+    font-weight: 700; 
 }
 
 .secondary-button span {
@@ -249,6 +272,12 @@
     transform: rotate(0deg);
 }
 
+.mobile-donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
 .secondary-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
     font-size: 12px;
@@ -267,6 +296,11 @@
 }
 
 .donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+.mobile-donate-button:hover {
     background-color: #7db32e; /* Slightly darker on hover */
     transform: translateY(-2px);
 }
@@ -646,6 +680,10 @@ padding-left: 7%;
     transform: rotate(-45deg);
 }
 
+.mobile-donate-button i {
+    transform: rotate(-45deg);
+}
+
 .secondary-button i {
     transform: rotate(-45deg);
 }
@@ -659,6 +697,10 @@ padding-left: 7%;
 }
 
 .donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.mobile-donate-button > .circle-icon i:hover {
     transform: rotate(0deg);
 }
 
@@ -1092,6 +1134,11 @@ padding-left: 7%;
     transition: transform 0.3s ease;
 }
 
+.mobile-donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
 .secondary-button i {
     font-size: 14px;
     transition: transform 0.3s ease;
@@ -1253,13 +1300,18 @@ padding-left: 7%;
         
         .banner-container {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
         
         .banner-text {
-            font-size: 15px;
-            margin-right: 2%;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.4;
         }
 
         .learn-more-btn {
@@ -1382,6 +1434,8 @@ padding-left: 7%;
             font-size: 15px;
             display: block;
             opacity: 0.9;
+            text-align: left;
+            font-weight: 300;
         }
 
         .footer-mobile-links a:hover {
@@ -1434,7 +1488,7 @@ padding-left: 7%;
             }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 976px) {
             .footer-top {
                 flex-direction: column;
                 gap: 0px;
@@ -1478,12 +1532,16 @@ padding-left: 7%;
             }
         }
 
-        @media (max-width: 1024px) {
+        @media (max-width: 976px) {
             .hero-container, 
             .communities-container,
             .cta-container {
                 flex-direction: column;
                 align-items: center;
+            }
+
+            .mobile-menu-toggle {
+                display: block; 
             }
 
             .hero-image {
@@ -2140,9 +2198,9 @@ padding-left: 7%;
 
         /* Media queries for responsive behavior */
         @media (max-width: 1354px) {
-            .main-nav {
-                display: none; /* Hide desktop nav */
-            }
+            /* .main-nav {
+                display: none; 
+            } */
 
             .communities-content {
                 margin-bottom: 10%;
@@ -2158,9 +2216,9 @@ padding-left: 7%;
                 padding-right: 10%;
             }
             
-            .mobile-menu-toggle {
-                display: block; /* Show hamburger icon */
-            }
+            /* .mobile-menu-toggle {
+                display: block; 
+            } */
             
             .header-container {
                 justify-content: space-between;
@@ -2260,6 +2318,30 @@ padding-left: 7%;
     color: #7D7E7E;
     font-size: 18px;
 }
+@media (max-width: 964px) {
+.mobile-menu-toggle {
+                display: block; 
+            }
+.donate-button {
+    display: none;
+}
+
+
+}
+@media (max-width: 1354px) {
+            /* .main-nav {
+                display: none;
+            } */
+            
+            /* .mobile-menu-toggle {
+                display: block; 
+            } */
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+        }
 @media (max-width: 1500px) { 
 .header-container {
             display: flex;
@@ -2314,7 +2396,551 @@ padding-left: 7%;
 .social-icons-top a:hover {
     color: #4d7e32;
 }
-        
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.skills-dropdown-nav {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 0px 85px 0px 25px; */
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4d7e32;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f3;
+    color: #4d7e32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+    .skills-dropdown-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    /* You would need to implement mobile dropdown separately or
+       integrate with  existing mobile menu system */
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 15px !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+    padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #4d7e32 !important;
+}
+
+/* Update existing mobile-nav styles */
+.mobile-nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.mobile-nav {
+    padding-top: 70px; /* Adjust if needed to make room for the header */
+}
+
+.hamburger.open {
+  position: fixed;
+  top: 20px;      /* Move it higher (decrease this value to move up) */
+  right: 20px;    /* Move it more to the right (decrease this value to move right) */
+  z-index: 1002;  /* Ensure it stays above other elements */
+}
+
+/* If the X is created by the transformed hamburger icon, make sure the spans align properly */
+.hamburger.open span:nth-child(2),
+.hamburger.open span:nth-child(3) {
+  right: 0;       /* Ensure the X is properly centered when transformed */
+}
+
+/* Optionally, if the mobile nav panel needs adjustment */
+.mobile-nav {
+  padding-top: 60px; /* Adjust top padding to ensure content doesn't go under the X */
+}
+
+/* Fix for horizontal scrolling on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Make sure container elements can't extend beyond viewport */
+.container, 
+.container-2, 
+.header-container,
+.communities-container,
+.cta-container,
+.footer-container,
+.hero-container {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Ensure images don't cause overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix for any potential absolute positioned elements causing overflow */
+.partnering-content,
+.topic-cards,
+.mobile-nav {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Additional media query to handle mobile specific issues */
+@media (max-width: 768px) {
+  .stats-wrapper {
+    width: 100%;
+    padding-right: 0;
+    box-sizing: border-box;
+  }
+  
+  .communities-content,
+  .access-content {
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.skills-dropdown-nav {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 0px 85px 0px 25px; */
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4d7e32;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f3;
+    color: #4d7e32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+    .skills-dropdown-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    /* You would need to implement mobile dropdown separately or
+       integrate with  existing mobile menu system */
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 15px !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+    padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #4d7e32 !important;
+}
+
+/* Update existing mobile-nav styles */
+.mobile-nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.mobile-nav {
+    padding-top: 70px; /* Adjust if needed to make room for the header */
+}
+
+.hamburger.open {
+  position: fixed;
+  top: 20px;      /* Move it higher (decrease this value to move up) */
+  right: 20px;    /* Move it more to the right (decrease this value to move right) */
+  z-index: 1002;  /* Ensure it stays above other elements */
+}
+
+/* If the X is created by the transformed hamburger icon, make sure the spans align properly */
+.hamburger.open span:nth-child(2),
+.hamburger.open span:nth-child(3) {
+  right: 0;       /* Ensure the X is properly centered when transformed */
+}
+
+/* Optionally, if the mobile nav panel needs adjustment */
+.mobile-nav {
+  padding-top: 60px; /* Adjust top padding to ensure content doesn't go under the X */
+}
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 60px 0px 35px;
+        }
+        @media (max-width: 976px) {
+.mobile-menu-toggle {
+                display: block; 
+            }
+.donate-button {
+    display: none;
+}
+
+
+}
+        .mobile-donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 3px 5px 3px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+.mobile-donate-button span {
+    margin-right: 5px;
+    font-family: Greycliff CF, Light; 
+    font-weight: 700;
+}
+.mobile-donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+.mobile-donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+.mobile-donate-button i {
+    transform: rotate(-45deg);
+}
+.mobile-donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+.mobile-donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+        @media (max-width: 1636px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 15px;
+            }
+            .header-container {
+                padding: 0px 30px 0px 30px;
+            }
+        }
+        @media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            .header-container {
+                padding: 0px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -2330,49 +2956,95 @@ padding-left: 7%;
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
     <!-- Banner Section -->
-    <div class="banner">
+    <!-- <div class="banner">
         <div class="banner-container">
             <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
             <a href="#" class="learn-more-btn">Learn More</a>
         </div>
-    </div>
+    </div> -->
 
     <!-- Header -->
     <header class="header">
+        
         <div class="header-container">
             <a href="https://skillsforchicago.org/" class="logo-link">
                 <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo" class="logo">
             </a>
             
             <!-- Desktop Navigation -->
-            <nav class="main-nav">
-                <div class="nav-links">
-                    <a href="https://skillsforchicago.org/">Home</a>
-                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
-                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
-                    <a href="https://skillsforchicago.org/partner/">Employers</a>
-                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
-                    <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    <a href="https://skillsforchicago.org/events/">Events</a>
-                    <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
-                    <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
-                </div>
-                <a href="#" class="donate-button">
-                    <span>Donate</span>
-                    <div class="circle-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>    
+            <nav class="skills-dropdown-nav">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="https://skillsforchicago.org/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/" class="dropdown-item">Who We Are</a>
+                        <a href="https://skillsforchicago.org/ourteam/" class="dropdown-item">Our Team</a>
+                        <a href="https://skillsforchicago.org/annualreports/" class="dropdown-item">Annual Reports & Financials</a>
+                        <a href="https://skillsforchicago.org/ourwork/" class="dropdown-item">Our Work in Action</a>
+                        <a href="https://skillsforchicago.org/careers/" class="dropdown-item">Careers at Skills</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Job Seekers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/" class="dropdown-item">Find A Job</a>
+                        <a href="https://skillsforchicago.org/careerresources/" class="dropdown-item">Career Resources</a>
+                        <a href="https://skillsforchicago.org/faqs/" class="dropdown-item">FAQs for Job Seekers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Employers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/" class="dropdown-item">Partner With Us</a>
+                        <a href="https://skillsforchicago.org/employerpartners/" class="dropdown-item">Our Employer Partners</a>
+                        </div>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Community Partners <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/collaborate/" class="dropdown-item">Collaborate With Us</a>
+                        <a href="https://skillsforchicago.org/communityimpact/" class="dropdown-item">Community Impact</a>
+                        <a href="https://skillsforchicago.org/communitypartners/" class="dropdown-item">Our Community Partners</a>
+                               
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/donors/" class="nav-link">Donors</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Events <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/events/" class="dropdown-item">Events & Highlights</a>
+                        <a href="https://skillsforchicago.org/ecb/" class="dropdown-item">Employment Champions Breakfast</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/nationalexpansion/" class="nav-link">National Expansion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/contactus/" class="nav-link">Contact Us</a>
+                        </li>
+                    </li>
+                </ul>
+                
             </nav>
-            
+            <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="donate-button">
+                <span>Donate</span>
+                <div class="circle-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>  
             <!-- Mobile Menu Toggle Button -->
             <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
                 <div class="hamburger">
@@ -2387,16 +3059,78 @@ padding-left: 7%;
             <div class="mobile-nav">
                 <div class="mobile-nav-links">
                     <a href="https://skillsforchicago.org/">Home</a>
-                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
-                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
-                    <a href="https://skillsforchicago.org/partner/">Employers</a>
-                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>About Us</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                            <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                            <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                            <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                            <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Job Seekers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Job Seekers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                            <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                            <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Employers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Employers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                            <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Partners Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Community Partners</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                            <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                            <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                        </div>
+                    </div>
+                    
                     <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    <a href="https://skillsforchicago.org/events/">Events</a>
+                    
+                    <!-- Events Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Events</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                            <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                        </div>
+                    </div>
+                    
                     <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
                     <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
                 </div>
-                <a href="#" class="donate-button mobile-donate-button">
+                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="mobile-donate-button">
                     <span>Donate</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -2478,7 +3212,7 @@ padding-left: 7%;
                 <h2 class="communities-title">Creating Access to <br> Employment</h2>
                 <p class="communities-text">
                     We connect underrepresented job seekers to meaningful work, offering direct access to employers ready to hire. Through personalized support and partnerships, we help individuals take the next step toward financial security.                </p>
-                <a href="#" class="action-button" style="width: 200px;">
+                <a href="https://skillsforchicago.org/findajob/" class="action-button" style="width: 200px;">
                     <span>Find A Job</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -2496,7 +3230,7 @@ padding-left: 7%;
                 <p class="partnering-text">
                     Through strategic employer partnerships, we help businesses tap into Chicago's diverse talent pool and develop hiring practices that remove barriers to employment
                 </p>
-                <a href="#" class="action-button" style="width: 200px; ">
+                <a href="https://skillsforchicago.org/partner/" class="action-button" style="width: 200px; ">
                     <span>Partner With Us</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -2511,14 +3245,14 @@ padding-left: 7%;
     <section class="partnering-section-mobile">
         <div class="container communities-container">
             <div class="communities-image">
-                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/AdobeStock_790856154_50.jpeg" alt="People at a community event">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Home-3.png" alt="People at a community event">
             </div>
             <div class="access-content">
                 <h2 class="communities-title">Partnering with Employers</h2>
                 <p class="communities-text">
                     Through strategic employer partnerships, we help businesses tap into Chicago's diverse talent pool and develop hiring practices that remove barriers to employment.
                     </p>
-                    <a href="#" class="action-button" style="width: 200px; ">
+                    <a href="https://skillsforchicago.org/partner/" class="action-button" style="width: 200px; ">
                         <span>Partner With Us</span>
                         <div class="circle-icon">
                             <i class="fas fa-arrow-right"></i>
@@ -2539,7 +3273,7 @@ padding-left: 7%;
                     <p class="communities-text">
                         We bring hiring events, job opportunities, and career resources directly to Chicago's south and west sides. By working alongside community organizations, we ensure that access to employment reaches those who need it most.
                     </p>
-                    <a href="#" class="action-button" style="width: 200px;">
+                    <a href="https://skillsforchicago.org/communityimpact/" class="action-button" style="width: 200px;">
                         <span>Community Impact</span>
                         <div class="circle-icon">
                             <i class="fas fa-arrow-right"></i>
@@ -2553,20 +3287,20 @@ padding-left: 7%;
     <section class="cta">
         <div class="container cta-container">
             <div class="cta-content">
-                <h2 class="cta-title">Your Next Opportunity<br>Starts Here</h2>
+                <h2 class="cta-title"> Next Opportunity<br>Starts Here</h2>
                 <p class="cta-text">
                     Discover new job opportunities, connect with hiring employers, and gain the support you
                     need to move forward.
                 </p>
             </div>
             <div class="cta-buttons">
-                <div class="search-box">
+                <!-- <div class="search-box">
                     <div class="search-icon-wrapper">
                         <i class="fas fa-search"></i>
                     </div>
                     <input type="text" class="search-input" placeholder="Search by job title, skill, or company">
                     <button class="search-btn">Search</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -2580,10 +3314,10 @@ padding-left: 7%;
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             
@@ -2902,33 +3636,36 @@ $(document).ready(function() {
         $(document).ready(function() {
     // Function to complete the animation and show the main content
     function completeIntroAnimation() {
-        // After the circle expands, fade out the overlay
-        setTimeout(function() {
-            // Make main content visible but still transparent
-            $('#main-content').css({
-                'visibility': 'visible',
-                'opacity': '0'
-            });
+    setTimeout(function() {
+        // Make main content visible but still transparent
+        $('#main-content').css({
+            'visibility': 'visible',
+            'opacity': '0',
+            'background-color': '#FFFFFF' // Add white background to main content
+        });
+        
+        // Fade out the intro overlay
+        $('#intro-overlay').fadeOut(800, function() {
+            // Fade in the main content
+            $('#main-content').animate({ opacity: 1 }, 800);
             
-            // Fade out the intro overlay
-            $('#intro-overlay').fadeOut(800, function() {
-                // Fade in the main content
-                $('#main-content').animate({ opacity: 1 }, 800);
-                
-                // Enable scrolling
-                $('body').addClass('content-loaded');
-                
-                // Remove the intro overlay from DOM
-                $(this).remove();
-            });
-        }, 2000); // Time after animation starts when we begin transitioning to main content
-    }
+            // Change body background to white after animation completes
+            $('body').css('background-color', '#FFFFFF');
+            
+            // Enable scrolling
+            $('body').addClass('content-loaded');
+            
+            // Remove the intro overlay from DOM
+            $(this).remove();
+        });
+    }, 2000);
+}
 
     // Start the animation sequence
     completeIntroAnimation();
 });
         $(document).ready(function() {
-    // Wrap your existing content in a div with id="main-content" if not already done
+    // Wrap  existing content in a div with id="main-content" if not already done
     
     // Function to complete the animation and show the main content
     function completeIntroAnimation() {
@@ -3039,7 +3776,7 @@ $(document).ready(function() {
             // But for this demo we'll use JavaScript to show how it might work
             const bgDiv = document.querySelector('.feature-card-bg');
             
-            // Using a placeholder image for demonstration - replace with your actual image
+            // Using a placeholder image for demonstration - replace with  actual image
             const demoImageUrl = 'https://source.unsplash.com/random/300x200?office,meeting';
             bgDiv.style.backgroundImage = `url('${demoImageUrl}')`;
         });
@@ -3054,7 +3791,7 @@ $(document).ready(function() {
                 searchBtn.addEventListener('click', function() {
                     if (searchInput.value.trim() !== '') {
                         console.log('Searching for:', searchInput.value);
-                        // Add your search functionality here
+                        // Add  search functionality here
                         alert('Search feature would be implemented here for: ' + searchInput.value);
                     } else {
                         searchInput.focus();
@@ -3069,7 +3806,7 @@ $(document).ready(function() {
             if (videoPlay && videoThumb) {
                 videoPlay.addEventListener('click', function() {
                     console.log('Video would play here');
-                    // Add your video functionality here
+                    // Add  video functionality here
                     alert('Video playback feature would be implemented here');
                 });
             }
@@ -3153,5 +3890,133 @@ $(document).ready(function() {
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // This adds accessibility support for keyboard navigation
+            const dropdowns = document.querySelectorAll('.dropdown');
+            
+            dropdowns.forEach(dropdown => {
+                const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+                const dropdownMenu = dropdown.querySelector('.dropdown-menu');
+                
+                // Handle keyboard events
+                dropdownToggle.addEventListener('keydown', function(e) {
+                    // Open dropdown on Enter or Space
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        dropdownMenu.style.opacity = '1';
+                        dropdownMenu.style.visibility = 'visible';
+                        dropdownMenu.style.transform = 'translateY(0)';
+                        
+                        // Focus first item in dropdown
+                        const firstItem = dropdownMenu.querySelector('a');
+                        if (firstItem) firstItem.focus();
+                    }
+                });
+                
+                // Close dropdown when focus leaves
+                dropdown.addEventListener('focusout', function(e) {
+                    // Check if the new focus target is still within this dropdown
+                    if (!dropdown.contains(e.relatedTarget)) {
+                        dropdownMenu.style.opacity = '';
+                        dropdownMenu.style.visibility = '';
+                        dropdownMenu.style.transform = '';
+                    }
+                });
+                
+                // Support for touch devices
+                if ('ontouchstart' in window) {
+                    dropdownToggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Check if this dropdown is already open
+                        const isOpen = dropdownMenu.style.visibility === 'visible';
+                        
+                        // Close all other dropdowns
+                        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                            menu.style.opacity = '';
+                            menu.style.visibility = '';
+                            menu.style.transform = '';
+                        });
+                        
+                        // Toggle this dropdown
+                        if (!isOpen) {
+                            dropdownMenu.style.opacity = '1';
+                            dropdownMenu.style.visibility = 'visible';
+                            dropdownMenu.style.transform = 'translateY(0)';
+                        }
+                    });
+                }
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.style.opacity = '';
+                        menu.style.visibility = '';
+                        menu.style.transform = '';
+                    });
+                }
+            });
+        });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Dropdown Functionality
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    
+    mobileDropdowns.forEach(dropdown => {
+        const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+        
+        dropdownToggle.addEventListener('click', function() {
+            // Toggle active class on clicked dropdown
+            dropdown.classList.toggle('active');
+            
+            // Optionally close other dropdowns when one is opened
+            // Comment this out if you want multiple dropdowns to be open simultaneously
+            mobileDropdowns.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                    otherDropdown.classList.remove('active');
+                }
+            });
+        });
+    });
+    
+    // Close dropdowns when a link inside is clicked
+    const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Optionally close the dropdown when a link is clicked
+            // Comment this out if you want the dropdown to stay open after a link is clicked
+            const parentDropdown = this.closest('.mobile-dropdown');
+            setTimeout(() => {
+                parentDropdown.classList.remove('active');
+                
+                // Also close the mobile menu
+                document.querySelector('.hamburger').classList.remove('open');
+                document.querySelector('.mobile-nav').classList.remove('open');
+                document.querySelector('.overlay').classList.remove('active');
+                document.querySelector('body').style.overflow = '';
+            }, 100); // Small delay to allow the click to register
+        });
+    });
+    
+    // Make sure mobile dropdowns are closed when menu is closed
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            // If closing the mobile menu, close all dropdowns
+            if (document.querySelector('.mobile-nav').classList.contains('open')) {
+                setTimeout(() => {
+                    mobileDropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }, 300); // Delay to match the mobile menu closing animation
+            }
+        });
+    }
+});
+        </script>
 </body>
 </html>
