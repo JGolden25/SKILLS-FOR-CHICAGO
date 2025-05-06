@@ -4131,6 +4131,241 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     width: 100% !important;
 }
 }
+
+/* Add this to your existing CSS to prevent horizontal scrolling */
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    max-width: 100%;
+}
+
+/* Fix potentially overflowing elements */
+img, svg, video, canvas, iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ensure all containers respect the viewport width */
+.container, 
+.container-2, 
+.header-container,
+.footer-container,
+.resources-container,
+.national-container,
+.communities-container,
+.banner-container,
+.work-together-container,
+.what-we-offer-cards,
+.proven-results-container,
+.location-cards {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fix map container that might be causing overflow */
+.map-container {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.map-img {
+    max-width: 100% !important;
+    width: 100% !important;
+    object-fit: contain;
+}
+
+/* Fix any elements with potential fixed widths */
+.location-card,
+.result-card,
+.what-we-offer-card {
+    max-width: 100%;
+    width: auto;
+    box-sizing: border-box;
+}
+
+/* Fix potential issues with absolute positioning */
+.mobile-nav.open {
+    width: 80%;
+    max-width: 100%;
+}
+
+/* Ensure proper box-sizing throughout */
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 976px) {
+    /* General centering for mobile */
+    .communities-title, 
+    .where-we-are-title, 
+    .proven-results-title,
+    .what-we-offer-title,
+    p {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Fix "Join The Movement" section */
+    .resources-section .resources-content {
+        padding: 30px 20px;
+        text-align: center;
+    }
+    
+    .communities-text {
+        width: 100% !important;
+        margin: 0 auto 30px;
+        text-align: center;
+    }
+    
+    .movement-title {
+        text-align: center;
+        width: 100%;
+        margin-top: 25px;
+    }
+    
+    /* Center the bullet points */
+    .movement-bullet, 
+    .movement-bullet2 {
+        text-align: left;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        list-style-position: inside;
+        padding-left: 0;
+    }
+    
+    /* Fix "Proven Results" section */
+    .proven-results-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 100%;
+    }
+    
+    .result-card {
+        width: 90%;
+        max-width: 320px;
+        height: auto;
+        min-height: 200px;
+        margin: 0 auto 15px;
+    }
+    
+    /* Why Our Model Works section */
+    .resources-container.engagement {
+        padding: 0;
+    }
+    
+    .resources-container.engagement .resources-content {
+        padding: 30px 20px;
+    }
+    
+    .movement-bullet2 strong {
+        display: block;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    
+    /* Location cards */
+    .location-cards {
+        padding: 0 15px;
+    }
+    
+    .location-card {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+    
+    /* Adjust work together section */
+    .work-together-container {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .work-together-content h2 {
+        width: 100%;
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 976px) {
+    /* Fix the Contact Us button in the black section */
+    .work-together-container {
+        text-align: center;
+        padding: 20px;
+    }
+    
+    .work-together-content h2 {
+        width: 100%;
+        font-size: 32px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .work-together-description {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .work-together-container .donate-button {
+        margin: 0 auto;
+        display: flex;
+        width: 200px;
+    }
+    
+    /* Fix the location cards in Where We Are Now section */
+    .location-cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .location-card {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 15px;
+    }
+    
+    /* Additional fixes for mobile layout */
+    .resources-container.engagement .resources-content {
+        padding: 25px 20px;
+    }
+    
+    .movement-bullet2 strong {
+        display: block;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 976px) {
+    .national-content h2.communities-title,
+    .national-content h4 {
+        text-align: center;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .national-content .communities-text {
+        text-align: center;
+        width: 100% !important;
+        margin: 0 auto 30px;
+    }
+    
+    .national-content {
+        padding: 30px 20px;
+        margin-left: 0%;
+    }
+    .resources-content {
+    margin-left: 0%;
+}
+}
         </style>
 </head>
 <body>

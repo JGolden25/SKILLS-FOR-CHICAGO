@@ -49,7 +49,7 @@ function skills_render_job_listings() {
     // Get WordPress database connection
     global $wpdb;
     
-    // Build the SQL query with possible filters - using your actual column names
+    // Build the SQL query with possible filters - using  actual column names
     $sql = "SELECT * FROM JobDetails WHERE Published = 1";
     $params = array();
     
@@ -705,7 +705,7 @@ function skills_job_listings_enqueue_scripts() {
     // Try an alternative CDN for Font Awesome
     wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
     
-    // Enqueue your custom CSS file
+    // Enqueue  custom CSS file
     wp_enqueue_style(
         'skills-job-listings-style',
         SKILLS_JOB_LISTINGS_PLUGIN_URL . 'skills-job-listings.css',

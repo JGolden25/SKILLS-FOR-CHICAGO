@@ -563,8 +563,8 @@ font-family: Greycliff CF, Bold;
     }
     
     .sponsor-tier.active {
-        background-color: #4F6B3A;
-        color: white;
+        /* background-color: #4F6B3A;
+        color: white; */
     }
     
     .tier-title {
@@ -2854,6 +2854,47 @@ padding-bottom: 0;
 .nav-links a {
     text-decoration: none;
 }
+
+.sponsor-tier {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #4F6B3A;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 12%;
+    text-align: center;
+    text-decoration: none;
+    color: #4F6B3A;
+}
+
+.sponsor-tier:hover {
+    background-color: #f5f5f5;
+}
+
+.sponsor-tier.active {
+    /* background-color: #4F6B3A;
+    color: white; */
+}
+
+@media (max-width: 976px) {
+    .sponsor-tier {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #4F6B3A;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    color: #4F6B3A;
+}  
+}
     </style>
 </head>
 <body>
@@ -3255,16 +3296,16 @@ padding-bottom: 0;
             <p class="sponsor-intro">A special thank you to the brands that have contributed funds, products, and time.</p>
             
             <div class="sponsor-tiers">
-                <button class="sponsor-tier active" data-tier="Presenting">Presenting</button>
-                <button class="sponsor-tier" data-tier="Champion">Champion</button>
-                <button class="sponsor-tier" data-tier="Ambassador">Ambassador</button>
-                <button class="sponsor-tier" data-tier="Advocate">Advocate</button>
-                <button class="sponsor-tier" data-tier="Supporter">Supporter</button>
-                <button class="sponsor-tier" data-tier="Partner">Partner</button>
-                <button class="sponsor-tier" data-tier="Friend">Friend</button>
-            </div>
+    <a href="#Presenting" class="sponsor-tier active">Presenting</a>
+    <a href="#Champion" class="sponsor-tier">Champion</a>
+    <a href="#Ambassador" class="sponsor-tier">Ambassador</a>
+    <a href="#Advocate" class="sponsor-tier">Advocate</a>
+    <a href="#Supporter" class="sponsor-tier">Supporter</a>
+    <a href="#Partner" class="sponsor-tier">Partner</a>
+    <a href="#Friend" class="sponsor-tier">Friend</a>
+</div>
             
-            <h3 class="tier-title" id="sponsor-tier-title">Presenting Sponsor</h3>
+            <h3 class="tier-title" id="Presenting">Presenting Sponsor</h3>
             
             <!-- Sponsor logos for each tier - only one will be visible at a time -->
             <div class="sponsor-logos-container">
@@ -3312,7 +3353,7 @@ padding-bottom: 0;
     </section>
 
  <!-- Partners Section -->
- <section class="partners-section" style="background-color:#F8F8F8">
+ <section id="Champion" class="partners-section" style="background-color:#F8F8F8">
     <h2 class="partners-title">Champion Sponsor</h2>
     <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
     
@@ -3332,7 +3373,7 @@ padding-bottom: 0;
         </div>
     </div>
 </section>
-<section class="partners-section">
+<section id="Ambassador" class="partners-section">
     <h2 class="partners-title">Ambassador Sponsor</h2>
     <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
     
@@ -3343,7 +3384,7 @@ padding-bottom: 0;
         </div>
     </div>
 </section>
-<section class="partners-section" style="background-color:#F8F8F8">
+<section id="Advocate" class="partners-section" style="background-color:#F8F8F8">
     <h2 class="partners-title">Advocate Sponsor</h2>
     <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
     
@@ -3390,7 +3431,7 @@ padding-bottom: 0;
         </div>
     </div>
 </section>
-<section class="partners-section">
+<section id="Supporter" class="partners-section">
     <h2 class="partners-title">Supporter Sponsor</h2>
     <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
     
@@ -3443,7 +3484,7 @@ padding-bottom: 0;
         </div>
     </div>
 </section>
-<section class="partners-section" style="background-color:#F8F8F8">
+<section id="Partner" class="partners-section" style="background-color:#F8F8F8">
     <h2 class="partners-title">Partner Sponsor</h2>
     <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
     
@@ -3521,7 +3562,7 @@ padding-bottom: 0;
     </div>
 </section>
  <!-- Board Grid Section -->
- <section class="board-grid-section">
+ <section id="Friend" class="board-grid-section">
     <div class="container">
         <h2 class="event-recap-title">Friend Sponsor</h2>
 
@@ -4384,6 +4425,65 @@ function adjustGalleryLayout() {
             }
         });
     }
+});
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Get all sponsor tier links
+    const tierLinks = document.querySelectorAll('.sponsor-tier');
+    
+    // Add click event to each link for smooth scrolling and active class toggling
+    tierLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Prevent default anchor behavior
+            e.preventDefault();
+            
+            // Get the target section id from the href attribute
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            // Update active class
+            tierLinks.forEach(lnk => lnk.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Smooth scroll to the target section
+            if (targetSection) {
+                // Calculate offset to account for fixed headers if needed
+                const offset = 100; // Adjust this value based on your header height
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Highlight the appropriate link based on scroll position (optional)
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        
+        // Get all sponsor sections
+        const sections = document.querySelectorAll('section[id]');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120; // Adjust offset as needed
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                // Remove active class from all links
+                tierLinks.forEach(link => link.classList.remove('active'));
+                
+                // Add active class to corresponding link
+                const activeLink = document.querySelector('.sponsor-tier[href="#' + sectionId + '"]');
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    });
 });
         </script>
 </body>

@@ -583,6 +583,7 @@
             opacity: 0.8;
             line-height: 1.4;
             font-weight: 500;
+            color: #FFFFFF !important;
         }
 
         .profile-social-link {
@@ -1412,7 +1413,7 @@
     }
     
     .container2 {
-        max-width: 2800px;
+        /* max-width: 2800px; */
         margin: 0 auto;
         padding: 0 20px;
     }
@@ -1941,9 +1942,9 @@
                 display: none; /* Hide desktop nav */
             }
             
-            .mobile-menu-toggle {
-                display: block; /* Show hamburger icon */
-            }
+            /* .mobile-menu-toggle {
+                display: block; 
+            } */
             
             .header-container {
                 justify-content: space-between;
@@ -2051,6 +2052,373 @@
     color: #7D7E7E;
     font-size: 18px;
 }
+.social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.skills-dropdown-nav {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 0px 85px 0px 25px; */
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4d7e32;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f3;
+    color: #4d7e32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+    .skills-dropdown-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    /* You would need to implement mobile dropdown separately or
+       integrate with  existing mobile menu system */
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 15px !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+    padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #4d7e32 !important;
+}
+
+/* Update existing mobile-nav styles */
+.mobile-nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.mobile-nav {
+    padding-top: 70px; /* Adjust if needed to make room for the header */
+}
+
+.hamburger.open {
+  position: fixed;
+  top: 20px;      /* Move it higher (decrease this value to move up) */
+  right: 20px;    /* Move it more to the right (decrease this value to move right) */
+  z-index: 1002;  /* Ensure it stays above other elements */
+}
+
+/* If the X is created by the transformed hamburger icon, make sure the spans align properly */
+.hamburger.open span:nth-child(2),
+.hamburger.open span:nth-child(3) {
+  right: 0;       /* Ensure the X is properly centered when transformed */
+}
+
+/* Optionally, if the mobile nav panel needs adjustment */
+.mobile-nav {
+  padding-top: 60px; /* Adjust top padding to ensure content doesn't go under the X */
+}
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 60px 0px 35px;
+        }
+        @media (max-width: 976px) {
+.mobile-menu-toggle {
+                display: block; 
+            }
+.donate-button {
+    display: none;
+}
+
+
+}
+        .mobile-donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 3px 5px 3px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+.mobile-donate-button span {
+    margin-right: 5px;
+    font-family: Greycliff-thin, sans-serif; 
+}
+.mobile-donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+.mobile-donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+.mobile-donate-button i {
+    transform: rotate(-45deg);
+}
+.mobile-donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+.mobile-donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+        @media (max-width: 1636px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 15px;
+            }
+            .header-container {
+                padding: 0px 30px 0px 30px;
+            }
+        }
+        @media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            .header-container {
+                padding: 0px;
+            }
+        }
+
+
+/* Additional fixes for mobile layout */
+@media (max-width: 976px) {
+    .team-container {
+        padding: 0;
+    }
+
+    html, body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+/* Fix for any oversized elements */
+img, video, iframe, table, div {
+    max-width: 100%;
+    height: auto;
+}
+
+    /* Center and resize the featured board member image */
+.featured-board-member {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    /* margin-bottom: 30px; */
+    margin-top: 5%;
+    align-items: center;
+}
+
+.board-member-image {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+}
+
+.board-member-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+    .profile-social-link-big {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    top: auto;
+    z-index: 2;
+}
+    
+    .featured-board-member {
+        gap: 20px;
+    }
+    
+    .board-member-info {
+        text-align: center;
+    }
+    
+    .board-member-bio {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
         </style>
 </head>
 <body>
@@ -2066,41 +2434,87 @@
             </div>
         </div>
     <!-- Banner Section -->
-    <div class="banner">
+    <!-- <div class="banner">
         <div class="banner-container">
             <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
             <a href="#" class="learn-more-btn">Learn More</a>
         </div>
-    </div>
+    </div> -->
 
     <!-- Header -->
     <header class="header">
+        
         <div class="header-container">
             <a href="https://skillsforchicago.org/" class="logo-link">
                 <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo" class="logo">
             </a>
             
             <!-- Desktop Navigation -->
-            <nav class="main-nav">
-                <div class="nav-links">
-                    <a href="https://skillsforchicago.org/">Home</a>
-                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
-                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
-                    <a href="https://skillsforchicago.org/partner/">Employers</a>
-                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
-                    <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    <a href="https://skillsforchicago.org/events/">Events</a>
-                    <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
-                    <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
-                </div>
-                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="donate-button">
-                    <span>Donate</span>
-                    <div class="circle-icon">
-                        <i class="fas fa-arrow-right"></i>
-                    </div>
-                </a>    
+            <nav class="skills-dropdown-nav">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="https://skillsforchicago.org/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/" class="dropdown-item">Who We Are</a>
+                        <a href="https://skillsforchicago.org/ourteam/" class="dropdown-item">Our Team</a>
+                        <a href="https://skillsforchicago.org/annualreports/" class="dropdown-item">Annual Reports & Financials</a>
+                        <a href="https://skillsforchicago.org/ourwork/" class="dropdown-item">Our Work in Action</a>
+                        <a href="https://skillsforchicago.org/careers/" class="dropdown-item">Careers at Skills</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Job Seekers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/" class="dropdown-item">Find A Job</a>
+                        <a href="https://skillsforchicago.org/careerresources/" class="dropdown-item">Career Resources</a>
+                        <a href="https://skillsforchicago.org/faqs/" class="dropdown-item">FAQs for Job Seekers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Employers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/" class="dropdown-item">Partner With Us</a>
+                        <a href="https://skillsforchicago.org/employerpartners/" class="dropdown-item">Our Employer Partners</a>
+                        </div>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Community Partners <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/collaborate/" class="dropdown-item">Collaborate With Us</a>
+                        <a href="https://skillsforchicago.org/communityimpact/" class="dropdown-item">Community Impact</a>
+                        <a href="https://skillsforchicago.org/communitypartners/" class="dropdown-item">Our Community Partners</a>
+                               
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/donors/" class="nav-link">Donors</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Events <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/events/" class="dropdown-item">Events & Highlights</a>
+                        <a href="https://skillsforchicago.org/ecb/" class="dropdown-item">Employment Champions Breakfast</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/nationalexpansion/" class="nav-link">National Expansion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/contactus/" class="nav-link">Contact Us</a>
+                        </li>
+                    </li>
+                </ul>
+                
             </nav>
-            
+            <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="donate-button">
+                <span>Donate</span>
+                <div class="circle-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>  
             <!-- Mobile Menu Toggle Button -->
             <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
                 <div class="hamburger">
@@ -2115,16 +2529,78 @@
             <div class="mobile-nav">
                 <div class="mobile-nav-links">
                     <a href="https://skillsforchicago.org/">Home</a>
-                    <a href="https://skillsforchicago.org/whoweare/">About Us</a>
-                    <a href="https://skillsforchicago.org/findajob/">Job Seekers</a>
-                    <a href="https://skillsforchicago.org/partner/">Employers</a>
-                    <a href="https://skillsforchicago.org/communitypartners/">Community Partners</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>About Us</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                            <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                            <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                            <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                            <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Job Seekers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Job Seekers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                            <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                            <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Employers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Employers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                            <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Partners Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Community Partners</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                            <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                            <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                        </div>
+                    </div>
+                    
                     <a href="https://skillsforchicago.org/donors/">Donors</a>
-                    <a href="https://skillsforchicago.org/events/">Events</a>
+                    
+                    <!-- Events Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Events</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                            <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                        </div>
+                    </div>
+                    
                     <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
                     <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
                 </div>
-                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="donate-button mobile-donate-button">
+                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="mobile-donate-button">
                     <span>Donate</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -2182,7 +2658,7 @@
                 <div class="staff-card">
                     <a href="https://www.linkedin.com/in/mayra-alarcon-4a2a4a36/" class="profile-social-link"><i class="fab fa-linkedin-in"></i></a>
                     <div class="staff-image">
-                        <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Mayra-Headshot-scaled.jpg" alt="Marie Brown">
+                        <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Mayra-Headshot-scaled.jpg" alt="Mayra Alarcon">
                     </div>
                     <h3 class="staff-name">Mayra Alarcon</h3>
                     <p class="staff-title">Chief Strategy Officer</p>
@@ -2191,7 +2667,7 @@
                 <div class="staff-card">
                     <a href="https://www.linkedin.com/in/tabatha-cobb-a348723/" class="profile-social-link"><i class="fab fa-linkedin-in"></i></a>
                     <div class="staff-image">
-                        <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Tabatha-Headshot-scaled.jpg" alt="Deidra Cook">
+                        <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Tabatha-Headshot-scaled.jpg" alt="Tabatha Cobb">
                     </div>
                     <h3 class="staff-name">Tabatha Cobb</h3>
                     <p class="staff-title">Chief Development Officer</p>
@@ -2200,7 +2676,7 @@
                 <div class="staff-card">
                     <a href="https://www.linkedin.com/in/kate-hermann-stone-0639852/" class="profile-social-link"><i class="fab fa-linkedin-in"></i></a>
                     <div class="staff-image">
-                        <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Kate-Headshot-scaled.jpg" alt="Kaci Van Der Sloot">
+                        <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Kate-Headshot-scaled.jpg" alt="Kate Hermann Stone">
                     </div>
                     <h3 class="staff-name">Kate Hermann Stone</h3>
                     <p class="staff-title">Vice President of Employer Partnerships</p>
@@ -2209,9 +2685,9 @@
                 <div class="staff-card">
                     <a href="https://www.linkedin.com/in/reena-patel-61104029/" class="profile-social-link"><i class="fab fa-linkedin-in"></i></a>
                     <div class="staff-image">
-                        <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Reena-Patel-Headshot-scaled.jpg" alt="Raena Patel">
+                        <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Reena-Patel-Headshot-scaled.jpg" alt="Reena Patel">
                     </div>
-                    <h3 class="staff-name">Raena Patel</h3>
+                    <h3 class="staff-name">Reena Patel</h3>
                     <p class="staff-title">Vice President of Candidate Services</p>
                 </div>
             </div>
@@ -2219,153 +2695,153 @@
             <!-- Smaller Staff Grid -->
             <div class="staff-grid-small">
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Brian Johnson</h4>
-                    <p class="staff-title-small">Director of Marketing & Communications</p>
+                    <h4 class="staff-name-small">Arturo Alarcon</h4>
+                    <p class="staff-title-small">Community Partnerships Associate</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Stephanie Kraviec</h4>
-                    <p class="staff-title-small">Director of Employer Partnerships</p>
+                    <h4 class="staff-name-small">Stephanie Alvarez</h4>
+                    <p class="staff-title-small">Director, Human Resources</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Biancha Buquen</h4>
-                    <p class="staff-title-small">Director of Programs & Operations</p>
+                    <h4 class="staff-name-small">Blanche Anglea</h4>
+                    <p class="staff-title-small">Salesforce & Systems Administrator</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Caitlin Briody</h4>
-                    <p class="staff-title-small">Director of Program Implementation</p>
+                    <h4 class="staff-name-small">Cecily Arroyo</h4>
+                    <p class="staff-title-small">Manager, Recruitment & Placement</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Sarah Block</h4>
-                    <p class="staff-title-small">Senior Program Manager</p>
+                    <h4 class="staff-name-small">Sarah Black</h4>
+                    <p class="staff-title-small">Director, Finance</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Allie Gonzalez</h4>
-                    <p class="staff-title-small">Senior Employer Engagement Manager</p>
+                    <h4 class="staff-name-small">Allie Brinskelle</h4>
+                    <p class="staff-title-small">Manager, National Partnerships</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Tia Bryce</h4>
-                    <p class="staff-title-small">Senior Manager, Talent Development</p>
+                    <h4 class="staff-name-small">Tia Brunt</h4>
+                    <p class="staff-title-small">Talent Acquisition Lead, New Business</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Aaron Cirillo</h4>
-                    <p class="staff-title-small">Senior Manager, Technology Solutions</p>
+                    <h4 class="staff-name-small">Adam Claus</h4>
+                    <p class="staff-title-small">Talent Acquisition Lead</p>
                 </div>
 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Al Carmeni</h4>
-                    <p class="staff-title-small">Manager, Talent Development</p>
+                    <h4 class="staff-name-small">Al Current</h4>
+                    <p class="staff-title-small">Manager, Employer Engagement</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Phil Del Giudice</h4>
-                    <p class="staff-title-small">Manager, Business Development</p>
+                    <h4 class="staff-name-small">Phil De Guzman</h4>
+                    <p class="staff-title-small">Senior Talent Acquisition Lead</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Ken Barr</h4>
-                    <p class="staff-title-small">Manager, Business Development</p>
+                    <h4 class="staff-name-small">Kim Dole</h4>
+                    <p class="staff-title-small">Director, Business Operations & Compliance</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Chelsea Esworthy</h4>
-                    <p class="staff-title-small">Manager, Talent Acquisition</p>
+                    <h4 class="staff-name-small">Chelsey Echevarria</h4>
+                    <p class="staff-title-small">Senior Manager, Client Services</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Maria Embardi</h4>
-                    <p class="staff-title-small">Manager, Talent Acquisition</p>
+                    <h4 class="staff-name-small">Erica Eckhardt</h4>
+                    <p class="staff-title-small">Senior Manager, Development</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Berkeley Sartico</h4>
-                    <p class="staff-title-small">Manager, Talent Acquisition</p>
+                    <h4 class="staff-name-small">Berkeley Gaither</h4>
+                    <p class="staff-title-small">Data & Recruitment Marketing Analyst</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Cari Darnell</h4>
-                    <p class="staff-title-small">Senior Talent Development Specialist</p>
+                    <h4 class="staff-name-small">Cori Garrett</h4>
+                    <p class="staff-title-small">Talent Acquisition Lead</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Peter Houlihan</h4>
-                    <p class="staff-title-small">Senior Data Analyst</p>
+                    <h4 class="staff-name-small">Peter Haefner</h4>
+                    <p class="staff-title-small">Senior Talent Acquisition Lead</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Tawana Preyer</h4>
-                    <p class="staff-title-small">Senior Community Outreach Specialist</p>
+                    <h4 class="staff-name-small">Yesenia Perez</h4>
+                    <p class="staff-title-small">Director, Learning & Development</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Richard Fanella</h4>
-                    <p class="staff-title-small">Senior Finance Associate</p>
+                    <h4 class="staff-name-small">Richard Pineda</h4>
+                    <p class="staff-title-small">Manager, Client Services</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Donielle Parker</h4>
-                    <p class="staff-title-small">Senior Program Coordinator</p>
+                    <h4 class="staff-name-small">Dwaine Porter</h4>
+                    <p class="staff-title-small">Talent Acquisition Lead</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Erek Robinson</h4>
-                    <p class="staff-title-small">Senior Program Coordinator</p>
+                    <h4 class="staff-name-small">Troi Roberson</h4>
+                    <p class="staff-title-small">External Affairs Generalist</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Eduardo Parilla</h4>
-                    <p class="staff-title-small">Talent Development Specialist</p>
+                    <h4 class="staff-name-small">Eduardo Rocha</h4>
+                    <p class="staff-title-small">Senior Talent Acquisition Lead</p>
                 </div>
                 
                 <div class="staff-card-small">
                     <h4 class="staff-name-small">Erica Sanchez</h4>
-                    <p class="staff-title-small">Talent Development Specialist</p>
+                    <p class="staff-title-small">Talent Acquisition Lead</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Cresset George</h4>
-                    <p class="staff-title-small">Talent Development Specialist</p>
+                    <h4 class="staff-name-small">Crystal Savage</h4>
+                    <p class="staff-title-small">Manager, Community Partnerships</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Leila Schroeder</h4>
-                    <p class="staff-title-small">Talent Development Specialist</p>
+                    <h4 class="staff-name-small">Link Schneider</h4>
+                    <p class="staff-title-small">Workforce Coordinator</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Trudie Smith</h4>
-                    <p class="staff-title-small">Executive Assistant</p>
+                    <h4 class="staff-name-small">Tanille Smith</h4>
+                    <p class="staff-title-small">Director, Strategic Initiatives</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">LeStava Spaulding</h4>
-                    <p class="staff-title-small">Administrative Coordinator</p>
+                    <h4 class="staff-name-small">LaTrina Spaulding</h4>
+                    <p class="staff-title-small">Director, Marketing Operations</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Karen Thomas</h4>
-                    <p class="staff-title-small">Program Coordinator</p>
+                    <h4 class="staff-name-small">Kiara Thaxter</h4>
+                    <p class="staff-title-small">Director, Events</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Suzette Wiliams</h4>
-                    <p class="staff-title-small">Program Coordinator</p>
+                    <h4 class="staff-name-small">Suzetta Whitaker</h4>
+                    <p class="staff-title-small">Talent Acquisition Lead</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">Marquita White</h4>
-                    <p class="staff-title-small">Program Coordinator</p>
+                    <h4 class="staff-name-small">Malaysia White</h4>
+                    <p class="staff-title-small">Talent Acquisition Lead</p>
                 </div>
                 
                 <div class="staff-card-small">
-                    <h4 class="staff-name-small">DeJonas Williams</h4>
-                    <p class="staff-title-small">Program Coordinator</p>
+                    <h4 class="staff-name-small">DeAnna Williams</h4>
+                    <p class="staff-title-small">Senior Talent Acquisition Lead</p>
                 </div>
             </div>
         </div>
@@ -2413,7 +2889,7 @@
                 
                 <div class="chair-card">
                     <div class="chair-image">
-                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/1200px-Penny_Pritzker_official_portrait-1.jpg" alt="Penny Pritzker">
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Penny_Pritzker_official_photograph.jpg" alt="Penny Pritzker">
                     </div>
                     <div class="chair-info">
                         <h3 class="chair-name">Penny Pritzker</h3>
@@ -2432,123 +2908,146 @@
             <div class="board-grid">
                 <div class="board-grid-card">
                     <h4 class="board-grid-name">Bridget Altenburg</h4>
-                    <p class="board-grid-role">President & CEO</p>
+                    <p class="board-grid-role">Chief Executive Officer</p>
                     <p class="board-grid-company">Skills for Chicago</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">Jeff Black</h4>
-                    <p class="board-grid-role">Managing Partner</p>
-                    <p class="board-grid-company">Ernst & Young</p>
+                    <h4 class="board-grid-name">Jeff Bilek</h4>
+                    <p class="board-grid-role">Partner, Central Talent Leader</p>
+                    <p class="board-grid-company">EY</p>
                 </div>
                 
                 <div class="board-grid-card">
                     <h4 class="board-grid-name">Carolyn Booth</h4>
-                    <p class="board-grid-role">Central Division Executive</p>
-                    <p class="board-grid-company">Bank of America</p>
+                    <p class="board-grid-role">Head of Distribution, US Personal and Business Banking</p>
+                    <p class="board-grid-company">BMO Harris Bank</p>
                 </div>
                 
                 <div class="board-grid-card">
                     <h4 class="board-grid-name">John Challenger</h4>
+                    <p class="board-grid-role">Cheif Executive Officer</p>
+                    <p class="board-grid-company">Challenger, Gray & Christmas, Inc.</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Adonis Clark Sr.</h4>
+                    <p class="board-grid-role">Vice President | Regional General Manager</p>
+                    <p class="board-grid-company">Walmart</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Christina Corley</h4>
+                    <p class="board-grid-role">Chief Commercial and Operating Officer</p>
+                    <p class="board-grid-company">CDW</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Gillian Darlow</h4>
                     <p class="board-grid-role">Chief Executive Officer</p>
-                    <p class="board-grid-company">Challenger, Gray & Christmas</p>
+                    <p class="board-grid-company">Polk Bros Foundation</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">Andrew Dupuy</h4>
-                    <p class="board-grid-role">Partner</p>
-                    <p class="board-grid-company">McKinsey & Company</p>
+                    <h4 class="board-grid-name">Andy Eichfeld</h4>
+                    <p class="board-grid-role">Formerly EVP, Chief Human Resources & Administrative Officer</p>
+                    <p class="board-grid-company">Discover Financial Services</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">Christina Coniey</h4>
+                    <h4 class="board-grid-name">Rich Floersch</h4>
+                    <p class="board-grid-role">Senior Strategic Advisor</p>
+                    <p class="board-grid-company">HR Policy Association</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Yvonne Franzese</h4>
                     <p class="board-grid-role">Chief Human Resources Officer</p>
-                    <p class="board-grid-company">Rush University Medical Center</p>
+                    <p class="board-grid-company">CNO Financial Group, Inc.</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">William Farrow</h4>
-                    <p class="board-grid-role">President & CEO</p>
-                    <p class="board-grid-company">Urban Partnership Bank</p>
+                    <h4 class="board-grid-name">Craig Freedman</h4>
+                    <p class="board-grid-role">Chief Executive Officer</p>
+                    <p class="board-grid-company">Freedman Seating Co.</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">Dirk Fehler</h4>
-                    <p class="board-grid-role">Managing Director</p>
-                    <p class="board-grid-company">Goldman Sachs</p>
-                </div>
-                
-                <div class="board-grid-card">
-                    <h4 class="board-grid-name">Paul Finnegan</h4>
-                    <p class="board-grid-role">Co-CEO</p>
-                    <p class="board-grid-company">Madison Dearborn Partners</p>
-                </div>
-                
-                <div class="board-grid-card">
-                    <h4 class="board-grid-name">Thierry Francois</h4>
-                    <p class="board-grid-role">Managing Partner</p>
-                    <p class="board-grid-company">Grosvenor Capital Management</p>
-                </div>
-                
-                <div class="board-grid-card">
-                    <h4 class="board-grid-name">Tanner Horsley</h4>
-                    <p class="board-grid-role">Managing Director</p>
-                    <p class="board-grid-company">Citadel</p>
-                </div>
-                
-                <div class="board-grid-card">
-                    <h4 class="board-grid-name">Catherine Kaufman</h4>
-                    <p class="board-grid-role">Managing Director</p>
-                    <p class="board-grid-company">JPMorgan Chase</p>
-                </div>
-                
-                <div class="board-grid-card">
-                    <h4 class="board-grid-name">Mark Kendall</h4>
-                    <p class="board-grid-role">Regional President</p>
-                    <p class="board-grid-company">PNC Financial Services Group</p>
-                </div>
-                
-                <div class="board-grid-card">
-                    <h4 class="board-grid-name">Kelly Moriarty</h4>
-                    <p class="board-grid-role">Senior Vice President</p>
+                    <h4 class="board-grid-name">Daniel Gamba</h4>
+                    <p class="board-grid-role">President, Asset Management</p>
                     <p class="board-grid-company">Northern Trust</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">Monique Mayes</h4>
-                    <p class="board-grid-role">Chief People Officer</p>
-                    <p class="board-grid-company">United Airlines</p>
+                    <h4 class="board-grid-name">Corliss Garner</h4>
+                    <p class="board-grid-role">Executive Vice President and Chief Diversity, Equity and Inclusion Officer</p>
+                    <p class="board-grid-company">Old National Bank</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">Elexony Todd</h4>
-                    <p class="board-grid-role">Group Vice President</p>
-                    <p class="board-grid-company">Target Corporation</p>
+                    <h4 class="board-grid-name">Juatise Gathings</h4>
+                    <p class="board-grid-role">Founder</p>
+                    <p class="board-grid-company">Just Act Partners</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">Claudia Sierra</h4>
-                    <p class="board-grid-role">Vice President</p>
-                    <p class="board-grid-company">The Allstate Corporation</p>
+                    <h4 class="board-grid-name">Srron Graham</h4>
+                    <p class="board-grid-role">Managing Director, Accenture Strategy</p>
+                    <p class="board-grid-company">Accenture</p>
                 </div>
                 
                 <div class="board-grid-card">
-                    <h4 class="board-grid-name">Gary White</h4>
-                    <p class="board-grid-role">Managing Partner</p>
-                    <p class="board-grid-company">Boston Consulting Group</p>
+                    <h4 class="board-grid-name">Courtney Kammer</h4>
+                    <p class="board-grid-role">Senior Vice President, Chief Human Resources Officer</p>
+                    <p class="board-grid-company">Rush University Medical Center</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Mark Kendall</h4>
+                    <p class="board-grid-role">Executive Vice President</p>
+                    <p class="board-grid-company">Hub International</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Kelly Manthey</h4>
+                    <p class="board-grid-role">CEO</p>
+                    <p class="board-grid-company">Kin + Carta</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Malaika Myers</h4>
+                    <p class="board-grid-role">Chief Human Resources Officer</p>
+                    <p class="board-grid-company">Hyatt Hotels Corporation</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Sammy Patel</h4>
+                    <p class="board-grid-role">Vice President, Commercial, Vantage Airport Group; CEO, Midway Partnership</p>
+                    <p class="board-grid-company">Health Care Services Corporation</p>
+                </div>
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Claudia Saran</h4>
+                    <p class="board-grid-role">Vice Chair, Culture</p>
+                    <p class="board-grid-company">KPMG</p>
+                </div>
+                
+                <div class="board-grid-card">
+                    <h4 class="board-grid-name">Cory White</h4>
+                    <p class="board-grid-role">Chief Legal Officer/ COO, Production and Delivery (Forestry, Services, Construction)</p>
+                    <p class="board-grid-company">Milhouse Engineering and Construction, Inc.</p>
                 </div>
                 
                 <div class="board-grid-card">
                     <h4 class="board-grid-name">Michael A. Wilder</h4>
-                    <p class="board-grid-role">Partner</p>
-                    <p class="board-grid-company">Littler Mendelson</p>
+                    <p class="board-grid-role">Chairman of the Board of Directors</p>
+                    <p class="board-grid-company">Littler Mendelson, P.C.</p>
                 </div>
                 
-                <div class="board-grid-card">
-                    <h4 class="board-grid-name">Manika Turnbull, Ph.D. Chair</h4>
-                    <p class="board-grid-role">SVP & CHRO</p>
-                    <p class="board-grid-company">Health Care Service Corporation</p>
-                </div>
+                <!-- <div class="board-grid-card">
+                    <h4 class="board-grid-name">Sammy Patel</h4>
+                    <p class="board-grid-role">Vice President, Commercial, Vantage Airport Group; CEO, Midway Partnership</p>
+                    <p class="board-grid-company">Health Care Services Corporation</p>
+                </div> -->
             </div>
         </div>
     </section>
@@ -2968,5 +3467,62 @@
             });
         });
     </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Dropdown Functionality
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    
+    mobileDropdowns.forEach(dropdown => {
+        const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+        
+        dropdownToggle.addEventListener('click', function() {
+            // Toggle active class on clicked dropdown
+            dropdown.classList.toggle('active');
+            
+            // Optionally close other dropdowns when one is opened
+            // Comment this out if you want multiple dropdowns to be open simultaneously
+            mobileDropdowns.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                    otherDropdown.classList.remove('active');
+                }
+            });
+        });
+    });
+    
+    // Close dropdowns when a link inside is clicked
+    const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Optionally close the dropdown when a link is clicked
+            // Comment this out if you want the dropdown to stay open after a link is clicked
+            const parentDropdown = this.closest('.mobile-dropdown');
+            setTimeout(() => {
+                parentDropdown.classList.remove('active');
+                
+                // Also close the mobile menu
+                document.querySelector('.hamburger').classList.remove('open');
+                document.querySelector('.mobile-nav').classList.remove('open');
+                document.querySelector('.overlay').classList.remove('active');
+                document.querySelector('body').style.overflow = '';
+            }, 100); // Small delay to allow the click to register
+        });
+    });
+    
+    // Make sure mobile dropdowns are closed when menu is closed
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            // If closing the mobile menu, close all dropdowns
+            if (document.querySelector('.mobile-nav').classList.contains('open')) {
+                setTimeout(() => {
+                    mobileDropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }, 300); // Delay to match the mobile menu closing animation
+            }
+        });
+    }
+    });
+        </script>
 </body>
 </html>
