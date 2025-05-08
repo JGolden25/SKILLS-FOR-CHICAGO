@@ -307,9 +307,14 @@ function skills_render_job_listings() {
                 esc_url($row->{'Account Logo'}) : 
                 "https://api.placeholder.com/100x40?text=" . urlencode($row->Employer);
             
-            // Create job detail URL
+            // Create job detail URL - MODIFIED CODE HERE
             $current_page_url = get_permalink();
-            $job_detail_url = add_query_arg(array('job_id' => $row->JN), $current_page_url);
+            // Get all current query parameters, including source if it exists
+            $current_query_params = $_GET;
+            // Add the job_id to the existing parameters
+            $current_query_params['job_id'] = $row->JN;
+            // Build the URL preserving all parameters
+            $job_detail_url = add_query_arg($current_query_params, $current_page_url);
             
             echo '<div class="job-card" data-job-id="' . $row->JN . '">';
             // Make the entire card clickable except for the bookmark button
@@ -506,7 +511,7 @@ function skills_render_job_detail($job_id) {
     // Get source parameter if it exists
     $source = isset($_GET['source']) ? urlencode($_GET['source']) : '';
     // Build apply now URL with job_id and optional source
-    $apply_now_url = "https://ibc.gzr.mybluehost.me/candidate-login/?tfa_3={$job->JN}&tfa_5={$source}";
+    $apply_now_url = "https://skillsforchicago.org/candidate-login/?tfa_3={$job->JN}&tfa_5={$source}";
     echo '<a href="' . esc_url($apply_now_url) . '" class="action-button" style="width: 150px;">
                 <span>Apply Now</span>
                 <div class="circle-icon">

@@ -264,14 +264,15 @@ font-family: Greycliff CF, Bold;
         }
         
         .stories-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: auto auto;
-            gap: 20px;
-            grid-template-areas:
-                "featured featured small1"
-                "featured featured small2";
-        }
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    grid-template-areas:
+        "featured featured small1 small3"
+        "featured featured small2 small4"
+        /* "small3 small4 small4"; */
+}
         
         .story-card {
             border-radius: 8px;
@@ -282,21 +283,27 @@ font-family: Greycliff CF, Bold;
         
         .story-card.featured {
             grid-area: featured;
-            height: 100%;
+            height: 620px !important;
         }
         
         .story-card.small1 {
             grid-area: small1;
-            max-height: 300px;
+            max-height: 300px !important;
         }
         
         .story-card.small2 {
             grid-area: small2;
-            max-height: 300px;
+            max-height: 300px !important;
         }
 
-        .small4 {
-            max-height: 300px;  
+        .story-card.small3 {
+            grid-area: small3;
+            max-height: 300px !important;
+        }
+
+        .story-card.small4 {
+            grid-area: small4;
+            max-height: 300px !important;
         }
 
         /* .story-card.small3 {
@@ -410,6 +417,8 @@ font-family: Greycliff CF, Bold;
         .news-logo {
             margin-bottom: 15px;
             height: 40px;
+            max-width: 35px !important;
+            max-height: 35px !important;
         }
         
         .news-source-name {
@@ -3422,6 +3431,120 @@ font-family: Greycliff CF, Bold;
         padding: 15px 1%;
     }
 }
+
+.news-card {
+            flex: 0 0 calc(33.333% - 14px);
+            max-width: calc(33.333% - 14px);
+            scroll-snap-align: start;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative; /* Added for positioning the anchor */
+        }
+        
+        .news-card-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1; /* Ensure it's above other elements but below text for selection */
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        /* Make the news headline appear clickable while maintaining its style */
+        .news-headline {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.4;
+            color: #333;
+            position: relative;
+            z-index: 2; /* Place above the card link */
+        }
+        
+        /* Add hover effect to the entire card */
+        .news-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+            transition: all 0.3s ease;
+        }
+        /* Make story cards clickable with overlay links */
+.story-card {
+    position: relative; /* Required for absolute positioning of the link */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Above base content but below story text for selection */
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Update grid area names to be unique */
+.story-card.small3 {
+    grid-area: small3;
+    max-height: 300px !important;
+}
+
+.story-card.small4 {
+    grid-area: small4;
+    max-height: 300px !important;
+}
+
+/* Add hover effect for cards */
+.story-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Updated grid template to include all cards */
+/* .stories-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    grid-template-areas:
+        "featured featured small1"
+        "featured featured small2"
+        "small3 small4 small4";
+} */
+
+/* Mobile adjustments for stories grid */
+@media (max-width: 976px) {
+    .stories-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "featured"
+            "small1"
+            "small2"
+            "small3"
+            "small4";
+        gap: 30px;
+    }
+    
+    .story-card.featured {
+        height: auto !important; /* Remove fixed height on mobile */
+    }
+    
+    .story-card {
+        max-height: none !important;
+    }
+    
+    /* Make news cards single column on mobile */
+    .news-card {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+    }
+}
 </style>
 </head>
 <body>
@@ -3633,57 +3756,62 @@ font-family: Greycliff CF, Bold;
     </section>
 
     <!-- Stories of Impact Section -->
-    <section class="stories-section">
-        <div class="stories-container">
-            <h2 class="stories-title">Stories of Impact</h2>
-            <p class="stories-intro">
-                Every job secured through Skills for Chicago represents more than just employment—it's a step toward financial stability and long-term success. Hear from job seekers who have overcome barriers, found new opportunities, and taken control of their futures.
-            </p>
-            
-            <div class="stories-grid">
-                <div class="story-card featured">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_592616405-scaled.jpeg" alt="Woman using smartphone" class="story-image">
-                    <div class="story-overlay">
-                        <h3 class="story-title">Welcome to the Energy Workforce Equity Portal</h3>
-                        <p class="story-subtitle">
-                            The Portal is an online source designed to help connect clean energy companies with Equity Eligible Persons looking to work in the clean energy sector in Illinois. Making these connections is a key aspect of ensuring that the clean energy industry in Illinois grows in an equitable manner.
-                        </p>
-                    </div>
-                </div>
-                
-                <div class="story-card small1">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_671308764-scaled.jpeg" alt="Person in office setting" class="story-image">
-                    <div class="story-overlay">
-                        <h3 class="small-story-title">From New York to Chicago: Maria's Determined Journey to Finding Confidence and Stability</h3>
-                    </div>
-                </div>
-                
-                <div class="story-card small2">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/AdobeStock_503137329-scaled.jpeg" alt="Person in business attire" class="story-image">
-                    <div class="story-overlay">
-                        <h3 class="small-story-title">Khalil's Story: Cultivating Growth with Skills for Chicagoland's Future</h3>
-                    </div>
-                </div>
-                
-                <div class="story-card small3">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/AdobeStock_290885990-scaled.jpeg" alt="Business meeting" class="story-image">
-                    <div class="story-overlay">
-                        <h3 class="small-story-title">3 Simple Solutions To Unlock Overlooked Talent</h3>
-                    </div>
-                </div>
-                
-                <div class="story-card small4">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/ManikaTurnbull27.webp" alt="Professional woman" class="story-image">
-                    <div class="story-overlay">
-                        <h3 class="small-story-title">Skills for Chicagoland's Future Announces New Board Chair, Dr. Monika Turnbull</h3>
-                    </div>
+<section class="stories-section">
+    <div class="stories-container">
+        <h2 class="stories-title">Stories of Impact</h2>
+        <p class="stories-intro">
+            Every job secured through Skills for Chicago represents more than just employment—it's a step toward financial stability and long-term success. Hear from job seekers who have overcome barriers, found new opportunities, and taken control of their futures.
+        </p>
+        
+        <div class="stories-grid">
+            <div class="story-card featured">
+                <a href="https://skillsforchicago.org/blog-2/" class="story-card-link" aria-label="Read Rasheed's story"></a>
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/From-Uncertainty-to-Opportunity-How-Rasheed-Found-His-Perfect-Match.png" alt="Woman using smartphone" class="story-image">
+                <div class="story-overlay">
+                    <h3 class="story-title">From Uncertainty to Opportunity: How Rasheed Found His Perfect Match</h3>
+                    <p class="story-subtitle">
+                        The first thing you notice about Rasheed is his laugh. It rings through the phone, bright and infectious—the kind that instantly makes you smile along. He even laughs while describing the amusing contrasts within his life.
+                    </p>
                 </div>
             </div>
-            <p class="stories-intro2">
-                <a href="https://skillsforchicago.org/blog-archives/"><strong>Click here</strong></a> to explore additional stories and learn more about how our work is changing lives across Chicago.
-            </p>
+            
+            <div class="story-card small1">
+                <a href="https://skillsforchicago.org/blog-3/" class="story-card-link" aria-label="Read about the journey from job seeker to mentor"></a>
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/The-Beauty-in-Giving-Back-A-Full-Circle-Journey-from-Job-Seeker-to-Mentor.jpg" alt="Person in office setting" class="story-image">
+                <div class="story-overlay">
+                    <h3 class="small-story-title">The Beauty in Giving Back: A Full-Circle Journey from Job Seeker to Mentor</h3>
+                </div>
+            </div>
+            
+            <div class="story-card small2">
+                <a href="https://skillsforchicago.org/blog-1/" class="story-card-link" aria-label="Read Efrain's story"></a>
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Navigating-Change-Efrains-Path-to-Stability-and-Impact.jpeg" alt="Person in business attire" class="story-image">
+                <div class="story-overlay">
+                    <h3 class="small-story-title">Navigating Change: Efrain's Path to Stability and Impact</h3>
+                </div>
+            </div>
+            
+            <div class="story-card small3">
+                <a href="https://skillsforchicago.org/blog-4/" class="story-card-link" aria-label="Read Keith's story"></a>
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Completing-the-Pass-Keiths-Journey-of-Relentless-Drive-scaled.jpg" alt="Business meeting" class="story-image">
+                <div class="story-overlay">
+                    <h3 class="small-story-title">Completing the Pass: Keith's Journey of Relentless Drive</h3>
+                </div>
+            </div>
+            
+            <div class="story-card small4">
+                <a href="https://skillsforchicago.org/blog-5/" class="story-card-link" aria-label="Read Khalilah's story"></a>
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Seeds-of-Strength-How-Khalilah-Cultivated-a-New-Career-Path-scaled.jpg" alt="Professional woman" class="story-image">
+                <div class="story-overlay">
+                    <h3 class="small-story-title">Seeds of Strength: How Khalilah Cultivated a New Career Path</h3>
+                </div>
+            </div>
         </div>
-    </section>
+        <p class="stories-intro2">
+            <a href="https://skillsforchicago.org/blog-archives/"><strong>Click here</strong></a> to explore additional stories and learn more about how our work is changing lives across Chicago.
+        </p>
+    </div>
+</section>
 
     <!-- News & Updates Section -->
     <section class="news-section">
@@ -3693,61 +3821,83 @@ font-family: Greycliff CF, Bold;
                 Stay informed on the latest developments in workforce equity, employer partnerships, and economic mobility. Explore insights on employment trends, policy shifts, and how businesses are working to create more inclusive hiring practices across Chicago.
             </p>
             
-            <div class="news-slider-container">
-                <div class="news-slider" id="newsSlider">
-                    <div class="news-card">
-                        <div class="news-source">
-                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/37fce9bf0969b1c6ef115f6541b72ad2.png" alt="Forbes logo" class="news-logo">
-                            <h4 class="news-source-name">Forbes</h4>
-                            <p class="news-date">February 10, 2025</p>
-                            <a href="#" class="news-headline">3 Simple Solutions To Unlock Overlooked Talent</a>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card">
-                        <div class="news-source">
-                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/hd-lego-logo-transparent-background-701751694773038ttazskfwrq.png" alt="Daily Herald logo" class="news-logo">
-                            <h4 class="news-source-name">Daily Herald</h4>
-                            <p class="news-date">February 13, 2025</p>
-                            <a href="#" class="news-headline">Skills for Chicagoland's Future Talk What's Next</a>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card">
-                        <div class="news-source">
-                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/37fce9bf0969b1c6ef115f6541b72ad2.png" alt="Chicago Defender logo" class="news-logo">
-                            <h4 class="news-source-name">Chicago Defender</h4>
-                            <p class="news-date">February 23, 2025</p>
-                            <a href="#" class="news-headline">Skills' Chief Program Officer on the Perri Small Show</a>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card">
-                        <div class="news-source">
-                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/hd-lego-logo-transparent-background-701751694773038ttazskfwrq.png" alt="Chicago Tribune logo" class="news-logo">
-                            <h4 class="news-source-name">Chicago Tribune</h4>
-                            <p class="news-date">February 5, 2025</p>
-                            <a href="#" class="news-headline">Bridging the Gap: Skills for Chicago's Innovative Approach to Workforce Development</a>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card">
-                        <div class="news-source">
-                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/37fce9bf0969b1c6ef115f6541b72ad2.png" alt="WBEZ logo" class="news-logo">
-                            <h4 class="news-source-name">WBEZ</h4>
-                            <p class="news-date">January 28, 2025</p>
-                            <a href="#" class="news-headline">Interview: Expanding Economic Mobility in Chicago's Underserved Communities</a>
-                        </div>
-                    </div>
-                    
-                    <div class="news-card">
-                        <div class="news-source">
-                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/hd-lego-logo-transparent-background-701751694773038ttazskfwrq.png" alt="Crain's Chicago Business logo" class="news-logo">
-                            <h4 class="news-source-name">Crain's Chicago Business</h4>
-                            <p class="news-date">January 15, 2025</p>
-                            <a href="#" class="news-headline">Local Employers Partner with Skills for Chicago to Address Workforce Gaps</a>
-                        </div>
-                    </div>
+            <div class="news-slider" id="newsSlider">
+                <!-- Card 1: Forbes - 3 Simple Solutions -->
+<div class="news-card">
+    <a href="https://www.forbes.com/sites/stand-together/2024/02/23/3-simple-solutions-to-unlock-overlooked-talent/?sh=5a46f5103cb3" class="news-card-link" aria-label="Read Forbes article: 3 Simple Solutions To Unlock Overlooked Talent"></a>
+    <div class="news-source">
+        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/forbes.png" alt="Forbes logo" class="news-logo">
+        <h4 class="news-source-name">Forbes</h4>
+        <p class="news-date">February 10, 2025</p>
+        <div class="news-headline">3 Simple Solutions To Unlock Overlooked Talent</div>
+    </div>
+</div>
+
+<!-- Card 2: Forbes - 5 Ways to Grow -->
+<div class="news-card">
+    <a href="https://www.forbes.com/sites/stand-together/2024/02/20/5-ways-to-grow-your-business-by-unleashing-workers-potential/" class="news-card-link" aria-label="Read Forbes article: 5 Ways to Grow Your Business by Unleashing Workers' Potential"></a>
+    <div class="news-source">
+        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/forbes.png" alt="Forbes logo" class="news-logo">
+        <h4 class="news-source-name">Forbes</h4>
+        <p class="news-date">February 13, 2025</p>
+        <div class="news-headline">5 Ways to Grow Your Business by Unleashing Workers' Potential</div>
+    </div>
+</div>
+
+<!-- Card 3: Chicago Defender - MacKenzie Scott -->
+<div class="news-card">
+    <a href="https://chicagodefender.com/philanthropist-mackenzie-scott-awards-5-million-to-skills-for-chicagolands-future/" class="news-card-link" aria-label="Read Chicago Defender article: MacKenzie Scott Awards $5 Million to Skills for Chicagoland's Future"></a>
+    <div class="news-source">
+        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Defender-logo.jpg" alt="Chicago Defender logo" class="news-logo">
+        <h4 class="news-source-name">Chicago Defender</h4>
+        <p class="news-date">February 23, 2025</p>
+        <div class="news-headline">Philanthropist MacKenzie Scott Awards $5 Million to Skills for Chicagoland's Future</div>
+    </div>
+</div>
+
+<!-- Card 4: Fox32 Chicago -->
+<div class="news-card">
+    <a href="https://www.fox32chicago.com/video/1303780" class="news-card-link" aria-label="Watch Fox32 Chicago video about Skills for Chicago"></a>
+    <div class="news-source">
+        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Fts-chicago-c.png" alt="Fox32 Chicago logo" class="news-logo">
+        <h4 class="news-source-name">Fox32 Chicago</h4>
+        <p class="news-date">February 5, 2025</p>
+        <div class="news-headline">Skills for Chicago Featured on Fox32 Chicago: Connecting Job Seekers with Opportunities</div>
+    </div>
+</div>
+
+<!-- Card 5: Chicago Sun-Times -->
+<div class="news-card">
+    <a href="https://chicago.suntimes.com/business/2023/6/7/23751582/chicago-job-placement-ceo-expansion" class="news-card-link" aria-label="Read Chicago Sun-Times article about job placement and expansion"></a>
+    <div class="news-source">
+        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Chicago_Sun-Times_2019-08-02-scaled.png" alt="Chicago Sun-Times logo" class="news-logo">
+        <h4 class="news-source-name">Chicago Sun-Times</h4>
+        <p class="news-date">January 28, 2025</p>
+        <div class="news-headline">Chicago Job Placement CEO Discusses National Expansion</div>
+    </div>
+</div>
+
+<!-- Card 6: Lawndale News -->
+<div class="news-card">
+    <a href="http://www.lawndalenews.com/2023/03/southwest-side-job-fair-welcomes-job-candidates/" class="news-card-link" aria-label="Read Lawndale News article about Southwest Side Job Fair"></a>
+    <div class="news-source">
+        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Lawndale-News-logo.png" alt="Lawndale News logo" class="news-logo">
+        <h4 class="news-source-name">Lawndale News</h4>
+        <p class="news-date">January 15, 2025</p>
+        <div class="news-headline">Southwest Side Job Fair Welcomes Job Candidates</div>
+    </div>
+</div>
+
+<!-- Card 7: Daily Herald -->
+<div class="news-card">
+    <a href="https://www.dailyherald.com/20221110/submitted-content/bank-of-america-names-allies-for-community-business-and-skills-for-chicagolands-future-2022-neighbo/" class="news-card-link" aria-label="Read Daily Herald article about Bank of America's neighborhood builders program"></a>
+    <div class="news-source">
+        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/image-asset.jpeg" alt="Daily Herald logo" class="news-logo">
+        <h4 class="news-source-name">Daily Herald</h4>
+        <p class="news-date">March 2, 2025</p>
+        <div class="news-headline">Bank of America Names Skills for Chicagoland's Future as 2022 Neighborhood Builder</div>
+    </div>
+</div>
                 </div>
                 
                 <div class="news-controls">
