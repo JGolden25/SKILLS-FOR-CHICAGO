@@ -442,7 +442,7 @@
             font-size: 22px;
             line-height: 1.7;
             color: #353232;
-            width: 70%;
+            width: 90%;
         }
 
         .communities-image {
@@ -669,7 +669,7 @@ li {
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -729,7 +729,7 @@ li {
         }
 
         /* Responsive adjustments */
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .collaborate-image img {
             width: 100%;
             max-height: 400px;
@@ -848,7 +848,7 @@ li {
             opacity: 1;
             text-decoration: underline;
         }
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .collaborate-image img {
             width: 100%;
             max-height: 400px;
@@ -857,7 +857,7 @@ li {
         }
     }
     /* Add these styles to  existing CSS */
-@media (max-width: 1354px) {
+@media (max-width: 1024px) {
     .employer-partner-section {
         flex-direction: column !important;
         gap: 0 !important;
@@ -899,7 +899,7 @@ li {
     }
 }
 
-@media (max-width: 1354px) {
+@media (max-width: 1024px) {
     /* First section (Our Employer Partners) mobile styling */
     .engagement-section > .engagement-section {
         flex-direction: column;
@@ -938,7 +938,7 @@ li {
         font-size: 18px;
     }
 }
-@media (max-width: 1354px) {
+@media (max-width: 1024px) {
             .collaborate-image img {
             width: 100%;
             max-height: 400px;
@@ -1299,7 +1299,7 @@ li {
             left: 50%;
         }
 
-@media (max-width: 1354px) {
+@media (max-width: 1024px) {
             .main-nav {
                 display: none; /* Hide desktop nav */
             }
@@ -1563,7 +1563,7 @@ li {
             left: 50%;
         }
 
-@media (max-width: 1354px) {
+@media (max-width: 1024px) {
             .main-nav {
                 display: none; /* Hide desktop nav */
             }
@@ -1732,7 +1732,7 @@ li {
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -1780,7 +1780,7 @@ li {
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -1923,7 +1923,7 @@ li {
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1961,7 +1961,7 @@ li {
                 padding: 0px 30px 0px 30px;
             }
         }
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .main-nav {
                 display: none; /* Hide desktop nav */
             }
@@ -1973,17 +1973,56 @@ li {
                 padding: 0px;
             }
         }
-    </style>
+        @media (max-width: 976px) {
+        .employer-partner-text::before {
+    content: "●";
+    color: #4F6B3A;
+    display: inline-block;
+    /* width: 1%; */
+    margin-left: -1em;
+    margin-right: 1%;
+    font-size: .5em;
+    align-items: center;
+    justify-content: center;
+}
+
+.engagement-section > .engagement-section h4 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 2%;
+        color: #526e3f;
+    }
+
+.employer-partner-text {
+    color: #FFFFFF;
+    font-size: 22px;
+    width: 70%;
+    font-weight: 100;
+    margin-bottom: 3%;
+}
+        }
+    @media (max-width: 1024px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+
+.emp-partners-sub {
+    padding-bottom: 6%;
+    font-weight: 700;
+    color: #4F6B3A;
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -2172,7 +2211,7 @@ li {
         <div class="engagement-section">
             <div class="engagement-content">
                 <h2 class="engagement-title">Our Employer Partners</h2>
-                <h4 style="padding-bottom: 2%;">Expanding Talent Pipelines. Building a Stronger Workforce.</h4>
+                <h4 class="emp-partners-sub">Expanding Talent Pipelines. Building a Stronger Workforce.</h4>
                 <p class="engagement-text">
                     At Skills for Chicago, we know that meaningful employment starts with collaboration. Our partners—including employers, community organizations, and educational institutions—play a critical role in connecting job seekers to life-changing opportunities while driving economic growth across the city. Together, we are expanding access to employment and creating opportunities that strengthen Chicago’s workforce.
                 </p>

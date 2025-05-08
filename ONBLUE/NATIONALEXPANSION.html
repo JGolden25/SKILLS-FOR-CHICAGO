@@ -2551,7 +2551,8 @@ padding-left: 0%;
             justify-content: center;
             gap: 40px;
             flex-wrap: wrap;
-            max-width: 1200px;
+            width: 80%;
+            /* max-width: 1200px; */
             margin: 0 auto;
             padding: 0 20px;
         }
@@ -2560,7 +2561,7 @@ padding-left: 0%;
             flex: 1;
     min-width: 300px;
     background-color: white;
-    padding: 45px;
+    padding: 40px 0px 30px 0px;
     border-radius: 30px;
     text-align: center;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
@@ -2568,9 +2569,10 @@ padding-left: 0%;
         }
 
         .what-we-offer-card h3 {
-            font-size: 24px;
+            font-size: 28px;
             margin-bottom: 15px;
             color: #4F6B3A;
+            font-family: Greycliff CF, Bold;
         }
 
         /* New styles for "Proven Results" section */
@@ -2762,7 +2764,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
             .resources-content {
                 padding: 80px 0 0px 0px;
-    background-color: #FFFFFF;
+    /* background-color: #FFFFFF; */
     margin-bottom: 8%;
 }
 
@@ -2795,7 +2797,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
         .work-together-container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -2868,6 +2870,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             font-size: 22px; 
             margin-bottom: 6%; 
             color: #FFFFFF;
+            font-family: Greycliff CF, Bold;
         }
 
         .movement-bullet2::marker {
@@ -3002,7 +3005,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -3719,7 +3722,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -3767,7 +3770,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -3910,7 +3913,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -4101,7 +4104,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 
 .communities-image img {
     width: 100%;
-    height: 100%; /* Changed from fixed 625px to 100% */
+    height: 800px; /* Changed from fixed 625px to 100% */
     display: block;
     object-fit: cover;
     object-position: center center; /* Changed from center 90% to center center */
@@ -4344,6 +4347,9 @@ img, svg, video, canvas, iframe {
 }
 
 @media (max-width: 976px) {
+    .communities-image img {
+        max-height: 400px !important;
+    }
     .national-content h2.communities-title,
     .national-content h4 {
         text-align: center;
@@ -4366,7 +4372,12 @@ img, svg, video, canvas, iframe {
     margin-left: 0%;
 }
 }
-        </style>
+        @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+</style>
 </head>
 <body>
    
@@ -4374,10 +4385,10 @@ img, svg, video, canvas, iframe {
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -4594,7 +4605,7 @@ img, svg, video, canvas, iframe {
     <section class="resources-section">
         <div class="container resources-container engagement" style="background-color:#041202;">
             <div class="resources-content" style="background-color:#041202;">
-                <h2 class="communities-title" style="color: white;">Why Our Model Works</h2>
+                <h2 class="communities-title" style="color: white; margin-top: 3%;">Why Our Model Works</h2>
                 <li class="movement-bullet2"><strong style="padding-left: 2%;">Direct Employer Partnerships</strong> - Connecting job seekers to companies ready to hire</li>
                 <li class="movement-bullet2"><strong style="padding-left: 2%;">Hiring Practice Change</strong> - Working with employers to eliminate barriers in the job process</li>
                 <li class="movement-bullet2"><strong style="padding-left: 2%;">Community Driven Impact</strong> - partnering with organizations that know their local worforce needs</li>
@@ -4760,10 +4771,10 @@ img, svg, video, canvas, iframe {
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             

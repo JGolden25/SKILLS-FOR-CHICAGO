@@ -3,167 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills for Chicago Carousel</title>
+    <title>Navigating Change: Efrain's Path to Stability and Impact | Skills for Chicago</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
         }
-
+        
         body {
-            font-family: Greycliff CF, Bold;
-            overflow-x: hidden;
-        }
-
-        h1 {
-         font-family: Greycliff CF, Bold;
-      }
-      h2 {
-         font-family: Greycliff CF, Bold;
-      }
-      p {
-        font-family: Greycliff CF, Light;
-      }
-      a {
-        font-family: Greycliff CF, Light;
-      }
-      span {
-        font-family: Greycliff CF, Bold;
-      }
-
-      h4 {
-        font-family: Greycliff CF, Bold;
-      }
-
-        .carousel-section {
-            width: 100%;
-            position: relative;
-            margin-bottom: 60px;
-        }
-
-        .carousel-container {
-            display: flex;
-            width: 100%;
-            height: 630px;
-            position: relative;
-        }
-
-        .carousel-panel {
-            position: relative;
-            flex: 1;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .carousel-panel.left {
-            margin-right: 30px;
-        }
-
-        .carousel-panel.center {
-            margin: 0 30px;
-            flex: 2;
-        }
-
-        .carousel-panel.right {
-            margin-left: 30px;
-        }
-
-        .carousel-image {
-            width: 100%;
-            height: 100% !important;
-            object-fit: cover;
-        }
-
-        .carousel-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            padding: 0 20px;
-            background: rgba(0, 0, 0, 0.3);
-        }
-
-        .tag {
-            display: inline-block;
-            background-color: white;
+            line-height: 1.6;
             color: #333;
-            padding: 8px 16px;
-            font-size: 14px;
+            /* max-width: 1200px; */
+            margin: 0 auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
             font-weight: 700;
-            text-transform: uppercase;
-            margin-bottom: 20px;
         }
 
-        .title {
-            font-size: 48px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            max-width: 800px;
-            text-align: center;
-        }
-
-        .meta {
-            font-size: 16px;
-            font-weight: 400;
-        }
-
-        .meta a {
-            color: #fff;
-            text-decoration: underline;
-        }
-
-        .nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            background-color: rgba(79, 107, 58, 0.8);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            z-index: 10;
-            font-size: 24px;
-            transition: background-color 0.3s;
-        }
-
-        .nav-arrow:hover {
-            background-color: rgba(79, 107, 58, 1);
-        }
-
-        .prev-arrow {
-            left: 0;
-        }
-
-        .next-arrow {
-            right: 0;
-        }
-
-        @media (max-width: 992px) {
-            .carousel-container {
-                flex-direction: column;
-                height: auto;
-            }
-            
-            .carousel-panel {
-                height: 400px;
-                margin: 0 0 4px 0 !important;
-            }
-            
-            .title {
-                font-size: 32px;
-            }
-        }
         h1 {
          font-family: Greycliff CF, Bold;
       }
@@ -289,10 +155,9 @@
         
         .related-posts h2 {
             text-align: center;
-    font-size: 46px;
-    margin-bottom: 60px;
-    color: #333;
-    font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
         }
         
         .posts-grid {
@@ -350,9 +215,8 @@
             font-size: 18px;
             line-height: 1.4;
             margin-bottom: 15px;
-            font-weight: 700;
+            font-weight: 600;
             text-align: center;
-            font-family: Greycliff CF, Bold;
         }
         
         .post-meta {
@@ -494,7 +358,7 @@
             display: inline-flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #A2C466; /* Light green */
+    background-color: #8dc63f; /* Light green */
     color: #333333; /* Black text color */
     padding: 7px 5px 7px 15px;
     border-radius: 25px;
@@ -793,6 +657,242 @@
             .footer-nav {
                 grid-template-columns: 1fr;
                 text-align: center;
+            }
+        }
+
+        /* Mobile Footer Links */
+        .footer-mobile-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-mobile-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-mobile-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            opacity: 0.9;
+        }
+
+        .footer-mobile-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        .social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+         /* Hamburger Menu Button */
+         .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+@media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            
+            /* .mobile-menu-toggle {
+                display: block;
+            } */
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 0px;
+            }
+        }
+@media (max-width: 1500px) { 
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+    margin-right: 45px;
+        }
+    }
+@media (max-width: 1478px) { 
+    .banner-text {
+            font-size: 15px;
+            margin-right: 0%;
+        }
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+         /* Mobile Navigation Panel */
+         .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
             }
         }
 
@@ -2244,219 +2344,6 @@ padding-left: 7%;
         margin-bottom: 15px;
     }
 }
-.social-strip {
-    background-color: #ffffff;
-    padding: 5px 0;
-    border-bottom: 1px solid #f0f0f0;
-}
-
-.social-strip-container {
-    display: flex;
-    justify-content: flex-end;
-    max-width: 83%;
-    margin: 0 auto;
-    padding: 0 40px;
-}
-
-.social-icons-top {
-    display: flex;
-    gap: 15px;
-}
-
-.social-icons-top a {
-    color: #333;
-    font-size: 18px;
-    transition: color 0.3s ease;
-}
-
-.social-icons-top a:hover {
-    color: #4d7e32;
-}
-/* START MOBILE CSS */
-.mobile-menu-toggle {
-            display: none; /* Hidden by default, shown in media query */
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1001;
-        }
-         /* Hamburger Menu Button */
-         .mobile-menu-toggle {
-            display: none; /* Hidden by default, shown in media query */
-            background: none;
-            border: none;
-            cursor: pointer;
-            padding: 10px;
-            z-index: 1001;
-        }
-
-        .hamburger {
-            width: 30px;
-            height: 20px;
-            position: relative;
-            transform: rotate(0deg);
-            transition: .5s ease-in-out;
-            cursor: pointer;
-        }
-
-        .hamburger span {
-            display: block;
-            position: absolute;
-            height: 3px;
-            width: 100%;
-            background: #333;
-            border-radius: 3px;
-            opacity: 1;
-            left: 0;
-            transform: rotate(0deg);
-            transition: .25s ease-in-out;
-        }
-
-        /* Hamburger icon bars positioning */
-        .hamburger span:nth-child(1) {
-            top: 0px;
-        }
-
-        .hamburger span:nth-child(2),
-        .hamburger span:nth-child(3) {
-            top: 10px;
-        }
-
-        .hamburger span:nth-child(4) {
-            top: 20px;
-        }
-
-        /* Hamburger animation to X */
-        .hamburger.open span:nth-child(1) {
-            top: 10px;
-            width: 0%;
-            left: 50%;
-        }
-
-        .hamburger.open span:nth-child(2) {
-            transform: rotate(45deg);
-        }
-
-        .hamburger.open span:nth-child(3) {
-            transform: rotate(-45deg);
-        }
-
-        .hamburger.open span:nth-child(4) {
-            top: 10px;
-            width: 0%;
-            left: 50%;
-        }
-
-@media (max-width: 1354px) {
-            .main-nav {
-                display: none; /* Hide desktop nav */
-            }
-
-            .nav-link {
-                padding: 15px 6px;
-            }
-            
-            /* .mobile-menu-toggle {
-                display: block;
-            } */
-            
-            .header-container {
-                justify-content: space-between;
-                padding: 0 0px;
-            }
-        }
-@media (max-width: 1500px) { 
-.header-container {
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 0px 0px 0px 0px;
-        }
-        .nav-links {
-            display: flex;
-            gap: 25px;
-    margin-right: 45px;
-        }
-    }
-@media (max-width: 1478px) { 
-    .banner-text {
-            font-size: 15px;
-            margin-right: 0%;
-        }
-           .header {
-            padding: 15px 15px;
-            }
-            .banner {
-                padding: 12px 15px;
-            }
-        }
-         /* Mobile Navigation Panel */
-         .mobile-nav {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 80%;
-            max-width: 400px;
-            height: 100%;
-            background-color: white;
-            padding: 80px 40px 40px;
-            z-index: 1000;
-            overflow-y: auto;
-            transition: right 0.3s ease-in-out;
-            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .mobile-nav.open {
-            right: 0;
-        }
-
-        .mobile-nav-links {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .mobile-nav-links a {
-            color: #333;
-            font-size: 18px;
-            font-weight: 500;
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            transition: color 0.3s ease;
-        }
-
-        .mobile-nav-links a:hover {
-            color: #4d7e32;
-        }
-
-        .mobile-donate-button {
-            margin-top: 30px;
-            /* width: 100%;
-            justify-content: center; */
-        }
-
-        /* Dark overlay when mobile menu is open */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-            display: none;
-        }
-
-        .overlay.active {
-            display: block;
-        }
-        @media (max-width: 576px) {
-            .mobile-nav {
-                width: 100%;
-                max-width: none;
-            }
-        }
         .social-strip {
     background-color: #ffffff;
     padding: 5px 0;
@@ -2763,7 +2650,7 @@ padding-left: 7%;
         padding: 15px 1%;
     }
 }
-</style>
+    </style>
 </head>
 <body>
     <div id="main-content">
@@ -2956,69 +2843,124 @@ padding-left: 7%;
             <div class="overlay"></div>
         </div>
     </header>
-    <section class="carousel-section">
-        <div class="carousel-container">
-            <div class="carousel-panel left">
-                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_462178768_2_30.jpeg" alt="People in classroom setting" class="carousel-image">
-                <div class="nav-arrow prev-arrow">&#8249;</div>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <div class="hero-tag">SUCCESS STORIES</div>
+            <h1 class="hero-title">Completing the Pass: Keith’s Journey of Relentless Drive</h1>
+        </div>
+    </div>
+    
+    <div class="main-container">
+        <div class="content-area">
+            <div class="article-meta">
+                written by <a href="https://skillsforchicago.org/">Skills for Chicago</a> published on Jan 27, 2025
             </div>
             
-            <div class="carousel-panel center">
-                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_462178768_2_30.jpeg" alt="Chicago Skyline" class="carousel-image">
-                <div class="carousel-overlay">
-                    <div class="tag">CANDIDATE STORIES</div>
-                    <h1 class="title">Navigating Change: Efrain's Path to Stability and Impact</h1>
-                    <div class="meta">written by <a href="#">Skills For Chicago</a> published on 9. 6. 2021</div>
-                </div>
-            </div>
-            
-            <div class="carousel-panel right">
-                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_462178768_2_30.jpeg" alt="Chicago Building" class="carousel-image">
-                <div class="nav-arrow next-arrow">&#8250;</div>
+            <div class="article-content">
+                <p>
+                    Keith's story begins on the football field. As a child in East Garfield Park, his speed was legendary in neighborhood games of pick-up football. “I was always the first pick,” he recalls with a laugh. His athleticism and drive were evident early, but life’s game plan would lead him down a different path. Today, at 40 years old, Keith lives in Belmont Cragin and is building a legacy for his nine-year-old son—one rooted in hard work, resilience, and a commitment to always learning.
+                </p>
+                
+                <p>
+                    For Keith, work has never been just about a paycheck. It’s about stability, security, and creating opportunities for his family. “I’m not just working for myself,” he says. “I’m working for my son. Everything I do is to make sure he’s got what he needs.”
+                </p>
+                
+                <p>
+                    Keith’s journey has been an unconventional one. He’s worked in construction, property preservation, microgreen farming, and public transit, each role teaching him valuable skills that he’s carried forward. His time with a local construction and property preservation company stands out as a period of growth. “I learned everything there—water pump-outs, thawing frozen floors. When work was slow, management kept me on because I knew how to do so much. It’s hard to let go of someone who knows everything.”
+                </p>
+                
+                <p>
+                    This mindset of becoming indispensable has guided him through every challenge. After leaving that company, Keith took on roles in transportation and then in environmental services for a hospital. But when the COVID-19 pandemic struck, he found himself unemployed and uncertain about where to go next.
+                    Research brought him to the Chicago Urban League, where his unique work experience led them to suggest he tap into Skills for Chicagoland’s Future. Our team matched him to a role as an Environmental Service Technician at Rush University Medical Center. “When Rush told me I was hired, it was the best news I’d had in a long time,” he says.
+                </p>
+                
+                <p>
+                    The role at Rush is not just a job; it’s a game changer. “I want to start my own property preservation business,” Keith shares. “Everything I’ve done—construction, environmental services—it all ties into that dream. I want to make sure when I clean up a property, no one has to send someone behind me. It’ll be thorough, done right the first time.”
+                </p>
+                
+                <p>
+                    Keith approaches his work and life with a coach’s mentality. “There are two kinds of people in the world: those who make a way and those who make excuses,” he says. His advice to anyone facing challenges is simple but profound: “Never limit yourself to just one thing. Learn as much as you can. The more you know, the harder it is for a job to deny you.”
+                </p>
+
+                <p>
+                    Keith’s optimism is infectious. He often shares nuggets of wisdom encouraging others to recognize and seize opportunities. “Everything you do is a choice,” he says. “If you do nothing, negativity will follow. But if you choose action, positivity will follow.”
+                </p>
+                <p>
+                    Nowadays, weekends are sacred for him. They’re a time for him and his son to reconnect—getting haircuts, playing football, and dreaming about the future. Keith sees his efforts as setting his son up for success, much like completing a pass on the field. “He’s got an arm,” Keith says proudly, hinting at his son following in his athletic footsteps. Beyond the stability his career offers, he’s grateful for the opportunity to ensure a brighter future for his son.
+                </p>
+
+                <p>
+                    “Don’t give up,” he insists, his voice steady with conviction. His journey with all of its reroutes and detours is a reminder that no matter the setbacks, there’s always a way comeback.
+                </p>
             </div>
         </div>
-    </section>
-     <!-- Related Posts Section (moved outside main container) -->
-     <section>
-     <div class="related-posts-container">
+        
+        <div class="sidebar">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Completing-the-Pass-Keiths-Journey-of-Relentless-Drive-scaled.jpg" alt="Efrain's portrait" class="profile-image">
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-heading">CATEGORIES</h3>
+                <ul class="categories-list">
+                    <li><a href="#">All Categories</a></li>
+                    <li><a href="#">Success Stories</a></li>
+                    <li><a href="#">Job Seeker Tips & Tools</a></li>
+                    <li><a href="#">Partnerships in Action</a></li>
+                    <li><a href="#">Donor Impact</a></li>
+                </ul>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-heading">SHARE ARTICLE</h3>
+                <ul class="share-links">
+                    <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fparse.com" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="https://www.linkedin.com/sharing/share-offsite/?url={url}"><i class="fab fa-linkedin-in" target="_blank"></i> LinkedIn</a></li>
+                    <li><a href="mailto:?subject=I wanted you to see this site&amp;body=Check out this site http://www.website.com." target="_blank"><i class="far fa-envelope"></i> Email</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Related Posts Section (moved outside main container) -->
+    <div class="related-posts-container">
         <div class="related-posts">
-            <h2>Topics This Month</h2>
+            <h2>You might love</h2>
             <div class="posts-grid">
-                <a href="https://skillsforchicago.org/blog-2/">
+                <a href="#">
                 <div class="post-card">
-                    <div class="post-image" style="background-image: url('https://skillsforchicago.org/wp-content/uploads/2025/05/From-Uncertainty-to-Opportunity-How-Rasheed-Found-His-Perfect-Match.png')">
+                    <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="post-tag">SUCCESS STORIES</div>
                     </div>
                     <div class="post-content">
                         <h3 class="post-title">From Uncertainty to Opportunity: How Rasheed Found His Perfect Match</h3>
                         <div class="post-meta">
-                            written by <a href="#">Skills For Chicago</a> published on Feb 27, 2025
+                            written by <a href="#">Skills For Chicago</a> published on June 3, 2025
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="https://skillsforchicago.org/blog-3/">
+            <a href="#">
                 <div class="post-card">
-                    <div class="post-image" style="background-image: url('https://skillsforchicago.org/wp-content/uploads/2025/05/The-Beauty-in-Giving-Back-A-Full-Circle-Journey-from-Job-Seeker-to-Mentor.jpg')">
+                    <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="post-tag">JOB SEEKER TIPS & TOOLS</div>
                     </div>
                     <div class="post-content">
                         <h3 class="post-title">The Beauty in Giving Back: A Full-Circle Journey from Job Seeker to Mentor</h3>
                         <div class="post-meta">
-                            written by <a href="#">Skills For Chicago</a> published on Feb 12, 2025
+                            written by <a href="#">Skills For Chicago</a> published on June 12, 2025
                         </div>
                     </div>
                 </div>
             </a>
-            <a href="https://skillsforchicago.org/blog-4/">
+            <a href="#">
                 <div class="post-card">
-                    <div class="post-image" style="background-image: url('https://skillsforchicago.org/wp-content/uploads/2025/05/Completing-the-Pass-Keiths-Journey-of-Relentless-Drive-scaled.jpg')">
+                    <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
                         <div class="post-tag">SUCCESS STORIES</div>
                     </div>
                     <div class="post-content">
                         <h3 class="post-title">Completing the Pass: Keith's Journey of Relentless Drive</h3>
                         <div class="post-meta">
-                            written by <a href="#">Skills For Chicago</a> published on Jan 27, 2025
+                            written by <a href="#">Skills For Chicago</a> published on May 14, 2025
                         </div>
                     </div>
                 </div>
@@ -3026,59 +2968,9 @@ padding-left: 7%;
             </div>
         </div>
     </div>
-</section>
-<section>
-    <div class="related-posts-container">
-       <div class="related-posts">
-           <div class="posts-grid">
-               <a href="https://skillsforchicago.org/blog-5/">
-               <div class="post-card">
-                   <div class="post-image" style="background-image: url('https://skillsforchicago.org/wp-content/uploads/2025/05/Seeds-of-Strength-How-Khalilah-Cultivated-a-New-Career-Path-scaled.jpg')">
-                       <div class="post-tag">SUCCESS STORIES</div>
-                   </div>
-                   <div class="post-content">
-                       <h3 class="post-title">Seeds of Strength: How Khalilah Cultivated a New Career Path
-                    </h3>
-                       <div class="post-meta">
-                           written by <a href="#">Skills For Chicago</a> published on Sept 18, 2024
-                       </div>
-                   </div>
-               </div>
-           </a>
-           <a href="https://skillsforchicago.org/blog-1/">
-               <div class="post-card">
-                   <div class="post-image" style="background-image: url('https://skillsforchicago.org/wp-content/uploads/2025/05/Navigating-Change-Efrains-Path-to-Stability-and-Impact.jpeg')">
-                       <div class="post-tag">JOB SEEKER TIPS & TOOLS</div>
-                   </div>
-                   <div class="post-content">
-                       <h3 class="post-title">Navigating Change Efrain's Path to Stability and Impact</h3>
-                       <div class="post-meta">
-                           written by <a href="#">Skills For Chicago</a> published on Mar 20, 2025
-                       </div>
-                   </div>
-               </div>
-           </a>
-           <!-- <a href="#">
-               <div class="post-card">
-                   <div class="post-image" style="background-image: url('https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80')">
-                       <div class="post-tag">SUCCESS STORIES</div>
-                   </div>
-                   <div class="post-content">
-                       <h3 class="post-title">Completing the Pass: Keith's Journey of Relentless Drive</h3>
-                       <div class="post-meta">
-                           written by <a href="#">Skills For Chicago</a> published on May 14, 2025
-                       </div>
-                   </div>
-               </div>
-           </a> -->
-           </div>
-       </div>
-   </div>
-</section>
 
-
-         <!-- Footer Content -->
-    <footer class="modern-footer">
+     <!-- Footer Content -->
+     <footer class="modern-footer">
         <div class="footer-container">
             <div class="footer-top">
                 <a href="https://skillsforchicago.org/"><div class="footer-logo">
@@ -3098,68 +2990,68 @@ padding-left: 7%;
                 <div class="footer-nav-section">
                     <h3>Home</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/">Home</a>
+                        <a href="#">Home</a>
                     </div>
                 </div>
                 <div class="footer-nav-section">
                     <h3>About Us</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
-                        <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
-                        <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
-                        <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
-                        <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                        <a href="#">Who We Are</a>
+                        <a href="#">Our Team</a>
+                        <a href="#">Annual Reports & Financials</a>
+                        <a href="#">Our Work in Action</a>
+                        <a href="#">Careers at Skills</a>
                     </div>
                 </div>
                 
                 <div class="footer-nav-section">
                     <h3>Job Seekers</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
-                        <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
-                        <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                        <a href="#">Find A Job</a>
+                        <a href="#">Career Resources</a>
+                        <a href="#">FAQs for Job Seekers</a>
                     </div>
                 </div>
                 
                 <div class="footer-nav-section">
                     <h3>Employers</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
-                        <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                        <a href="#">Partner With Us</a>
+                        <a href="#">Our Employer Partners</a>
                     </div>
                 </div>
 
                 <div class="footer-nav-section">
                     <h3>COMMUNITY PARTNERS</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
-                        <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
-                        <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                        <a href="#">Collaborate With Us</a>
+                        <a href="#">Community Impact</a>
+                        <a href="#">Our Community Partners</a>
                     </div>
                 </div>
                 <div class="footer-nav-section">
                     <h3>Donors</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/donors/">Donors</a>
+                        <a href="#">Donors</a>
                     </div>
                 </div>
                 <div class="footer-nav-section">
                     <h3>EVENTS</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
-                        <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                        <a href="#">Events & Highlights</a>
+                        <a href="#">Employment Champions Breakfast</a>
                     </div>
                 </div>
                 <div class="footer-nav-section">
                     <h3>NATIONAL EXPANSION</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
+                        <a href="#">National Expansion</a>
                     </div>
                 </div>
                 <div class="footer-nav-section">
                     <h3>CONTACT US</h3>
                     <div class="footer-nav-links">
-                        <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
+                        <a href="#">Contact Us</a>
                     </div>
                 </div>
             </div>
@@ -3176,11 +3068,11 @@ padding-left: 7%;
                     </div>
                     <div class="footer-accordion-content">
                         <ul class="footer-mobile-links">
-                        <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
-                        <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
-                        <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
-                        <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
-                        <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                            <li><a href="#">Who We Are</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Annual Reports & Financials</a></li>
+                            <li><a href="#">Our Work in Action</a></li>
+                            <li><a href="#">Careers at Skills</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3195,9 +3087,9 @@ padding-left: 7%;
                     </div>
                     <div class="footer-accordion-content">
                         <ul class="footer-mobile-links">
-                        <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
-                        <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
-                        <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                            <li><a href="#">Find A Job</a></li>
+                            <li><a href="#">Career Resources</a></li>
+                            <li><a href="#">FAQs for Job Seekers</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3212,8 +3104,8 @@ padding-left: 7%;
                     </div>
                     <div class="footer-accordion-content">
                         <ul class="footer-mobile-links">
-                           <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
-                        <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                            <li><a href="#">Partner With Us</a></li>
+                            <li><a href="#">Our Employer Partners</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3228,9 +3120,9 @@ padding-left: 7%;
                     </div>
                     <div class="footer-accordion-content">
                         <ul class="footer-mobile-links">
-                        <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
-                        <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
-                        <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                            <li><a href="#">Collaborate With Us</a></li>
+                            <li><a href="#">Community Impact</a></li>
+                            <li><a href="#">Our Community Partners</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3244,7 +3136,7 @@ padding-left: 7%;
                     </div>
                     <div class="footer-accordion-content">
                         <ul class="footer-mobile-links">
-                            <li><a href="https://skillsforchicago.org/donors/">Donors</a></li>
+                            <li><a href="#">Donors</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3259,8 +3151,8 @@ padding-left: 7%;
                     </div>
                     <div class="footer-accordion-content">
                         <ul class="footer-mobile-links">
-                        <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
-                        <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                            <li><a href="#">Events & Highlights</a></li>
+                            <li><a href="#">Employment Champions Breakfast</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3275,7 +3167,7 @@ padding-left: 7%;
                     </div>
                     <div class="footer-accordion-content">
                         <ul class="footer-mobile-links">
-                            <li><a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a></li>
+                            <li><a href="#">National Expansion</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3291,7 +3183,7 @@ padding-left: 7%;
                     </div>
                     <div class="footer-accordion-content">
                         <ul class="footer-mobile-links">
-                            <li><a href="https://skillsforchicago.org/contactus/">Contact Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
                         </ul>
                     </div>
                 </div>
@@ -3304,188 +3196,21 @@ padding-left: 7%;
             </div>
         </div>
     </footer>
-</div>
+    
     <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const container = document.querySelector('.carousel-container');
-    const panels = document.querySelectorAll('.carousel-panel');
-    const prevArrow = document.querySelector('.prev-arrow');
-    const nextArrow = document.querySelector('.next-arrow');
-    
-    // Clone arrows and append directly to container for mobile view
-    const prevArrowClone = prevArrow.cloneNode(true);
-    const nextArrowClone = nextArrow.cloneNode(true);
-    prevArrowClone.classList.add('mobile-arrow');
-    nextArrowClone.classList.add('mobile-arrow');
-    container.appendChild(prevArrowClone);
-    container.appendChild(nextArrowClone);
-    
-    // Initially hide mobile arrows
-    const mobileArrows = document.querySelectorAll('.mobile-arrow');
-    mobileArrows.forEach(arrow => {
-        arrow.style.display = 'none';
-    });
-    
-    // Set up carousel data with actual content from the page
-    const carouselItems = [
-        {
-            left: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/From-Uncertainty-to-Opportunity-How-Rasheed-Found-His-Perfect-Match.png",
-                alt: "People in classroom setting"
-            },
-            center: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/Navigating-Change-Efrains-Path-to-Stability-and-Impact.jpeg",
-                alt: "Chicago Skyline",
-                tag: "CANDIDATE STORIES",
-                title: "Navigating Change: Efrain's Path to Stability and Impact",
-                author: "Skills For Chicago",
-                date: "9. 6. 2021"
-            },
-            right: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/The-Beauty-in-Giving-Back-A-Full-Circle-Journey-from-Job-Seeker-to-Mentor.jpg",
-                alt: "Chicago Building"
-            }
-        },
-        {
-            left: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/Navigating-Change-Efrains-Path-to-Stability-and-Impact.jpeg",
-                alt: "Office meeting"
-            },
-            center: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/The-Beauty-in-Giving-Back-A-Full-Circle-Journey-from-Job-Seeker-to-Mentor.jpg",
-                alt: "Chicago Downtown",
-                tag: "JOB SEEKER TIPS",
-                title: "The Beauty in Giving Back: A Full-Circle Journey from Job Seeker to Mentor",
-                author: "Skills For Chicago",
-                date: "8. 22. 2021"
-            },
-            right: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/From-Uncertainty-to-Opportunity-How-Rasheed-Found-His-Perfect-Match.png",
-                alt: "Job fair"
-            }
-        },
-        {
-            left: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/The-Beauty-in-Giving-Back-A-Full-Circle-Journey-from-Job-Seeker-to-Mentor.jpg",
-                alt: "Training session"
-            },
-            center: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/From-Uncertainty-to-Opportunity-How-Rasheed-Found-His-Perfect-Match.png",
-                alt: "Chicago River",
-                tag: "EMPLOYER PARTNERSHIPS",
-                title: "From Uncertainty to Opportunity How Rasheed Found His Perfect Match",
-                author: "Skills For Chicago",
-                date: "9. 15. 2021"
-            },
-            right: {
-                image: "https://skillsforchicago.org/wp-content/uploads/2025/05/Navigating-Change-Efrains-Path-to-Stability-and-Impact.jpeg",
-                alt: "Business district"
-            }
-        }
-    ];
-    
-    let currentIndex = 0;
-    let isMobileView = window.innerWidth <= 991;
-    
-    function updateCarousel() {
-        const item = carouselItems[currentIndex];
-        
-        if (isMobileView) {
-            // In mobile view, handle panel visibility
-            panels.forEach((panel) => {
-                panel.style.display = 'block';
-                panel.classList.remove('active-mobile');
+        // Optional JavaScript for enhanced interactivity
+        document.addEventListener('DOMContentLoaded', function() {
+            const postCards = document.querySelectorAll('.post-card');
+            
+            postCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // Navigate to the post link (in a real implementation)
+                    // window.location.href = this.getAttribute('data-link');
+                });
             });
-            
-            // Show only the center panel
-            panels[1].classList.add('active-mobile');
-            
-            // Show mobile arrows, hide panel arrows
-            mobileArrows.forEach(arrow => {
-                arrow.style.display = 'flex';
-            });
-            document.querySelectorAll('.carousel-panel .nav-arrow').forEach(arrow => {
-                arrow.style.display = 'none';
-            });
-            
-            // Update all panel content
-            panels[0].querySelector('img').src = item.left.image;
-            panels[0].querySelector('img').alt = item.left.alt;
-            
-            panels[1].querySelector('img').src = item.center.image;
-            panels[1].querySelector('img').alt = item.center.alt;
-            panels[1].querySelector('.tag').textContent = item.center.tag;
-            panels[1].querySelector('.title').textContent = item.center.title;
-            panels[1].querySelector('.meta').innerHTML = `written by <a href="#">${item.center.author}</a> published on ${item.center.date}`;
-            
-            panels[2].querySelector('img').src = item.right.image;
-            panels[2].querySelector('img').alt = item.right.alt;
-            
-        } else {
-            // Desktop view - ensure all panels are visible correctly
-            panels.forEach((panel) => {
-                panel.style.display = 'block';
-                panel.classList.remove('active-mobile');
-            });
-            
-            // Hide mobile arrows, show panel arrows
-            mobileArrows.forEach(arrow => {
-                arrow.style.display = 'none';
-            });
-            document.querySelectorAll('.carousel-panel .nav-arrow').forEach(arrow => {
-                arrow.style.display = 'flex';
-            });
-            
-            // Update all panels
-            panels[0].querySelector('img').src = item.left.image;
-            panels[0].querySelector('img').alt = item.left.alt;
-            
-            panels[1].querySelector('img').src = item.center.image;
-            panels[1].querySelector('img').alt = item.center.alt;
-            panels[1].querySelector('.tag').textContent = item.center.tag;
-            panels[1].querySelector('.title').textContent = item.center.title;
-            panels[1].querySelector('.meta').innerHTML = `written by <a href="#">${item.center.author}</a> published on ${item.center.date}`;
-            
-            panels[2].querySelector('img').src = item.right.image;
-            panels[2].querySelector('img').alt = item.right.alt;
-        }
-    }
-    
-    function goToNextSlide() {
-        currentIndex = (currentIndex + 1) % carouselItems.length;
-        updateCarousel();
-    }
-    
-    function goToPrevSlide() {
-        currentIndex = (currentIndex - 1 + carouselItems.length) % carouselItems.length;
-        updateCarousel();
-    }
-    
-    // Set up event listeners for all arrows
-    prevArrow.addEventListener('click', goToPrevSlide);
-    nextArrow.addEventListener('click', goToNextSlide);
-    prevArrowClone.addEventListener('click', goToPrevSlide);
-    nextArrowClone.addEventListener('click', goToNextSlide);
-    
-    // Check for mobile view when the window is resized
-    window.addEventListener('resize', function() {
-        const wasInMobileView = isMobileView;
-        isMobileView = window.innerWidth <= 991;
-        
-        // If the view mode has changed, update the carousel
-        if (wasInMobileView !== isMobileView) {
-            updateCarousel();
-        }
-    });
-    
-    // Initialize carousel
-    updateCarousel();
-    
-    // Auto scroll every 15 seconds
-    setInterval(goToNextSlide, 15000);
-});
+        });
     </script>
-     <script>
+        <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // Smooth scrolling for anchor links
                 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -3562,62 +3287,62 @@ padding-left: 7%;
                 });
             });
         </script>
-                <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-            // Mobile Dropdown Functionality
-            const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Dropdown Functionality
+        const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+        
+        mobileDropdowns.forEach(dropdown => {
+            const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
             
-            mobileDropdowns.forEach(dropdown => {
-                const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+            dropdownToggle.addEventListener('click', function() {
+                // Toggle active class on clicked dropdown
+                dropdown.classList.toggle('active');
                 
-                dropdownToggle.addEventListener('click', function() {
-                    // Toggle active class on clicked dropdown
-                    dropdown.classList.toggle('active');
-                    
-                    // Optionally close other dropdowns when one is opened
-                    // Comment this out if you want multiple dropdowns to be open simultaneously
-                    mobileDropdowns.forEach(otherDropdown => {
-                        if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
-                            otherDropdown.classList.remove('active');
-                        }
-                    });
-                });
-            });
-            
-            // Close dropdowns when a link inside is clicked
-            const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
-            dropdownLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                    // Optionally close the dropdown when a link is clicked
-                    // Comment this out if you want the dropdown to stay open after a link is clicked
-                    const parentDropdown = this.closest('.mobile-dropdown');
-                    setTimeout(() => {
-                        parentDropdown.classList.remove('active');
-                        
-                        // Also close the mobile menu
-                        document.querySelector('.hamburger').classList.remove('open');
-                        document.querySelector('.mobile-nav').classList.remove('open');
-                        document.querySelector('.overlay').classList.remove('active');
-                        document.querySelector('body').style.overflow = '';
-                    }, 100); // Small delay to allow the click to register
-                });
-            });
-            
-            // Make sure mobile dropdowns are closed when menu is closed
-            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-            if (mobileMenuToggle) {
-                mobileMenuToggle.addEventListener('click', function() {
-                    // If closing the mobile menu, close all dropdowns
-                    if (document.querySelector('.mobile-nav').classList.contains('open')) {
-                        setTimeout(() => {
-                            mobileDropdowns.forEach(dropdown => {
-                                dropdown.classList.remove('active');
-                            });
-                        }, 300); // Delay to match the mobile menu closing animation
+                // Optionally close other dropdowns when one is opened
+                // Comment this out if you want multiple dropdowns to be open simultaneously
+                mobileDropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                        otherDropdown.classList.remove('active');
                     }
                 });
-            }
+            });
         });
-                </script>
+        
+        // Close dropdowns when a link inside is clicked
+        const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Optionally close the dropdown when a link is clicked
+                // Comment this out if you want the dropdown to stay open after a link is clicked
+                const parentDropdown = this.closest('.mobile-dropdown');
+                setTimeout(() => {
+                    parentDropdown.classList.remove('active');
+                    
+                    // Also close the mobile menu
+                    document.querySelector('.hamburger').classList.remove('open');
+                    document.querySelector('.mobile-nav').classList.remove('open');
+                    document.querySelector('.overlay').classList.remove('active');
+                    document.querySelector('body').style.overflow = '';
+                }, 100); // Small delay to allow the click to register
+            });
+        });
+        
+        // Make sure mobile dropdowns are closed when menu is closed
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                // If closing the mobile menu, close all dropdowns
+                if (document.querySelector('.mobile-nav').classList.contains('open')) {
+                    setTimeout(() => {
+                        mobileDropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }, 300); // Delay to match the mobile menu closing animation
+                }
+            });
+        }
+    });
+            </script>
 </body>
 </html>

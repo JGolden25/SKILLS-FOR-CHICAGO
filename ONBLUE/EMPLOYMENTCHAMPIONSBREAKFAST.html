@@ -278,9 +278,9 @@ font-family: Greycliff CF, Bold;
         }
         
         .sponsor-logo {
-            height: 50px;
-            max-width: 150px;
-            object-fit: contain;
+            height: auto !important;
+    max-width: 200px !important;
+    object-fit: contain;
         }
         
         /* Recap Section */
@@ -529,7 +529,7 @@ font-family: Greycliff CF, Bold;
     }
     
     .sponsors-overview {
-        padding: 40px 0;
+        padding: 40px 0px 0px 0px;
         text-align: center;
     }
     
@@ -686,7 +686,7 @@ font-family: Greycliff CF, Bold;
         }
 
         .partner-logo {
-            height: 100px;
+            /* height: 100px; */
             /* background-color: #fff; */
             border-radius: 8px;
             display: flex;
@@ -723,6 +723,10 @@ font-family: Greycliff CF, Bold;
             
             .partners-grid {
                 grid-template-columns: repeat(3, 1fr);
+            }
+
+            .action-button {
+                margin-bottom: 5%;
             }
         }
 
@@ -1081,7 +1085,7 @@ font-family: Greycliff CF, Bold;
 }
 .action-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: font-family: Greycliff CF, Light;
 }
 .action-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1214,7 +1218,7 @@ font-family: Greycliff CF, Bold;
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -1634,7 +1638,7 @@ padding-bottom: 0;
         
         .team-subtitle {
             font-size: 26px;
-            font-weight: 600;
+            font-weight: 700;
             color: #526e3f;
             margin-bottom: 25px;
         }
@@ -2602,7 +2606,7 @@ padding-bottom: 0;
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -2650,7 +2654,7 @@ padding-bottom: 0;
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -2793,7 +2797,7 @@ padding-bottom: 0;
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -2894,18 +2898,97 @@ padding-bottom: 0;
     text-decoration: none;
     color: #4F6B3A;
 }  
+
+/* Additional mobile-specific fixes */
+.partners-grid, .partners-grid2 {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .team-container {
+    padding: 0;
+  }
+  
+  .social-strip-container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  max-width: 100%;
 }
-    </style>
+
+/* Fix any potential culprits for overflow */
+.container, .container2, 
+.hero-container, .footer-container,
+.detailed-schedule, .partners-grid,
+.team-container, .social-strip-container,
+.gallery-grid, .header-container,
+.event-header, .partners-section {
+  max-width: 100%;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+.detailed-schedule {
+    padding: 0px 5% 5% 5%;
+}
+
+.board-grid-section {
+    text-align: center;
+    padding: 15% 6% 0px 3%;
+    /* margin-right: 5%; */
+    /* width: 90%; */
+}
+
+/* Ensure images don't cause overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Handle specific elements that might be too wide */
+.countdown-container {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.countdown-box {
+  width: auto;
+  max-width: 80px;
+}
+
+/* Make sure tables and other potentially wide elements adjust */
+table {
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+/* Fix any absolute positioned elements that might extend beyond viewport */
+.mobile-nav {
+  max-width: 100vw;
+}
+}
+    @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -3311,24 +3394,25 @@ padding-bottom: 0;
             <div class="sponsor-logos-container">
                 <!-- Presenting sponsors -->
                 <div class="tier-sponsors" id="Presenting-sponsors" style="display: block;">
-                    <img src="https://api.placeholder.com/300x150?text=Jewel+Osco" alt="Jewel Osco" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Logo-Jewel-Osco-Color.png" alt="Jewel Osco" class="sponsor-logo">
                 </div>
                 
                 <!-- Champion sponsors -->
                 <div class="tier-sponsors" id="Champion-sponsors" style="display: none;">
-                    <img src="https://api.placeholder.com/200x100?text=ULTA" alt="ULTA Beauty" class="sponsor-logo">
-                    <img src="https://api.placeholder.com/200x100?text=Allstate" alt="Allstate" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-29_2x.png" alt="ULTA Beauty" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-1.png" alt="Allstate" class="sponsor-logo">
                 </div>
                 
                 <!-- Ambassador sponsors -->
                 <div class="tier-sponsors" id="Ambassador-sponsors" style="display: none;">
-                    <img src="https://api.placeholder.com/180x90?text=AON" alt="AON" class="sponsor-logo">
-                    <img src="https://api.placeholder.com/180x90?text=BDT&MSD" alt="BDT&MSD" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-33_2x.png" alt="ULTA Beauty" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-2_2x.png" alt="AON" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-3_2x.png" alt="BDT&MSD" class="sponsor-logo">
                 </div>
                 
                 <!-- Advocate sponsors -->
                 <div class="tier-sponsors" id="Advocate-sponsors" style="display: none;">
-                    <img src="https://api.placeholder.com/150x80?text=BCBS" alt="BlueCross BlueShield of Illinois" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-4_2x.png" alt="BlueCross BlueShield of Illinois" class="sponsor-logo">
                 </div>
                 
                 <!-- Supporter sponsors -->
@@ -3360,16 +3444,16 @@ padding-bottom: 0;
     <div class="partners-grid">
         <!-- Row 1 -->
         <div class="partner-logo" id="logo-1">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-29_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-2">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-4.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-3">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-31_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-4">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-32_2x.png" alt="People at a community event">
         </div>
     </div>
 </section>
@@ -3380,7 +3464,7 @@ padding-bottom: 0;
     <div class="partners-grid2">
         <!-- Row 1 -->
         <div class="partner-logo" id="logo-1">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-33_2x.png" alt="People at a community event">
         </div>
     </div>
 </section>
@@ -3391,43 +3475,43 @@ padding-bottom: 0;
     <div class="partners-grid">
         <!-- Row 1 -->
         <div class="partner-logo" id="logo-1">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-1.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-2">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-2_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-3">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-8_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-4">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-4_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-5">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-5_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-6">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-6_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-7">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-7_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-8">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-8_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-9">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-2.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-10">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-10_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-11">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-11_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-12">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-12_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-13">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-13_2x.png" alt="People at a community event">
         </div>
     </div>
 </section>
@@ -3438,49 +3522,49 @@ padding-bottom: 0;
     <div class="partners-grid">
         <!-- Row 1 -->
         <div class="partner-logo" id="logo-1">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-14_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-2">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-15_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-3">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-16_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-4">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-17_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-5">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-18_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-6">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-3.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-7">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-20_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-8">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-21_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-9">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-22_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-10">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Latham___Watkins_Logo.svg_.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-11">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-24_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-12">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-25_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-13">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-26_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-14">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-27_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-15">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-28_2x.png" alt="People at a community event">
         </div>
     </div>
 </section>
@@ -3491,174 +3575,190 @@ padding-bottom: 0;
     <div class="partners-grid">
         <!-- Row 1 -->
         <div class="partner-logo" id="logo-1">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-34_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-2">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-5.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-3">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-6.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-4">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-37_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-5">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-38_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-6">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-39_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-7">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-CNO.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-8">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-7.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-9">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BCBSIL_center_rgb.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-42_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-10">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/BMO-logo_2-002.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-8.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-11">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Carelon-color-logo.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-freedman-seating.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-12">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-45_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-13">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-46_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-14">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-47_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-15">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-48_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-16">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-49_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-17">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-9.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-18">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-10.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-19">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-northwestern-medicine-logo.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-20">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-11.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-21">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-54_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-22">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-55_2x.png" alt="People at a community event">
         </div>
         <div class="partner-logo" id="logo-23">
-            <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Chase-logo-scaled.png" alt="People at a community event">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-56_2x.png" alt="People at a community event">
         </div>
     </div>
 </section>
  <!-- Board Grid Section -->
  <section id="Friend" class="board-grid-section">
-    <div class="container">
+    <div class="container" style="padding: 0px;">
         <h2 class="event-recap-title">Friend Sponsor</h2>
 
         <div class="board-grid">
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Bridget Altenburg</h4>
+                <h4 class="board-grid-name">AbbVie</h4>
                
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Jeff Black</h4>
+                <h4 class="board-grid-name">BCG Chicago</h4>
                
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Carolyn Booth</h4>
+                <h4 class="board-grid-name">BUILD Inc.</h4>
                
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">John Challenger</h4>
+                <h4 class="board-grid-name">CBRE</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Andrew Dupuy</h4>
+                <h4 class="board-grid-name">Citi</h4>
                
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Christina Coniey</h4>
+                <h4 class="board-grid-name">Ferrara</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">William Farrow</h4>
+                <h4 class="board-grid-name">Goodwill Greater Milwaukee & Chicago</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Dirk Fehler</h4>
+                <h4 class="board-grid-name">Jim Gordon & The Edgewater Funds</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Paul Finnegan</h4>
+                <h4 class="board-grid-name">Help at Home</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Thierry Francois</h4>
+                <h4 class="board-grid-name">Lockton</h4>
                
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Tanner Horsley</h4>
+                <h4 class="board-grid-name">Marie Trzupek Lynch and John Lynch</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Catherine Kaufman</h4>
+                <h4 class="board-grid-name">Marmon Holdings, Inc.</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Mark Kendall</h4>
+                <h4 class="board-grid-name">Narratent Digital Marketing</h4>
                
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Kelly Moriarty</h4>
+                <h4 class="board-grid-name">Nixon Peabody LLP</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Monique Mayes</h4>
+                <h4 class="board-grid-name">ORBA – Certified Public Accountants</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Elexony Todd</h4>
+                <h4 class="board-grid-name">Patzik, Frank & Samonty Ltd.</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Claudia Sierra</h4>
+                <h4 class="board-grid-name">Preservation of Affordable Housing</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Gary White</h4>
+                <h4 class="board-grid-name">Rush University Medical Center</h4>
                 
             </div>
             
             <div class="board-grid-card">
-                <h4 class="board-grid-name">Michael A. Wilder</h4>
+                <h4 class="board-grid-name">Sagin, LLC</h4>
+                
+            </div>
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Salesforce.org</h4>
+                
+            </div>
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Scimo Family Fund</h4>
+                
+            </div>
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Shaker Recruitment Marketing</h4>
+                
+            </div>
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Valtech</h4>
                 
             </div>
         </div>
@@ -3670,8 +3770,10 @@ padding-bottom: 0;
     <div class="container2" style="background-color:#F8F8F8">
         <h2 class="event-recap-title2" style="color:#353232;">2024 Employment Champions Breakfast Recap</h2>
     </div>  
-        <img src="/api/placeholder/880/500" alt="Chicago skyline at sunset" class="event-recap-image">
-        
+        <!-- <img src="/api/placeholder/880/500" alt="Chicago skyline at sunset" class="event-recap-image"> -->
+        <video src="2024 Employment Champions Breakfast Recap.mp4" type="video/mp4" poster="2024 Employment Champions Breakfast Recap_PosterImage.png" width="1920" height="1080" muted loop autoplay>
+            Sorry, your browser doesn't support HTML5 video tag.
+        </video>
         <h3 class="talent-section-title">Hear From Our Talent</h3>
         
         <div class="talent-stories">
@@ -3829,10 +3931,10 @@ padding-bottom: 0;
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             

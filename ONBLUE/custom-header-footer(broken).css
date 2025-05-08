@@ -1,0 +1,1028 @@
+/* Font Families */
+h1 {
+    font-family: Greycliff CF, Bold;
+   }
+   h2 {
+    font-family: Greycliff CF, Bold;
+   }
+   h3 {
+    font-family: Greycliff CF, Bold;
+   }
+   p {
+   font-family: Greycliff CF, light;
+   }
+   a {
+   font-family: Greycliff CF, light;
+   }
+   span {
+   font-family: Greycliff CF;
+   }
+           
+           a {
+               text-decoration: none;
+               color: inherit;
+           }
+           .page-title {
+            margin-top: 3%;
+            font-family: Greycliff CF, Bold;
+            font-weight: 700;
+        }
+
+        .page-subtitle {
+            font-weight: 600;
+        }
+
+        .page-description {
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.6;
+            font-family: 'Greycliff CF';
+            font-weight: 300;
+        }
+/* Social Strip */
+.social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+
+/* Header Styles */
+.header {
+    padding: 15px 3%;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 60px 0px 35px;
+}
+
+.logo {
+    width: 150px;
+}
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.skills-dropdown-nav {
+    margin: 0 auto;
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: Greycliff CF, Light;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4d7e32;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: Greycliff CF, Light;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f3;
+    color: #4d7e32;
+}
+
+/* Donate Button */
+.donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f;
+    color: #333333;
+    padding: 5px 5px 5px 13px !important;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px;
+    border: 1px solid #707070;
+}
+
+.donate-button span {
+    margin-right: 5px;
+}
+
+.donate-button:hover .circle-icon i {
+    color: #333333;
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.donate-button:hover {
+    background-color: #7db32e;
+    transform: translateY(-2px);
+}
+
+.donate-button i {
+    transform: rotate(-45deg);
+}
+
+.donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.circle-icon {
+    width: 35px !important;
+    height: 35px !important;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate-button:hover .circle-icon i {
+    color: #333333;
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1001;
+}
+
+:root {
+    margin-top: 0px !important;
+}
+
+.wp-block-group.alignfull.has-global-padding.is-layout-constrained.wp-block-group-is-layout-constrained {
+    padding-bottom: 0px !important;
+  }
+
+.hamburger {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    border-radius: 3px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+    top: 10px;
+}
+
+.hamburger span:nth-child(4) {
+    top: 20px;
+}
+
+.hamburger.open span:nth-child(1) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+}
+
+.hamburger.open span:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.hamburger.open span:nth-child(4) {
+    top: 10px;
+    width: 0%;
+    left: 50%;
+}
+
+/* Mobile Navigation Panel */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100%;
+    background-color: white;
+    padding: 80px 40px 40px;
+    z-index: 1000;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.open {
+    right: 0;
+}
+
+.mobile-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mobile-nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-links a:hover {
+    color: #4d7e32;
+}
+
+.mobile-donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f;
+    color: #333333;
+    padding: 3px 5px 3px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px;
+    border: 1px solid #707070;
+    margin-top: 30px;
+}
+
+.mobile-donate-button span {
+    margin-right: 5px;
+    font-family: font-family: Greycliff CF, Light;
+}
+
+.mobile-donate-button:hover .circle-icon i {
+    color: #333333;
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.mobile-donate-button:hover {
+    background-color: #7db32e;
+    transform: translateY(-2px);
+}
+
+.mobile-donate-button i {
+    transform: rotate(-45deg);
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 300px;
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 15px !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+    padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #4d7e32 !important;
+}
+
+/* Footer Styles */
+.modern-footer {
+    background-color: #1F3707;
+    color: white;
+    padding: 60px 0 0 0;
+    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.modern-footer::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+    width: 60%;
+    height: 140%;
+    background-image: url('https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Artboard-1-copy.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.20;
+}
+
+.footer-container, .footer-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    padding: 0 6%;
+    font-weight: 600;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer-divider {
+    flex: 1;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0 40px;
+}
+
+.footer-logo img {
+    height: 80px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 0.8;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 60px;
+}
+
+.footer-nav-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+}
+
+.footer-nav-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    height: 22px;
+    line-height: 22px;
+}
+
+.footer-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    transition: opacity 0.3s ease;
+    font-weight: 300;
+    font-family: font-family: Greycliff CF, Light;
+}
+
+.footer-nav-links a:hover {
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+.footer-copyright {
+    background-color: #1F3707;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #DCDCDC;
+}
+
+/* Mobile Footer Accordion */
+.footer-accordion {
+    display: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-accordion-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-accordion-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+}
+
+.footer-accordion-icon {
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.footer-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.footer-accordion.active .footer-accordion-icon {
+    transform: rotate(180deg);
+}
+
+.footer-accordion.active .footer-accordion-content {
+    max-height: 300px;
+    padding-bottom: 15px;
+}
+
+.footer-mobile-links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-mobile-links li {
+    margin-bottom: 12px;
+}
+
+.footer-mobile-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    opacity: 0.9;
+    text-align: left;
+    font-weight: 300;
+}
+
+.footer-mobile-links a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+
+
+/* Fix for Hamburger Menu X Position */
+.hamburger.open {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1002;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 1000px) {
+    .hero-content,
+    .hero-image,
+    .ways-content,
+    .ways-image,
+    .donation-card,
+    .donation-header-content {
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        box-sizing: border-box;
+    }
+
+    .hero-content {
+        padding: 0px 4% 10% 5%;
+    }
+  
+    .hero-container {
+        padding: 0;
+        min-height: auto;
+        border: none;
+    }
+  
+    .donation-section .container {
+        padding: 0 15px;
+    }
+  
+    .ways-section {
+        display: block;
+    }
+  
+    .testimonial-card {
+        margin: 60px 15px 0;
+        padding: 60px 15px 30px;
+    }
+  
+    .testimonial-controls {
+        width: calc(100% - 30px);
+        padding: 0;
+    }
+  
+    .hero-image {
+        border-left: none;
+    }
+
+    .hamburger.open {
+        right: 15px;
+    }
+}
+
+/* Hide WordPress theme header elements with zero height */
+:where(.wp-site-blocks) > :first-child {
+    margin-block-start: 0;
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.is-layout-constrained > .alignwide {
+    max-width: var(--wp--style--global--wide-size);
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+:where(.wp-site-blocks) > :last-child {
+    margin-block-end: 0;
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.wp-block-post-title {
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.wp-block-page-list:only-child {
+    flex-grow: 1;
+    display: none !important;
+    height: 0 !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Target common WordPress container elements */
+.wp-site-blocks {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+article.wp-block-post {
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+}
+
+/* Force our content to start at the top */
+.skills-job-listings-wrapper {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Target specific WordPress blocks that might be causing space */
+.wp-block-group, 
+.wp-block-cover,
+.wp-block-template-part,
+.wp-block-template-part > * {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+/* Hide any admins bars if they exist */
+#wpadminbar {
+    display: none !important;
+}
+
+/* Force full width on main containers */
+.wp-site-blocks,
+.entry-content,
+.site-content,
+main {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 1636px) {
+    .main-nav {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 15px 15px;
+    }
+    
+    .header-container {
+        padding: 0px 30px 0px 30px;
+    }
+}
+
+@media (max-width: 1500px) { 
+    .header-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0px 0px 0px 0px;
+    }
+    
+    .nav-links {
+        display: flex;
+        gap: 25px;
+        margin-right: 45px;
+    }
+}
+
+@media (max-width: 1478px) { 
+    .banner-text {
+        font-size: 15px;
+        margin-right: 0%;
+    }
+    
+    /* .header {
+        padding: 15px 15px;
+    } */
+    
+    .banner {
+        padding: 12px 15px;
+    }
+    .skills-job-listings-wrapper .job-listings-container {
+        max-width: 90%;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 1354px) {
+    .main-nav {
+        display: none;
+    }
+
+    .nav-link {
+        padding: 15px 6px;
+    }
+    
+    .header-container {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 1001px) {
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+
+    .skills-dropdown-nav {
+        display: block !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .mobile-menu-toggle {
+        display: block; 
+    }
+    
+    .donate-button {
+        display: none !important;
+    }
+
+    .skills-dropdown-nav {
+        margin: 0 auto;
+        display: none;
+    }
+    
+    .footer-top {
+        flex-direction: column;
+        gap: 0px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .footer-nav {
+        display: none;
+    }
+
+    .footer-accordion {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .mobile-nav {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .footer-nav {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* Fix for mobile menu positioning and display */
+@media (max-width: 1000px) {
+    /* Ensure mobile nav is completely off-screen when closed */
+    
+    /* Fix hamburger menu positioning when open */
+    .hamburger.open {
+        position: fixed;
+        top: 25px;
+        right: 25px;
+        z-index: 1005; /* Ensure it's above other elements */
+    }
+    
+    /* Make sure content doesn't shift when menu opens */
+    body.menu-open {
+        overflow: hidden;
+    }
+    
+    /* Adjust overlay to cover full screen */
+    .overlay.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 1000;
+    }
+    
+    /* Ensure main content doesn't slide or change */
+    #main-content {
+        position: relative;
+        transition: none;
+    }
+    
+    /* Hide the menu peek from the right */
+    .skills-job-listings-wrapper {
+        overflow-x: hidden;
+    }
+    
+    /* Ensure mobile menu toggle is visible and properly positioned */
+    .mobile-menu-toggle {
+        display: block;
+        position: relative;
+        z-index: 1001;
+        margin-right: 10px;
+    }
+}
+
+/* Fix for mobile menu positioning and display without breaking sticky header */
+@media (max-width: 1000px) {
+    /* Ensure mobile nav is completely off-screen when closed but preserve sticky header */
+    
+    
+    body .mobile-nav.open {
+        right: 0 !important;
+    }
+    
+    body .hamburger.open {
+        position: fixed !important;
+        top: 25px !important;
+        right: 25px !important;
+        z-index: 1005 !important;
+    }
+    
+    body.menu-open {
+        overflow: hidden !important;
+    }
+    
+    body .overlay.active {
+        opacity: 1 !important;
+        visibility: visible !important;
+        z-index: 1000 !important;
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    /* Remove the properties that conflict with sticky positioning */
+    /* #main-content {
+        position: relative !important;
+        transition: none !important;
+    } */
+    
+    /* Only hide horizontal overflow, keep vertical scrolling intact */
+    html, body {
+        overflow-x: hidden !important;
+        overflow-y: visible !important;
+    }
+    
+    /* Ensure sticky header still works */
+    .skills-job-listings-wrapper .job-title-header {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 100 !important; /* Lower than mobile menu but high enough to stick */
+    }
+    
+    /* Force the mobile menu toggle visibility */
+    body .mobile-menu-toggle {
+        display: block !important;
+        position: relative !important;
+        z-index: 1001 !important;
+        margin-right: 10px !important;
+    }
+}

@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-family: Greycliff CF, Bold;
         }
         @font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
 
@@ -206,9 +206,10 @@
         
         .team-subtitle {
             font-size: 26px;
-            font-weight: 600;
-            color: #526e3f;
+            font-weight: 700;
+            color: #4F6B3A;
             margin-bottom: 25px;
+            font-family: Greycliff CF, Bold;
         }
         
         .team-description {
@@ -313,6 +314,7 @@
             margin-bottom: 5px;
             color: #1a1a1a;
             text-align: left;
+            font-family: Greycliff CF, Bold;
         }
         
         .staff-title-small {
@@ -320,8 +322,8 @@
             color: #4F6B3A;
             line-height: 1.4;
             text-align: left;
-            font-family: Helvetica Neue, Medium;
-            font-weight: 400;
+            font-family: Greycliff CF, Light;
+            font-weight: 300;
         }
         
         /* Board Section */
@@ -382,10 +384,11 @@
             font-weight: 600;
             color: #526e3f;
             margin-bottom: 10px;
+            font-family: Greycliff CF, Bold;
         }
         
         .board-member-company {
-            font-size: 16px;
+            font-size: 14px;
             margin-bottom: 15px;
             color: #666;
             font-weight: 500;
@@ -500,9 +503,10 @@
 .chair-subtitle {
     font-size: 18px;
     color: #4F6B3A;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 5px;
-    font-family: Helvetica Neue, Italic;
+    font-family: Greycliff CF, Light;
+    font-style: italic;
 }
 
 .chair-years {
@@ -568,6 +572,7 @@
             font-size: 16px;
             font-weight: 700;
             margin-bottom: 5px;
+            font-family: Greycliff CF, Bold;
         }
         
         .board-grid-role {
@@ -1653,7 +1658,7 @@
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -2112,7 +2117,7 @@
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -2160,7 +2165,7 @@
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -2303,7 +2308,7 @@
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -2419,17 +2424,35 @@ img, video, iframe, table, div {
         margin: 0 auto;
     }
 }
-        </style>
+
+@media (max-width: 976px) {
+        .chair-image img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.chair-position {
+    text-align: center;
+    margin: auto;
+}
+        }
+        @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -2618,7 +2641,7 @@ img, video, iframe, table, div {
         <div class="team-container">
             <div class="team-content">
                 <h1>Our Team</h1>
-                <div class="team-subtitle">Dedicated to Equity. Driven by Impact.</div>
+                <div class="team-subtitle" style="color: #4F6B3A;">Dedicated to Equity. Driven by Impact.</div>
                 <p class="team-description">
                     At Skills for Chicago, our team is united by a shared commitment to expanding access to meaningful employment for job seekers across Chicago. With our engaged Board of Directors, we work together to break down barriers to employment, advocate for equitable hiring, and create sustainable economic mobility for underrepresented job seekers across Chicago's south and west sides. Our team is focused on driving employment that goes beyond job placement—building a future where opportunity is accessible to all.
                 </p>
@@ -3061,10 +3084,10 @@ img, video, iframe, table, div {
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             

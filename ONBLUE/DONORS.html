@@ -387,6 +387,7 @@ font-family: Greycliff CF, Bold;
             font-size: 22px;
             line-height: 1.7;
             color: #444;
+            font-family: Greycliff CF, Light;
         }
         
         /* Ways to Give Section */
@@ -408,7 +409,7 @@ font-family: Greycliff CF, Bold;
         
         /* Update the ways-content CSS */
 .ways-content {
-    padding: 60px 40px;
+    padding: 60px 10%;
     background-color: #000000;
     color: white;
     /* Add these properties for vertical centering */
@@ -996,7 +997,7 @@ h2 {
 }
 .action-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: font-family: Greycliff CF, Light;
 }
 .action-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1129,7 +1130,7 @@ h2 {
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -1846,7 +1847,7 @@ h2 {
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -1894,7 +1895,7 @@ h2 {
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -2037,7 +2038,7 @@ h2 {
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -2087,17 +2088,81 @@ h2 {
                 padding: 0px;
             }
         }
-        </style>
+        /* Mobile-specific fixes */
+@media (max-width: 976px) {
+  .hero-content,
+  .hero-image,
+  .ways-content,
+  .ways-image,
+  .donation-card,
+  .donation-header-content {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  .hero-content {
+    padding: 0px 4% 10% 5%;
+  }
+  
+  /* Fix specific issues with the hero section */
+  .hero-container {
+    padding: 0;
+    min-height: auto;
+    border: none;
+  }
+  
+  /* Fix for margin/padding in donation section */
+  .donation-section .container {
+    padding: 0 15px;
+  }
+  
+  /* Fix ways section layout */
+  .ways-section {
+    display: block;
+  }
+  
+  /* Fix testimonial cards */
+  .testimonial-card {
+    margin: 60px 15px 0;
+    padding: 60px 15px 30px;
+  }
+  
+  /* Ensure proper positioning of testimonial controls */
+  .testimonial-controls {
+    width: calc(100% - 30px);
+    padding: 0;
+  }
+  
+  /* Reset the border on hero image in mobile view */
+  .hero-image {
+    border-left: none;
+  }
+
+  /* Fix any fixed positioning */
+  .hamburger.open {
+    right: 15px;
+  }
+}
+        @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -2286,8 +2351,8 @@ h2 {
         <div class="hero-container">
             <div class="hero-content">
                 <h1>Donors</h1>
-                <h2 style="font-size: 22px;
-    margin-bottom: 8%; font-weight: 600;">Invest in Opportunity. Create Pathways to Success.</h2>
+                <h2 style="font-size: 28px;
+    margin-bottom: 8%; font-weight: 700; color: #4F6B3A;">Invest in Opportunity. Create Pathways to Success.</h2>
                 <p class="hero-description">
                     At Skills for Chicago, we know that access to employment is the foundation of financial stability and stronger futures.  donation equips job seekers with the tools, support, and employer connections they need to secure long-term, meaningful employment and build brighter futures.
                 </p>
@@ -2379,24 +2444,24 @@ h2 {
         <div class="ways-content">
             <h1 style="font-weight: 600;">Ways To Give</h1>
             <p style="font-size: 20px;">
-                 support can take many forms, and every contribution expands economic opportunity for job seekers in need.
+                Your support can take many forms, and every contribution expands economic opportunity for job seekers in need.
             </p>
             
             <div class="giving-option">
                 <h3>One-Time or Monthly Giving</h3>
-                <p style="font-size: 20px;">
+                <p style="font-size: 20px; width: 91%;">
                     To stand as a life-changing employment resource by connecting underrepresented job seekers to employers with opportunities across industries.
                 </p>
             </div>
             
             <div class="giving-option">
                 <h3>Employer Match</h3>
-                <p style="font-size: 20px;">
+                <p style="font-size: 20px; width: 91%; margin-bottom: 0px;">
                     If  company offers a matching gift program,  donation can double its impact. Simply submit  donation with  employer's matching gift form to maximize  contribution.
                 </p>
             </div>
             
-            <div class="contact-info" style="font-size: 20px;">
+            <div class="contact-info" style="font-size: 20px; width: 91%;">
                 Contact our Development team at <a><strong>development@skillsforchicago.org</strong></a> with any questions about the process.            </div>
         </div>
     </section>
@@ -2504,10 +2569,10 @@ h2 {
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             

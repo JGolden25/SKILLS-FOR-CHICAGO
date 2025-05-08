@@ -780,7 +780,7 @@ font-family: Greycliff CF, Bold;
         .support-icon {
             width: 13px;
             height: 13px;
-            background-color: #1e3a14;
+            background-color: #4F6B3A !important;
             border-radius: 50%;
             margin-top: 8px;
             flex-shrink: 0;
@@ -789,6 +789,7 @@ font-family: Greycliff CF, Bold;
         .support-text {
             font-size: 20px;
             line-height: 1.6;
+            font-family: Greycliff CF, Light !important;
         }
         
         .support-text strong {
@@ -1469,6 +1470,17 @@ font-family: Greycliff CF, Bold;
             flex: 1;
         }
 
+        .employer-content {
+            display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+        }
+
+        .support-icon {
+            color: #4F6B3A !important;
+        }
+
        
         .communities-title {
             font-size: 52px;
@@ -1482,7 +1494,7 @@ font-family: Greycliff CF, Bold;
             font-size: 22px;
             line-height: 1.7;
             color: #444;
-            width: 70%;
+            width: 90%;
         }
         @media (max-width: 1354px) {
             .container {
@@ -2635,7 +2647,7 @@ padding: 0px;
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -2683,7 +2695,7 @@ padding: 0px;
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -2826,7 +2838,7 @@ padding: 0px;
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -2879,17 +2891,121 @@ padding: 0px;
         .nav-links a:hover {
         color: #4d7e32;
       }
-    </style>
+
+      @media (max-width: 976px) {
+  /* Force html and body to contain all content */
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Make all containers respect viewport width */
+  .container,
+  .join-container,
+  .events-section,
+  .filter-section,
+  .events-list,
+  .event-card,
+  .event-details,
+  .event-image,
+  .employer-support,
+  .employer-support-container,
+  .employer-content,
+  .employer-image,
+  .resources-container,
+  .resources-content,
+  .communities-image,
+  .hero-container,
+  .header-container,
+  .footer-container,
+  .modern-footer,
+  .social-strip,
+  .social-strip-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    /* padding-left: 15px !important;
+    padding-right: 15px !important; */
+    box-sizing: border-box !important;
+  }
+  
+  /* Fix for images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix for filter section that has padding: 20px 35% */
+  .filter-section {
+    padding: 20px 15px !important;
+  }
+  
+  /* Fix for event cards */
+  .event-card {
+    flex-direction: column;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Fix for footer */
+  .footer-container {
+    padding: 0 15px !important;
+  }
+  
+  /* Fix for hamburger menu when open */
+  .hamburger.open {
+    position: fixed;
+    right: 15px;
+  }
+  
+  /* Ensure anything with position: absolute doesn't cause overflow */
+  /* [class*="absolute"],
+  [style*="position: absolute"] {
+    max-width: 100vw;
+  } */
+}
+
+/* General overflow fixes for all screen sizes */
+/* * {
+  box-sizing: border-box;
+} */
+
+/* Force all sections to respect container width */
+/* section {
+  width: 100%;
+  max-width: 100%;
+} */
+    @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+    .communities-title {
+        font-size: 32px;
+    }
+
+    .resources-content {
+        padding: 0% 7% 0% 2%;
+    }
+    
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -3292,10 +3408,10 @@ padding: 0px;
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             

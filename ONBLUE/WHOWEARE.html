@@ -69,6 +69,7 @@ h1 {
         margin-bottom: 2%;
         font-size: 22px;
         font-family: Greycliff CF, Light;
+        width: 90%;
     }
 
     li.employer-partner-text::marker {
@@ -80,7 +81,7 @@ h1 {
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    padding: 0px 0px 0px 80px;
+    padding: 0px 0px 0px 100px;
     background-color: #FFFFFF;
     min-height: 800px;
         }
@@ -100,7 +101,7 @@ h1 {
             font-size: 24px;
     line-height: 1.7;
     color: #444;
-    width: 80%;
+    width: 90%;
     margin-bottom: 5%;
         }
 
@@ -125,9 +126,24 @@ h1 {
                 padding: 0px;
             }
 
+            .employer-partner-text::before {
+    color: #4F6B3A; /*  specified green color */
+    display: inline-block;
+    /* width: 1%; */
+    margin-left: -1em;
+    margin-right: 1%;
+    font-size: 12px !important;
+    align-items: center;
+    justify-content: center;
+}
+
             .team-image {
                 order: -1;
-                height: 600px;
+                height: 550px;
+            }
+
+            .team-image img {
+                height: 550px;
             }
             
             .profile-social-link-big {
@@ -714,9 +730,21 @@ h1 {
     max-width: 50%;
 }
 
+.image-section2 {
+    flex: 1;
+    max-width: 50%;
+}
+
 .image-section img {
     width: 100%;
     height: 800px;
+    object-fit: cover;
+    display: block;
+}
+
+.image-section2 img {
+    width: 100%;
+    height: 900px;
     object-fit: cover;
     display: block;
 }
@@ -767,6 +795,15 @@ h1 {
 
     .image-section {
         max-width: 100%;
+    }
+
+    .image-section2 {
+        max-width: 100%;
+        height: 550px !important;
+    }
+
+    .image-section2 img {
+        height: 550px !important;
     }
 
     .content-section {
@@ -1256,7 +1293,7 @@ h1 {
 }
 .action-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: Greycliff CF, Light;
 }
 .action-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1389,7 +1426,7 @@ h1 {
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -2106,7 +2143,7 @@ h1 {
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -2154,7 +2191,7 @@ h1 {
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -2297,7 +2334,7 @@ h1 {
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -2576,7 +2613,7 @@ h1 {
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -2624,7 +2661,7 @@ h1 {
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -2767,7 +2804,7 @@ h1 {
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -2828,17 +2865,32 @@ h1 {
 .nav-links a:hover {
         color: #4d7e32;
       }
-        </style>
+        @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .team-description {
+        font-size: 20px;
+    }
+
+    .employer-partner-text {
+        font-size: 18px;
+    }
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -3064,8 +3116,8 @@ h1 {
     <!-- Start with the Job Section -->
     <section class="job-section">
         <div class="mission-container">
-            <div class="image-section">
-                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Who-We-are-2c-scaled.jpg" alt="Two people in a job interview, one person in a white shirt reviewing a document with another person in a blue shirt">
+            <div class="image-section2">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Who-We-are-2c-scaled.jpg" alt="Two people in a job interview, one person in a white shirt reviewing a document with another person in a blue shirt" style="height: 900px;">
             </div>
             <div class="content-section">
                 <h2 class="section-heading">Our Mission</h2>
@@ -3094,10 +3146,10 @@ h1 {
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             

@@ -23,7 +23,7 @@ h2 {
  font-family: Greycliff CF, bold;
 }
 p {
-font-family: Greycliff-thin, sans-serif;
+font-family: Greycliff CF, Light;
 }
 a {
             text-decoration: none;
@@ -136,7 +136,7 @@ a {
             color: #7D7E7E;
             font-size: 15px;
             font-weight: 500;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: Greycliff CF, Light;
         }
 
         .nav-links a:hover {
@@ -227,29 +227,23 @@ a {
         
         .collaborate-subtitle {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 700;
             color: #526e3f;
             margin-bottom: 30px;
         }
         
         .collaborate-description {
-            font-size: 18px;
+            font-size: 21px;
             line-height: 1.7;
             color: #444;
             margin-bottom: 40px;
-        }
-        
-        .how-we-work {
-            font-size: 24px;
-            font-weight: 600;
-            color: #526e3f;
-            margin-bottom: 30px;
+            font-family: Greycliff CF, Light;
         }
         
         
         .how-we-work {
             font-size: 24px;
-            font-weight: 600;
+            font-weight: 700;
             color: #526e3f;
             margin-bottom: 30px;
         }
@@ -294,6 +288,7 @@ a {
         
         .work-together-description {
             font-size: 28px;
+            font-family: Greycliff CF, Light;
         }
         
         .partner-button {
@@ -331,7 +326,7 @@ a {
             position: relative;
             padding-left: 30px;
             margin-bottom: 30px;
-            font-size: 18px;
+            font-size: 21px;
             line-height: 1.6;
         }
         
@@ -818,7 +813,7 @@ a {
             
             .collaborate-subtitle,
             .how-we-work {
-                font-size: 20px;
+                font-size: 24px;
             }
             
             .work-together-content h2 {
@@ -933,7 +928,7 @@ a {
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -993,7 +988,7 @@ a {
         }
 
         /* Responsive adjustments */
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .collaborate-image img {
             width: 100%;
             height: 400px;
@@ -1650,7 +1645,7 @@ a {
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -1698,7 +1693,7 @@ a {
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -1841,7 +1836,7 @@ a {
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1891,17 +1886,58 @@ a {
                 padding: 0px;
             }
         }
-    </style>
+
+        /* Remove or modify this rule that hides the button */
+@media (max-width: 976px) {
+    .mobile-menu-toggle {
+        display: block; 
+    }
+    /* Remove this line that hides the button */
+    /* .donate-button {
+        display: none;
+    } */
+    
+    /* Add responsive styling for the button on mobile */
+    .work-together-container .donate-button {
+        display: inline-flex;
+        width: 200px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    /* Make the work-together section more mobile-friendly */
+    .work-together-container {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 15px;
+    }
+    
+    .work-together-content h2 {
+        font-size: 28px;
+        width: 100%;
+    }
+    
+    .work-together-description {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}
+    @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -2141,10 +2177,10 @@ a {
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             

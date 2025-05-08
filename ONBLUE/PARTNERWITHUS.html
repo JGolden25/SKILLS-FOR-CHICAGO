@@ -12,7 +12,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-family: Greycliff CF, Bold;
         }
         
         body {
@@ -481,7 +481,7 @@ font-family: Greycliff CF, Bold;
         }
         
         .employer-content h2 {
-            font-size: 36px;
+            font-size: 42px;
             font-weight: 800;
             margin-bottom: 30px;
             color: #1a1a1a;
@@ -489,6 +489,7 @@ font-family: Greycliff CF, Bold;
         
         .support-list {
             list-style-type: none;
+            width: 95%;
         }
         
         .support-item {
@@ -501,15 +502,16 @@ font-family: Greycliff CF, Bold;
         .support-icon {
             width: 10px;
             height: 10px;
-            background-color: #1e3a14;
+            background-color: #4F6B3A;
             border-radius: 50%;
             margin-top: 8px;
             flex-shrink: 0;
         }
         
         .support-text {
-            font-size: 16px;
+            font-size: 22px;
             line-height: 1.6;
+            font-family: Greycliff CF, Light;
         }
         
         .support-text strong {
@@ -1203,7 +1205,7 @@ font-family: Greycliff CF, Bold;
             font-size: 22px;
             line-height: 1.7;
             color: #444;
-            width: 70%;
+            width: 90%;
         }
         @media (max-width: 1354px) {
             .container {
@@ -1431,7 +1433,7 @@ padding: 0px;
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -1952,7 +1954,7 @@ padding: 0px;
 
 .donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: font-family: Greycliff CF, Light;
 }
 
 .circle-icon {
@@ -2007,7 +2009,7 @@ padding: 0px;
 
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: font-family: Greycliff CF, Light;
 }
 
 .mobile-donate-button i {
@@ -2048,7 +2050,7 @@ padding: 0px;
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -2096,7 +2098,7 @@ padding: 0px;
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -2400,7 +2402,7 @@ padding: 0px;
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -2448,7 +2450,7 @@ padding: 0px;
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -2591,7 +2593,7 @@ padding: 0px;
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -2641,17 +2643,196 @@ padding: 0px;
                 padding: 0px;
             }
         }
-        </style>
+        @media (max-width: 976px) {
+  .employer-support,
+  .resources-section,
+  .testimonial-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  .employer-support-container,
+  .resources-container {
+    /* padding: 15px; */
+    margin: 0;
+  }
+  
+  /* Ensure content doesn't overflow on mobile */
+  .communities-content, 
+  .employer-content {
+    padding: 15px;
+  }
+  html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure all containers respect viewport boundaries */
+.container, 
+.banner-container, 
+.header-container, 
+.hero-container, 
+.employer-support-container, 
+.resources-container,
+.testimonial-container,
+.work-together-container,
+.footer-container {
+  max-width: 100%;
+  box-sizing: border-box;
+  /* padding-left: 15px;
+  padding-right: 15px; */
+  overflow-x: hidden;
+}
+
+.work-together-section .donate-button {
+    display: inline-flex !important;
+    width: 195px !important;
+    margin: 20px auto 0 auto;
+  }
+
+/* Fix potential image overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Fix potential section overflow */
+section {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+}
+/* Fix for hamburger X button visibility on mobile */
+.hamburger.open {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 9999; /* Extremely high z-index to ensure it's above everything */
+  background-color: rgba(255, 255, 255, 0.95); /* Near solid white background */
+  padding: 10px;
+  border-radius: 50%; /* Make it a circle */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Make the X lines thicker and more visible */
+.hamburger.open span {
+  background-color: #333; /* Darker color */
+  height: 3px; /* Slightly thicker */
+}
+
+/* Ensure proper X transformation */
+.hamburger.open span:nth-child(1) {
+  top: 10px;
+  width: 0;
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(2) {
+  transform: rotate(45deg);
+  width: 100%;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg);
+  width: 100%;
+}
+
+.hamburger.open span:nth-child(4) {
+  width: 0;
+  opacity: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 576px) {
+  .hamburger.open {
+    right: 10px;
+    top: 60px;
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: 1478px) { 
+    .banner-text {
+            font-size: 15px;
+            margin-right: 0%;
+        }
+
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+        @media (max-width: 1354px) {
+            .communities-text {
+            font-size: 16px;
+        }
+
+        
+
+        h4 {
+            font-size: 24px; 
+        }
+
+        .communities-title {
+            font-size: 32px;
+            margin-bottom: 5px;
+        }
+    .header {
+        padding: 15px 1%;
+    }
+
+    .employer-content h2 {
+        font-size: 32px;
+    }
+    .partnering-text {
+        font-size: 18px;
+    }
+
+    .support-text {
+        font-size: 18px;
+    }
+
+    .resources-content {
+        padding: 0% 7% 0% 2%; 
+    }
+
+    .communities-title {
+        margin-bottom: 5px !important;
+    }
+
+    .partner-subtitle {
+        margin-bottom: 5px !important;
+
+    }
+}
+
+.partner-subtitle {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6%;
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -2840,7 +3021,7 @@ padding: 0px;
         <div class="container resources-container">
             <div class="resources-content">
                 <h2 class="communities-title">Partner With Us</h2>
-                <h4 style="padding-bottom: 2%; color: #4F6B3A;">Find the Right Talent. Strengthen  Workforce.</h4>
+                <h4 style="padding-bottom: 2%; color: #4F6B3A;" class="partner-subtitle">Find the Right Talent. Strengthen  Workforce.</h4>
                 <p class="communities-text">
                     At Skills for Chicago, we connect businesses with qualified, pre-screened talent they won’t find anywhere else. Our employer partners gain access to job seekers with unique skills and experiences who are ready to contribute and grow. By working with us, companies fill critical roles while driving economic mobility in Chicago.
                 </p>
@@ -2863,35 +3044,35 @@ padding: 0px;
                     <li class="support-item">
                         <div class="support-icon"></div>
                         <div class="support-text">
-                            <strong>Curated Talent Pipelines</strong>
+                            Curated Talent Pipelines -
                             Find job-ready candidates aligned with  hiring needs.
                         </div>
                     </li>
                     <li class="support-item">
                         <div class="support-icon"></div>
                         <div class="support-text">
-                            <strong>Tailored Recruitment Solutions</strong>
+                            Tailored Recruitment Solutions -
                             Tap into flexible hiring support for various industries.
                         </div>
                     </li>
                     <li class="support-item">
                         <div class="support-icon"></div>
                         <div class="support-text">
-                            <strong>Exclusive Talent Access</strong>
+                            Exclusive Talent Access -
                             Connect with candidates who are not on traditional job boards
                         </div>
                     </li>
                     <li class="support-item">
                         <div class="support-icon"></div>
                         <div class="support-text">
-                            <strong>Hiring Expertise</strong>
+                            Hiring Expertise -
                             Access insights to streamline and improve  recruitment process.
                         </div>
                     </li>
                     <li class="support-item">
                         <div class="support-icon"></div>
                         <div class="support-text">
-                            <strong>Strategic Workforce Support</strong>
+                            Strategic Workforce Support -
                             Strengthen  team with motivated, skilled employees.
                         </div>
                     </li>
@@ -3019,10 +3200,10 @@ padding: 0px;
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             
@@ -3714,6 +3895,160 @@ if (mobileMenuToggle) {
         }
     });
 }
+});
+    </script>
+    <script>
+        // Complete fixed mobile menu accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile Menu Toggle (Hamburger)
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const overlay = document.querySelector('.overlay');
+  const body = document.body;
+  
+  // Function to toggle mobile menu
+  function toggleMobileMenu() {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    overlay.classList.toggle('active');
+    
+    // Prevent body scrolling when menu is open
+    if (mobileNav.classList.contains('open')) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
+  }
+  
+  // Mobile Dropdown Functionality
+  const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+  
+  mobileDropdowns.forEach(dropdown => {
+    const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+    const dropdownMenu = dropdown.querySelector('.mobile-dropdown-menu');
+    
+    // Fix: Force proper initial state
+    dropdownMenu.style.maxHeight = '0px';
+    
+    dropdownToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Toggle active class on clicked dropdown
+      dropdown.classList.toggle('active');
+      
+      // Explicitly set max-height to either 0 or actual content height
+      if (dropdown.classList.contains('active')) {
+        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+      } else {
+        dropdownMenu.style.maxHeight = '0px';
+      }
+      
+      // Close other dropdowns
+      mobileDropdowns.forEach(otherDropdown => {
+        if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+          otherDropdown.classList.remove('active');
+          otherDropdown.querySelector('.mobile-dropdown-menu').style.maxHeight = '0px';
+        }
+      });
+    });
+  });
+  
+  // Event listeners for menu toggling
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+  }
+  
+  // Close menu when clicking overlay
+  if (overlay) {
+    overlay.addEventListener('click', toggleMobileMenu);
+  }
+  
+  // Close menu when clicking a mobile navigation link
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a:not(.mobile-dropdown-toggle)');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      toggleMobileMenu();
+    });
+  });
+  
+  // Footer Accordion Functionality
+  const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
+  
+  accordionHeaders.forEach(header => {
+    const accordion = header.parentElement;
+    const content = accordion.querySelector('.footer-accordion-content');
+    
+    // Fix: Force proper initial state
+    content.style.maxHeight = '0px';
+    
+    header.addEventListener('click', function() {
+      // Toggle active class
+      accordion.classList.toggle('active');
+      
+      // Explicitly set max-height based on active state
+      if (accordion.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = '0px';
+      }
+      
+      // Close all other accordions (optional - comment out if you want multiple open)
+      accordionHeaders.forEach(otherHeader => {
+        if (otherHeader !== header) {
+          const otherAccordion = otherHeader.parentElement;
+          const otherContent = otherAccordion.querySelector('.footer-accordion-content');
+          otherAccordion.classList.remove('active');
+          otherContent.style.maxHeight = '0px';
+        }
+      });
+    });
+  });
+});
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Select all footer accordion headers
+    const footerAccordionHeaders = document.querySelectorAll('.footer-accordion-header');
+    
+    // Initialize and set up event handlers for each footer accordion
+    footerAccordionHeaders.forEach(header => {
+        const content = header.nextElementSibling; // Get the content element
+        const accordion = header.parentElement; // Get the accordion container
+        
+        // Ensure accordions are closed initially
+        content.style.maxHeight = '0';
+        
+        // Add click event listener
+        header.addEventListener('click', function() {
+            // Toggle active class
+            accordion.classList.toggle('active');
+            
+            // Set the maxHeight based on the actual content height
+            if (accordion.classList.contains('active')) {
+                // When active, set the maxHeight to match the content's height
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.paddingBottom = '15px';
+            } else {
+                // When inactive, set maxHeight to 0
+                content.style.maxHeight = '0';
+                content.style.paddingBottom = '0';
+            }
+            
+            // Close other accordions (optional - for accordion behavior)
+            footerAccordionHeaders.forEach(otherHeader => {
+                if (otherHeader !== header) {
+                    const otherAccordion = otherHeader.parentElement;
+                    const otherContent = otherHeader.nextElementSibling;
+                    
+                    otherAccordion.classList.remove('active');
+                    otherContent.style.maxHeight = '0';
+                    otherContent.style.paddingBottom = '0';
+                }
+            });
+        });
+    });
 });
     </script>
 </body>

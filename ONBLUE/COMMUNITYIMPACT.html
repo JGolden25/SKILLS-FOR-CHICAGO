@@ -1398,7 +1398,7 @@ padding-left: 7%;
     }
 
         /* Responsive Styles */
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .audiences {
                 position: static;
                 width: 100%;
@@ -1876,7 +1876,7 @@ padding-left: 7%;
     }
 }
 
-@media (max-width: 1354px) {
+@media (max-width: 1024px) {
             .audiences {
                 position: static;
                 width: 100%;
@@ -2644,7 +2644,7 @@ padding-left: 0%;
         }
 
         /* Responsive adjustments */
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .collaborate-image img {
             width: 100%;
             max-height: 400px;
@@ -2776,7 +2776,7 @@ padding-left: 0%;
             border-top: 1px solid black;
             /* margin-top: 40px; */
         }
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .partnering-section-mobile {
             display: flex;
             align-items: center;
@@ -2828,7 +2828,7 @@ padding-left: 0%;
             background-color: var(--light-gray);
             display: none;
         }
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .partnering-section-mobile {
             display: flex;
             align-items: center;
@@ -2875,7 +2875,7 @@ padding-left: 0%;
             gap: 60px;
             background-color: #F8F8F8;
         }
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .communities-container {
                 flex-direction: column;
                 gap: 40px;
@@ -2935,7 +2935,7 @@ padding-left: 0%;
             color: #444;
             width: 70%;
         }
-        @media (max-width: 1354px) {
+        @media (max-width: 1024px) {
             .resources-content {
     /* padding: 80px 0; */
     background-color: #FFFFFF;
@@ -3365,6 +3365,9 @@ padding-left: 0%;
             .banner {
                 padding: 12px 15px;
             }
+            .communities-text {
+                font-size: 20px;
+            }
         }
          /* Mobile Navigation Panel */
          .mobile-nav {
@@ -3492,7 +3495,7 @@ padding-left: 0%;
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -3540,7 +3543,7 @@ padding-left: 0%;
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -3683,7 +3686,7 @@ padding-left: 0%;
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -3733,17 +3736,86 @@ padding-left: 0%;
                 padding: 0px;
             }
         }
-    </style>
+        @media (max-width: 976px) {
+  .communities-content,
+  .resources-content,
+  .access-content {
+    /* padding-left: 0px;
+    padding-right: 0px; */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .communities-title {
+        font-size: 24px;
+        margin-bottom: 0px !important;
+    }
+  
+  .header {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  
+  /* Remove extra right padding/margin that might cause overflow */
+  .header-container {
+    padding: 0 0px;
+  }
+
+  html, body {
+  width: 100%;
+  /* overflow-x: hidden; */
+  max-width: 100%;
+}
+
+/* Ensure all containers respect viewport width */
+.container, 
+.container-2, 
+.footer-container, 
+.header-container,
+.banner-container,
+.communities-container,
+.resources-container,
+.partnering-content,
+.social-strip-container,
+.stats-container {
+  max-width: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Fix for potential image overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+}
+    @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+
+    .communities-title {
+        font-size: 28px;
+        /* margin-bottom: 0px; */
+    }
+
+    .communities-text {
+        font-size: 15px; 
+        width: 100%;
+
+    }
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -4040,10 +4112,10 @@ padding-left: 0%;
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             

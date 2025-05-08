@@ -796,7 +796,7 @@ font-family: Greycliff CF, Bold
 }
 .action-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: font-family: Greycliff CF, Light;
 }
 .action-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -929,7 +929,7 @@ font-family: Greycliff CF, Bold
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -1646,7 +1646,7 @@ font-family: Greycliff CF, Bold
     padding: 15px 25px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
@@ -1694,7 +1694,7 @@ font-family: Greycliff CF, Bold
     padding: 10px 20px;
     color: #7D7E7E;
     text-decoration: none;
-    font-family: 'Greycliff CF', 'Arial', sans-serif;
+    font-family: Greycliff CF, Light;
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
@@ -1837,7 +1837,7 @@ font-family: Greycliff CF, Bold
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif; 
+    font-family: font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1887,17 +1887,22 @@ font-family: Greycliff CF, Bold
                 padding: 0px;
             }
         }
-        </style>
+        @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+</style>
 </head>
 <body>
     <div id="main-content">
         <div class="social-strip">
             <div class="social-strip-container">
                 <div class="social-icons-top">
-                    <a href="https://www.facebook.com/SkillsForChicago/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -2183,7 +2188,7 @@ font-family: Greycliff CF, Bold
                     </div>
                 </div>
                 
-                <div class="form-column">
+                <!-- <div class="form-column">
                     <div class="form-group">
                         <label class="form-label">First Name*</label>
                         <input type="text" class="form-input" required>
@@ -2259,7 +2264,7 @@ font-family: Greycliff CF, Bold
                                 <i class="fas fa-arrow-right"></i>
                             </div>
                         </a>  
-                    </div>
+                    </div> -->
                     
                     <!-- <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -2267,7 +2272,8 @@ font-family: Greycliff CF, Bold
                 <a href="#"><i class="fab fa-youtube"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
                     </div> -->
-                </div>
+                <!-- </div> -->
+                <iframe src=https://skills.tfaforms.net/316 height="100%" width="1200" frameborder="0" ></iframe>
             </div>
         </div>
     </section>
@@ -2281,10 +2287,10 @@ font-family: Greycliff CF, Bold
                 </div></a>
                 <div class="footer-divider"></div>
                 <div class="footer-social">
-                    <a href="https://www.facebook.com/SkillsForChicago/"><i class="fa-brands fa-facebook"></i></a>
-                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.youtube.com/@skillsforchicagoland"><i class="fab fa-youtube"></i></a>
-                    <a href="https://www.instagram.com/skillsforchicago/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
             
@@ -2722,5 +2728,6 @@ font-family: Greycliff CF, Bold
     }
 });
         </script>
+        <script src="//skills.tfaforms.net/js/iframe_resize_helper.js"></script>
 </body>
 </html>
