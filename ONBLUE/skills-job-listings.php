@@ -332,7 +332,7 @@ function skills_render_job_listings() {
                 echo '<p class="job-details"><i class="far fa-clock"></i> ' . skills_clean_output($row->{'Shift Details'}) . '</p>';
             }
             
-            echo '<div class="days-posted">' . $days_display . '</div>';
+            // echo '<div class="days-posted">' . $days_display . '</div>';
             echo '</a>';
             echo '</div>';
         }

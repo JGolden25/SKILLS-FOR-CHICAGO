@@ -29,7 +29,7 @@ h1 {
         }
 
         .page-subtitle {
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .page-description {
@@ -124,6 +124,8 @@ h1 {
     font-size: 15px;
     font-weight: 500;
     transition: all 0.3s ease;
+    outline: none !important;
+    border: 0;
 }
 
 .nav-link:hover {
@@ -155,12 +157,16 @@ h1 {
     transition: all 0.3s ease;
     z-index: 1000;
     border-radius: 0px 0px 25px 25px;
+    outline: none !important;
+    border: 0;
 }
 
 .dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    outline: none !important;
+    border: 0;
 }
 
 .dropdown-item {
@@ -172,11 +178,14 @@ h1 {
     font-size: 14px;
     font-weight: 400;
     transition: all 0.2s ease;
+    outline: none !important;
+    border: 0;
 }
 
 .dropdown-item:hover {
     background-color: #f8f8f3;
     color: #4d7e32;
+    
 }
 
 /* Donate Button */
@@ -189,7 +198,7 @@ h1 {
     padding: 5px 5px 5px 13px !important;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700 !important;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px;
@@ -371,7 +380,7 @@ h1 {
     padding: 3px 5px 3px 13px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px;
@@ -381,7 +390,7 @@ h1 {
 
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: font-family: Greycliff CF, Light;
+    font-family: Greycliff CF, Light;
 }
 
 .mobile-donate-button:hover .circle-icon i {
@@ -507,7 +516,7 @@ h1 {
 
 .footer-container {
     padding: 0 6%;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .footer-top {
@@ -578,7 +587,7 @@ h1 {
     font-size: 12px;
     transition: opacity 0.3s ease;
     font-weight: 300;
-    font-family: font-family: Greycliff CF, Light;
+    font-family: Greycliff CF, Light;
 }
 
 .footer-nav-links a:hover {
@@ -1149,7 +1158,7 @@ main {
     position: sticky !important;
     top: 0 !important;
     z-index: 500 !important;
-    width: 100% !important;
+    /* width: 100% !important; */
     transform: translate3d(0,0,0) !important;
     will-change: position !important;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1) !important;
@@ -1165,3 +1174,15 @@ main {
         z-index: 500 !important;
     }
 }
+
+@media (max-width: 1478px) { 
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+            .footer-nav-section {
+                flex: 1 0 30%;
+                min-height: auto;
+            }
+        }

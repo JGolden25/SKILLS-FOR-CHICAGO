@@ -29,7 +29,7 @@ h1 {
         }
 
         .page-subtitle {
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .page-description {
@@ -189,7 +189,7 @@ h1 {
     padding: 5px 5px 5px 13px !important;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px;
@@ -371,7 +371,7 @@ h1 {
     padding: 3px 5px 3px 13px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px;
@@ -507,7 +507,7 @@ h1 {
 
 .footer-container {
     padding: 0 6%;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .footer-top {

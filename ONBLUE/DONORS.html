@@ -207,7 +207,7 @@ font-family: Greycliff CF, Bold;
 
         .hero-content {
             height: auto;
-            width: 70%;
+            width: 95%;
         }
         
         .hero-content h1 {
@@ -290,7 +290,7 @@ font-family: Greycliff CF, Bold;
             display: flex;
             align-items: center;
             gap: 10px;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 16px;
         }
         
@@ -463,7 +463,7 @@ font-family: Greycliff CF, Bold;
     padding: 5px 5px 5px 13px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px; /* Adjust width as needed */
@@ -989,7 +989,7 @@ h2 {
     padding: 7px 5px 7px 15px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px; /* Adjust width as needed */
@@ -997,7 +997,7 @@ h2 {
 }
 .action-button span {
     margin-right: 5px;
-    font-family: font-family: Greycliff CF, Light;
+    font-family: Greycliff CF, Light;
 }
 .action-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1058,7 +1058,7 @@ h2 {
 
         .footer-container {
             padding: 0 6%;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .footer-top {
@@ -1130,7 +1130,7 @@ h2 {
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: font-family: Greycliff CF, Light;
+            font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -2030,7 +2030,7 @@ h2 {
     padding: 3px 5px 3px 13px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px; /* Adjust width as needed */
@@ -2038,7 +2038,7 @@ h2 {
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: font-family: Greycliff CF, Light; 
+    font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -2151,6 +2151,21 @@ h2 {
     .header {
         padding: 15px 1%;
     }
+}
+
+.hero-image {
+    background-position: -20px center !important;
+}
+
+.hero-image img,
+.elementor-widget-image img,
+.wp-block-image img,
+.wp-post-image,
+img.hero-image-img {
+    object-position: -20px center !important; /* Adjust this value as needed: negative moves left */
+    margin-right: 20px !important; /* Optionally add margin to compensate */
+    transform: translateX(-20px) !important; /* Alternative approach */
+    max-width: calc(100% + 20px) !important; /* Ensure the image doesn't get cut off on the left */
 }
 </style>
 </head>
@@ -2359,7 +2374,7 @@ h2 {
                 <p class="hero-description">
                     Together, we can create a stronger, more inclusive workforce where job seekers have the resources they need to thrive. Be part of the movement to create pathways to success.
                 </p>
-                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="action-button" style="width: 200px;">
+                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" target="_blank" class="action-button" style="width: 200px;">
                     <span>Make A Donation</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -2442,7 +2457,7 @@ h2 {
             <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_871917446-scaled.jpeg" alt="Chicago skyline">
         </div>
         <div class="ways-content">
-            <h1 style="font-weight: 600;">Ways To Give</h1>
+            <h1 style="font-weight: 700;">Ways To Give</h1>
             <p style="font-size: 20px;">
                 Your support can take many forms, and every contribution expands economic opportunity for job seekers in need.
             </p>
@@ -2783,7 +2798,7 @@ h2 {
         
         <div class="footer-copyright">
             <div class="footer-container">
-                Copyright @ 2025 Skills All rights reserved
+                copyright @ 2025 Skills For Chicago all rights reserved
             </div>
         </div>
     </footer>

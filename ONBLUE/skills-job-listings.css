@@ -1,10 +1,10 @@
 /* Font Families */
 h1, h2, h3, h4, h5, span {
-    font-family: Greycliff, sans-serif;
+    font-family: Greycliff CF, Light;
 }
 
 p, a {
-    font-family: font-family: Greycliff CF, Light;
+    font-family: Greycliff CF, Light;
 }
 
 /* Filter Section */
@@ -31,6 +31,7 @@ p, a {
     gap: 5px;
     min-width: 120px;
     justify-content: space-between;
+    font-family: Greycliff CF, Light !important;
 }
 
 .skills-job-listings-wrapper .reset-btn i {
@@ -48,10 +49,11 @@ p, a {
     border-radius: 30px;
     padding: 10px 25px;
     cursor: pointer;
-    font-weight: 600;
+    /* font-weight: 700; */
     display: flex;
     align-items: center;
     gap: 8px;
+    font-family: Greycliff CF, Light !important;
 }
 
 .skills-job-listings-wrapper .filter-apply-btn:hover {
@@ -96,7 +98,7 @@ p, a {
 .skills-job-listings-wrapper .results-count {
     color: #4F6B3A;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 20px;
     padding-bottom: 10px;
     border-bottom: 1px solid #eee;
@@ -133,7 +135,7 @@ p, a {
 
 .skills-job-listings-wrapper .job-title {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 5px;
     color: #333;
 }
@@ -142,18 +144,21 @@ p, a {
     font-size: 14px;
     color: #333;
     margin-bottom: 5px;
+    font-family: Greycliff CF, Light !important;
 }
 
 .skills-job-listings-wrapper .job-location {
     font-size: 14px;
     color: #666;
     margin-bottom: 10px;
+    font-family: Greycliff CF, Light !important;
 }
 
 .skills-job-listings-wrapper .job-details {
     font-size: 13px;
     color: #666;
     margin-bottom: 5px;
+    font-family: Greycliff CF, Light !important;
 }
 
 .skills-job-listings-wrapper .days-posted {
@@ -221,7 +226,7 @@ p, a {
     color: white;
     padding: 20px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .skills-job-listings-wrapper .filter-content {
@@ -235,7 +240,7 @@ p, a {
 .skills-job-listings-wrapper .filter-group-title {
     font-size: 18px;
     margin-bottom: 15px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .skills-job-listings-wrapper .filter-option {
@@ -313,10 +318,10 @@ p, a {
 }
 
 .skills-job-listings-wrapper .page-description {
-    max-width: 800px;
-    margin: 0 auto 30px;
-    text-align: center;
-    font-size: 16px;
+    max-width: 1000px;   
+    margin: 0 auto 30px;	  
+    text-align: center; 
+    font-size: 19px; 
     line-height: 1.6;
 }
 
@@ -377,7 +382,7 @@ p, a {
     font-size: 28px;
     margin: 0 0 5px 0;
     color: #333;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .skills-job-listings-wrapper .job-company-name {
@@ -400,7 +405,7 @@ p, a {
     padding: 7px 5px 7px 15px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px; /* Adjust width as needed */
@@ -427,7 +432,7 @@ p, a {
     padding: 7px 5px 7px 15px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px; /* Adjust width as needed */
@@ -522,7 +527,7 @@ p, a {
 
 .skills-job-listings-wrapper .metadata-label {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: 5px;
     color: #333;
 }
@@ -557,10 +562,10 @@ p, a {
 
 .skills-job-listings-wrapper .job-detail-heading {
     font-size: 28px;
-    font-weight: 600;
+    font-weight: 700;
     color: #333;
     margin-bottom: 20px;
-    font-family: Greycliff, sans-serif;
+    font-family: Greycliff CF, Light;
 }
 
 .skills-job-listings-wrapper .job-detail-list {
@@ -650,7 +655,7 @@ p, a {
     color: white;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     transition: background-color 0.3s;
 }
 
@@ -844,12 +849,12 @@ p, a {
     background-color: #f8f8f8;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
-    /* width: 100%; */
+    /* width: 96% !important; */
 }
 
 /* Add some padding to prevent content jump when header becomes sticky */
 .skills-job-listings-wrapper .job-detail-container {
-    padding-top: 10px;
+    /* padding-top: 10px; */
 }
 
 /* Optimize for smaller screens */
@@ -857,6 +862,55 @@ p, a {
     .skills-job-listings-wrapper .job-title-header {
         padding: 15px;
     }
+}
+
+ p {
+    font-family: Greycliff CF, Light !important;
+ }
+
+ span {
+    font-family: Greycliff CF, Light !important;
+
+ }
+
+ .skills-job-listings-wrapper .employer-description {
+    font-family: Greycliff CF, Light;
+
+ }
+
+ .skills-job-listings-wrapper .dropdown-option label {
+    font-family: Greycliff CF, Light !important;
+ }
+
+ .skills-job-listings-wrapper .page-description {
+    max-width: 1000px;   
+margin: 0 auto 30px;	  
+text-align: center; 
+font-size: 19px; 
+line-height: 1.6;
+}
+
+/* Add this to your skills-job-listings.css file - REVISED VERSION */
+
+/* Remove only outlines from job cards */
+.skills-job-listings-wrapper .job-card:focus,
+.skills-job-listings-wrapper .job-card a:focus,
+.skills-job-listings-wrapper .job-card *:focus {
+    outline: none !important;
+}
+
+/* Only apply box-shadow: none to focused elements, not to all states */
+.skills-job-listings-wrapper a:focus,
+.skills-job-listings-wrapper button:focus,
+.skills-job-listings-wrapper input:focus,
+.skills-job-listings-wrapper select:focus {
+    outline: none !important;
+}
+
+/* Fix for Firefox */
+.skills-job-listings-wrapper .job-card::-moz-focus-inner,
+.skills-job-listings-wrapper .job-card a::-moz-focus-inner {
+    border: 0;
 }
 
 :where(.wp-site-blocks) > :first-child {

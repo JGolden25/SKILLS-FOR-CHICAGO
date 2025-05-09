@@ -225,7 +225,7 @@
     
     <div class="footer-copyright">
         <div class="footer-container">
-            Copyright @ 2025 Skills All rights reserved
+            copyright @ 2025 Skills For Chicago all rights reserved
         </div>
     </div>
 </footer>

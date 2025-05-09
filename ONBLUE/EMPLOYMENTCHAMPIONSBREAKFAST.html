@@ -155,7 +155,7 @@ font-family: Greycliff CF, Bold;
         
         .schedule-time {
             width: 150px;
-            font-weight: 600;
+            font-weight: 700;
             text-align: right;
             padding-right: 20px;
             border-right: 1px solid #ccc;
@@ -243,7 +243,7 @@ font-family: Greycliff CF, Bold;
         }
         
         .speaker-role {
-            font-weight: 600;
+            font-weight: 700;
         }
         
         /* Sponsors Section */
@@ -812,7 +812,7 @@ font-family: Greycliff CF, Bold;
             text-align: center;
             font-size: 2.2rem;
             margin-bottom: 30px;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .sponsor-logos {
@@ -1092,7 +1092,7 @@ font-family: Greycliff CF, Bold;
     padding: 7px 5px 7px 15px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 225px; /* Adjust width as needed */
@@ -1162,7 +1162,7 @@ font-family: Greycliff CF, Bold;
 
         .footer-container {
             padding: 0 6%;
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .footer-top {
@@ -1553,7 +1553,7 @@ padding-bottom: 0;
 .detailed-schedule-time {
     width: 120px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
     color: #333;
     padding-right: 25px;
     text-align: right;
@@ -1639,7 +1639,7 @@ padding-bottom: 0;
     gap: 60px;
     align-items: center;
     padding: 0px 0px 0px 80px;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
     background-color: #FAFAFA;
     min-height: 800px;
         }
@@ -1671,7 +1671,7 @@ padding-bottom: 0;
             height: 100%;
             /* border-radius: 5px; */
             overflow: hidden;
-            border-left: 1px solid black;
+            /* border-left: 1px solid black; */
         }
         
         .team-image img {
@@ -2040,7 +2040,7 @@ padding-bottom: 0;
     padding: 5px 5px 5px 13px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px; /* Adjust width as needed */
@@ -2806,7 +2806,7 @@ padding-bottom: 0;
     padding: 3px 5px 3px 13px;
     border-radius: 25px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: 14px;
     transition: all 0.3s ease;
     width: 150px; /* Adjust width as needed */
@@ -2978,6 +2978,11 @@ img {
   max-width: 80px;
 }
 
+.ulta-logo {
+    max-width: 75%;
+    max-height: 75%;
+}
+
 /* Make sure tables and other potentially wide elements adjust */
 table {
   max-width: 100%;
@@ -3020,6 +3025,19 @@ table {
     margin-bottom: 40px;
     background-color: transparent; /* Remove the existing background color */
 }
+
+.ulta-logo {
+    max-width: 15% !important; 
+    max-height: 40% !important;
+}
+
+@media (max-width: 976px) {
+
+    .ulta-logo {
+    max-width: 75% !important;
+    max-height: 75% !important;
+}
+ }
 </style>
 </head>
 <body>
@@ -3225,7 +3243,7 @@ table {
                     Join us in recognizing the employers, organizations, and individuals who are making a lasting impact on Chicago’s workforce.
                 </p>
                 <div style="display: inline-block; width: 100%;">
-                <a href="https://skills.tfaforms.net/314" class="action-button" style="margin-right: 3%;">
+                <a href="https://skills.tfaforms.net/314" target="_blank" class="action-button" style="margin-right: 3%;">
                     <span>Become A Sponsor</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -3337,8 +3355,7 @@ table {
             <div class="detailed-schedule-time"></div>
             <div class="detailed-schedule-content">
                 <div class="detailed-schedule-title">WELCOMING REMARKS</div>
-                <p class="detailed-schedule-person">Bridget Altenburg,</p>
-                <p class="detailed-schedule-description">President & CEO of Skills for Chicago, will kick things off with a warm welcome and set the tone for the day.</p>
+                <p class="detailed-schedule-description">Bridget Altenburg, President & CEO of Skills for Chicago, will kick things off with a warm welcome and set the tone for the day.</p>
             </div>
         </div>
         
@@ -3430,7 +3447,7 @@ table {
     <a href="#Friend" class="sponsor-tier">Friend</a>
 </div>
             
-            <h3 class="tier-title" id="Presenting">Presenting Sponsor</h3>
+            <h3 class="tier-title" id="Presenting" style="font-size: 52px;">Presenting Sponsor</h3>
             
             <!-- Sponsor logos for each tier - only one will be visible at a time -->
             <div class="sponsor-logos-container">
@@ -3481,7 +3498,7 @@ table {
  <!-- Partners Section -->
  <section id="Champion" class="partners-section" style="background-color:#F8F8F8">
     <h2 class="partners-title">Champion Sponsor</h2>
-    <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
     
     <div class="partners-grid">
         <!-- Row 1 -->
@@ -3501,18 +3518,18 @@ table {
 </section>
 <section id="Ambassador" class="partners-section">
     <h2 class="partners-title">Ambassador Sponsor</h2>
-    <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
     
     <div class="partners-grid2">
         <!-- Row 1 -->
         <div class="partner-logo" id="logo-1">
-            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-33_2x.png" alt="People at a community event">
+            <img class="ulta-logo" src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-33_2x.png" alt="People at a community event">
         </div>
     </div>
 </section>
 <section id="Advocate" class="partners-section" style="background-color:#F8F8F8">
     <h2 class="partners-title">Advocate Sponsor</h2>
-    <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
     
     <div class="partners-grid">
         <!-- Row 1 -->
@@ -3559,7 +3576,7 @@ table {
 </section>
 <section id="Supporter" class="partners-section">
     <h2 class="partners-title">Supporter Sponsor</h2>
-    <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
     
     <div class="partners-grid">
         <!-- Row 1 -->
@@ -3612,7 +3629,7 @@ table {
 </section>
 <section id="Partner" class="partners-section" style="background-color:#F8F8F8">
     <h2 class="partners-title">Partner Sponsor</h2>
-    <p class="partners-subtitle">Explore the businesses committed to making an impact.</p>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
     
     <div class="partners-grid">
         <!-- Row 1 -->
@@ -4200,7 +4217,7 @@ table {
         
         <div class="footer-copyright">
             <div class="footer-container">
-                Copyright @ 2025 Skills All rights reserved
+                copyright @ 2025 Skills For Chicago all rights reserved
             </div>
         </div>
     </footer>
