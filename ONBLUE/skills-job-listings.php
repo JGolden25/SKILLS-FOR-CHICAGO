@@ -34,15 +34,6 @@ function skills_job_listings_custom_assets() {
             'all'
         );
         
-        // Enqueue custom header/footer CSS
-        wp_enqueue_style(
-            'skills-custom-header-footer',
-            SKILLS_JOB_LISTINGS_PLUGIN_URL . 'assets/custom-header-footer.css',
-            array('skills-job-listings-style'),
-            '1.0.0',
-            'all'
-        );
-        
         // Enqueue custom JS
         wp_enqueue_script(
             'skills-custom-scripts',
@@ -60,9 +51,6 @@ function skills_job_listings_shortcode($atts) {
     // Start output buffering
     ob_start();
     
-    // Include custom header
-    include_once(plugin_dir_path(__FILE__) . 'templates/custom-header.php');
-    
     // Check if we're displaying a job detail page
     $job_id = isset($_GET['job_id']) ? intval($_GET['job_id']) : 0;
     
@@ -73,9 +61,6 @@ function skills_job_listings_shortcode($atts) {
         echo skills_render_job_listings();
     }
     echo '</div>';
-    
-    // Include custom footer
-    include_once(plugin_dir_path(__FILE__) . 'templates/custom-footer.php');
     
     // Get the contents of the output buffer
     $output = ob_get_clean();
@@ -115,12 +100,36 @@ function skills_render_job_listings() {
     $params = array();
     $where_clauses = array();
     
-    // Handle multiple employer filters
-    if (!empty($employer_filters)) {
-        $placeholders = array_fill(0, count($employer_filters), '%s');
+    // Handle special employer filters (County Job and Credential Job)
+    $county_job_selected = in_array('County Job', $employer_filters);
+    $credential_job_selected = in_array('Credential Job', $employer_filters); // Fixed: was checking for 'County Job' again
+    
+    // Get regular employers (exclude special cases)
+    $regular_employers = array_diff($employer_filters, array('County Job', 'Credential Job'));
+    
+    // Handle regular employer filters
+    if (!empty($regular_employers)) {
+        $placeholders = array_fill(0, count($regular_employers), '%s');
         $where_clause = " Employer IN (" . implode(', ', $placeholders) . ")";
         $where_clauses[] = $where_clause;
-        $params = array_merge($params, $employer_filters);
+        $params = array_merge($params, $regular_employers);
+    }
+    
+    // Add County Job and Credential Job filters if selected (using OR logic for these special cases)
+    if ($county_job_selected || $credential_job_selected) {
+        $special_subclauses = array();
+        
+        if ($county_job_selected) {
+            $special_subclauses[] = "`County Job` = 1";
+        }
+        
+        if ($credential_job_selected) {
+            $special_subclauses[] = "`Credential Job` = 1";
+        }
+        
+        if (!empty($special_subclauses)) {
+            $where_clauses[] = "(" . implode(' OR ', $special_subclauses) . ")";
+        }
     }
     
     // Handle multiple job type filters
@@ -185,7 +194,23 @@ function skills_render_job_listings() {
         return $wpdb->get_col($sql);
     }
     
-    $employers = skills_get_filter_options('Employer');
+    // Get employers and add County Job and Credential Job as options
+    function skills_get_employer_options() {
+        global $wpdb;
+        // Get regular employers
+        $employers = skills_get_filter_options('Employer');
+        
+        // Add County Job and Credential Job as options
+        $employers[] = "County Job";
+        $employers[] = "Credential Job";
+        
+        // Sort alphabetically
+        sort($employers);
+        
+        return $employers;
+    }
+    
+    $employers = skills_get_employer_options();
     $job_types = skills_get_filter_options('Job Type');
     $locations = skills_get_filter_options('Location');
     

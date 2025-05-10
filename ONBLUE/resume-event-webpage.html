@@ -11,7 +11,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: Greycliff CF, Light;
         }
 
         body {
@@ -28,6 +28,19 @@
         h1 {
          font-family: Greycliff CF, bold;
       }
+      .skills-footer-nav-section h3 {
+    /* font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    height: 22px;
+    line-height: 22px; */
+    color: #ffffff !important;
+}
+.elementor-widget:not(:last-child) {
+    margin-block-end: 0px !important;
+}
+
       h2 {
          font-family: Greycliff CF, bold;
          color: #4F6B3A;
@@ -62,7 +75,7 @@
 
         /* Header Section */
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('/api/placeholder/1200/600') no-repeat center center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://skillsforchicago.org/wp-content/uploads/2025/05/Untitled-design-5-1.png') no-repeat center center;
             background-size: cover;
             color: white;
             padding: 100px 0;
@@ -353,7 +366,7 @@
     background-color: #1F3707;
     color: white;
     padding: 60px 0 0 0;
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: Greycliff CF, Light;
     position: relative;
     overflow: hidden; /* Keep the background logo contained within the footer */
 }
@@ -804,7 +817,7 @@
     background-color: #1F3707;
     color: white;
     padding: 60px 0 0 0;
-    font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    font-family: Greycliff CF, Light;
     position: relative;
     overflow: hidden; /* Keep the background logo contained within the footer */
 }
@@ -1100,7 +1113,7 @@
 }
 .action-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: Greycliff CF, Light;
 }
 .action-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1131,7 +1144,7 @@
             background-color: #1F3707;
             color: white;
             padding: 60px 0 0 0;
-            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            font-family: Greycliff CF, Light;
             position: relative;
             overflow: hidden; /* Keep the background logo contained within the footer */
         }
@@ -1233,7 +1246,7 @@
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: Greycliff-thin, sans-serif;
+            font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -1428,7 +1441,7 @@
 }
 .action-button span {
     margin-right: 5px;
-    font-family: Greycliff-thin, sans-serif;
+    font-family: Greycliff CF, Light;
 }
 .action-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -1517,16 +1530,644 @@
         margin-top: 20px;
     }
 }
+.social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.skills-dropdown-nav {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 0px 85px 0px 25px; */
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: Greycliff CF, Light;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4d7e32;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: Greycliff CF, Light;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f3;
+    color: #4d7e32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+    .skills-dropdown-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    /* You would need to implement mobile dropdown separately or
+       integrate with  existing mobile menu system */
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 15px !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+    padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #4d7e32 !important;
+}
+
+/* Update existing mobile-nav styles */
+.mobile-nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.mobile-nav {
+    padding-top: 70px; /* Adjust if needed to make room for the header */
+}
+
+.hamburger.open {
+  position: fixed;
+  top: 20px;      /* Move it higher (decrease this value to move up) */
+  right: 20px;    /* Move it more to the right (decrease this value to move right) */
+  z-index: 1002;  /* Ensure it stays above other elements */
+}
+
+/* If the X is created by the transformed hamburger icon, make sure the spans align properly */
+.hamburger.open span:nth-child(2),
+.hamburger.open span:nth-child(3) {
+  right: 0;       /* Ensure the X is properly centered when transformed */
+}
+
+/* Optionally, if the mobile nav panel needs adjustment */
+.mobile-nav {
+  padding-top: 60px; /* Adjust top padding to ensure content doesn't go under the X */
+}
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 60px 0px 35px;
+        }
+        @media (max-width: 976px) {
+.mobile-menu-toggle {
+                display: block; 
+            }
+.donate-button {
+    display: none;
+}
+
+
+}
+        .mobile-donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 3px 5px 3px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+.mobile-donate-button span {
+    margin-right: 5px;
+    font-family: Greycliff CF, Light; 
+}
+.mobile-donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+.mobile-donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+.mobile-donate-button i {
+    transform: rotate(-45deg);
+}
+.mobile-donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+.mobile-donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+        @media (max-width: 1636px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 15px;
+            }
+            .header-container {
+                padding: 0px 30px 0px 30px;
+            }
+        }
+        @media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            .header-container {
+                padding: 0px;
+            }
+        }
+        .nav-links a:hover {
+        color: #4d7e32;
+      }
+
+      @media (max-width: 976px) {
+  /* Force html and body to contain all content */
+  html, body {
+    width: 100%;
+    overflow-x: hidden !important;
+    max-width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Make all containers respect viewport width */
+  .container,
+  .join-container,
+  .events-section,
+  .filter-section,
+  .events-list,
+  .event-card,
+  .event-details,
+  .event-image,
+  .employer-support,
+  .employer-support-container,
+  .employer-content,
+  .employer-image,
+  .resources-container,
+  .resources-content,
+  .communities-image,
+  .hero-container,
+  .header-container,
+  .footer-container,
+  .modern-footer,
+  .social-strip,
+  .social-strip-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    /* padding-left: 15px !important;
+    padding-right: 15px !important; */
+    box-sizing: border-box !important;
+  }
+  
+  /* Fix for images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Fix for filter section that has padding: 20px 35% */
+  .filter-section {
+    padding: 20px 15px !important;
+  }
+  
+  /* Fix for event cards */
+  .event-card {
+    flex-direction: column;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  /* Fix for footer */
+  .footer-container {
+    padding: 0 15px !important;
+  }
+  
+  /* Fix for hamburger menu when open */
+  .hamburger.open {
+    position: fixed;
+    right: 15px;
+  }
+  
+  /* Ensure anything with position: absolute doesn't cause overflow */
+  /* [class*="absolute"],
+  [style*="position: absolute"] {
+    max-width: 100vw;
+  } */
+}
+
+/* General overflow fixes for all screen sizes */
+/* * {
+  box-sizing: border-box;
+} */
+
+/* Force all sections to respect container width */
+/* section {
+  width: 100%;
+  max-width: 100%;
+} */
+    @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+    .communities-title {
+        font-size: 32px;
+    }
+
+    .resources-content {
+        padding: 0% 7% 0% 2%;
+    }
+    
+}
+
+.sub-section-title {
+    font-weight: 700;
+    margin-bottom: 4%;
+    font-size: 26px;
+}
+
+.events-image {
+    max-height: 400px !important;
+    max-width: 400px !important;
+}
+.header {
+            background-color: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 60px 0px 35px;
+        }
+@media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }}
     </style>
 </head>
 <body>
+    <div id="main-content">
+        <div class="social-strip">
+            <div class="social-strip-container">
+                <div class="social-icons-top">
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    <!-- Banner Section -->
+    <!-- <div class="banner">
+        <div class="banner-container">
+            <div class="banner-text">Englewood Job Fair and Employment Resource Fair, Wed 1/29/2025, 12:30 PM - 3:30 PM. Click here to register!</div>
+            <a href="#" class="learn-more-btn">Learn More</a>
+        </div>
+    </div> -->
+
+    <!-- Header -->
+    <header class="header">
+        
+        <div class="header-container">
+            <a href="https://skillsforchicago.org/" class="logo-link">
+                <img src="https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/03/SFC_Logo_Assets_2025_v1-2_optimized.png" alt="Skills for Chicago Logo" class="logo">
+            </a>
+            
+            <!-- Desktop Navigation -->
+            <nav class="skills-dropdown-nav">
+                <ul class="nav-items">
+                    <li class="nav-item">
+                        <a href="https://skillsforchicago.org/" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">About Us <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/" class="dropdown-item">Who We Are</a>
+                        <a href="https://skillsforchicago.org/ourteam/" class="dropdown-item">Our Team</a>
+                        <a href="https://skillsforchicago.org/annualreports/" class="dropdown-item">Annual Reports & Financials</a>
+                        <a href="https://skillsforchicago.org/ourwork/" class="dropdown-item">Our Work in Action</a>
+                        <a href="https://skillsforchicago.org/careers/" class="dropdown-item">Careers at Skills</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Job Seekers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/" class="dropdown-item">Find A Job</a>
+                        <a href="https://skillsforchicago.org/careerresources/" class="dropdown-item">Career Resources</a>
+                        <a href="https://skillsforchicago.org/faqs/" class="dropdown-item">FAQs for Job Seekers</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle">Employers <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/" class="dropdown-item">Partner With Us</a>
+                        <a href="https://skillsforchicago.org/employerpartners/" class="dropdown-item">Our Employer Partners</a>
+                        </div>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Community Partners <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/collaborate/" class="dropdown-item">Collaborate With Us</a>
+                        <a href="https://skillsforchicago.org/communityimpact/" class="dropdown-item">Community Impact</a>
+                        <a href="https://skillsforchicago.org/communitypartners/" class="dropdown-item">Our Community Partners</a>
+                               
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/donors/" class="nav-link">Donors</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Events <i class="fas fa-chevron-down"></i></a>
+                            <div class="dropdown-menu">
+                                <a href="https://skillsforchicago.org/events/" class="dropdown-item">Events & Highlights</a>
+                        <a href="https://skillsforchicago.org/ecb/" class="dropdown-item">Employment Champions Breakfast</a>
+                                
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/nationalexpansion/" class="nav-link">National Expansion</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="https://skillsforchicago.org/contactus/" class="nav-link">Contact Us</a>
+                        </li>
+                    </li>
+                </ul>
+                
+            </nav>
+            <a href="https://fundraise.givesmart.com/form/ezpk5w?utm_source=embed&utm_medium=page&utm_campaign=donation" class="donate-button">
+                <span>Donate</span>
+                <div class="circle-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>  
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-menu-toggle" aria-label="Toggle Mobile Menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+            
+            <!-- Mobile Navigation Panel -->
+            <div class="mobile-nav">
+                <div class="mobile-nav-links">
+                    <a href="https://skillsforchicago.org/">Home</a>
+                    
+                    <!-- About Us Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>About Us</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/whoweare/">Who We Are</a>
+                            <a href="https://skillsforchicago.org/ourteam/">Our Team</a>
+                            <a href="https://skillsforchicago.org/annualreports/">Annual Reports & Financials</a>
+                            <a href="https://skillsforchicago.org/ourwork/">Our Work in Action</a>
+                            <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Job Seekers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Job Seekers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/findajob/">Find A Job</a>
+                            <a href="https://skillsforchicago.org/careerresources/">Career Resources</a>
+                            <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Employers Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Employers</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/partner/">Partner With Us</a>
+                            <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Community Partners Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Community Partners</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/collaborate/">Collaborate With Us</a>
+                            <a href="https://skillsforchicago.org/communityimpact/">Community Impact</a>
+                            <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://skillsforchicago.org/donors/">Donors</a>
+                    
+                    <!-- Events Dropdown -->
+                    <div class="mobile-dropdown">
+                        <div class="mobile-dropdown-toggle">
+                            <span>Events</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="mobile-dropdown-menu">
+                            <a href="https://skillsforchicago.org/events/">Events & Highlights</a>
+                            <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a>
+                    <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
+                </div>
+                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="mobile-donate-button">
+                    <span>Donate</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- Overlay for mobile menu -->
+            <div class="overlay"></div>
+        </div>
+    </header>
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
             <div class="hero-content">
-                <h1>Skills Resume Building Resource Day</h1>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.</p>
-                <a href="#" class="action-button" style="width: 200px;">
+                <h1>Resource Day</h1>
+                <p>Our dedicated team at Skills for Chicago has your back when it comes to finding the right job. We're behind you at every stage from applying, to preparation, to getting hired-all at zero cost to you!</p>
+                <a href="https://skillsforchicago.org/communityimpact/" class="action-button" style="width: 200px;">
                     <span>Community Impact</span>
                     <div class="circle-icon">
                         <i class="fas fa-arrow-right"></i>
@@ -1539,7 +2180,7 @@
     <div class="container">
         <div class="event-card">
             <div class="event-card-header">
-                <h2 class="event-title">Skills Resume Building Resource Day</h2>
+                <h2 class="event-title">Resource Day</h2>
                 <a href="#" class="action-button" style="width: 225px;">
                     <span>Add To Calendar</span>
                     <div class="circle-icon">
@@ -1549,25 +2190,25 @@
 
             <div class="event-info">
                 <h3>Date & Time</h3>
-                <p class="card-date">April 8, 2025 - 10:00 AM</p>
+                <p class="card-date">June 10, 2025 - 10:00 AM</p>
 
                 <h3>Address</h3>
-                <p>205 W. Wacker Dr. Suite 2000<br>Chicago, IL 60606</p>
+                <p>815 West 63rd Street, Second Floor<br>Chicago, IL 60621</p>
             </div>
 
             <div class="social-share">
                 <h3>Share With Friends</h3>
                 <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
-            <div class="qr-code-container">
+            <!-- <div class="qr-code-container">
                 <img src="/api/placeholder/150/150" alt="Event QR Code" class="qr-code">
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -1577,13 +2218,13 @@
             <div class="event-details-grid">
                 <div class="event-details-column">
                     <h2>Event Details</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh viverra non semper suscipit posuere a pede.</p>
+                    <p>Our team will be on-site reviewing resumes and conducting mock interviews. Drop in and talk one-on-one with our talent acquisition team to get all your job-related questions answered!</p>
                 </div>
                 <div class="event-details-column">
                     <div class="event-host">
-                        <div class="host-image">
+                        <!-- <div class="host-image">
                             <img src="/api/placeholder/100/100" alt="Event Host">
-                        </div>
+                        </div> -->
                         <div class="host-info">
                             <h3>Event Host</h3>
                             <p><a href="tel:+7735550097">773-555-0097</a></p>
@@ -1597,17 +2238,17 @@
     </section>
 
     <!-- Event Photos -->
-    <section class="event-section">
+    <!-- <section class="event-section">
         <div class="container">
             <h2>Event Photos And Videos</h2>
             <div class="photo-gallery">
                 <img src="/api/placeholder/800/400" alt="Event Photo">
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Event Sponsors -->
-    <section class="event-section">
+    <!-- <section class="event-section">
         <div class="container">
             <h2>Event Sponsors</h2>
             <div class="sponsors-logos">
@@ -1617,10 +2258,10 @@
                 <img src="/api/placeholder/150/80" alt="Misericordia Logo" class="sponsor-logo">
             </div>
         </div>
-    </section>
+    </section> -->
 
         <!-- Footer Content -->
-        <footer class="modern-footer">
+        <!-- <footer class="modern-footer">
             <div class="footer-container">
                 <div class="footer-top">
                     <a href="#"><div class="footer-logo">
@@ -1628,15 +2269,15 @@
                     </div></a>
                     <div class="footer-divider"></div>
                     <div class="footer-social">
-                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/SkillsForChicago/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.linkedin.com/company/skills-for-chicago/?viewAsMember=true" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     </div>
-                </div>
+                </div> -->
                 
                 <!-- Desktop Footer Navigation -->
-                <div class="footer-nav">
+                <!-- <div class="footer-nav">
                     <div class="footer-nav-section">
                         <h3>Home</h3>
                         <div class="footer-nav-links">
@@ -1704,12 +2345,12 @@
                             <a href="#">Contact Us</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 
                 <!-- Mobile Footer Accordion -->
-                <div class="mobile-footer">
+                <!-- <div class="mobile-footer"> -->
                     <!-- ABOUT US Section -->
-                    <div class="footer-accordion">
+                    <!-- <div class="footer-accordion">
                         <div class="footer-accordion-header">
                             <h3 class="footer-accordion-title">ABOUT US</h3>
                             <span class="footer-accordion-icon">
@@ -1725,10 +2366,10 @@
                                 <li><a href="#">Careers at Skills</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
     
                     <!-- JOB SEEKERS Section -->
-                    <div class="footer-accordion">
+                    <!-- <div class="footer-accordion">
                         <div class="footer-accordion-header">
                             <h3 class="footer-accordion-title">JOB SEEKERS</h3>
                             <span class="footer-accordion-icon">
@@ -1742,10 +2383,10 @@
                                 <li><a href="#">FAQs for Job Seekers</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
     
                     <!-- EMPLOYERS Section -->
-                    <div class="footer-accordion">
+                    <!-- <div class="footer-accordion">
                         <div class="footer-accordion-header">
                             <h3 class="footer-accordion-title">EMPLOYERS</h3>
                             <span class="footer-accordion-icon">
@@ -1758,10 +2399,10 @@
                                 <li><a href="#">Our Employer Partners</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
     
                     <!-- COMMUNITY PARTNERS Section -->
-                    <div class="footer-accordion">
+                    <!-- <div class="footer-accordion">
                         <div class="footer-accordion-header">
                             <h3 class="footer-accordion-title">COMMUNITY PARTNERS</h3>
                             <span class="footer-accordion-icon">
@@ -1775,9 +2416,9 @@
                                 <li><a href="#">Our Community Partners</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- DONORS Section -->
-                    <div class="footer-accordion">
+                    <!-- <div class="footer-accordion">
                         <div class="footer-accordion-header">
                             <h3 class="footer-accordion-title">DONORS</h3>
                             <span class="footer-accordion-icon">
@@ -1789,10 +2430,10 @@
                                 <li><a href="#">Donors</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
     
                     <!-- EVENTS & HIGHLIGHTS Section -->
-                    <div class="footer-accordion">
+                    <!-- <div class="footer-accordion">
                         <div class="footer-accordion-header">
                             <h3 class="footer-accordion-title">EVENTS</h3>
                             <span class="footer-accordion-icon">
@@ -1805,10 +2446,10 @@
                                 <li><a href="#">Employment Champions Breakfast</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
     
                     <!-- NATIONAL EXPANSION Section -->
-                    <div class="footer-accordion">
+                    <!-- <div class="footer-accordion">
                         <div class="footer-accordion-header">
                             <h3 class="footer-accordion-title">NATIONAL EXPANSION</h3>
                             <span class="footer-accordion-icon">
@@ -1820,11 +2461,11 @@
                                 <li><a href="#">National Expansion</a></li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
     
     
                     <!-- CONTACT US Section -->
-                    <div class="footer-accordion">
+                    <!-- <div class="footer-accordion">
                         <div class="footer-accordion-header">
                             <h3 class="footer-accordion-title">CONTACT US</h3>
                             <span class="footer-accordion-icon">
@@ -1842,10 +2483,10 @@
             
             <div class="footer-copyright">
                 <div class="footer-container">
-                    Copyright @ 2025 Skills All rights reserved
+                    © 2025 Skills for Chicago. All Rights Reserved.
                 </div>
             </div>
-        </footer>
+        </footer> -->
 
     <script>
         // Add to Calendar functionality
@@ -1949,5 +2590,62 @@
             });
         });
     </script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function() {
+        // Mobile Dropdown Functionality
+        const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+        
+        mobileDropdowns.forEach(dropdown => {
+            const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+            
+            dropdownToggle.addEventListener('click', function() {
+                // Toggle active class on clicked dropdown
+                dropdown.classList.toggle('active');
+                
+                // Optionally close other dropdowns when one is opened
+                // Comment this out if you want multiple dropdowns to be open simultaneously
+                mobileDropdowns.forEach(otherDropdown => {
+                    if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                        otherDropdown.classList.remove('active');
+                    }
+                });
+            });
+        });
+        
+        // Close dropdowns when a link inside is clicked
+        const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+        dropdownLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                // Optionally close the dropdown when a link is clicked
+                // Comment this out if you want the dropdown to stay open after a link is clicked
+                const parentDropdown = this.closest('.mobile-dropdown');
+                setTimeout(() => {
+                    parentDropdown.classList.remove('active');
+                    
+                    // Also close the mobile menu
+                    document.querySelector('.hamburger').classList.remove('open');
+                    document.querySelector('.mobile-nav').classList.remove('open');
+                    document.querySelector('.overlay').classList.remove('active');
+                    document.querySelector('body').style.overflow = '';
+                }, 100); // Small delay to allow the click to register
+            });
+        });
+        
+        // Make sure mobile dropdowns are closed when menu is closed
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', function() {
+                // If closing the mobile menu, close all dropdowns
+                if (document.querySelector('.mobile-nav').classList.contains('open')) {
+                    setTimeout(() => {
+                        mobileDropdowns.forEach(dropdown => {
+                            dropdown.classList.remove('active');
+                        });
+                    }, 300); // Delay to match the mobile menu closing animation
+                }
+            });
+        }
+    });
+            </script>
 </body>
 </html>

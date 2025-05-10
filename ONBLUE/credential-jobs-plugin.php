@@ -30,16 +30,16 @@ function credential_jobs_custom_assets() {
             'credential-jobs-style',
             CREDENTIAL_JOBS_PLUGIN_URL . 'credential-jobs.css',
             array('font-awesome'),
-            '1.0.0',
+            '1.0.1',
             'all'
         );
         
-        // Enqueue custom JS (minimal now, but keeping it for future functionality)
+        // Enqueue custom JS
         wp_enqueue_script(
             'credential-jobs-scripts',
             CREDENTIAL_JOBS_PLUGIN_URL . 'credential-jobs.js',
             array('jquery'),
-            '1.0.0',
+            '1.0.1',
             true
         );
     }
@@ -111,8 +111,8 @@ function credential_render_job_listings() {
     // Main Content HTML
     echo '<div class="credential-jobs-container">';
     echo '<div class="page-title-container">';
-    echo '<h1 class="page-title">Credential Jobs</h1>';
-    echo '<h2 class="page-subtitle">Find Your Next Credential Job. Build Your Future.</h2>';
+    // echo '<h1 class="page-title">Credential Jobs</h1>';
+    // echo '<h2 class="page-subtitle">Find Your Next Credential Job. Build Your Future.</h2>';
     echo '</div>';
     
     // Results Count
@@ -136,10 +136,12 @@ function credential_render_job_listings() {
             
             echo '<div class="job-card" data-job-id="' . $row->JN . '">';
             
-            // Make the entire card clickable
-            echo '<a href="' . esc_url($job_detail_url) . '" style="display:block; text-decoration:none; color:inherit;">';
-            
+            // Job card content
+            echo '<a href="' . esc_url($job_detail_url) . '" class="job-card-link">';
+            echo '<div class="job-card-logo">';
             echo '<img src="' . $logo_url . '" alt="' . credential_clean_output($row->Employer) . ' logo" class="company-logo">';
+            echo '</div>';
+            echo '<div class="job-card-content">';
             echo '<h3 class="job-title">' . credential_clean_output($row->{'Job Title'}) . '</h3>';
             echo '<p class="company-name">' . credential_clean_output($row->Employer) . '</p>';
             echo '<p class="job-location">' . credential_clean_output($row->Location) . '</p>';
@@ -154,8 +156,9 @@ function credential_render_job_listings() {
                 echo '<p class="job-shift">' . credential_clean_output($row->{'Shift Details'}) . '</p>';
             }
             
-            echo '</a>';
-            echo '</div>';
+            echo '</div>'; // End job-card-content
+            echo '</a>'; // End job-card-link
+            echo '</div>'; // End job-card
         }
     } else {
         echo '<div class="no-results">No credential jobs found.</div>';

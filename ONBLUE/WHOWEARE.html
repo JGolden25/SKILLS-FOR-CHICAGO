@@ -26,6 +26,19 @@
 h1 {
          font-family: Greycliff CF, bold;
       }
+      .skills-footer-nav-section h3 {
+    /* font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    height: 22px;
+    line-height: 22px; */
+    color: #ffffff !important;
+}
+.elementor-widget:not(:last-child) {
+    margin-block-end: 0px !important;
+}
+
       h2 {
          font-family: Greycliff CF, bold;
       }
@@ -53,6 +66,16 @@ h1 {
     margin-left: 2%;
 }
 
+.team-container {
+            display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    padding: 0px 0px 0px 100px;
+    background-color: #FFFFFF;
+    min-height: 800px;
+        }
+
 .employer-partner-text::before {
     content: "●"; /* Unicode bullet character */
     color: #4F6B3A; /*  specified green color */
@@ -76,15 +99,7 @@ h1 {
         display: hidden;
         font-size: 0px;
     }
-    .team-container {
-            display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: center;
-    padding: 0px 0px 0px 100px;
-    background-color: #FFFFFF;
-    min-height: 800px;
-        }
+  
         .team-content {
             margin-bottom: 10%;
         }
@@ -122,7 +137,7 @@ h1 {
         @media (max-width: 1024px) {
         .team-container {
                 grid-template-columns: 1fr;
-                gap: 40px;
+                gap: 0px;
                 padding: 0px;
             }
 
@@ -139,12 +154,13 @@ h1 {
 
             .team-image {
                 order: -1;
-                height: 550px;
+                height: 400px;
             }
 
             .team-image img {
-                height: 550px;
-            }
+        height: 400px;
+        object-position: center 25%;
+    }
             
             .profile-social-link-big {
     position: absolute;
@@ -2970,7 +2986,7 @@ h1 {
                 </ul>
                 
             </nav>
-            <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="donate-button">
+            <a href="https://fundraise.givesmart.com/form/ezpk5w?utm_source=embed&utm_medium=page&utm_campaign=donation" class="donate-button">
                 <span>Donate</span>
                 <div class="circle-icon">
                     <i class="fas fa-arrow-right"></i>
@@ -3138,7 +3154,7 @@ h1 {
         </div>
     </section>
         <!-- Footer Content -->
-    <footer class="modern-footer">
+    <!-- <footer class="modern-footer">
         <div class="footer-container">
             <div class="footer-top">
                 <a href="https://skillsforchicago.org/"><div class="footer-logo">
@@ -3151,10 +3167,10 @@ h1 {
                     <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
-            </div>
+            </div> -->
             
             <!-- Desktop Footer Navigation -->
-            <div class="footer-nav">
+            <!-- <div class="footer-nav">
                 <div class="footer-nav-section">
                     <h3>Home</h3>
                     <div class="footer-nav-links">
@@ -3222,12 +3238,12 @@ h1 {
                         <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             <!-- Mobile Footer Accordion -->
-            <div class="mobile-footer">
+            <!-- <div class="mobile-footer"> -->
                 <!-- ABOUT US Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">ABOUT US</h3>
                         <span class="footer-accordion-icon">
@@ -3243,10 +3259,10 @@ h1 {
                         <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- JOB SEEKERS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">JOB SEEKERS</h3>
                         <span class="footer-accordion-icon">
@@ -3260,10 +3276,10 @@ h1 {
                         <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- EMPLOYERS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">EMPLOYERS</h3>
                         <span class="footer-accordion-icon">
@@ -3276,10 +3292,10 @@ h1 {
                         <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- COMMUNITY PARTNERS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">COMMUNITY PARTNERS</h3>
                         <span class="footer-accordion-icon">
@@ -3293,9 +3309,9 @@ h1 {
                         <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <!-- DONORS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">DONORS</h3>
                         <span class="footer-accordion-icon">
@@ -3307,10 +3323,10 @@ h1 {
                             <li><a href="https://skillsforchicago.org/donors/">Donors</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- EVENTS & HIGHLIGHTS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">EVENTS</h3>
                         <span class="footer-accordion-icon">
@@ -3323,10 +3339,10 @@ h1 {
                         <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- NATIONAL EXPANSION Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">NATIONAL EXPANSION</h3>
                         <span class="footer-accordion-icon">
@@ -3338,11 +3354,11 @@ h1 {
                             <li><a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
 
                 <!-- CONTACT US Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">CONTACT US</h3>
                         <span class="footer-accordion-icon">
@@ -3360,10 +3376,10 @@ h1 {
         
         <div class="footer-copyright">
             <div class="footer-container">
-                copyright @ 2025 Skills For Chicago all rights reserved
+                © 2025 Skills for Chicago. All Rights Reserved.
             </div>
         </div>
-    </footer>
+    </footer> -->
 
 
     <script>

@@ -27,6 +27,19 @@
       h2 {
          font-family: Greycliff CF, Bold;
       }
+      .skills-footer-nav-section h3 {
+    /* font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    height: 22px;
+    line-height: 22px; */
+    color: #ffffff !important;
+}
+.elementor-widget:not(:last-child) {
+    margin-block-end: 0px !important;
+}
+
       p {
         font-family: Greycliff CF, Light;
       }
@@ -1710,7 +1723,7 @@ padding-left: 7%;
             font-size: 22px;
             line-height: 1.7;
             color: #444;
-            width: 70%;
+            width: 90%;
         }
 
         .communities-image {
@@ -1731,10 +1744,10 @@ padding-left: 7%;
 
         .national-image img {
             width: 100%;
-            height: 625px;
+            height: 575px;
             display: block;
             object-fit: cover;
-            object-position: center 90%;
+            object-position: center 50%;
         }
 
         .impact-button {
@@ -2742,7 +2755,7 @@ padding-left: 0%;
             font-size: 22px;
             line-height: 1.7;
             color: #444;
-            width: 70%;
+            width: 90%;
         }
         @media (max-width: 1354px) {
             .location-cards {
@@ -3006,7 +3019,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
             font-size: 12px;
             transition: opacity 0.3s ease;
             font-weight: 300;
-            font-family: font-family: Greycliff CF, Light;
+            font-family: Greycliff CF, Light;
         }
 
         .footer-nav-links a:hover {
@@ -3914,7 +3927,7 @@ grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: font-family: Greycliff CF, Light; 
+    font-family: Greycliff CF, Light; 
 }
 .mobile-donate-button:hover .circle-icon i {
     color: #333333; /* Black arrow */
@@ -4378,6 +4391,37 @@ img, svg, video, canvas, iframe {
         padding: 15px 1%;
     }
 }
+
+/* Hover effect for location cards */
+.location-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden; /* Keeps the scaled image inside the card boundaries */
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Make the image itself grow slightly on hover */
+.location-image img {
+    transition: transform 0.5s ease;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.location-card:hover .location-image img {
+    transform: scale(1.05);
+}
+
+/* Style for the anchor wrapping the card */
+.location-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
 </style>
 </head>
 <body>
@@ -4469,7 +4513,7 @@ img, svg, video, canvas, iframe {
                 </ul>
                 
             </nav>
-            <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1j85h3" class="donate-button">
+            <a href="https://fundraise.givesmart.com/form/ezpk5w?utm_source=embed&utm_medium=page&utm_campaign=donation" class="donate-button">
                 <span>Donate</span>
                 <div class="circle-icon">
                     <i class="fas fa-arrow-right"></i>
@@ -4583,7 +4627,7 @@ img, svg, video, canvas, iframe {
                 </p>
             </div>
             <div class="national-image">
-                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/SAF-Redesign-Option-_1-1.png" alt="People at a community event">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/SAF-redesign-Red-centered-1.png" alt="People at a community event">
             </div>
         </div>
     </section>
@@ -4659,73 +4703,69 @@ img, svg, video, canvas, iframe {
         <h2 class="where-we-are-title">Where We Are Now</h2>
         <div class="location-cards">
             <!-- Location 1 -->
-            <div class="location-card">
-                <div class="location-image">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Chicago-IL.png" alt="Chicago skyline">
-                    <!-- <div class="location-logo">
-                        <img src="/api/placeholder/120/50" alt="Skills for Chicago logo">
-                    </div> -->
+            <a href="https://skillsforchicago.org/" class="location-link">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Chicago-IL.png" alt="Chicago skyline">
+                    </div>
+                    <div class="location-info">
+                        <h3>Chicago, IL</h3>
+                        <p>Our flagship site, Skills for Chicago (formerly Skills for Chicagoland's Future), launched in 2012</p>
+                    </div>
                 </div>
-                <div class="location-info">
-                    <h3>Chicago, IL</h3>
-                    <p>Our flagship site, Skills for Chicago (formerly Skills for Chicagoland's Future), launched in 2012</p>
-                </div>
-            </div>
+            </a>
             
             <!-- Location 2 -->
-            <div class="location-card">
-                <div class="location-image">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Rhode-Island.png" alt="Rhode Island cityscape">
-                    <!-- <div class="location-logo">
-                        <img src="/api/placeholder/120/50" alt="Skills for Rhode Island's Future logo">
-                    </div> -->
+            <a href="https://skillsforri.com/" class="location-link">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Rhode-Island.png" alt="Rhode Island cityscape">
+                    </div>
+                    <div class="location-info">
+                        <h3>Rhode Island</h3>
+                        <p>Skills for Rhode Island's Future, launched in 2016</p>
+                    </div>
                 </div>
-                <div class="location-info">
-                    <h3>Rhode Island</h3>
-                    <p>Skills for Rhode Island's Future, launched in 2016</p>
-                </div>
-            </div>
+            </a>
             
             <!-- Location 3 -->
-            <div class="location-card">
-                <div class="location-image">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Phoenix-AZ.png" alt="Phoenix skyline">
-                    <!-- <div class="location-logo">
-                        <img src="/api/placeholder/120/50" alt="Connect to Work AZ logo">
-                    </div> -->
+            <a href="https://connecttoworkaz.com/" class="location-link">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Phoenix-AZ.png" alt="Phoenix skyline">
+                    </div>
+                    <div class="location-info">
+                        <h3>Phoenix, AZ</h3>
+                        <p>Connect to Work AZ, launched in partnership with the Greater Phoenix Chamber Foundation in 2023</p>
+                    </div>
                 </div>
-                <div class="location-info">
-                    <h3>Phoenix, AZ</h3>
-                    <p>Connect to Work AZ, launched in partnership with the Greater Phoenix Chamber Foundation in 2023</p>
-                </div>
-            </div>
-             <!-- Location 1 -->
-             <div class="location-card">
-                <div class="location-image">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Atlanta-GA.png" alt="Chicago skyline">
-                    <!-- <div class="location-logo">
-                        <img src="/api/placeholder/120/50" alt="Skills for Chicago logo">
-                    </div> -->
-                </div>
-                <div class="location-info">
-                    <h3>Atlanta, GA</h3>
-                    <p>Connect to Work GA, launched in partnership with the Metro Atlanta Chamber in 2024</p>
-                </div>
-            </div>
+            </a>
             
-            <!-- Location 2 -->
-            <div class="location-card">
-                <div class="location-image">
-                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Hartford-CT-1.png" alt="Rhode Island cityscape">
-                    <!-- <div class="location-logo">
-                        <img src="/api/placeholder/120/50" alt="Skills for Rhode Island's Future logo">
-                    </div> -->
+            <!-- Location 4 -->
+            <a href="https://connecttoworkga.org/" class="location-link">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Atlanta-GA.png" alt="Atlanta skyline">
+                    </div>
+                    <div class="location-info">
+                        <h3>Atlanta, GA</h3>
+                        <p>Connect to Work GA, launched in partnership with the Metro Atlanta Chamber in 2024</p>
+                    </div>
                 </div>
-                <div class="location-info">
-                    <h3>Hartford, CT</h3>
-                    <p>Workforce Solutions Collaborative of Metro Hartford, launched in 2024</p>
+            </a>
+            
+            <!-- Location 5 -->
+            <a href="https://unitedwayinc.org/our-work/economic-mobility-2/workforce-solutions/" class="location-link">
+                <div class="location-card">
+                    <div class="location-image">
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Hartford-CT-1.png" alt="Hartford cityscape">
+                    </div>
+                    <div class="location-info">
+                        <h3>Hartford, CT</h3>
+                        <p>Workforce Solutions Collaborative of Metro Hartford, launched in 2024</p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
     </section>
      <!-- Communities Section -->
@@ -4764,7 +4804,7 @@ img, svg, video, canvas, iframe {
         </div>
     </section>
           <!-- Footer Content -->
-    <footer class="modern-footer">
+    <!-- <footer class="modern-footer">
         <div class="footer-container">
             <div class="footer-top">
                 <a href="https://skillsforchicago.org/"><div class="footer-logo">
@@ -4777,10 +4817,10 @@ img, svg, video, canvas, iframe {
                     <a href="https://www.youtube.com/@skillsforchicagoland" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     <a href="https://www.instagram.com/skillsforchicago/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                 </div>
-            </div>
+            </div> -->
             
             <!-- Desktop Footer Navigation -->
-            <div class="footer-nav">
+            <!-- <div class="footer-nav">
                 <div class="footer-nav-section">
                     <h3>Home</h3>
                     <div class="footer-nav-links">
@@ -4848,12 +4888,12 @@ img, svg, video, canvas, iframe {
                         <a href="https://skillsforchicago.org/contactus/">Contact Us</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
             <!-- Mobile Footer Accordion -->
-            <div class="mobile-footer">
+            <!-- <div class="mobile-footer"> -->
                 <!-- ABOUT US Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">ABOUT US</h3>
                         <span class="footer-accordion-icon">
@@ -4869,10 +4909,10 @@ img, svg, video, canvas, iframe {
                         <a href="https://skillsforchicago.org/careers/">Careers at Skills</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- JOB SEEKERS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">JOB SEEKERS</h3>
                         <span class="footer-accordion-icon">
@@ -4886,10 +4926,10 @@ img, svg, video, canvas, iframe {
                         <a href="https://skillsforchicago.org/faqs/">FAQs for Job Seekers</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- EMPLOYERS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">EMPLOYERS</h3>
                         <span class="footer-accordion-icon">
@@ -4902,10 +4942,10 @@ img, svg, video, canvas, iframe {
                         <a href="https://skillsforchicago.org/employerpartners/">Our Employer Partners</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- COMMUNITY PARTNERS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">COMMUNITY PARTNERS</h3>
                         <span class="footer-accordion-icon">
@@ -4919,9 +4959,9 @@ img, svg, video, canvas, iframe {
                         <a href="https://skillsforchicago.org/communitypartners/">Our Community Partners</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
                 <!-- DONORS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">DONORS</h3>
                         <span class="footer-accordion-icon">
@@ -4933,10 +4973,10 @@ img, svg, video, canvas, iframe {
                             <li><a href="https://skillsforchicago.org/donors/">Donors</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- EVENTS & HIGHLIGHTS Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">EVENTS</h3>
                         <span class="footer-accordion-icon">
@@ -4949,10 +4989,10 @@ img, svg, video, canvas, iframe {
                         <a href="https://skillsforchicago.org/ecb/">Employment Champions Breakfast</a>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- NATIONAL EXPANSION Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">NATIONAL EXPANSION</h3>
                         <span class="footer-accordion-icon">
@@ -4964,11 +5004,11 @@ img, svg, video, canvas, iframe {
                             <li><a href="https://skillsforchicago.org/nationalexpansion/">National Expansion</a></li>
                         </ul>
                     </div>
-                </div>
+                </div> -->
 
 
                 <!-- CONTACT US Section -->
-                <div class="footer-accordion">
+                <!-- <div class="footer-accordion">
                     <div class="footer-accordion-header">
                         <h3 class="footer-accordion-title">CONTACT US</h3>
                         <span class="footer-accordion-icon">
@@ -4986,10 +5026,10 @@ img, svg, video, canvas, iframe {
         
         <div class="footer-copyright">
             <div class="footer-container">
-                copyright @ 2025 Skills For Chicago all rights reserved
+                © 2025 Skills for Chicago. All Rights Reserved.
             </div>
         </div>
-    </footer>
+    </footer> -->
 </div>
 
     <script>

@@ -15,7 +15,13 @@ p, a {
     margin-bottom: 40px;
     align-items: center;
 }
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100% !important;
+}
 
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0px !important;
+}
 .skills-job-listings-wrapper .filter-dropdown {
     position: relative;
 }
@@ -710,6 +716,15 @@ p, a {
     background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4));
 }
 
+.skills-header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 60px 0px 35px;
+    max-width: 100% !important;
+    margin: 0 auto;
+}
+
 .skills-job-listings-wrapper .job-banner-content {
     position: relative;
     display: flex;
@@ -775,11 +790,11 @@ p, a {
 /* Responsive styles */
 @media (max-width: 992px) {
     .skills-job-listings-wrapper .job-listings-container {
-        max-width: 100%;
+        /* max-width: 100%;
         margin: 0 auto;      
         padding: 0 0px;        
         margin-left: 0%;        
-        margin-right: 0%;
+        margin-right: 0%; */
     }
 
     .has-global-padding {
@@ -911,6 +926,13 @@ line-height: 1.6;
 .skills-job-listings-wrapper .job-card::-moz-focus-inner,
 .skills-job-listings-wrapper .job-card a::-moz-focus-inner {
     border: 0;
+}
+.skills-nav-items {
+    display: flex;
+    list-style: none;
+   
+    margin: 0 auto;
+    justify-content: space-evenly;
 }
 
 :where(.wp-site-blocks) > :first-child {
