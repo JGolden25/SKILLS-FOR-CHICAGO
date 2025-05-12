@@ -535,10 +535,22 @@ function skills_render_job_detail($job_id) {
     
     // Right - Apply Button
     echo '<div class="apply-button-container">';
-    // Get source parameter if it exists
+    // Get parameters if they exist
     $source = isset($_GET['source']) ? urlencode($_GET['source']) : '';
-    // Build apply now URL with job_id and optional source
+    $tfa_49 = isset($_GET['tfa_49']) ? urlencode($_GET['tfa_49']) : '';
+    $tfa_89 = isset($_GET['tfa_89']) ? urlencode($_GET['tfa_89']) : '';
+
+    // Build apply now URL with job_id and optional parameters
     $apply_now_url = "https://skillsforchicago.org/candidate-login/?tfa_3={$job->JN}&tfa_5={$source}";
+
+    // Add additional parameters if they exist
+    if (!empty($tfa_49)) {
+        $apply_now_url .= "&tfa_49={$tfa_49}";
+    }
+    if (!empty($tfa_89)) {
+        $apply_now_url .= "&tfa_89={$tfa_89}";
+    }
+    
     echo '<a href="' . esc_url($apply_now_url) . '" class="action-button" style="width: 150px;">
                 <span>Apply Now</span>
                 <div class="circle-icon">
