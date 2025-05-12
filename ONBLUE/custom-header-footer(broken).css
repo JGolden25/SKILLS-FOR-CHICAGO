@@ -381,7 +381,7 @@ h1 {
 
 .mobile-donate-button span {
     margin-right: 5px;
-    font-family: font-family: Greycliff CF, Light;
+    font-family: Greycliff CF, Light;
 }
 
 .mobile-donate-button:hover .circle-icon i {
@@ -578,7 +578,7 @@ h1 {
     font-size: 12px;
     transition: opacity 0.3s ease;
     font-weight: 300;
-    font-family: font-family: Greycliff CF, Light;
+    font-family: Greycliff CF, Light;
 }
 
 .footer-nav-links a:hover {

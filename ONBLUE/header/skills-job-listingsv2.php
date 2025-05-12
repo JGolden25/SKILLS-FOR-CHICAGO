@@ -516,6 +516,9 @@ function skills_render_job_detail($job_id) {
     </div>';
 
     echo '<div class="job-detail-container">';
+    
+    // JobAdX tracking pixel for job description page
+    echo '<img src="https://track.jobadx.com/v1/i.gif?utm_pixel=ad02b4ff-730e-4dd4-a5af-3bc67ca78d98&utm_ptz=EST&utm_rqt=track" height="1" width="1" style="display: none" alt="" referrerpolicy="no-referrer-when-downgrade" />';
 
     echo '<div class="job-detail-container">';
     
@@ -537,14 +540,28 @@ function skills_render_job_detail($job_id) {
     echo '<div class="apply-button-container">';
     // Get source parameter if it exists
     $source = isset($_GET['source']) ? urlencode($_GET['source']) : '';
-    // Build apply now URL with job_id and optional source
-    $apply_now_url = "https://skillsforchicago.org/candidate-login/?tfa_3={$job->JN}&tfa_5={$source}";
-    echo '<a href="' . esc_url($apply_now_url) . '" class="action-button" style="width: 150px;">
+    
+    // Build apply now URL with job_id and source - NEVER add cred=credential on the Find a Job page
+    $apply_now_url = "https://skillsforchicago.org/candidate-login/?job_id={$job->JN}&source={$source}";
+    
+    // Modified Apply Now button with JobAdX tracking pixel
+    echo '<a href="' . esc_url($apply_now_url) . '" class="action-button" style="width: 150px;" onclick="trackApplyClick(); return true;">
                 <span>Apply Now</span>
                 <div class="circle-icon">
                     <i class="fas fa-arrow-right"></i>
                 </div>
-            </a> ';
+            </a>';
+    echo '<script>
+    function trackApplyClick() {
+        // Create JobAdX tracking pixel for apply start
+        var img = new Image();
+        img.src = "https://track.jobadx.com/v1/i.gif?utm_pixel=ad02b4ff-730e-4dd4-a5af-3bc67ca78d98&utm_ptz=EST&utm_rqt=conversion_start";
+        img.height = 1;
+        img.width = 1;
+        img.style.display = "none";
+    }
+    </script>';
+    
     echo '</div>';
     
     echo '</div>'; // End job-title-header
