@@ -437,7 +437,7 @@ hr {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1636px) {
+@media (max-width: 1693px) {
     /* .skills-dropdown-nav {
         display: none;
     } */
@@ -450,6 +450,17 @@ hr {
         padding: 0px 30px 0px 30px;
     }
 }
+
+@media (max-width: 1486px) {
+    .skills-nav-link {
+        padding: 0px 0px;  
+}
+.skills-nav-items {
+    padding-left: 0px;
+}
+}
+
+
 
 @media (max-width: 1354px) {
     /* .skills-dropdown-nav {

@@ -1968,6 +1968,62 @@
     .header {
         padding: 15px 1%;
     }}
+
+/* Calendar Dropdown Styles */
+.calendar-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.calendar-options {
+    position: absolute;
+    top: calc(100% + 5px);
+    right: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    width: 200px;
+    z-index: 100;
+    border: 1px solid #ddd;
+    display: none;
+}
+
+.calendar-option {
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+    font-family: Greycliff CF, Light;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.calendar-option:first-child {
+    border-radius: 8px 8px 0 0;
+}
+
+.calendar-option:last-child {
+    border-radius: 0 0 8px 8px;
+}
+
+.calendar-option:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.calendar-option:hover {
+    background-color: #f5f5f5;
+    color: #4d7e32;
+}
+
+.calendar-option i {
+    margin-right: 10px;
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    color: #555;
+}
     </style>
 </head>
 <body>
@@ -2181,12 +2237,23 @@
         <div class="event-card">
             <div class="event-card-header">
                 <h2 class="event-title">Resource Day</h2>
-                <a href="#" class="action-button" style="width: 225px;">
-                    <span>Add To Calendar</span>
-                    <div class="circle-icon">
-                        <i class="fas fa-arrow-right"></i>
+                <div class="calendar-dropdown">
+                    <a href="#" class="action-button" id="calendarButton" style="width: 225px;">
+                        <span>Add To Calendar</span>
+                        <div class="circle-icon">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <div id="calendarOptions" class="calendar-options">
+                        <a href="#" id="addToGoogle" class="calendar-option">
+                            <i class="fab fa-google"></i> Google Calendar
+                        </a>
+                        <a href="#" id="addToApple" class="calendar-option">
+                            <i class="fab fa-apple"></i> Apple Calendar
+                        </a>
                     </div>
-                </a>             </div>
+                </div>
+            </div>
 
             <div class="event-info">
                 <h3>Date & Time</h3>
@@ -2489,31 +2556,78 @@
         </footer> -->
 
     <script>
-        // Add to Calendar functionality
-        document.getElementById('addToCalendar').addEventListener('click', function(e) {
-            e.preventDefault();
+        document.addEventListener('DOMContentLoaded', function() {
+            const calendarButton = document.getElementById('calendarButton');
+            const calendarOptions = document.getElementById('calendarOptions');
+            const addToGoogle = document.getElementById('addToGoogle');
+            const addToApple = document.getElementById('addToApple');
+            
+            // Toggle dropdown
+            calendarButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                calendarOptions.style.display = calendarOptions.style.display === 'none' || calendarOptions.style.display === '' ? 'block' : 'none';
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!calendarButton.contains(e.target) && !calendarOptions.contains(e.target)) {
+                    calendarOptions.style.display = 'none';
+                }
+            });
             
             // Calendar event details
-            const eventTitle = "Skills Resume Building Resource Day";
-            const eventStart = "20250408T100000"; // April 8, 2025, 10:00 AM
-            const eventEnd = "20250408T130000";   // April 8, 2025, 1:00 PM (assuming 3 hours)
-            const eventLocation = "205 W. Wacker Dr. Suite 2000, Chicago, IL 60606";
-            const eventDescription = "Join us for the Skills Resume Building Resource Day. Get expert help with your resume and connect with employers.";
+            const eventTitle = "Resource Day";
+            const eventStart = "20250610T100000"; // June 10, 2025, 10:00 AM
+            const eventEnd = "20250610T130000";   // June 10, 2025, 1:00 PM (assuming 3 hours)
+            const eventLocation = "815 West 63rd Street, Second Floor, Chicago, IL 60621";
+            const eventDescription = "Our team will be on-site reviewing resumes and conducting mock interviews. Drop in and talk one-on-one with our talent acquisition team to get all your job-related questions answered!";
             
-            // Create Google Calendar URL
-            const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${eventStart}/${eventEnd}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}&sprop=website:skillsforchicago.org`;
+            // Add to Google Calendar
+            addToGoogle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(eventTitle)}&dates=${eventStart}/${eventEnd}&details=${encodeURIComponent(eventDescription)}&location=${encodeURIComponent(eventLocation)}&sprop=website:skillsforchicago.org`;
+                window.open(googleCalendarUrl, '_blank');
+            });
             
-            // Open in a new tab
-            window.open(googleCalendarUrl, '_blank');
-        });
+            // Add to Apple Calendar (downloads .ics file)
+            addToApple.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Create .ics file content
+                const icsContent = [
+                    'BEGIN:VCALENDAR',
+                    'VERSION:2.0',
+                    'CALSCALE:GREGORIAN',
+                    'PRODID:-//Skills for Chicago//Resource Day//EN',
+                    'METHOD:PUBLISH',
+                    'BEGIN:VEVENT',
+                    `SUMMARY:${eventTitle}`,
+                    `DTSTART:${eventStart}`,
+                    `DTEND:${eventEnd}`,
+                    `LOCATION:${eventLocation}`,
+                    `DESCRIPTION:${eventDescription.replace(/\n/g, '\\n')}`,
+                    'STATUS:CONFIRMED',
+                    'SEQUENCE:0',
+                    'END:VEVENT',
+                    'END:VCALENDAR'
+                ].join('\r\n');
+                
+                // Create download link
+                const dataUri = 'data:text/calendar;charset=utf-8,' + encodeURIComponent(icsContent);
+                const downloadLink = document.createElement('a');
+                downloadLink.href = dataUri;
+                downloadLink.download = 'resource-day.ics';
+                document.body.appendChild(downloadLink);
+                downloadLink.click();
+                document.body.removeChild(downloadLink);
+            });
 
-        // Mobile responsive menu toggle
-        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile responsive menu toggle
             // Additional JavaScript functionality can be added here
             // For example, image gallery slideshow, form validations, etc.
         });
     </script>
-       <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -2590,62 +2704,67 @@
             });
         });
     </script>
-            <script>
-                document.addEventListener('DOMContentLoaded', function() {
-        // Mobile Dropdown Functionality
-        const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
-        
-        mobileDropdowns.forEach(dropdown => {
-            const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mobile Dropdown Functionality
+            const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
             
-            dropdownToggle.addEventListener('click', function() {
-                // Toggle active class on clicked dropdown
-                dropdown.classList.toggle('active');
+            mobileDropdowns.forEach(dropdown => {
+                const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
                 
-                // Optionally close other dropdowns when one is opened
-                // Comment this out if you want multiple dropdowns to be open simultaneously
-                mobileDropdowns.forEach(otherDropdown => {
-                    if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
-                        otherDropdown.classList.remove('active');
-                    }
+                dropdownToggle.addEventListener('click', function() {
+                    // Toggle active class on clicked dropdown
+                    dropdown.classList.toggle('active');
+                    
+                    // Optionally close other dropdowns when one is opened
+                    // Comment this out if you want multiple dropdowns to be open simultaneously
+                    mobileDropdowns.forEach(otherDropdown => {
+                        if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                            otherDropdown.classList.remove('active');
+                        }
+                    });
                 });
             });
-        });
-        
-        // Close dropdowns when a link inside is clicked
-        const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
-        dropdownLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                // Optionally close the dropdown when a link is clicked
-                // Comment this out if you want the dropdown to stay open after a link is clicked
-                const parentDropdown = this.closest('.mobile-dropdown');
-                setTimeout(() => {
-                    parentDropdown.classList.remove('active');
-                    
-                    // Also close the mobile menu
-                    document.querySelector('.hamburger').classList.remove('open');
-                    document.querySelector('.mobile-nav').classList.remove('open');
-                    document.querySelector('.overlay').classList.remove('active');
-                    document.querySelector('body').style.overflow = '';
-                }, 100); // Small delay to allow the click to register
-            });
-        });
-        
-        // Make sure mobile dropdowns are closed when menu is closed
-        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
-        if (mobileMenuToggle) {
-            mobileMenuToggle.addEventListener('click', function() {
-                // If closing the mobile menu, close all dropdowns
-                if (document.querySelector('.mobile-nav').classList.contains('open')) {
+            
+            // Close dropdowns when a link inside is clicked
+            const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    // Optionally close the dropdown when a link is clicked
+                    // Comment this out if you want the dropdown to stay open after a link is clicked
+                    const parentDropdown = this.closest('.mobile-dropdown');
                     setTimeout(() => {
-                        mobileDropdowns.forEach(dropdown => {
-                            dropdown.classList.remove('active');
-                        });
-                    }, 300); // Delay to match the mobile menu closing animation
-                }
+                        parentDropdown.classList.remove('active');
+                        
+                        // Also close the mobile menu
+                        document.querySelector('.hamburger').classList.remove('open');
+                        document.querySelector('.mobile-nav').classList.remove('open');
+                        document.querySelector('.overlay').classList.remove('active');
+                        document.querySelector('body').style.overflow = '';
+                    }, 100); // Small delay to allow the click to register
+                });
             });
-        }
+            
+            // Make sure mobile dropdowns are closed when menu is closed
+            const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+            if (mobileMenuToggle) {
+                mobileMenuToggle.addEventListener('click', function() {
+                    // If closing the mobile menu, close all dropdowns
+                    if (document.querySelector('.mobile-nav').classList.contains('open')) {
+                        setTimeout(() => {
+    mobileDropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
     });
-            </script>
+},
+setTimeout(() => {
+    mobileDropdowns.forEach(dropdown => {
+        dropdown.classList.remove('active');
+    });
+}, 300));
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>

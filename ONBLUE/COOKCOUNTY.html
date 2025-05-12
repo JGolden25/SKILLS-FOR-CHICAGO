@@ -2641,6 +2641,39 @@
         padding: 15px 1%;
     }
 }
+
+@media (max-width: 976px) {
+  /* Fix potential overflow issues in specific sections */
+  .team-container, 
+  .container2, 
+  .columns-container,
+  .team-content, 
+  .team-description {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .team-content h1 {
+    font-size: 38px;
+  }
+  
+  /* Ensure images don't overflow */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .employer-partner-text::before {
+    font-size: .5em;
+  }
+  
+  /* Ensure lists don't overflow */
+  .partner-list {
+    padding-left: 15px;
+    margin-right: 15px;
+  }
+}
 </style>
 </head>
 <body>
