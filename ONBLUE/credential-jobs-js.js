@@ -9,4 +9,37 @@ jQuery(document).ready(function($) {
             window.location.href = url;
         }
     });
+    
+    // Check if we're on a job detail page (URL has job_id parameter)
+    if (window.location.href.indexOf('job_id=') > -1) {
+        // Add more specific selectors based on the HTML structure visible in DevTools
+        var hideTeamCSS = `
+            section.team-section, 
+            div.team-container, 
+            .team-container, 
+            #div\\.team-container,
+            div[class*="team"], 
+            section[class*="team"],
+            div[_grid="0"].team-container { 
+                display: none !important; 
+                visibility: hidden !important;
+                height: 0 !important;
+                overflow: hidden !important;
+            } 
+            .credential-jobs-wrapper { 
+                width: 100% !important; 
+            }
+        `;
+        
+        // Apply the CSS immediately
+        $('<style id="hide-team-styles">' + hideTeamCSS + '</style>').appendTo('head');
+        
+        // Also try direct removal for this specific element pattern
+        setTimeout(function() {
+            $('section.team-section').remove();
+            $('.team-container').remove();
+            $('div.team-container').remove();
+            $('[class*="team"]').hide();
+        }, 100);
+    }
 });

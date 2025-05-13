@@ -585,7 +585,7 @@ p, a {
 
 .skills-job-listings-wrapper .job-detail-list li {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 15px;
     line-height: 1.5;
 }
