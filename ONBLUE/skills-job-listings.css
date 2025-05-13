@@ -313,8 +313,8 @@ p, a {
 .skills-job-listings-wrapper .page-title {
     font-size: 36px;
     margin-bottom: 10px;
-    font-family: Greycliff CF, Bold;
-    font-weight: 700;
+    font-family: Greycliff CF, Bold !important;
+    font-weight: 700 !important;
 }
 
 .skills-job-listings-wrapper .page-subtitle {
