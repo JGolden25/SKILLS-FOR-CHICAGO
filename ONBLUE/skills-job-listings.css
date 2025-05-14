@@ -930,6 +930,14 @@ line-height: 1.6;
 .skills-job-listings-wrapper .job-card a::-moz-focus-inner {
     border: 0;
 }
+
+/* Fix for squished bullet points */
+.skills-job-listings-wrapper .green-bullet {
+    flex-shrink: 0; /* Prevents the bullet from shrinking */
+    width: 10px !important;
+    height: 10px !important;
+    min-width: 10px !important;
+}
 .skills-nav-items {
     display: flex;
     list-style: none;

@@ -2114,6 +2114,10 @@ h2 {
     box-sizing: border-box;
   }
 
+  .ways-content {
+    padding: 10% 3% 10% 6%;
+  }
+
   .hero-content {
     padding: 0px 4% 10% 5%;
   }
@@ -2166,17 +2170,125 @@ h2 {
 .hero-image {
     background-position: -20px center !important;
 }
+/* Close the white gap between image and black section */
+.hero-image,
+.ways-image,
+.hero-section img,
+.ways-section img {
+  display: block;
+  margin-bottom: 0 !important;
+  vertical-align: bottom;
+}
 
-/* .hero-image img,
-.elementor-widget-image img,
-.wp-block-image img,
-.wp-post-image,
-img.hero-image-img {
-    object-position: -20px center !important; 
-    margin-right: 20px !important; 
-    transform: translateX(-20px) !important; 
-    max-width: calc(100% + 20px) !important; 
-} */
+.ways-section,
+.ways-content,
+#main-content > div > section:nth-of-type(2),
+[class*="ways-to-give"] {
+  margin-top: 0px !important; /* Negative margin to ensure no gap */
+}
+/* Mobile-specific styles */
+@media (max-width: 976px) {
+  /* Add 3% padding to left side only */
+  /* .ways-section,
+  .ways-content,
+  #main-content > div > section:nth-of-type(2),
+  [class*="ways-to-give"],
+  h1, h2, h3, p {
+    padding-left: 3% !important;
+  } */
+  
+  /* Ensure image and black section connect perfectly */
+  .hero-image img,
+  .ways-image img {
+    width: 100%;
+    margin-bottom: 0 !important;
+  }
+  
+  /* Fixing any potential floating issues */
+  .hero-container,
+  .ways-section {
+    overflow: hidden;
+  }
+}
+
+/* Fix arrow positioning for mobile carousel only */
+@media (max-width: 976px) {
+  /* Target the arrow buttons - using common class names for carousel navigation */
+  .testimonial-button.next-button,
+  .carousel-button.next,
+  button[aria-label="Next slide"],
+  .testimonial-controls .fa-chevron-right,
+  .slick-next,
+  .carousel-control-next,
+  .carousel-arrow-right,
+  .testimonial-slide-next,
+  .next-button,
+  [class*="next"],
+  [class*="arrow"][class*="right"],
+  .testimonial-carousel .fa-chevron-right {
+    right: 0 !important; /* Force it to proper right position */
+  }
+
+  /* Ensure proper spacing from the edge of the screen */
+  .testimonial-controls,
+  .carousel-controls,
+  .slick-arrow-container,
+  [class*="controls"],
+  [class*="navigation"],
+  .testimonial-carousel .buttons-container {
+    padding: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  /* Set equal spacing from edges */
+  .testimonial-button.prev-button,
+  .carousel-button.prev,
+  button[aria-label="Previous slide"],
+  .testimonial-controls .fa-chevron-left,
+  .slick-prev,
+  .carousel-control-prev,
+  .carousel-arrow-left,
+  .testimonial-slide-prev,
+  .prev-button,
+  [class*="prev"],
+  [class*="arrow"][class*="left"] {
+    left: 20px !important; /* Adjust based on your design */
+  }
+
+  .testimonial-button.next-button,
+  .carousel-button.next,
+  button[aria-label="Next slide"],
+  .testimonial-controls .fa-chevron-right,
+  .slick-next,
+  .carousel-control-next,
+  .carousel-arrow-right,
+  .testimonial-slide-next,
+  .next-button,
+  [class*="next"],
+  [class*="arrow"][class*="right"] {
+    right: 20px !important; /* Match the left spacing */
+  }
+
+  /* If the issue persists and we need more specific targeting */
+  #testimonialCarousel .next-button,
+  .testimonial-slide .next-button,
+  .testimonial-carousel .next-button {
+    right: 20px !important;
+    position: absolute !important;
+  }
+}
+
+
+@media (max-width: 976px) {
+ /* If the issue persists and we need more specific targeting */
+ #testimonialCarousel .next-button,
+  .testimonial-slide .next-button,
+  .testimonial-carousel .next-button {
+    right: 0px !important;
+    position: absolute !important;
+  }
+}
 </style>
 </head>
 <body>

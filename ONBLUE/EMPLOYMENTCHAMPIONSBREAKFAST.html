@@ -3061,6 +3061,38 @@ table {
     max-height: 75% !important;
 }
  }
+
+ /* Mobile-friendly grid adjustments */
+@media (max-width: 976px) {
+    .board-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 100%;
+        padding: 0 5px;
+    }
+    
+    .board-grid-name {
+        font-size: 14px;
+        word-wrap: break-word;
+        width: 100%;
+    }
+    
+    .board-grid-section {
+        padding: 30px 15px;
+        text-align: center;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .board-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .board-grid-name {
+        font-size: 16px;
+    }
+}
 </style>
 </head>
 <body>
