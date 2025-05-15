@@ -2763,6 +2763,58 @@ padding-left: 7%;
         padding: 15px 1%;
     }
 }
+@media (max-width: 768px) {
+    .related-posts-container {
+        width: 100%; /* Make it full width on mobile */
+        padding: 0 15px; /* Add some padding instead */
+    }
+    
+    .related-posts h2 {
+        text-align: center; /* Ensure the heading is centered */
+        font-size: 36px; /* Slightly reduce font size on mobile */
+    }
+    
+    .posts-grid {
+        padding: 0 10px; /* Add padding to the grid */
+    }
+    
+    .post-card {
+        margin-bottom: 30px; /* Add space between stacked cards */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Fix for Topics This Month heading on mobile */
+    .related-posts-container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .related-posts h2 {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Clear any potential float issues */
+    .related-posts::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .posts-grid {
+            display: flex;
+            gap: 40px;
+            margin-right: 0px;
+        }
+}
 </style>
 </head>
 <body>

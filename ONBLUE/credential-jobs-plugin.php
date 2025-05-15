@@ -266,7 +266,7 @@ function credential_render_job_detail($job_id) {
     $tfa_89 = isset($_GET['tfa_89']) ? urlencode($_GET['tfa_89']) : '';
 
     // Build apply now URL with job_id and optional parameters
-    $apply_now_url = "https://skillsforchicago.org/candidate-login/?tfa_3={$job->JN}&tfa_5={$source}";
+    $apply_now_url = "https://skillsforchicago.org/candidate-login/?tfa_3={$job->JN}&tfa_5={$source}&cred=credential";
 
     // Add additional parameters if they exist
     if (!empty($tfa_49)) {
