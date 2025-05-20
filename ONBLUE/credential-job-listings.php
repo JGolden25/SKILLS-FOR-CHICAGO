@@ -231,7 +231,7 @@ function credential_render_job_detail($job_id) {
     
     // Function to sanitize output
     function credential_clean_detail_output($data) {
-        return wp_kses_post($data);
+        return htmlspecialchars($data, ENT_QUOTES, 'UTF-8');
     }
     
     // Create a placeholder logo URL using company name
@@ -355,7 +355,7 @@ function credential_render_job_detail($job_id) {
     echo '<h2 class="job-detail-heading">Job Description</h2>';
     if (!empty($job->{'Job Description'})) {
         // Parse job description to create a list with bullet points
-        $description = wp_kses_post($job->{'Job Description'});
+        $description = nl2br(credential_clean_detail_output($job->{'Job Description'}));
         $description_lines = explode('<br />', $description);
         
         echo '<ul class="job-detail-list">';
@@ -376,7 +376,7 @@ function credential_render_job_detail($job_id) {
     echo '<h2 class="job-detail-heading">Skills & Qualifications</h2>';
     if (!empty($job->{'Skills and Qualifications'})) {
         // Parse skills to create a list with bullet points
-        $skills = wp_kses_post($job->{'Skills and Qualifications'});
+        $skills = nl2br(credential_clean_detail_output($job->{'Skills and Qualifications'}));
         $skills_lines = explode('<br />', $skills);
         
         echo '<ul class="job-detail-list">';
@@ -412,7 +412,7 @@ function credential_render_job_detail($job_id) {
     
     // Parse the Benefits field
     if (!empty($job->Benefits)) {
-        $benefits = preg_split('/[,;\n]+/', $job->Benefits);
+        $benefits = preg_split('/[,\n]+/', $job->Benefits);
         foreach ($benefits as $benefit) {
             $benefit = trim($benefit);
             if (!empty($benefit)) {
@@ -429,7 +429,7 @@ function credential_render_job_detail($job_id) {
     echo '<div class="job-detail-section">';
     echo '<h2 class="job-detail-heading">About the Employer</h2>';
     if (!empty($job->{'About the Employer'})) {
-        echo '<div class="employer-description">' . wp_kses_post($job->{'About the Employer'}) . '</div>';
+        echo '<div class="employer-description">' . nl2br(credential_clean_detail_output($job->{'About the Employer'})) . '</div>';
     } else {
         echo '<p>No detailed information about the employer available.</p>';
     }

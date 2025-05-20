@@ -159,7 +159,7 @@ function skills_render_job_listings() {
     }
     
     // Add ordering
-    $sql .= " ORDER BY Employer ASC, `Job Title` ASC";
+    $sql .= " ORDER BY JN DESC";
     
     // Add pagination
     $sql .= " LIMIT %d OFFSET %d";
@@ -540,14 +540,9 @@ function skills_render_job_detail($job_id) {
     $tfa_49 = isset($_GET['tfa_49']) ? urlencode($_GET['tfa_49']) : '';
     $tfa_89 = isset($_GET['tfa_89']) ? urlencode($_GET['tfa_89']) : '';
 
-    // Build apply now URL with tfa_3 and tfa_5 parameters (keeping original)
+    // Build apply now URL with job_id and optional parameters
     $apply_now_url = "https://skillsforchicago.org/candidate-login/?tfa_3={$job->JN}&tfa_5={$source}";
 
-    // Add cred=credential parameter if this is a credential job
-    if (isset($job->{'Credential Job'}) && $job->{'Credential Job'} == 1) {
-        $apply_now_url .= "&cred=credential";
-    }
-    
     // Add additional parameters if they exist
     if (!empty($tfa_49)) {
         $apply_now_url .= "&tfa_49={$tfa_49}";
@@ -690,21 +685,20 @@ function skills_render_job_detail($job_id) {
     
     echo '<ul class="job-detail-list">';
     
-  // Parse the Benefits field - updated to handle semicolon separation
-if (!empty($job->Benefits)) {
-    // Split by commas, new lines, AND semicolons
-    $benefits = preg_split('/[,;\n]+/', $job->Benefits);
-    foreach ($benefits as $benefit) {
-        $benefit = trim($benefit);
-        if (!empty($benefit)) {
-            echo '<li><span class="green-bullet"></span> <span>' . skills_clean_detail_output($benefit) . '</span></li>';
+    // Parse the Benefits field - assuming it contains a list of benefits separated by commas or new lines
+    if (!empty($job->Benefits)) {
+        $benefits = preg_split('/[,\n]+/', $job->Benefits);
+        foreach ($benefits as $benefit) {
+            $benefit = trim($benefit);
+            if (!empty($benefit)) {
+                echo '<li><span class="green-bullet"></span> <span>' . skills_clean_detail_output($benefit) . '</span></li>';
+            }
         }
+    } else {
+        echo '<li>No specific benefits listed.</li>';
     }
-} else {
-    echo '<li>No specific benefits listed.</li>';
-}
-echo '</ul>';
-echo '</div>';
+    echo '</ul>';
+    echo '</div>';
     
     // About the Employer
     echo '<div class="job-detail-section">';
