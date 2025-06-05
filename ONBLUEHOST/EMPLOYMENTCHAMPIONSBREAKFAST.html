@@ -1,0 +1,4340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employment Champions Breakfast 2025</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Greycliff CF;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .container2 {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 25px 20px;
+        }
+        
+        h1 {
+ font-family: Greycliff CF, Bold;
+}
+h2 {
+ font-family: Greycliff CF, Bold;
+}
+h3 {
+ font-family: Greycliff CF, Bold;
+}
+p {
+font-family: Greycliff CF, Light;
+}
+a {
+font-family: Greycliff CF, Light;
+}
+span {
+font-family: Greycliff CF, Bold;
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100%;
+}
+
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0px;
+}
+        
+        /* Header Styles */
+        .event-header {
+            text-align: center;
+            padding: 40px 0 20px;
+        }
+        
+        .event-date {
+            font-size: 46px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .event-location {
+            font-size: 22px;
+            font-weight: 700;
+            color: #4F6B3A;
+            margin-bottom: 10px;
+        }
+        
+        .event-address {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+        
+        /* Countdown Timer */
+        .countdown-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+        }
+        
+        .countdown-box {
+            background-color: #041202;
+            color: white;
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 162px;
+            font-weight: 700;
+            border-radius: 10%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .countdown-separator {
+            font-size: 72px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            color: #0F230A;
+            margin-bottom: 4%;
+        }
+        
+        .countdown-label {
+            font-size: 44px;
+            font-weight: 500;
+            text-align: center;
+            margin-top: 10px;
+        }
+        
+        /* Event Agenda Section */
+        .event-agenda {
+            background-color: #0F230A;
+            color: white;
+            padding: 20px 0;
+            margin-bottom: 30px;
+        }
+        
+        .event-agenda h2 {
+            text-align: center;
+            font-size: 52px;
+            margin: 10px 0px;
+        }
+        
+        .event-intro {
+            text-align: center;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    font-size: 22px;
+        }
+        
+        /* Schedule Grid */
+        .schedule-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .schedule-item {
+            display: flex;
+            margin-bottom: 30px;
+        }
+        
+        .schedule-time {
+            width: 150px;
+            font-weight: 700;
+            text-align: right;
+            padding-right: 20px;
+            border-right: 1px solid #ccc;
+            font-size: 16px;
+        }
+        
+        .schedule-details {
+            flex: 1;
+            padding-left: 20px;
+        }
+        
+        .schedule-title {
+            color: #8DC63F;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+        
+        .schedule-detail-item {
+            margin-bottom: 15px;
+        }
+        
+        .schedule-person {
+            font-weight: 700;
+        }
+        
+        .schedule-subtitle {
+            font-size: 14px;
+            font-style: italic;
+        }
+        
+        /* Featured Speakers Section */
+        .featured-speakers {
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            font-size: 42px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 700;
+        }
+        
+        .panel-title {
+            text-align: center;
+            color: #4F6B3A;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        
+        .speakers-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .speaker-card {
+            width: 220px;
+            text-align: center;
+        }
+        
+        .speaker-image {
+            width: 100%;
+            height: 200px;
+            background-color: #999;
+            margin-bottom: 15px;
+        }
+        
+        .speaker-name {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #4F6B3A;
+        }
+        
+        .speaker-title {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .speaker-company {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .speaker-role {
+            font-weight: 700;
+        }
+        
+        /* Sponsors Section */
+        .sponsors-section {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .sponsors-header {
+            margin-bottom: 40px;
+        }
+        
+        .sponsors-header h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        
+        .sponsors-header p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        
+        
+        .sponsor-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .sponsor-logo {
+            height: auto !important;
+    max-width: 200px !important;
+    object-fit: contain;
+        }
+        
+        /* Recap Section */
+        .recap-section {
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .recap-title {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        
+        .recap-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            margin-bottom: 40px;
+        }
+        
+        /* Talent Section */
+        .talent-section {
+            padding: 40px 0;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        
+        .view-more-btn {
+            background-color: #A2C466;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .view-more-btn:hover {
+            background-color: #7db32e;
+        }
+        
+        .talent-grid {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .talent-card {
+            flex: 1;
+            position: relative;
+        }
+        
+        .talent-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        .talent-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+        }
+        
+        .talent-journey {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        
+        .talent-name {
+            font-size: 18px;
+            color: #8DC63F;
+            margin-top: 5px;
+        }
+        
+        /* Moments Section */
+        .moments-section {
+            padding: 40px 0 60px;
+        }
+        
+        .carousel-container {
+            position: relative;
+            overflow: hidden;
+            margin-top: 30px;
+        }
+        
+        .carousel-wrapper {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        
+        .carousel-slide {
+            flex: 0 0 25%;
+            padding: 0 10px;
+        }
+        
+        .carousel-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        
+        .carousel-pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+        }
+        
+        .carousel-dot.active {
+            background-color: #666;
+        }
+        
+        /* Media Queries */
+        @media (max-width: 992px) {
+            .countdown-box {
+                width: 100px;
+                height: 100px;
+                font-size: 60px;
+            }
+            
+            .countdown-separator {
+                font-size: 60px;
+            }
+            
+            .countdown-label {
+                font-size: 20px;
+            }
+            
+            .speakers-grid {
+                gap: 20px;
+            }
+            
+            .speaker-card {
+                width: 180px;
+            }
+            
+            .carousel-slide {
+                flex: 0 0 33.333%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .event-date {
+                font-size: 28px;
+            }
+            
+            .event-location {
+                font-size: 20px;
+            }
+            
+            .countdown-box {
+                width: 80px;
+                height: 80px;
+                font-size: 48px;
+            }
+            
+            .countdown-separator {
+                font-size: 48px;
+            }
+            
+            .countdown-label {
+                font-size: 16px;
+            }
+            
+            .schedule-item {
+                flex-direction: column;
+            }
+            
+            .schedule-time {
+                width: 100%;
+                text-align: left;
+                padding-right: 0;
+                border-right: none;
+                border-bottom: 1px solid #ccc;
+                padding-bottom: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .schedule-details {
+                padding-left: 0;
+            }
+            
+            .talent-grid {
+                flex-direction: column;
+            }
+            
+            .carousel-slide {
+                flex: 0 0 50%;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .countdown-container {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            
+            .countdown-box {
+                width: 70px;
+                height: 70px;
+                font-size: 36px;
+            }
+            
+            .countdown-separator {
+                font-size: 36px;
+            }
+            
+            .carousel-slide {
+                flex: 0 0 100%;
+            }
+        }
+        .agenda-note {
+        padding: 30px 0;
+        text-align: center;
+    }
+    
+    .note-title {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .note-text {
+        max-width: 800px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    
+    .sponsors-overview {
+        padding: 40px 0px 0px 0px;
+        text-align: center;
+    }
+    
+    .sponsor-intro {
+        max-width: 800px;
+        margin: 10px auto 30px;
+        font-size: 18px;
+    }
+    
+    .sponsor-tiers {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 40px;
+    }
+    
+    .sponsor-tier {
+        background-color: white;
+        border: 1px solid #4F6B3A;
+        border-radius: 30px;
+        padding: 8px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        width: 12%;
+    }
+    
+    .sponsor-tier:hover {
+        background-color: #f5f5f5;
+    }
+    
+    .sponsor-tier.active {
+        /* background-color: #4F6B3A;
+        color: white; */
+    }
+    
+    .tier-title {
+        font-size: 24px;
+        color: #4F6B3A;
+        margin-bottom: 20px;
+    }
+    
+    .sponsor-logos-container {
+        margin: 0 auto 40px;
+    }
+    
+    .tier-sponsors {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin: 0 auto;
+    }
+    
+    .sponsor-logo {
+        height: auto;
+        max-width: 100%;
+    }
+
+    @media (max-width: 991px) {
+        .sponsor-tier {
+            padding: 6px 15px;
+            font-size: 12px;
+            width: 100px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .sponsor-tiers {
+            gap: 8px;
+        }
+        
+        .sponsor-tier {
+            padding: 6px 15px;
+            font-size: 12px;
+            width: 100px;
+        }
+    }
+
+    .tier-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 25px;
+}
+
+.sponsor-logo {
+    height: auto;
+    max-width: 200px;
+    object-fit: contain;
+}
+
+.sponsor-logo-large {
+    height: auto;
+    max-width: 300px;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .tier-row {
+        gap: 15px;
+    }
+    
+    .sponsor-logo {
+        max-width: 150px;
+    }
+    
+    .sponsor-logo-large {
+        max-width: 200px;
+    }
+}
+
+ /* Partners Section */
+ .partners-section {
+            padding: 60px 0;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .partners-title {
+            font-size: 52px;
+            font-weight: 700;
+            color: #4F6B3A;
+            margin-bottom: 15px;
+        }
+
+        .partners-subtitle {
+            font-size: 24px;
+            color: #666;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .partners-grid2 {
+            /* display: grid;
+            grid-template-columns: repeat(4, 1fr); */
+            gap: 30px;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .partner-logo {
+            /* height: 100px; */
+            /* background-color: #fff; */
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .partner-logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .partner-logo img {
+            max-width: 80%;
+            max-height: 70%;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+            }
+            
+            .hero-content, .hero-image {
+                width: 100%;
+                padding: 0 20px;
+            }
+            
+            .hero-image {
+                margin-top: 30px;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .action-button {
+                margin-bottom: 5%;
+            }
+        }
+
+        @media (max-width: 976px) {
+            .main-nav {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .header-container {
+                justify-content: space-between;
+            }
+            
+            .hero-title {
+                font-size: 32px;
+            }
+            
+            .partners-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .partners-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+   /* Board Grid Section */
+   .board-grid-section {
+            padding: 60px 0;
+            background-color: #FFFFFF;
+            color: #041202;
+        }
+        
+        .board-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+        
+        .board-grid-card {
+            margin-bottom: 30px;
+        }
+        
+        .board-grid-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .board-grid-role {
+            font-size: 14px;
+            color: #95c58b;
+            margin-bottom: 5px;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+        
+        .board-grid-company {
+            font-size: 13px;
+            opacity: 0.8;
+            line-height: 1.4;
+            font-weight: 500;
+        }
+
+        /* New Sponsors Section Styles - ADDED */
+        .sponsors-section-new {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .sponsor-tier {
+            margin-bottom: 60px;
+        }
+
+        .tier-title {
+            color: #546a43;
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .sponsor-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        .champion-logos .logo-container {
+            flex-basis: calc(25% - 40px);
+            min-width: 180px;
+        }
+
+        .ambassador-logos .logo-container {
+            min-width: 220px;
+        }
+
+        .advocate-logos .logo-container {
+            flex-basis: calc(25% - 40px);
+            min-width: 150px;
+        }
+
+        .sponsor-logo-new {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .champion-logos .logo-container,
+            .advocate-logos .logo-container {
+                flex-basis: calc(50% - 40px);
+            }
+            
+            .tier-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .champion-logos .logo-container,
+            .advocate-logos .logo-container {
+                flex-basis: 100%;
+            }
+            
+            .logo-container {
+                height: 80px;
+            }
+            
+            .tier-title {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* NEW SECTION - 2024 Event Recap */
+        .event-recap-section {
+    padding: 30px 0px 0px 0px;
+    background-color: #fff;
+    width: 100%;
+    overflow: hidden;
+}
+
+        .event-recap-title {
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            color: #4F6B3A;
+            margin-bottom: 40px;
+        }
+
+        .event-recap-title2 {
+            font-size: 40px;
+            font-weight: 700;
+            text-align: center;
+            color: #4F6B3A;
+            margin-bottom: 0px;
+        }
+
+        .event-recap-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 60px;
+        }
+
+        .talent {
+            max-width: 1250px;
+    margin: auto;
+        }
+
+        .talent-section-title {
+            font-size: 36px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 40px;
+            padding: 0 20px;
+            margin-top: 2%;
+        }
+
+        .talent-stories {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 60px;
+    padding: 0;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+}
+
+.talent-story {
+    flex: 1;
+    max-width: 560px;
+    background-color: #fff;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+        .talent-story-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .talent-story-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .moments-section-container {
+            padding: 2% 2% 0% 2%;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .moments-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .moments-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .gallery-button {
+            display: flex;
+            align-items: center;
+            background-color: #8BC53F;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s;
+        }
+
+        .gallery-button:hover {
+            background-color: #7ab52e;
+        }
+
+        .gallery-button i {
+            margin-left: 8px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-dots {
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .gallery-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .gallery-dot.active {
+            background-color: #888;
+        }
+
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .talent-stories {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .talent-story {
+                max-width: 100%;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .event-recap-title {
+                font-size: 32px;
+            }
+
+            .event-recap-title2 {
+                font-size: 32px;
+            }
+            
+            .talent-section-title,
+            .moments-title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .moments-header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+        .action-button {
+            display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #A2C466; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 7px 5px 7px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 225px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+.action-button span {
+    margin-right: 5px;
+    font-family: Greycliff CF, Light;
+    font-weight: 700;
+}
+.action-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+.action-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+.action-button i {
+    transform: rotate(-45deg);
+}
+.action-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+.action-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
+/* Footer Content */
+.modern-footer {
+            background-color: #1F3707;
+            color: white;
+            padding: 60px 0 0 0;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            position: relative;
+            overflow: hidden; /* Keep the background logo contained within the footer */
+        }
+
+        /* Add the SC logo as a background on the left side */
+        .modern-footer::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -10%; /* Position on the left side instead of right */
+            transform: translateY(-50%);
+            width: 60%; /* Large size to match the image */
+            height: 140%;
+            background-image: url('https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Artboard-1-copy.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: contain;
+            z-index: 0;
+            opacity: 0.20; /* Dark but subtle appearance */
+        }
+
+        /* Ensure footer content stays on top of the background image */
+        .footer-container, .footer-copyright {
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-container {
+            padding: 0 6%;
+            font-weight: 700;
+        }
+
+        .footer-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .footer-divider {
+            flex: 1;
+            height: 1px;
+            background-color: #ffffff;
+            margin: 0 40px;
+        }
+
+        .footer-logo img {
+            height: 80px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            color: white;
+            font-size: 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            opacity: 0.8;
+        }
+
+         /* Updated footer navigation styles to fix vertical alignment */
+         .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start; /* Changed from center to flex-start */
+            margin-bottom: 60px;
+        }
+
+        .footer-nav-section {
+            display: flex;
+            flex-direction: column;
+            min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+        }
+
+        .footer-nav-section h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            height: 22px; /* Fixed height for the heading */
+            line-height: 22px; /* Match the height to ensure consistent alignment */
+        }
+
+        .footer-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .footer-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 12px;
+            transition: opacity 0.3s ease;
+            font-weight: 300;
+            font-family: Greycliff CF, Light;
+        }
+
+        .footer-nav-links a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            background-color: #1F3707;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 14px;
+            border-top: 1px solid #DCDCDC;
+        }
+
+        /* NEW STYLES FOR MOBILE FOOTER ACCORDION */
+        .footer-accordion {
+            display: none; /* Hide on desktop */
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-accordion-header {
+            padding: 15px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-accordion-title {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: white;
+        }
+
+        .footer-accordion-icon {
+            transition: transform 0.3s ease;
+            color: white;
+        }
+
+        .footer-accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .footer-accordion.active .footer-accordion-icon {
+            transform: rotate(180deg);
+        }
+
+        .footer-accordion.active .footer-accordion-content {
+            max-height: 300px; /* Adjust as needed */
+            padding-bottom: 15px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1354px) {
+            .collaborate-image img {
+            width: 100%;
+            max-height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+
+        .work-together-content h2 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.header-container {
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+
+            .header {
+            padding: 15px 15px;
+            }
+            /* .partnering-section-mobile {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            border-top: 1px solid black;
+        }
+
+        .partnering-section-mobile {
+            background-color: var(--light-gray);
+        }
+        .partnering-section {
+            display: none;  
+        }
+            .cta-text {
+                margin-bottom: 20px;
+                font-size: 22px;
+                width: 60%;
+            }
+            .hero-image {
+                flex: 1;
+                text-align: right;
+                object-fit: cover;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+                border-radius: 70px;
+                height: 400px;
+                object-fit: cover;
+            } */
+            .footer-nav {
+                flex-wrap: wrap;
+                gap: 30px;
+            }
+            
+            .footer-nav-section {
+                flex: 1 0 30%;
+                min-height: auto;
+            }
+        }
+
+        @media (max-width: 976px) {
+            .footer-top {
+                flex-direction: column;
+                gap: 0px;
+                text-align: center;
+                margin-bottom: 0px;
+            }
+
+            /* Hide desktop footer navigation and show accordion */
+            .footer-nav {
+                display: none;
+            }
+
+            .footer-accordion {
+                display: block;
+            }
+
+            .banner-container {
+                flex-direction: column;
+                gap: 10px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .footer-nav {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+        }
+
+        /* Mobile Footer Links */
+        .footer-mobile-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-mobile-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-mobile-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            display: block;
+            opacity: 0.9;
+            text-align: left;
+            font-weight: 300;
+        }
+
+        .footer-mobile-links a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        .circle-icon {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+ /* Hero Section */
+ .hero {
+            background-color: #E8EFDD;
+            padding: 48px 7%;
+        }
+
+        .hero-container {
+            display: flex;
+            /* align-items: center; */
+            gap: 100px;
+            padding-top: 0;
+/* padding-right: 7%; */
+padding-bottom: 0;
+/* padding-left: 7%; */
+        }
+
+        .hero-content {
+            flex: 1;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            color: #353232;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+
+        .hero-description {
+            font-size: 22px;
+            margin-bottom: 10px;
+            max-width: 600px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .hero-image {
+            flex: 1;
+            text-align: right;
+            object-fit: cover;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 70px;
+            height: 800px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 1354px) {
+            .hero-image {
+                flex: 1;
+                text-align: right;
+                object-fit: cover;
+            }
+
+            .hero-image img {
+                max-width: 100%;
+                border-radius: 70px;
+                height: 400px;
+                object-fit: cover;
+            }
+            .hero-container, 
+            .communities-container,
+            .cta-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero-image {
+                order: -1;
+                margin-bottom: 30px;
+            }
+            .hero-title {
+                font-size: 32px;
+            }
+        }
+        .gallery-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery-wrapper {
+    position: relative;
+}
+
+.gallery-page {
+    display: none;
+}
+
+.gallery-page.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* New schedule styles for the detailed agenda */
+.detailed-schedule {
+    max-width: 90%;
+    margin: 0 auto;
+    color: #333;
+    /* font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; */
+    text-align: center;
+}
+
+.detailed-schedule-item {
+    display: flex;
+    margin-bottom: 25px;
+    position: relative;
+    text-align: left;
+}
+
+.detailed-schedule-time {
+    width: 120px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    padding-right: 25px;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.detailed-schedule-content {
+    flex-grow: 1;
+    padding-left: 25px;
+    border-left: 1px solid #ccc;
+    position: relative;
+}
+
+.detailed-schedule-content::before {
+    content: '';
+    position: absolute;
+    top: 8px;
+    left: -6px;
+    width: 12px;
+    height: 12px;
+    background-color: #4F6B3A;
+    border-radius: 50%;
+}
+
+.detailed-schedule-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4F6B3A;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+.detailed-schedule-description {
+    font-size: 24px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.detailed-schedule-person {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.detailed-schedule-note {
+    font-size: 14px;
+    font-style: italic;
+    color: #666;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .detailed-schedule-item {
+        flex-direction: column;
+    }
+    
+    .detailed-schedule-time {
+        width: 100%;
+        text-align: left;
+        padding-right: 0;
+        padding-bottom: 10px;
+    }
+    
+    .detailed-schedule-content {
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+}
+/* Add this to  existing style section */
+@media (max-width: 991px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .gallery-item {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: 43% 57%; /* Giving the image section 10% more space */
+    gap: 60px;
+    align-items: center;
+    padding: 0px 0px 0px 80px;
+    /* border-bottom: 1px solid black; */
+    background-color: #FAFAFA;
+    /* min-height: 800px; */
+        }
+        
+        .team-content h1 {
+            font-size: 50px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+        
+        .team-subtitle {
+            font-size: 26px;
+            font-weight: 700;
+            color: #526e3f;
+            margin-bottom: 25px;
+        }
+        
+        .team-description {
+            font-size: 22px;
+            line-height: 1.7;
+            color: #444;
+            width: 95%;
+        }
+        
+        .team-image {
+            width: 100%;
+            height: 750px;
+            /* border-radius: 5px; */
+            overflow: hidden;
+            /* border-left: 1px solid black; */
+        }
+        
+        .team-image img {
+            width: 100%;
+            height: 100%;
+            /* object-fit: cover; */
+        }
+
+         /* Responsive adjustments */
+    @media (max-width: 1024px) {
+        .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0px;
+            }
+            .profile-social-link-big {
+    position: absolute;
+    top: 290px;
+    right: 220px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    transition: all 0.3seas;
+}
+            .team-description {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #444;
+            width: 100%;
+        }
+
+        .team-image {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .team-image img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+
+            .team-content {
+                padding: 0px 5% 5% 5%;
+            }
+       
+    }
+
+    @media (max-width: 1024px) {
+            .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .team-image {
+                order: -1;
+            }
+        }
+        .social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+         /* Hamburger Menu Button */
+         .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+@media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+            
+            .mobile-menu-toggle {
+                display: block; /* Show hamburger icon */
+            }
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 20px;
+            }
+        }
+@media (max-width: 1500px) { 
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+    margin-right: 45px;
+        }
+    }
+@media (max-width: 1478px) { 
+
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+         /* Mobile Navigation Panel */
+         .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 40%; */
+            /* justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        /* Banner Styles */
+.banner {
+    background-color: #1e3a14;
+    color: white;
+    padding: 12px 0;
+}
+
+.banner-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+.banner-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.4;
+        }
+
+.learn-more-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 6px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 8%;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* Header Styles */
+.header {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    z-index: 100;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+.logo {
+    width: 175px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 1%;
+}
+
+.nav-links {
+    display: flex;
+    gap: 65px;
+    margin-right: 45px;
+}
+
+.nav-links a {
+    color: #7D7E7E;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.donate-btn {
+    background-color: #67b346;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.donate-btn-icon {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate-btn-icon::after {
+    content: '→';
+    color: #67b346;
+    font-size: 12px;
+}
+
+.donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #95C561;
+    color: #333333; /* Black text color */
+    padding: 5px 5px 5px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+
+.donate-button span {
+    margin-right: 5px; 
+    font-weight: 700;
+}
+
+.donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+
+.donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+
+.donate-button i {
+    transform: rotate(-45deg);
+}
+
+.donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+
+.donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.circle-icon {
+    width: 35px;
+    height: 35px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+         /* Hamburger Menu Button */
+         .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+@media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+            
+            /* .mobile-menu-toggle {
+                display: block;
+            } */
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 0px;
+            }
+        }
+@media (max-width: 1500px) { 
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+    margin-right: 45px;
+        }
+    }
+@media (max-width: 1478px) { 
+
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+         /* Mobile Navigation Panel */
+         .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        .fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
+@media (max-width: 976px) {
+    .careers-section {
+        padding: 0;
+    }
+
+    .mobile-menu-toggle {
+                display: block;
+            }
+    
+    .careers-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 0;
+        min-height: auto;
+        border-bottom: none;
+    }
+    
+    .careers-image {
+        order: -1; /* This puts the image on top */
+        height: 315px;
+        border-left: none;
+        width: 100%;
+    }
+    
+    .careers-image img {
+        height: auto;
+        max-height: 325px;
+    }
+    
+    .careers-content {
+        padding: 20px 15px 40px;
+        background-color: #f5f5f5; /* Light gray background like in  image */
+        width: 100%;
+    }
+    
+    .careers-content h1 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+    
+    .careers-subtitle {
+        font-size: 22px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    
+    .careers-description {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 15px;
+    }
+}
+.social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+         /* Hamburger Menu Button */
+         .mobile-menu-toggle {
+            display: none; /* Hidden by default, shown in media query */
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger {
+            width: 30px;
+            height: 20px;
+            position: relative;
+            transform: rotate(0deg);
+            transition: .5s ease-in-out;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            display: block;
+            position: absolute;
+            height: 3px;
+            width: 100%;
+            background: #333;
+            border-radius: 3px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        /* Hamburger icon bars positioning */
+        .hamburger span:nth-child(1) {
+            top: 0px;
+        }
+
+        .hamburger span:nth-child(2),
+        .hamburger span:nth-child(3) {
+            top: 10px;
+        }
+
+        .hamburger span:nth-child(4) {
+            top: 20px;
+        }
+
+        /* Hamburger animation to X */
+        .hamburger.open span:nth-child(1) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+        .hamburger.open span:nth-child(2) {
+            transform: rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: rotate(-45deg);
+        }
+
+        .hamburger.open span:nth-child(4) {
+            top: 10px;
+            width: 0%;
+            left: 50%;
+        }
+
+@media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            
+            /* .mobile-menu-toggle {
+                display: block;
+            } */
+            
+            .header-container {
+                justify-content: space-between;
+                padding: 0 0px;
+            }
+        }
+@media (max-width: 1500px) { 
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 0px 0px 0px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 25px;
+    margin-right: 45px;
+        }
+    }
+@media (max-width: 1478px) { 
+    .banner-text {
+            font-size: 15px;
+            margin-right: 0%;
+        }
+           .header {
+            padding: 15px 15px;
+            }
+            .banner {
+                padding: 12px 15px;
+            }
+        }
+         /* Mobile Navigation Panel */
+         .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 400px;
+            height: 100%;
+            background-color: white;
+            padding: 80px 40px 40px;
+            z-index: 1000;
+            overflow-y: auto;
+            transition: right 0.3s ease-in-out;
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .mobile-nav.open {
+            right: 0;
+        }
+
+        .mobile-nav-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-nav-links a {
+            color: #333;
+            font-size: 18px;
+            font-weight: 500;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #4d7e32;
+        }
+
+        .mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+
+        /* Dark overlay when mobile menu is open */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+        @media (max-width: 576px) {
+            .mobile-nav {
+                width: 100%;
+                max-width: none;
+            }
+        }
+        .social-strip {
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 83%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.social-icons-top {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons-top a {
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+    color: #4d7e32;
+}
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+    width: 100%;
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 100;
+}
+
+.skills-dropdown-nav {
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    /* padding: 0px 85px 0px 25px; */
+}
+
+.nav-items {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 15px 25px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: Greycliff CF, Light;
+    font-size: 15px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #4d7e32;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-toggle i {
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 230px;
+    background-color: #FFFFFF;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #eee;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.dropdown-item {
+    display: block;
+    padding: 10px 20px;
+    color: #7D7E7E;
+    text-decoration: none;
+    font-family: Greycliff CF, Light;
+    font-size: 14px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f8f3;
+    color: #4d7e32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+    .skills-dropdown-nav {
+        display: none; /* Hide desktop nav on mobile */
+    }
+    
+    /* You would need to implement mobile dropdown separately or
+       integrate with  existing mobile menu system */
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+    color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+    transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+    max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+    display: block;
+    padding: 10px 0 10px 15px !important;
+    font-size: 16px !important;
+    color: #666 !important;
+    border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+    padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+    color: #4d7e32 !important;
+}
+
+/* Update existing mobile-nav styles */
+.mobile-nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    transition: color 0.3s ease;
+    display: block;
+}
+
+.mobile-nav {
+    padding-top: 70px; /* Adjust if needed to make room for the header */
+}
+
+.hamburger.open {
+  position: fixed;
+  top: 20px;      /* Move it higher (decrease this value to move up) */
+  right: 20px;    /* Move it more to the right (decrease this value to move right) */
+  z-index: 1002;  /* Ensure it stays above other elements */
+}
+
+/* If the X is created by the transformed hamburger icon, make sure the spans align properly */
+.hamburger.open span:nth-child(2),
+.hamburger.open span:nth-child(3) {
+  right: 0;       /* Ensure the X is properly centered when transformed */
+}
+
+/* Optionally, if the mobile nav panel needs adjustment */
+.mobile-nav {
+  padding-top: 60px; /* Adjust top padding to ensure content doesn't go under the X */
+}
+.header-container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0px 60px 0px 35px;
+        }
+        @media (max-width: 976px) {
+.mobile-menu-toggle {
+                display: block; 
+            }
+.donate-button {
+    display: none;
+}
+
+
+}
+        .mobile-donate-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #8dc63f; /* Light green */
+    color: #333333; /* Black text color */
+    padding: 3px 5px 3px 13px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    width: 150px; /* Adjust width as needed */
+    border: 1px solid #707070;
+}
+.mobile-donate-button span {
+    margin-right: 5px;
+    font-family: Greycliff CF, Light; 
+}
+.mobile-donate-button:hover .circle-icon i {
+    color: #333333; /* Black arrow */
+    font-size: 12px;
+    transform: rotate(0deg);
+}
+.mobile-donate-button:hover {
+    background-color: #7db32e; /* Slightly darker on hover */
+    transform: translateY(-2px);
+}
+.mobile-donate-button i {
+    transform: rotate(-45deg);
+}
+.mobile-donate-button > .circle-icon i:hover {
+    transform: rotate(0deg);
+}
+.mobile-donate-button i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+.mobile-donate-button {
+            margin-top: 30px;
+            /* width: 100%;
+            justify-content: center; */
+        }
+        @media (max-width: 1636px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 15px;
+            }
+            .header-container {
+                padding: 0px 30px 0px 30px;
+            }
+        }
+        @media (max-width: 1354px) {
+            .main-nav {
+                display: none; /* Hide desktop nav */
+            }
+
+            .nav-link {
+                padding: 15px 6px;
+            }
+            .header-container {
+                padding: 0px;
+            }
+        }
+.fa-arrow-right:before {
+    content: "\f061";
+    color: #7D7E7E;
+    font-size: 18px;
+}
+.nav-links a:hover {
+        color: #4d7e32;
+      }
+.nav-links a {
+    text-decoration: none;
+}
+
+.sponsor-tier {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #4F6B3A;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 12%;
+    text-align: center;
+    text-decoration: none;
+    color: #4F6B3A;
+}
+
+.sponsor-tier:hover {
+    background-color: #f5f5f5;
+}
+
+.sponsor-tier.active {
+    /* background-color: #4F6B3A;
+    color: white; */
+}
+
+@media (max-width: 976px) {
+    .sponsor-tier {
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #4F6B3A;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 120px;
+    text-align: center;
+    text-decoration: none;
+    color: #4F6B3A;
+}  
+
+/* Additional mobile-specific fixes */
+.partners-grid, .partners-grid2 {
+    width: 100%;
+    padding: 0 10px;
+  }
+  
+  .team-container {
+    padding: 0;
+  }
+  
+  .social-strip-container {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+
+  html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  max-width: 100%;
+}
+
+/* Fix any potential culprits for overflow */
+.container, .container2, 
+.hero-container, .footer-container,
+.detailed-schedule, .partners-grid,
+.team-container, .social-strip-container,
+.gallery-grid, .header-container,
+.event-header, .partners-section {
+  max-width: 100%;
+  box-sizing: border-box;
+  /* overflow-x: hidden; */
+}
+
+.detailed-schedule {
+    padding: 0px 5% 5% 5%;
+}
+
+.board-grid-section {
+    text-align: center;
+    padding: 15% 6% 0px 3%;
+    /* margin-right: 5%; */
+    /* width: 90%; */
+}
+
+/* Ensure images don't cause overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Handle specific elements that might be too wide */
+.countdown-container {
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.countdown-box {
+  width: auto;
+  max-width: 80px;
+}
+
+.ulta-logo {
+    max-width: 75%;
+    max-height: 75%;
+}
+
+/* Make sure tables and other potentially wide elements adjust */
+table {
+  max-width: 100%;
+  display: block;
+  overflow-x: auto;
+}
+
+/* Fix any absolute positioned elements that might extend beyond viewport */
+.mobile-nav {
+  max-width: 100vw;
+}
+}
+    @media (max-width: 1354px) {
+    .header {
+        padding: 15px 1%;
+    }
+}
+
+.video-wrapper {
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.moments-section-container {
+    padding: 2% 2% 0% 2%;
+    position: relative;
+    margin-bottom: 40px;
+    background-color: transparent; /* Remove the existing background color */
+}
+
+.ulta-logo {
+    max-width: 15% !important; 
+    max-height: 40% !important;
+}
+
+@media (max-width: 1111px) {
+.team-container {
+  
+    padding: 0px 0px 0px 0px;
+    /* border-bottom: 1px solid black; */
+    background-color: #FAFAFA;
+    /* min-height: 800px; */
+}
+}
+
+@media (max-width: 976px) {
+
+    .ulta-logo {
+    max-width: 75% !important;
+    max-height: 75% !important;
+}
+ }
+
+ /* Mobile-friendly grid adjustments */
+@media (max-width: 976px) {
+    .board-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        width: 100%;
+        padding: 0 5px;
+    }
+    
+    .board-grid-name {
+        font-size: 14px;
+        word-wrap: break-word;
+        width: 100%;
+    }
+    
+    .board-grid-section {
+        padding: 30px 15px;
+        text-align: center;
+    }
+}
+
+/* Even smaller screens */
+@media (max-width: 480px) {
+    .board-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .board-grid-name {
+        font-size: 16px;
+    }
+}
+</style>
+</head>
+<body>
+    <div id="main-content">
+
+    <section class="team-section">
+        <div class="team-container">
+            <div class="team-content">
+                <h1>Employment Champions Breakfast</h1>
+                <div class="team-subtitle">Recognizing Partnerships. Inspiring Change.</div>
+                <p class="team-description" style="margin-bottom: 5%;">
+                    The Employment Champions Breakfast is our premier fundraising event, bringing together business and community leaders committed to creating pathways to employment. This event celebrates the collective impact of our partners and highlights the strategies that drive meaningful workforce solutions in Chicago.
+                </p>
+                <p class="team-description" style="margin-bottom: 5%;">
+                    Join us in recognizing the employers, organizations, and individuals who are making a lasting impact on Chicago’s workforce.
+                </p>
+                <div style="display: inline-block; width: 100%;">
+                <a href="https://skills.tfaforms.net/314" target="_blank" class="action-button" style="margin-right: 3%;">
+                    <span>Become A Sponsor</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+                <a href="https://fundraise.givesmart.com/form/5f7YAQ?vid=1jcum7" class="action-button" style="width: 125px; background-color:#231F20; color: #FFFFFF;">
+                    <span>Donate</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div> 
+            </div>
+            <div class="team-image">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/SFC_ECB-2025-Invitations-2.png">
+            </div>
+        </div>
+    </section>
+    <!-- Event Header Section -->
+    <section class="event-header">
+        <div>
+            <h1 class="event-date">Wednesday, October 29, 2025</h1>
+            <h2 class="event-location">SHERATON GRAND CHICAGO RIVERWALK</h2>
+            <p class="event-address">301 E. North Water St, Chicago, Il 60611</p>
+            
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <div class="days">
+                    <div class="countdown-box" id="days">35</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div>
+                    <div class="countdown-box" id="hours">16</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div>
+                    <div class="countdown-box" id="minutes">34</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div>
+                    <div class="countdown-box" id="seconds">20</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-image">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Dilla-Headshot.jpeg" alt="Professional woman smiling">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Keynote Speaker</h1>
+                <h2 class="speaker-name">Shermann "Dilla" Thomas</h2>
+                <p class="hero-description">
+                    We're thrilled to welcome Dilla—Chicago's beloved urban historian, content creator, and founder of Chicago Mahogany—as the keynote speaker for this year's Employment Champions Breakfast. Renowned for his engaging storytelling and deep knowledge of the city's cultural and historical roots, Dilla connects people to the neighborhoods that shape Chicago's identity and future."
+                </p>
+                <p class="hero-description">
+                    In alignment with this year's theme, "Beyond Empowerment: Creating Opportunities, Strengthening Communities," Dilla will speak on "Beyond Empowerment: Taking Action for Sustainable Change"—exploring how the history and culture of Chicago's neighborhoods shape opportunity and what it truly means to go beyond empowerment to create lasting economic and social change.
+                </p>
+            </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- Event Agenda Section -->
+    <section class="event-agenda">
+        <div class="container">
+            <h2>Event Agenda</h2>
+        </div>
+    </section>
+    <!-- Detailed Schedule Section -->
+    <div class="detailed-schedule">
+        <p class="event-intro">
+            We're excited to welcome you to this year's Employment Champions Breakfast! As you prepare for  arrival,
+            please take a moment to review the key event details below.
+        </p>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time">7:30AM</div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">CHECK-IN OPENS:</div>
+                <p class="detailed-schedule-description">Use this time to enjoy breakfast and connect with fellow guests, community partners, and friends before the program begins.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time">8:00AM</div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">BREAKFAST</div>
+                <p class="detailed-schedule-description">Use this time to enjoy breakfast and connect with fellow guests, community partners, and friends before the program begins.</p>
+                <p class="detailed-schedule-note">NOTE: All plates will be cleared before the program starts at 9:00 AM, so feel free to settle in and enjoy  meal early</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time">9:00AM</div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">PROGRAM BEGINS</div>
+                <p class="detailed-schedule-description">The Program will begin promptly at 9:00 AM</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">WELCOMING REMARKS</div>
+                <p class="detailed-schedule-description">Bridget Altenburg, President & CEO of Skills for Chicago, will kick things off with a warm welcome and set the tone for the day.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">PRESENTING SPONSOR SHOWCASE</div>
+                <p class="detailed-schedule-description">Hear from our presenting sponsor as they share their commitment to equitable hiring and community impact.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">PLACEMENT FEATURE</div>
+                <p class="detailed-schedule-description">Be inspired by a powerful story of career transformation from one of our program participants.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">CHAMPION FOR EQUITABLE HIRING AWARD PRESENTATION</div>
+                <p class="detailed-schedule-description">Celebrate a company that's going above and beyond to create inclusive hiring practices.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">KEYNOTE SPEAKER</div>
+                <p class="detailed-schedule-description">A special guest will join us to share insights and inspiration on advancing equity in the workforce.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">CHAMPION FOR COMMUNITY IMPACT AWARD PRESENTATION</div>
+                <p class="detailed-schedule-description">We'll recognize an outstanding partner who is making a difference at the community level.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">REMARKS FROM OUR BOARD CHAIR</div>
+                <p class="detailed-schedule-description">Get a look at our vision and direction from the leadership of our Board of Directors.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">PLACEMENT FEATURE</div>
+                <p class="detailed-schedule-description">Another moving spotlight on the impact of meaningful employment.</p>
+            </div>
+        </div>
+        
+        <div class="detailed-schedule-item">
+            <div class="detailed-schedule-time"></div>
+            <div class="detailed-schedule-content">
+                <div class="detailed-schedule-title">CLOSING REMARKS</div>
+                <p class="detailed-schedule-description">We'll wrap up the morning with a few final thoughts and expressions of gratitude.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Agenda Note Section -->
+<section class="agenda-note">
+    <div class="container">
+        <h2 class="note-title">Please Note:</h2>
+        <p class="note-text">More details will be shared and this agenda will be updated as we get closer to the event date. Be sure to check back for the latest information!</p>
+    </div>
+</section>
+ 
+    <section class="sponsors-overview">
+        <div class="container">
+            <h2 class="section-title">Thank You To Our 2024 Sponsors</h2>
+            <p class="sponsor-intro">A special thank you to the brands that have contributed funds, products, and time.</p>
+            
+            <div class="sponsor-tiers">
+    <a href="#Presenting" class="sponsor-tier active">Presenting</a>
+    <a href="#Champion" class="sponsor-tier">Champion</a>
+    <a href="#Ambassador" class="sponsor-tier">Ambassador</a>
+    <a href="#Advocate" class="sponsor-tier">Advocate</a>
+    <a href="#Supporter" class="sponsor-tier">Supporter</a>
+    <a href="#Partner" class="sponsor-tier">Partner</a>
+    <a href="#Friend" class="sponsor-tier">Friend</a>
+</div>
+            
+            <h3 class="tier-title" id="Presenting" style="font-size: 52px;">Presenting Sponsor</h3>
+            
+            <!-- Sponsor logos for each tier - only one will be visible at a time -->
+            <div class="sponsor-logos-container">
+                <!-- Presenting sponsors -->
+                <div class="tier-sponsors" id="Presenting-sponsors" style="display: block;">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Logo-Jewel-Osco-Color.png" alt="Jewel Osco" class="sponsor-logo">
+                </div>
+                
+                <!-- Champion sponsors -->
+                <div class="tier-sponsors" id="Champion-sponsors" style="display: none;">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-29_2x.png" alt="ULTA Beauty" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-1.png" alt="Allstate" class="sponsor-logo">
+                </div>
+                
+                <!-- Ambassador sponsors -->
+                <div class="tier-sponsors" id="Ambassador-sponsors" style="display: none;">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-33_2x.png" alt="ULTA Beauty" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-2_2x.png" alt="AON" class="sponsor-logo">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-3_2x.png" alt="BDT&MSD" class="sponsor-logo">
+                </div>
+                
+                <!-- Advocate sponsors -->
+                <div class="tier-sponsors" id="Advocate-sponsors" style="display: none;">
+                    <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-4_2x.png" alt="BlueCross BlueShield of Illinois" class="sponsor-logo">
+                </div>
+                
+                <!-- Supporter sponsors -->
+                <div class="tier-sponsors" id="Supporter-sponsors" style="display: none;">
+                    <img src="https://api.placeholder.com/120x70?text=Supporter1" alt="Supporter 1" class="sponsor-logo">
+                    <img src="https://api.placeholder.com/120x70?text=Supporter2" alt="Supporter 2" class="sponsor-logo">
+                </div>
+                
+                <!-- Partner sponsors -->
+                <div class="tier-sponsors" id="Partner-sponsors" style="display: none;">
+                    <img src="https://api.placeholder.com/100x60?text=Partner1" alt="Partner 1" class="sponsor-logo">
+                    <img src="https://api.placeholder.com/100x60?text=Partner2" alt="Partner 2" class="sponsor-logo">
+                </div>
+                
+                <!-- Friend sponsors -->
+                <div class="tier-sponsors" id="Friend-sponsors" style="display: none;">
+                    <img src="https://api.placeholder.com/80x50?text=Friend1" alt="Friend 1" class="sponsor-logo">
+                    <img src="https://api.placeholder.com/80x50?text=Friend2" alt="Friend 2" class="sponsor-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <!-- Partners Section -->
+ <section id="Champion" class="partners-section" style="background-color:#F8F8F8">
+    <h2 class="partners-title">Champion Sponsor</h2>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
+    
+    <div class="partners-grid">
+        <!-- Row 1 -->
+        <div class="partner-logo" id="logo-1">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-29_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-2">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-4.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-3">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-31_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-4">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-32_2x.png" alt="People at a community event">
+        </div>
+    </div>
+</section>
+<section id="Ambassador" class="partners-section">
+    <h2 class="partners-title">Ambassador Sponsor</h2>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
+    
+    <div class="partners-grid2">
+        <!-- Row 1 -->
+        <div class="partner-logo" id="logo-1">
+            <img class="ulta-logo" src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-33_2x.png" alt="People at a community event">
+        </div>
+    </div>
+</section>
+<section id="Advocate" class="partners-section" style="background-color:#F8F8F8">
+    <h2 class="partners-title">Advocate Sponsor</h2>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
+    
+    <div class="partners-grid">
+        <!-- Row 1 -->
+        <div class="partner-logo" id="logo-1">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-1.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-2">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-2_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-3">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-8_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-4">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-4_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-5">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-5_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-6">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-6_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-7">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-7_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-8">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-8_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-9">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-2.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-10">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-10_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-11">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-11_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-12">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-12_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-13">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-13_2x.png" alt="People at a community event">
+        </div>
+    </div>
+</section>
+<section id="Supporter" class="partners-section">
+    <h2 class="partners-title">Supporter Sponsor</h2>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
+    
+    <div class="partners-grid">
+        <!-- Row 1 -->
+        <div class="partner-logo" id="logo-1">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-14_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-2">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-15_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-3">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-16_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-4">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-17_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-5">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-18_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-6">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-3.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-7">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-20_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-8">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-21_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-9">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-22_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-10">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Latham___Watkins_Logo.svg_.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-11">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-24_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-12">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-25_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-13">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-26_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-14">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-27_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-15">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-28_2x.png" alt="People at a community event">
+        </div>
+    </div>
+</section>
+<section id="Partner" class="partners-section" style="background-color:#F8F8F8">
+    <h2 class="partners-title">Partner Sponsor</h2>
+    <!-- <p class="partners-subtitle">Explore the businesses committed to making an impact.</p> -->
+    
+    <div class="partners-grid">
+        <!-- Row 1 -->
+        <div class="partner-logo" id="logo-1">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-34_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-2">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-5.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-3">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-6.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-4">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-37_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-5">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-38_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-6">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-39_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-7">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-CNO.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-8">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-7.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-9">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-42_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-10">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-8.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-11">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-freedman-seating.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-12">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-45_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-13">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-46_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-14">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-47_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-15">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-48_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-16">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-49_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-17">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-9.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-18">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-10.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-19">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-northwestern-medicine-logo.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-20">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-11.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-21">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-54_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-22">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-55_2x.png" alt="People at a community event">
+        </div>
+        <div class="partner-logo" id="logo-23">
+            <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/big-Artboard-56_2x.png" alt="People at a community event">
+        </div>
+    </div>
+</section>
+ <!-- Board Grid Section -->
+ <section id="Friend" class="board-grid-section">
+    <div class="container" style="padding: 0px;">
+        <h2 class="event-recap-title">Friend Sponsor</h2>
+
+        <div class="board-grid">
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">AbbVie</h4>
+               
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">BCG Chicago</h4>
+               
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">BUILD Inc.</h4>
+               
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">CBRE</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Citi</h4>
+               
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Ferrara</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Goodwill Greater Milwaukee & Chicago</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Jim Gordon & The Edgewater Funds</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Help at Home</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Lockton</h4>
+               
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Marie Trzupek Lynch and John Lynch</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Marmon Holdings, Inc.</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Narratent Digital Marketing</h4>
+               
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Nixon Peabody LLP</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">ORBA – Certified Public Accountants</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Patzik, Frank & Samonty Ltd.</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Preservation of Affordable Housing</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Rush University Medical Center</h4>
+                
+            </div>
+            
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Sagin, LLC</h4>
+                
+            </div>
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Salesforce.org</h4>
+                
+            </div>
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Scimo Family Fund</h4>
+                
+            </div>
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Shaker Recruitment Marketing</h4>
+                
+            </div>
+            <div class="board-grid-card">
+                <h4 class="board-grid-name">Valtech</h4>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- NEW SECTION: 2024 Employment Champions Breakfast Recap -->
+<section class="event-recap-section">
+    <div class="container2" style="background-color:#F8F8F8">
+        <h2 class="event-recap-title2" style="color:#353232;">2024 Employment Champions Breakfast Recap</h2>
+    </div>  
+        <!-- <img src="/api/placeholder/880/500" alt="Chicago skyline at sunset" class="event-recap-image"> -->
+        <iframe id="promotional-video" width="560" height="715" 
+  src="https://www.youtube.com/embed/ESEBsqjp3k4?si=RppnkGYqdi0cqtcr&muted=1" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" 
+  allowfullscreen>
+</iframe>       
+<section class="talent">
+<h3 class="talent-section-title">Hear From Our Talent</h3>
+        
+<div class="talent-stories">
+    <div class="talent-story">
+        <div class="video-wrapper">
+            <iframe width="100%" height="365" src="https://www.youtube.com/embed/bnWRRhfKCUk?si=ptv2VqdPquYluDp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="talent-story-title">Candidate Spotlight: Amiracle's Story</p>
+    </div>
+    
+    <div class="talent-story">
+        <div class="video-wrapper">
+            <iframe width="100%" height="365" src="https://www.youtube.com/embed/Krc1cP3xdxE?si=GNmb7UkCATT2cV-a" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <p class="talent-story-title">Candidate Spotlight: Ngozi's Story</p>
+    </div>
+</div>
+</section> 
+
+       <div style="background-color: #F8F8F8; width: 100%; padding: 60px 0px 10px 0px;">
+        <div class="moments-section-container" style="background-color: transparent;">
+            <div class="moments-header">
+                <h3 class="moments-title">Moments From 2024</h3>
+                <!-- <a href="#" class="action-button">
+                    <span>View 2024 Gallery</span>
+                    <div class="circle-icon">
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </a>  -->
+            </div>
+            
+            <div class="gallery-container">
+                <div class="gallery-wrapper">
+                    <!-- Page 1 -->
+                    <div class="gallery-page active">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0860-scaled.jpg" alt="Event moment 1" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0875-scaled.jpg" alt="Event moment 2" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0901-scaled.jpg" alt="Event moment 3" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0889-scaled.jpg" alt="Event moment 4" class="gallery-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Page 2 -->
+                    <div class="gallery-page">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0882-scaled.jpg" alt="Event moment 5" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0865-scaled.jpg" alt="Event moment 6" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9739-scaled.jpg" alt="Event moment 7" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0868-scaled.jpg" alt="Event moment 8" class="gallery-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 3 -->
+                    <div class="gallery-page">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9745-scaled.jpg" alt="Event moment 9" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9724-scaled.jpg" alt="Event moment 10" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0891-scaled.jpg" alt="Event moment 11" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9727-scaled.jpg" alt="Event moment 12" class="gallery-image">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Page 4 -->
+                    <div class="gallery-page">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK0887-scaled.jpg" alt="Event moment 13" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9990-scaled.jpg" alt="Event moment 14" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/DSC05076-scaled.jpg" alt="Event moment 15" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9823-scaled.jpg" alt="Event moment 16" class="gallery-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Page 5 -->
+                    <div class="gallery-page">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9895-scaled.jpg" alt="Event moment 17" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/DSC05049-scaled.jpg" alt="Event moment 18" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/DSC05134-scaled.jpg" alt="Event moment 19" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/DSC04987-scaled.jpg" alt="Event moment 20" class="gallery-image">
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- Page 6 -->
+                     <div class="gallery-page">
+                        <div class="gallery-grid">
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/DSC05078-scaled.jpg" alt="Event moment 21" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/DSC04820-scaled.jpg" alt="Event moment 22" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9828-scaled.jpg" alt="Event moment 23" class="gallery-image">
+                            </div>
+                            <div class="gallery-item">
+                                <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/JWK9747-scaled.jpg" alt="Event moment 24" class="gallery-image">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Add more pages as needed -->
+                </div>
+                
+                <div class="gallery-dots">
+                    <div class="gallery-dot active" data-page="0"></div>
+                    <div class="gallery-dot" data-page="1"></div>
+                    <div class="gallery-dot" data-page="2"></div>
+                    <div class="gallery-dot" data-page="3"></div>
+                    <div class="gallery-dot" data-page="4"></div>
+                    <div class="gallery-dot" data-page="5"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+      
+
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('October 29, 2025 00:00:00').getTime();
+            const now = new Date().getTime();
+            const difference = targetDate - now;
+            
+            const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').innerText = days;
+            document.getElementById('hours').innerText = hours;
+            document.getElementById('minutes').innerText = minutes;
+            document.getElementById('seconds').innerText = seconds;
+            
+            // Fix the last "Minutes" label to "Seconds"
+            const labels = document.querySelectorAll('.countdown-label');
+            if (labels.length >= 4) {
+                labels[3].innerText = 'Seconds';
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Carousel Functionality
+        let currentSlide = 0;
+        const totalSlides = document.querySelectorAll('.carousel-slide').length;
+        const carousel = document.getElementById('carousel');
+        const carouselDots = document.querySelectorAll('.carousel-dot');
+        let slidesToShow = 4; // Default for desktop
+        
+        // Update slides to show based on window width
+        function updateSlidesToShow() {
+            if (window.innerWidth < 576) {
+                slidesToShow = 1;
+            } else if (window.innerWidth < 768) {
+                slidesToShow = 2;
+            } else if (window.innerWidth < 992) {
+                slidesToShow = 3;
+            } else {
+                slidesToShow = 4;
+            }
+        }
+        
+        function showSlide(index) {
+            if (index < 0) {
+                index = 0;
+            } else if (index > totalSlides - slidesToShow) {
+                index = totalSlides - slidesToShow;
+            }
+            
+            currentSlide = index;
+            const slideWidth = document.querySelector('.carousel-slide').offsetWidth;
+            const offset = -currentSlide * slideWidth;
+            carousel.style.transform = `translateX(${offset}px)`;
+            
+            // Update active dot
+            carouselDots.forEach((dot, i) => {
+                dot.classList.toggle('active', i === currentSlide);
+            });
+        }
+        
+        // Add event listeners to dots
+        carouselDots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                showSlide(i);
+            });
+        });
+        
+        // Auto slide
+        setInterval(() => {
+            if (currentSlide < totalSlides - slidesToShow) {
+                showSlide(currentSlide + 1);
+            } else {
+                showSlide(0);
+            }
+        }, 5000);
+        
+       // Handle window resize
+       window.addEventListener('resize', () => {
+            updateSlidesToShow();
+            showSlide(currentSlide);
+        });
+        
+        // Initialize
+        updateSlidesToShow();
+        showSlide(0);
+    </script>
+    <script>
+        // Wait for DOM to be fully loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all sponsor tier buttons
+            const tierButtons = document.querySelectorAll('.sponsor-tier');
+            const titleElement = document.getElementById('sponsor-tier-title');
+            
+            // Add click event to each button
+            tierButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Get the tier name from the button's data attribute
+                    const tier = this.getAttribute('data-tier');
+                    
+                    // Update the active button
+                    tierButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Update the title text
+                    titleElement.textContent = tier + ' Sponsor' + (tier === 'Friend' ? 's' : '');
+                    
+                    // Hide all sponsor tiers
+                    document.querySelectorAll('.tier-sponsors').forEach(div => {
+                        div.style.display = 'none';
+                    });
+                    
+                    // Show the selected tier's sponsors
+                    const sponsorsDiv = document.getElementById(tier + '-sponsors');
+                    if (sponsorsDiv) {
+                        sponsorsDiv.style.display = 'flex';
+                    }
+                });
+            });
+
+            // Gallery pages functionality
+            const galleryPages = document.querySelectorAll('.gallery-page');
+            const galleryDots = document.querySelectorAll('.gallery-dot');
+            let currentIndex = 0;
+            
+            // Add click event to dots
+            galleryDots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showPage(index);
+                });
+            });
+            
+            // Show the selected page
+            function showPage(index) {
+                // Hide all pages
+                galleryPages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show selected page if it exists
+                if (galleryPages[index]) {
+                    galleryPages[index].classList.add('active');
+                } else {
+                    // If the page doesn't exist, show the first page
+                    galleryPages[0].classList.add('active');
+                }
+                
+                // Update active dot
+                galleryDots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+                
+                currentIndex = index;
+            }
+            
+            // Auto rotation
+            let autoRotate = setInterval(() => {
+                let nextIndex = (currentIndex + 1) % galleryPages.length;
+                // If we don't have enough pages, just cycle between what we have
+                if (nextIndex >= galleryPages.length) {
+                    nextIndex = 0;
+                }
+                showPage(nextIndex);
+            }, 5000);
+        });
+    </script>
+       <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation to sections when they come into view
+            const animateSections = () => {
+                const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const isVisible = rect.top <= window.innerHeight * 0.8;
+                    
+                    if (isVisible) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial styles for animation
+            const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            // Run on load and scroll
+            animateSections();
+            window.addEventListener('scroll', animateSections);
+            
+                        // Mobile Menu Functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const overlay = document.querySelector('.overlay');
+        const body = document.querySelector('body');
+        
+        // Function to toggle mobile menu
+        function toggleMobileMenu() {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scrolling when menu is open
+            if (mobileNav.classList.contains('open')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+        }
+        
+        // Event listeners for menu toggling
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu when clicking overlay
+        if (overlay) {
+            overlay.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu when clicking a mobile navigation link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                toggleMobileMenu();
+            });
+        });
+        
+        // Close menu on window resize if screen becomes larger than mobile breakpoint
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && mobileNav.classList.contains('open')) {
+                toggleMobileMenu();
+            }
+        });
+
+            // Footer Accordion Functionality
+            const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordion = this.parentElement;
+                    
+                    // Toggle active class
+                    accordion.classList.toggle('active');
+                    
+                    // Close all other accordions (optional - comment out if you want multiple open)
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== this) {
+                            otherHeader.parentElement.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+        <script>
+            // Add this to  existing script section or create a new one
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to adjust gallery items based on screen size
+    // Replace  existing adjustGalleryLayout function with this corrected version
+function adjustGalleryLayout() {
+    const isMobile = window.innerWidth <= 991;
+    const galleryPages = document.querySelectorAll('.gallery-page');
+    
+    if (isMobile) {
+        // On mobile, for each page, show only the first item
+        galleryPages.forEach(page => {
+            const items = page.querySelectorAll('.gallery-item');
+            
+            items.forEach((item, index) => {
+                // Show only the first item in each page
+                if (index === 0) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    } else {
+        // On desktop, show all items
+        const allItems = document.querySelectorAll('.gallery-item');
+        allItems.forEach(item => {
+            item.style.display = 'block';
+        });
+    }
+}
+    
+    // Call the function on page load and resize
+    adjustGalleryLayout();
+    window.addEventListener('resize', adjustGalleryLayout);
+    
+    // When clicking on dots, make sure layout is adjusted
+    document.querySelectorAll('.gallery-dot').forEach(dot => {
+        dot.addEventListener('click', function() {
+            setTimeout(adjustGalleryLayout, 50);
+        });
+    });
+});
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Mobile Dropdown Functionality
+    const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+    
+    mobileDropdowns.forEach(dropdown => {
+        const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+        
+        dropdownToggle.addEventListener('click', function() {
+            // Toggle active class on clicked dropdown
+            dropdown.classList.toggle('active');
+            
+            // Optionally close other dropdowns when one is opened
+            // Comment this out if you want multiple dropdowns to be open simultaneously
+            mobileDropdowns.forEach(otherDropdown => {
+                if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                    otherDropdown.classList.remove('active');
+                }
+            });
+        });
+    });
+    
+    // Close dropdowns when a link inside is clicked
+    const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+    dropdownLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Optionally close the dropdown when a link is clicked
+            // Comment this out if you want the dropdown to stay open after a link is clicked
+            const parentDropdown = this.closest('.mobile-dropdown');
+            setTimeout(() => {
+                parentDropdown.classList.remove('active');
+                
+                // Also close the mobile menu
+                document.querySelector('.hamburger').classList.remove('open');
+                document.querySelector('.mobile-nav').classList.remove('open');
+                document.querySelector('.overlay').classList.remove('active');
+                document.querySelector('body').style.overflow = '';
+            }, 100); // Small delay to allow the click to register
+        });
+    });
+    
+    // Make sure mobile dropdowns are closed when menu is closed
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function() {
+            // If closing the mobile menu, close all dropdowns
+            if (document.querySelector('.mobile-nav').classList.contains('open')) {
+                setTimeout(() => {
+                    mobileDropdowns.forEach(dropdown => {
+                        dropdown.classList.remove('active');
+                    });
+                }, 300); // Delay to match the mobile menu closing animation
+            }
+        });
+    }
+});
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+    // Get all sponsor tier links
+    const tierLinks = document.querySelectorAll('.sponsor-tier');
+    
+    // Add click event to each link for smooth scrolling and active class toggling
+    tierLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            // Prevent default anchor behavior
+            e.preventDefault();
+            
+            // Get the target section id from the href attribute
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+            
+            // Update active class
+            tierLinks.forEach(lnk => lnk.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Smooth scroll to the target section
+            if (targetSection) {
+                // Calculate offset to account for fixed headers if needed
+                const offset = 100; // Adjust this value based on your header height
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Highlight the appropriate link based on scroll position (optional)
+    window.addEventListener('scroll', function() {
+        const scrollPosition = window.scrollY;
+        
+        // Get all sponsor sections
+        const sections = document.querySelectorAll('section[id]');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120; // Adjust offset as needed
+            const sectionHeight = section.offsetHeight;
+            const sectionId = section.getAttribute('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                // Remove active class from all links
+                tierLinks.forEach(link => link.classList.remove('active'));
+                
+                // Add active class to corresponding link
+                const activeLink = document.querySelector('.sponsor-tier[href="#' + sectionId + '"]');
+                if (activeLink) {
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    });
+});
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+  // Create an Intersection Observer
+  const options = {
+    root: null, // Use the viewport as the root
+    rootMargin: '0px',
+    threshold: 0.5 // Trigger when at least 50% of the element is visible
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // The video is now visible in the viewport
+        const iframe = entry.target;
+        const currentSrc = iframe.src;
+        
+        // Only modify if autoplay isn't already in the URL
+        if (!currentSrc.includes('autoplay=1')) {
+          // Add autoplay parameter to the URL
+          iframe.src = currentSrc + '&autoplay=1';
+        }
+        
+        // Stop observing once we've made the change
+        observer.unobserve(iframe);
+      }
+    });
+  }, options);
+
+  // Start observing the iframe
+  const videoIframe = document.getElementById('promotional-video');
+  if (videoIframe) {
+    observer.observe(videoIframe);
+  }
+});
+        </script>
+</body>
+</html>

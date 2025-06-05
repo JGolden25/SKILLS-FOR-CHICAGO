@@ -1,0 +1,315 @@
+/* Font Families */
+.skills-modern-footer h1, 
+.skills-modern-footer h2, 
+.skills-modern-footer h3, 
+.skills-modern-footer h4, 
+.skills-modern-footer h5, 
+.skills-modern-footer span {
+    font-family: Greycliff CF, sans-serif;
+}
+
+.skills-modern-footer p, 
+.skills-modern-footer a {
+    font-family: Greycliff CF, Light;
+}
+
+/* Footer Content */
+.skills-modern-footer {
+    background-color: #1F3707;
+    color: white;
+    padding: 60px 0 0 0;
+    font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+    position: relative;
+    overflow: hidden; /* Keep the background logo contained within the footer */
+}
+
+.wpml-ls-legacy-list-horizontal.wpml-ls-statics-footer {
+    display: none;
+}
+
+.elementor-widget:not(:last-child) {
+    margin-bottom: 0px !important;
+}
+
+/* Add the SC logo as a background on the left side */
+.skills-modern-footer::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -10%; /* Position on the left side instead of right */
+    transform: translateY(-50%);
+    width: 60%; /* Large size to match the image */
+    height: 140%;
+    background-image: url("https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Artboard-1-copy.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    z-index: 0;
+    opacity: 0.20; /* Dark but subtle appearance */
+}
+
+/* Ensure footer content stays on top of the background image */
+.skills-footer-container, .skills-footer-copyright {
+    position: relative;
+    z-index: 1;
+}
+
+.skills-footer-container {
+    padding: 0 6%;
+    font-weight: 700;
+}
+
+.skills-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.skills-footer-divider {
+    flex: 1;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0 40px;
+}
+
+.skills-footer-logo img {
+    height: 80px !important;
+}
+
+.skills-footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.skills-footer-social a {
+    color: white;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.skills-footer-social a:hover {
+    opacity: 0.8;
+}
+
+/* Updated footer navigation styles to fix vertical alignment */
+.skills-footer-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Changed from center to flex-start */
+    margin-bottom: 60px;
+}
+
+.skills-footer-nav-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+}
+
+.skills-footer-nav-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    height: 22px; /* Fixed height for the heading */
+    line-height: 22px; /* Match the height to ensure consistent alignment */
+}
+
+.skills-footer-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skills-footer-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
+    transition: opacity 0.3s ease;
+    font-weight: 300;
+    font-family: Greycliff CF, Light;
+}
+
+.skills-footer-nav-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.skills-footer-copyright {
+    background-color: #1F3707;
+    padding: 20px 0;
+    font-size: 14px;
+    border-top: 1px solid #DCDCDC;
+}
+
+.skills-footer-copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.skills-footer-links {
+    display: flex;
+    gap: 30px;
+    justify-content: flex-start;
+    flex-basis: 50%;
+}
+
+.skills-footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+    font-weight: 300;
+}
+
+.skills-footer-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.skills-footer-copyright-text {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 300px;
+    z-index: 0;
+}
+
+/* NEW STYLES FOR MOBILE FOOTER ACCORDION */
+.skills-mobile-footer {
+    display: none; /* Hide on desktop */
+}
+
+.skills-footer-accordion {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.skills-footer-accordion-header {
+    padding: 15px 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-footer-accordion-title {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: white;
+    margin: 0;
+}
+
+.skills-footer-accordion-icon {
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.skills-footer-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 20px;
+}
+
+.skills-footer-accordion.active .skills-footer-accordion-icon {
+    transform: rotate(180deg);
+}
+
+.skills-footer-accordion.active .skills-footer-accordion-content {
+    max-height: 300px; /* Adjust as needed */
+    padding-bottom: 15px;
+}
+
+/* Mobile Footer Links */
+.skills-footer-mobile-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-footer-mobile-links li {
+    margin-bottom: 12px;
+}
+
+.skills-footer-mobile-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    display: block;
+    opacity: 0.9;
+    text-align: left;
+    font-weight: 300;
+}
+
+.skills-footer-mobile-links a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1354px) {
+    .skills-footer-nav {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+    
+    .skills-footer-nav-section {
+        flex: 1 0 30%;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 976px) {
+    .skills-modern-footer::before {
+        width: 100%;
+        left: -20%;
+    }
+    
+    .skills-footer-top {
+        flex-direction: column;
+        gap: 0px;
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    /* Hide desktop footer navigation and show accordion */
+    .skills-footer-nav {
+        display: none;
+    }
+
+    .skills-mobile-footer {
+        display: block;
+    }
+    
+    .skills-footer-copyright-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .skills-footer-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .skills-footer-copyright-text {
+        position: static;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .skills-footer-nav {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

@@ -1,0 +1,3864 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills for Chicago</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Greycliff CF, Bold;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+@font-face { font-family: Greycliff; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-bold.otf'); } 
+
+@font-face { font-family: Greycliff-thin; src: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Fontspring-DEMO-greycliffcf-thin.otf'); } 
+h1 {
+ font-family: Greycliff CF, Bold;
+}
+h2 {
+ font-family: Greycliff CF, Bold;
+}
+h3 {
+ font-family: Greycliff CF, Bold;
+}
+p {
+font-family: Greycliff CF, Light;
+}
+a {
+font-family: Greycliff CF, Light;
+}
+span {
+font-family: Greycliff CF, Bold;
+}
+
+.elementor-section.elementor-section-boxed > .elementor-container {
+    max-width: 100%;
+}
+
+.elementor-column-gap-default>.elementor-column>.elementor-element-populated {
+    padding: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0px auto;
+    /* padding: 0 20px; */
+}
+
+/* Banner Styles */
+.banner {
+    background-color: #1e3a14;
+    color: white;
+    padding: 12px 0;
+    position: relative;
+}
+
+.banner-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.exit-fullscreen {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #3a86ff;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.banner-text {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.learn-more-btn {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 6px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 10%;
+}
+
+/* Header Styles */
+.header {
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+z-index: 100;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 0px;
+}
+
+.logo {
+    width: 180px;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 65px;
+margin-right: 45px;
+}
+
+.nav-links a {
+    color: #7D7E7E;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+color: #4d7e32;
+}
+
+.donate-btn {
+    background-color: #67b346;
+    color: white;
+    border-radius: 25px;
+    padding: 8px 25px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.donate-btn-icon {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.donate-btn-icon::after {
+    content: '→';
+    color: #67b346;
+    font-size: 12px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 70px 0;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin: 0px 5% 0px 5%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #1a1a1a;
+}
+
+.hero-content h2 {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+
+.hero-content p {
+    font-size: 22px;
+    line-height: 1.7;
+    color: #444;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 640px;
+    object-fit: cover;
+    border-radius: 75px;
+}
+
+/* Testimonial Dots */
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+}
+
+.dot.active {
+    background-color: #1e3a14;
+}
+
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    /* background-color: white; */
+    border-radius: 50%;
+}
+
+/* Footer Content */
+.modern-footer {
+background-color: #1F3707;
+color: white;
+padding: 60px 0 0 0;
+font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+position: relative;
+overflow: hidden; /* Keep the background logo contained within the footer */
+}
+
+/* Add the SC logo as a background on the left side */
+.modern-footer::before {
+content: '';
+position: absolute;
+top: 50%;
+left: -10%; /* Position on the left side instead of right */
+transform: translateY(-50%);
+width: 60%; /* Large size to match the image */
+height: 140%;
+background-image: url('/Users/josephchretien/Downloads/SKILLSWEBPAGES/Artboard 1 copy.png');
+background-repeat: no-repeat;
+background-position: center center;
+background-size: contain;
+z-index: 0;
+opacity: 0.45; /* Dark but subtle appearance */
+}
+
+/* Ensure footer content stays on top of the background image */
+.footer-container, .footer-copyright {
+position: relative;
+z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+.modern-footer::before {
+    width: 100%;
+    left: -20%;
+}
+}
+.footer-container {
+    padding: 0 6%;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.footer-divider {
+    flex: 1;
+    height: 1px;
+    background-color: #ffffff;
+    margin: 0 40px;
+}
+
+.footer-logo img {
+    height: 80px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 20px;
+    transition: opacity 0.3s ease;
+}
+
+.footer-social a:hover {
+    opacity: 0.8;
+}
+
+.hero-content h3 {
+    color:#355e0b;
+    margin-bottom: 6%;
+    font-size: 22px;
+}
+
+/* Updated footer navigation styles to fix vertical alignment */
+.footer-nav {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start; /* Changed from center to flex-start */
+    margin-bottom: 60px;
+}
+
+.footer-nav-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+}
+
+.footer-nav-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    height: 22px; /* Fixed height for the heading */
+    line-height: 22px; /* Match the height to ensure consistent alignment */
+}
+
+.skills-footer-nav-section h3 {
+    /* font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    height: 22px;
+    line-height: 22px; */
+    color: #ffffff !important;
+}
+.elementor-widget:not(:last-child) {
+    margin-block-end: 0px !important;
+}
+
+
+.footer-nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        transition: opacity 0.3s ease;
+        font-weight: 300;
+    }
+
+.footer-nav-links a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    background-color: #1F3707;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+    .footer-nav {
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .hero-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 75px;
+    }
+    
+    .footer-nav-section {
+        flex: 1 0 30%;
+        min-height: auto;
+    }
+}
+
+@media (max-width: 976px) {
+    .footer-top {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+
+    .footer-nav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-nav-section {
+        width: 100%;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-nav {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+    .contact-info {
+        margin-top: 15px;
+    }
+    
+    .contact-item {
+        margin-bottom: 10px;
+        font-size: 15px;
+    }
+    
+    /* Copyright */
+    .copyright {
+        background-color: #1e3a14;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 14px;
+    }
+    
+    /* Employer Support Section */
+    .employer-support {
+        padding: 70px 0px 70px 5%;
+        background-color: #F8F8F8;
+        /* border-top: 1px solid black; */
+    }
+    
+    .employer-support-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+        margin: 0px 0px 0px 4%;
+    }
+    
+    .employer-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .employer-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .employer-content h2 {
+        font-size: 42px;
+        font-weight: 800;
+        margin-bottom: 30px;
+        color: #1a1a1a;
+    }
+    
+    .support-list {
+        list-style-type: none;
+        width: 95%;
+    }
+    
+    .support-item {
+        display: flex;
+        gap: 15px;
+        margin-bottom: 25px;
+        align-items: flex-start;
+    }
+    
+    .support-icon {
+        width: 10px;
+        height: 10px;
+        background-color: #4F6B3A;
+        border-radius: 50%;
+        margin-top: 8px;
+        flex-shrink: 0;
+    }
+    
+    .support-text {
+        font-size: 22px;
+        line-height: 1.6;
+        font-family: Greycliff CF, Light;
+    }
+    
+    .support-text strong {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 17px;
+    }
+    
+    /* Network Section */
+    .network-section {
+        padding: 30px 0;
+        background-color: #1e3a14;
+        color: white;
+    }
+    
+    .network-container {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    
+    .network-heading {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    .network-subheading {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .partner-btn {
+        background-color: #67b346;
+        color: white;
+        border-radius: 50px;
+        padding: 12px 30px;
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    
+    .partner-btn-icon {
+        width: 20px;
+        height: 20px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .partner-btn-icon::after {
+        content: '→';
+        color: #67b346;
+        font-size: 14px;
+    }
+    
+    /* Testimonial Carousel */
+    .testimonial-carousel {
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        background-color: #E6F0DC;
+    }
+    
+    .carousel-container {
+        overflow: hidden;
+        position: relative;
+        padding: 60px 0 20px;
+    }
+    #intro-logo {
+        width: 100%;
+        height: auto;
+    }
+
+    .donate-button {
+display: inline-flex;
+align-items: center;
+justify-content: space-between;
+background-color: #8dc63f; /* Light green */
+color: #333333; /* Black text color */
+padding: 5px 5px 5px 13px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 700;
+font-size: 14px;
+transition: all 0.3s ease;
+width: 150px; /* Adjust width as needed */
+border: 1px solid black;
+}
+
+.donate-button i {
+font-size: 14px;
+transition: transform 0.3s ease;
+}
+
+.donate-button span {
+margin-right: 5px; 
+margin-left: 6%;
+}
+
+.donate-button:hover .circle-icon i {
+color: #333333; /* Black arrow */
+font-size: 12px;
+transform: rotate(0deg);
+}
+
+.donate-button:hover {
+background-color: #7db32e; /* Slightly darker on hover */
+transform: translateY(-2px);
+}
+
+.donate-button i {
+transform: rotate(-45deg);
+}
+
+.donate-button > .circle-icon i:hover {
+transform: rotate(0deg);
+}
+
+.donate-button i {
+font-size: 14px;
+transition: transform 0.3s ease;
+}
+
+.circle-icon {
+width: 35px;
+height: 35px;
+background-color: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+    
+    .testimonial-cards {
+        display: flex;
+        transition: transform 0.5s ease;
+        gap: 25px;
+    }
+    
+    .testimonial-card {
+        background-color: white;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        position: relative;
+        margin-top: 60px;
+        flex: 0 0 calc(33.333% - 17px);
+        box-sizing: border-box;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* Layered shadow for depth */
+        border: 1px solid black;
+    }
+    
+    .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50px;
+        height: 50px;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        color: #1e3a14;
+        cursor: pointer;
+        z-index: 10;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        border: none;
+        transition: all 0.3s ease;
+    }
+    
+    .carousel-arrow:hover {
+        background-color: #fff;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .carousel-arrow.left {
+        left: -10px;
+    }
+    
+    .carousel-arrow.right {
+        right: -10px;
+    }
+    
+    .testimonial-avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: absolute;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 4px solid white;
+    }
+    
+    .testimonial-avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    
+    .testimonial-logo {
+        height: 40px;
+        margin: 35px 0 10px;
+    }
+    
+    .testimonial-name {
+        font-size: 18px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 5px;
+    }
+
+    .action-button {
+display: inline-flex;
+align-items: center;
+justify-content: space-between;
+background-color: #A2C466; /* Light green */
+color: #333333; /* Black text color */
+padding: 10px 15px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 700;
+font-size: 14px;
+transition: all 0.3s ease;
+width: 150px; /* Adjust width as needed */
+border: 1px solid black;
+}
+
+.action-button span {
+margin-right: 5px;
+}
+
+.action-button:hover .circle-icon i {
+color: #333333; /* Black arrow */
+font-size: 12px;
+transform: rotate(0deg);
+}
+
+.action-button:hover {
+background-color: #7db32e; /* Slightly darker on hover */
+transform: translateY(-2px);
+}
+
+.action-button i {
+transform: rotate(-45deg);
+}
+
+.action-button > .circle-icon i:hover {
+transform: rotate(0deg);
+}
+
+.action-button i {
+font-size: 14px;
+transition: transform 0.3s ease;
+}
+    
+    .testimonial-title {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+    
+    .testimonial-quote {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #555;
+    }
+    
+    /* Responsive Styles */
+    @media (max-width: 976px) {
+        .footer-container {
+            grid-template-columns: repeat(3, 1fr);
+        }
+        
+        .footer-logo-section {
+            grid-column: span 3;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .footer-logo {
+            margin: 0 auto 20px;
+        }
+        
+        .employer-support-container,
+        .hero-container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        .testimonial-card {
+            flex: 0 0 calc(50% - 13px);
+        }
+    }
+    
+    @media (max-width: 767px) {
+        .testimonial-card {
+            flex: 0 0 100%;
+        }
+    }
+    
+    @media (max-width: 976px) {
+        .work-together-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+        .work-together-content h2 {
+            font-size: 28px;
+        }
+        .nav-links {
+            display: none;
+        }
+        
+        .footer-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        
+        .footer-nav-links {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .footer-nav-container {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .social-icons {
+            justify-content: center;
+        }
+        
+        .footer-heading {
+            margin-top: 20px;
+        }
+        
+        .hero-content h1,
+        .hero-content h2 {
+            font-size: 36px;
+        }
+        
+        .network-heading {
+            font-size: 30px;
+        }
+        
+        .banner-container {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+    }
+    /* PART 2: MIDDLE SECTION */
+    /* Work Together Section */
+    .work-together-section {
+        padding: 35px 0;
+        background-color: #1F3707;
+        color: white;
+    }
+    
+    .work-together-container {
+        max-width: 1600px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .work-together-content {
+        width: 70%;
+    }
+    
+    .work-together-content h2 {
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+    
+    .work-together-description {
+        font-size: 20px;
+        /* margin-bottom: 30px; */
+    }
+      /* Testimonial Section Styles */
+.testimonial-section {
+    padding: 80px 0;
+    background-color: #E6F0DC;
+    text-align: center;
+    overflow: hidden;
+}
+
+.testimonial-container {
+    max-width: 2400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.testimonial-carousel {
+    position: relative;
+}
+
+.testimonial-slide {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.testimonial-slide.active {
+    display: block;
+    opacity: 1;
+}
+
+.testimonial-card {
+    background-color: #f2f3eb;
+    border-radius: 20px;
+    padding: 70px 50px 50px;
+    margin-top: 60px;
+    position: relative;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #e0e0d0;
+    min-height: 300px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial-profile {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 2;
+}
+
+.testimonial-profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonial-quote-mark {
+    position: absolute;
+    top: 60px;
+    left: 60px;
+    font-size: 180px;
+    line-height: 0;
+    font-family: Georgia, serif;
+    color: #2e4017;
+    opacity: 0.5;
+}
+
+.testimonial-quote {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: Greycliff CF, Light;
+}
+
+.testimonial-name {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: Greycliff, 'Segoe UI', sans-serif;
+}
+
+.testimonial-title {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+    font-family: Greycliff CF, Light;
+}
+
+.testimonial-program {
+    font-size: 16px;
+    color: #666;
+    font-family: Greycliff CF, Light;
+}
+
+.testimonial-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.testimonial-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.testimonial-dot.active {
+    background-color: #2e4017;
+}
+
+.testimonial-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    left: 0;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 3;
+}
+
+.communities-image img {
+        width: 100%;
+        height: 750px;
+        display: block;
+        object-fit: cover;
+    }
+
+.testimonial-button {
+    background-color: #2e4017;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.testimonial-button:hover {
+    background-color: #3b5320;
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .testimonial-card {
+        padding: 60px 30px 40px;
+    }
+    
+    .testimonial-quote-mark {
+        font-size: 120px;
+        top: 40px;
+        left: 30px;
+    }
+    
+    .testimonial-quote {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .testimonial-card {
+        padding: 60px 20px 30px;
+    }
+    
+    .testimonial-quote-mark {
+        font-size: 100px;
+        top: 30px;
+        left: 20px;
+    }
+    
+    .testimonial-quote {
+        font-size: 18px;
+    }
+}
+.resources-section {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+.resources-section {
+        /* padding: 80px 0; */
+        background-color: var(--light-gray);
+    }
+    .resources-container {
+        display: flex;
+        gap: 40px;
+        align-items: center;
+    }
+    @media (max-width: 976px) {
+        .communities-text {
+        margin-bottom: 30px;
+        font-size: 16px;
+        line-height: 1.7;
+        color: #444;
+        width: 100%;
+    }
+
+.resources-content {
+    /* margin-bottom: 4%; */
+}
+}
+    @media (max-width: 768px) {
+        .hero-container, 
+        .communities-container,
+        .cta-container {
+            flex-direction: column;
+            align-items: center;
+        }
+        .access-title, .communities-title {
+            font-size: 32px;
+        }
+        .communities-text {
+        margin-bottom: 30px;
+        font-size: 22px;
+        line-height: 1.7;
+        color: #444;
+        width: 70%;
+    }
+
+        .hero-container, 
+        .resources-container,
+        .cta-container {
+            flex-direction: column;
+            align-items: center;
+        } }
+        .resources-container {
+        display: flex;
+        /* display: inline-flex; */
+        align-items: center;
+        justify-content: center;
+        padding-left: 2%;
+        gap: 60px;
+        background-color: #FFFFFF;
+    }
+    @media (max-width: 976px) {
+        .communities-container {
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .resources-container {
+            flex-direction: column;
+            gap: 40px;
+        }}
+        @media (max-width: 976px) {
+.resources-container {
+    flex-direction: column-reverse !important; /* Reverses the order in mobile view */
+}
+.communities-image, .resources-content {
+            width: 100%;
+        }
+        .communities-image, .communities-content {
+            width: 100%;
+        }
+}
+.resources-content {
+padding: 2% 0px 2% 0%;
+margin-left: 5%;
+}
+.resources-content {
+        flex: 1;
+        padding: 2% 0px 2% 0%;
+    }
+    .resources-content {
+        flex: 1;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+
+   
+    .communities-title {
+        font-size: 52px;
+        color: var(--dark-green);
+        margin-bottom: 30px;
+        font-weight: 700;
+        color: #000000;
+    }
+    .communities-text {
+        margin-bottom: 30px;
+        font-size: 22px;
+        line-height: 1.7;
+        color: #444;
+        width: 90%;
+    }
+    @media (max-width: 1354px) {
+        .container {
+padding: 0px;
+        }
+
+        .resources-container {
+            padding: 0px;
+        }
+        .communities-text {
+            margin-bottom: 30px;
+            font-size: 16px;
+            line-height: 1.7;
+            color: #444;
+            width: 100%;
+        }
+        .partnering-text {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .communities-image img {
+        width: 100%;
+        height: 400px;
+        display: block;
+    }
+    .communities-image, .communities-content {
+            width: 100%;
+        }
+
+        .communities-image, .access-content {
+            width: 100%;
+        }
+    }
+    .communities-image {
+        flex: 1.2;
+    }
+    
+    @media (min-width: 1478px) { 
+/* .communities-image img {
+width: 100%;
+height: 400px;
+display: block;
+object-fit: cover;
+} */
+.employer-support-container {
+margin: 0px;
+}
+}
+/* Responsive */
+@media (max-width: 976px) {
+        .collaborate-container {
+            grid-template-columns: 1fr;
+            gap: 40px;
+        }
+        
+        .collaborate-content {
+            order: 1;
+        }
+        
+        .collaborate-image {
+            order: 0;
+        }
+        
+        .nav-links {
+            display: none;
+        }
+        
+        .footer-nav {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    @media (max-width: 976px) {
+        .banner-container {
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .work-together-container {
+            flex-direction: column;
+            text-align: center;
+            gap: 20px;
+        }
+        
+        .footer-nav {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        
+        .footer-top {
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .footer-divider {
+            width: 100%;
+            margin: 20px 0;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .footer-nav {
+            grid-template-columns: 1fr;
+        }
+        
+        .collaborate-content h1 {
+            font-size: 32px;
+        }
+        
+        .collaborate-subtitle,
+        .how-we-work {
+            font-size: 20px;
+        }
+        
+        .work-together-content h2 {
+            font-size: 28px;
+        }
+    }
+
+      /* Footer Content */
+      .modern-footer {
+        background-color: #1F3707;
+        color: white;
+        padding: 60px 0 0 0;
+        font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        position: relative;
+        overflow: hidden; /* Keep the background logo contained within the footer */
+    }
+
+    /* Add the SC logo as a background on the left side */
+    .modern-footer::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: -10%; /* Position on the left side instead of right */
+        transform: translateY(-50%);
+        width: 60%; /* Large size to match the image */
+        height: 140%;
+        background-image: url('https://ibc.gzr.mybluehost.me/wp-content/uploads/2025/04/Artboard-1-copy.png');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        z-index: 0;
+        opacity: 0.20; /* Dark but subtle appearance */
+    }
+
+    /* Ensure footer content stays on top of the background image */
+    .footer-container, .footer-copyright {
+        position: relative;
+        z-index: 1;
+    }
+
+    .footer-container {
+        padding: 0 6%;
+        font-weight: 700;
+    }
+
+    .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+        position: relative;
+    }
+    
+    .footer-divider {
+        flex: 1;
+        height: 1px;
+        background-color: #ffffff;
+        margin: 0 40px;
+    }
+
+    .footer-logo img {
+        height: 80px;
+    }
+
+    .footer-social {
+        display: flex;
+        gap: 20px;
+    }
+
+    .footer-social a {
+        color: white;
+        font-size: 20px;
+        transition: opacity 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        opacity: 0.8;
+    }
+
+     /* Updated footer navigation styles to fix vertical alignment */
+     .footer-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; /* Changed from center to flex-start */
+        margin-bottom: 60px;
+    }
+
+    .footer-nav-section {
+        display: flex;
+        flex-direction: column;
+        min-height: 300px; /* Set a minimum height to ensure consistent spacing */
+    }
+
+    .footer-nav-section h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        text-transform: uppercase;
+        height: 22px; /* Fixed height for the heading */
+        line-height: 22px; /* Match the height to ensure consistent alignment */
+    }
+
+    .footer-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-nav-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 12px;
+        transition: opacity 0.3s ease;
+        font-weight: 300;
+        font-family: Greycliff CF, Light;
+    }
+
+    .footer-nav-links a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+    }
+
+    .footer-copyright {
+        background-color: #1F3707;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 14px;
+        border-top: 1px solid #DCDCDC;
+    }
+
+    /* NEW STYLES FOR MOBILE FOOTER ACCORDION */
+    .footer-accordion {
+        display: none; /* Hide on desktop */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .footer-accordion-header {
+        padding: 15px 20px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-accordion-title {
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: white;
+    }
+
+    .footer-accordion-icon {
+        transition: transform 0.3s ease;
+        color: white;
+    }
+
+    .footer-accordion-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        padding: 0 20px;
+    }
+
+    .footer-accordion.active .footer-accordion-icon {
+        transform: rotate(180deg);
+    }
+
+    .footer-accordion.active .footer-accordion-content {
+        max-height: 300px; /* Adjust as needed */
+        padding-bottom: 15px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 1478px) {
+        .collaborate-image img {
+        width: 100%;
+        height: 400px;
+        border-radius: 35px;
+        object-fit: cover;
+    }
+
+    .resources-content {
+        padding: 0% 7% 6% 2%;
+    }
+
+    /* .employer-support {
+        padding: 0px;
+    } */
+
+    .employer-content {
+        padding: 0px 0px 0px 3%;
+    }
+
+    .employer-support-container {
+margin: 0px;
+}
+
+    .work-together-content h2 {
+font-size: 50px;
+font-weight: 800;
+line-height: 1.2;
+margin-bottom: 20px;
+width: 100%;
+}
+
+.header-container {
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .header {
+        padding: 15px 15px;
+        }
+        /* .partnering-section-mobile {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        border-top: 1px solid black;
+    }
+
+    .partnering-section-mobile {
+        background-color: var(--light-gray);
+    }
+    .partnering-section {
+        display: none;  
+    }
+        .cta-text {
+            margin-bottom: 20px;
+            font-size: 22px;
+            width: 60%;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: right;
+            object-fit: cover;
+        }
+
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 70px;
+            height: 400px;
+            object-fit: cover;
+        } */
+        .footer-nav {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        
+        .footer-nav-section {
+            flex: 1 0 30%;
+            min-height: auto;
+        }
+    }
+
+    @media (max-width: 976px) {
+        .footer-top {
+            flex-direction: column;
+            gap: 0px;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+        .employer-support-container {
+margin: 0px;
+}
+
+ .employer-support {
+        padding: 0px;
+    }
+
+        /* Hide desktop footer navigation and show accordion */
+        .footer-nav {
+            display: none;
+        }
+
+        .footer-accordion {
+            display: block;
+        }
+
+        .banner-container {
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .footer-nav {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+    }
+
+    /* Mobile Footer Links */
+    .footer-mobile-links {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-mobile-links li {
+        margin-bottom: 12px;
+    }
+
+    .footer-mobile-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 15px;
+        display: block;
+        opacity: 0.9;
+        text-align: left;
+        font-weight: 300;
+    }
+
+    .footer-mobile-links a:hover {
+        opacity: 1;
+        text-decoration: underline;
+    }
+    .social-strip {
+background-color: #ffffff;
+padding: 5px 0;
+border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+display: flex;
+justify-content: flex-end;
+max-width: 83%;
+margin: 0 auto;
+padding: 0 40px;
+}
+
+.social-icons-top {
+display: flex;
+gap: 15px;
+}
+
+.social-icons-top a {
+color: #333;
+font-size: 18px;
+transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+color: #4d7e32;
+}
+/* START MOBILE CSS */
+.mobile-menu-toggle {
+        display: none; /* Hidden by default, shown in media query */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1001;
+    }
+     /* Hamburger Menu Button */
+     .mobile-menu-toggle {
+        display: none; /* Hidden by default, shown in media query */
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1001;
+    }
+
+    .hamburger {
+        width: 30px;
+        height: 20px;
+        position: relative;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+
+    .hamburger span {
+        display: block;
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: #333;
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+
+    /* Hamburger icon bars positioning */
+    .hamburger span:nth-child(1) {
+        top: 0px;
+    }
+
+    .hamburger span:nth-child(2),
+    .hamburger span:nth-child(3) {
+        top: 10px;
+    }
+
+    .hamburger span:nth-child(4) {
+        top: 20px;
+    }
+
+    /* Hamburger animation to X */
+    .hamburger.open span:nth-child(1) {
+        top: 10px;
+        width: 0%;
+        left: 50%;
+    }
+
+    .hamburger.open span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .hamburger.open span:nth-child(4) {
+        top: 10px;
+        width: 0%;
+        left: 50%;
+    }
+
+@media (max-width: 1354px) {
+        .main-nav {
+            display: none; /* Hide desktop nav */
+        }
+        
+        .mobile-menu-toggle {
+            display: block; /* Show hamburger icon */
+        }
+        
+        .header-container {
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+    }
+@media (max-width: 1500px) { 
+.header-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0px 0px 0px 0px;
+    }
+    .nav-links {
+        display: flex;
+        gap: 25px;
+margin-right: 45px;
+    }
+}
+@media (max-width: 1478px) { 
+.learn-more-btn {
+        margin-right: 0%;
+    }
+       .header {
+        padding: 15px 15px;
+        }
+        .banner {
+            padding: 12px 15px;
+        }
+    }
+     /* Mobile Navigation Panel */
+     .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 400px;
+        height: 100%;
+        background-color: white;
+        padding: 80px 40px 40px;
+        z-index: 1000;
+        overflow-y: auto;
+        transition: right 0.3s ease-in-out;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-nav.open {
+        right: 0;
+    }
+
+    .mobile-nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mobile-nav-links a {
+        color: #333;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        transition: color 0.3s ease;
+    }
+
+    .mobile-nav-links a:hover {
+        color: #4d7e32;
+    }
+
+    .mobile-donate-button {
+        margin-top: 30px;
+        /* width: 40%; */
+        /* justify-content: center; */
+    }
+
+    /* Dark overlay when mobile menu is open */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        display: none;
+    }
+
+    .overlay.active {
+        display: block;
+    }
+    @media (max-width: 576px) {
+        .mobile-nav {
+            width: 100%;
+            max-width: none;
+        }
+    }
+    .fa-arrow-right:before {
+content: "\f061";
+color: #7D7E7E;
+font-size: 18px;
+}
+
+/* Social Strip Styles */
+.social-strip {
+background-color: #ffffff;
+padding: 5px 0;
+border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+display: flex;
+justify-content: flex-end;
+max-width: 83%;
+margin: 0 auto;
+padding: 0 40px;
+}
+
+.social-icons-top {
+display: flex;
+gap: 15px;
+}
+
+.social-icons-top a {
+color: #333;
+font-size: 18px;
+transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+color: #4d7e32;
+}
+
+/* Banner Styles */
+.banner {
+background-color: #1e3a14;
+color: white;
+padding: 12px 0;
+}
+
+.banner-container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+.banner-text {
+max-width: 800px;
+margin: 0 auto;
+font-size: 16px;
+line-height: 1.4;
+}
+
+.learn-more-btn {
+background-color: transparent;
+color: white;
+border: 1px solid white;
+border-radius: 25px;
+padding: 6px 16px;
+font-size: 14px;
+cursor: pointer;
+display: inline-block;
+}
+
+/* Header Styles */
+.header {
+background-color: #ffffff;
+padding: 15px 0;
+border-bottom: 1px solid #eee;
+position: relative;
+z-index: 100;
+box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.header-container {
+display: flex;
+justify-content: space-evenly;
+align-items: center;
+padding: 0px 85px 0px 25px;
+}
+
+.logo {
+width: 175px;
+}
+
+.logo-link {
+display: block;
+}
+
+/* Donate Button Styles */
+.donate-button {
+display: inline-flex;
+align-items: center;
+justify-content: space-between;
+background-color: #8dc63f;
+color: #333333;
+padding: 3px 5px 3px 13px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 700;
+font-size: 14px;
+transition: all 0.3s ease;
+width: 150px;
+border: 1px solid #707070;
+}
+
+.donate-button span {
+margin-right: 5px;
+font-family: Greycliff CF, Light;
+}
+
+.circle-icon {
+width: 35px;
+height: 35px;
+background-color: white;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.fa-arrow-right:before {
+content: "\f061";
+color: #7D7E7E;
+font-size: 18px;
+}
+
+.donate-button i {
+font-size: 14px;
+transition: transform 0.3s ease;
+transform: rotate(-45deg);
+}
+
+.donate-button:hover {
+background-color: #7db32e;
+transform: translateY(-2px);
+}
+
+.donate-button:hover .circle-icon i {
+color: #333333;
+font-size: 12px;
+transform: rotate(0deg);
+}
+
+.mobile-donate-button {
+display: inline-flex;
+align-items: center;
+justify-content: space-between;
+background-color: #8dc63f;
+color: #333333;
+padding: 3px 5px 3px 13px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 700;
+font-size: 14px;
+transition: all 0.3s ease;
+width: 150px;
+border: 1px solid #707070;
+margin-top: 30px;
+}
+
+.mobile-donate-button span {
+margin-right: 5px;
+font-family: Greycliff CF, Light;
+}
+
+.mobile-donate-button i {
+font-size: 14px;
+transition: transform 0.3s ease;
+transform: rotate(-45deg);
+}
+
+.mobile-donate-button:hover {
+background-color: #7db32e;
+transform: translateY(-2px);
+}
+
+.mobile-donate-button:hover .circle-icon i {
+color: #333333;
+font-size: 12px;
+transform: rotate(0deg);
+}
+
+/* Skills Dropdown Navigation Styles */
+.skills-dropdown-nav {
+margin: 0 auto;
+}
+
+.nav-items {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav-item {
+position: relative;
+}
+
+.nav-link {
+display: block;
+padding: 15px 25px;
+color: #7D7E7E;
+text-decoration: none;
+font-family: Greycliff CF, Light;
+font-size: 15px;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+color: #4d7e32;
+}
+
+.dropdown-toggle {
+display: flex;
+align-items: center;
+}
+
+.dropdown-toggle i {
+font-size: 12px;
+margin-left: 8px;
+}
+
+.dropdown-menu {
+position: absolute;
+top: 100%;
+left: 0;
+min-width: 230px;
+background-color: #FFFFFF;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+border-radius: 0 0 5px 5px;
+border: 1px solid #eee;
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: all 0.3s ease;
+z-index: 1000;
+border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+.dropdown-item {
+display: block;
+padding: 10px 20px;
+color: #7D7E7E;
+text-decoration: none;
+font-family: Greycliff CF, Light;
+font-size: 14px;
+font-weight: 400;
+transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+background-color: #f8f8f3;
+color: #4d7e32;
+}
+
+/* Mobile Menu Toggle Button */
+.mobile-menu-toggle {
+display: none;
+background: none;
+border: none;
+cursor: pointer;
+padding: 10px;
+z-index: 1001;
+}
+
+.hamburger {
+width: 30px;
+height: 20px;
+position: relative;
+transform: rotate(0deg);
+transition: .5s ease-in-out;
+cursor: pointer;
+}
+
+.hamburger span {
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+background: #333;
+border-radius: 3px;
+opacity: 1;
+left: 0;
+transform: rotate(0deg);
+transition: .25s ease-in-out;
+}
+
+/* Hamburger icon bars positioning */
+.hamburger span:nth-child(1) {
+top: 0px;
+}
+
+.hamburger span:nth-child(2),
+.hamburger span:nth-child(3) {
+top: 10px;
+}
+
+.hamburger span:nth-child(4) {
+top: 20px;
+}
+
+/* Hamburger animation to X */
+.hamburger.open span:nth-child(1) {
+top: 10px;
+width: 0%;
+left: 50%;
+}
+
+.hamburger.open span:nth-child(2) {
+transform: rotate(45deg);
+}
+
+.hamburger.open span:nth-child(3) {
+transform: rotate(-45deg);
+}
+
+.hamburger.open span:nth-child(4) {
+top: 10px;
+width: 0%;
+left: 50%;
+}
+
+/* Mobile Navigation Panel */
+.mobile-nav {
+position: fixed;
+top: 0;
+right: -100%;
+width: 80%;
+max-width: 400px;
+height: 100%;
+background-color: white;
+padding: 80px 40px 40px;
+z-index: 1000;
+overflow-y: auto;
+transition: right 0.3s ease-in-out;
+box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-nav.open {
+right: 0;
+}
+
+.mobile-nav-links {
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
+.mobile-nav-links a {
+color: #333;
+font-size: 18px;
+font-weight: 500;
+padding: 10px 0;
+border-bottom: 1px solid #eee;
+transition: color 0.3s ease;
+display: block;
+}
+
+.mobile-nav-links a:hover {
+color: #4d7e32;
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+position: relative;
+border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0;
+cursor: pointer;
+color: #333;
+font-size: 18px;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+font-size: 14px;
+transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+display: block;
+padding: 10px 0 10px 15px !important;
+font-size: 16px !important;
+color: #666 !important;
+border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+color: #4d7e32 !important;
+}
+
+/* Dark overlay when mobile menu is open */
+.overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+z-index: 999;
+display: none;
+}
+
+.overlay.active {
+display: block;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 1500px) { 
+.header-container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+}
+.nav-links {
+    display: flex;
+    gap: 25px;
+    margin-right: 45px;
+}
+}
+
+@media (max-width: 1478px) { 
+.header {
+    padding: 15px 15px;
+}
+.banner {
+    padding: 12px 15px;
+}
+}
+
+@media (max-width: 1354px) {
+.header-container {
+    justify-content: space-between;
+    padding: 0 20px;
+}
+}
+
+@media (max-width: 976px) {
+.mobile-menu-toggle {
+    display: block; 
+}
+.donate-button {
+    display: none;
+}
+}
+
+@media (max-width: 976px) {
+.skills-dropdown-nav {
+    display: none; /* Hide desktop nav on mobile */
+}
+}
+
+@media (max-width: 576px) {
+.mobile-nav {
+    width: 100%;
+    max-width: none;
+}
+}
+
+.social-strip {
+background-color: #ffffff;
+padding: 5px 0;
+border-bottom: 1px solid #f0f0f0;
+}
+
+.social-strip-container {
+display: flex;
+justify-content: flex-end;
+max-width: 83%;
+margin: 0 auto;
+padding: 0 40px;
+}
+
+.social-icons-top {
+display: flex;
+gap: 15px;
+}
+
+.social-icons-top a {
+color: #333;
+font-size: 18px;
+transition: color 0.3s ease;
+}
+
+.social-icons-top a:hover {
+color: #4d7e32;
+}
+
+/* Skills Dropdown Navigation Styles */
+.skills-nav-container {
+width: 100%;
+background-color: #FFFFFF;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+position: relative;
+z-index: 100;
+}
+
+.skills-dropdown-nav {
+/* max-width: 1200px; */
+margin: 0 auto;
+/* padding: 0px 85px 0px 25px; */
+}
+
+.nav-items {
+display: flex;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.nav-item {
+position: relative;
+}
+
+.nav-link {
+display: block;
+padding: 15px 25px;
+color: #7D7E7E;
+text-decoration: none;
+font-family: Greycliff CF, Light;
+font-size: 15px;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+color: #4d7e32;
+}
+
+.dropdown-toggle {
+display: flex;
+align-items: center;
+}
+
+.dropdown-toggle i {
+font-size: 12px;
+margin-left: 8px;
+}
+
+.dropdown-menu {
+position: absolute;
+top: 100%;
+left: 0;
+min-width: 230px;
+background-color: #FFFFFF;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+border-radius: 0 0 5px 5px;
+border: 1px solid #eee;
+opacity: 0;
+visibility: hidden;
+transform: translateY(10px);
+transition: all 0.3s ease;
+z-index: 1000;
+border-radius: 0px 0px 25px 25px;
+}
+
+.dropdown:hover .dropdown-menu {
+opacity: 1;
+visibility: visible;
+transform: translateY(0);
+}
+
+.dropdown-item {
+display: block;
+padding: 10px 20px;
+color: #7D7E7E;
+text-decoration: none;
+font-family: Greycliff CF, Light;
+font-size: 14px;
+font-weight: 400;
+transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+background-color: #f8f8f3;
+color: #4d7e32;
+}
+
+/* Responsive adjustments */
+@media (max-width: 976px) {
+.skills-dropdown-nav {
+    display: none; /* Hide desktop nav on mobile */
+}
+
+/* You would need to implement mobile dropdown separately or
+   integrate with  existing mobile menu system */
+}
+
+/* Mobile Dropdown Styles */
+.mobile-dropdown {
+position: relative;
+border-bottom: 1px solid #eee;
+}
+
+.mobile-dropdown-toggle {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px 0;
+cursor: pointer;
+color: #333;
+font-size: 18px;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover {
+color: #4d7e32;
+}
+
+.mobile-dropdown-toggle i {
+font-size: 14px;
+transition: transform 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-toggle i {
+transform: rotate(180deg);
+}
+
+.mobile-dropdown-menu {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease;
+}
+
+.mobile-dropdown.active .mobile-dropdown-menu {
+max-height: 300px; /* Adjust as needed based on content */
+}
+
+.mobile-dropdown-menu a {
+display: block;
+padding: 10px 0 10px 15px !important;
+font-size: 16px !important;
+color: #666 !important;
+border-bottom: none !important;
+}
+
+.mobile-dropdown-menu a:last-child {
+padding-bottom: 15px !important;
+}
+
+.mobile-dropdown-menu a:hover {
+color: #4d7e32 !important;
+}
+
+/* Update existing mobile-nav styles */
+.mobile-nav-links a {
+color: #333;
+font-size: 18px;
+font-weight: 500;
+padding: 10px 0;
+border-bottom: 1px solid #eee;
+transition: color 0.3s ease;
+display: block;
+}
+
+.mobile-nav {
+padding-top: 70px; /* Adjust if needed to make room for the header */
+}
+
+.hamburger.open {
+position: fixed;
+top: 20px;      /* Move it higher (decrease this value to move up) */
+right: 20px;    /* Move it more to the right (decrease this value to move right) */
+z-index: 1002;  /* Ensure it stays above other elements */
+}
+
+/* If the X is created by the transformed hamburger icon, make sure the spans align properly */
+.hamburger.open span:nth-child(2),
+.hamburger.open span:nth-child(3) {
+right: 0;       /* Ensure the X is properly centered when transformed */
+}
+
+/* Optionally, if the mobile nav panel needs adjustment */
+.mobile-nav {
+padding-top: 60px; /* Adjust top padding to ensure content doesn't go under the X */
+}
+.header-container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0px 60px 0px 35px;
+    }
+    @media (max-width: 976px) {
+.mobile-menu-toggle {
+            display: block; 
+        }
+.donate-button {
+display: none;
+}
+
+
+}
+    .mobile-donate-button {
+display: inline-flex;
+align-items: center;
+justify-content: space-between;
+background-color: #8dc63f; /* Light green */
+color: #333333; /* Black text color */
+padding: 3px 5px 3px 13px;
+border-radius: 25px;
+text-decoration: none;
+font-weight: 700;
+font-size: 14px;
+transition: all 0.3s ease;
+width: 150px; /* Adjust width as needed */
+border: 1px solid #707070;
+}
+.mobile-donate-button span {
+margin-right: 5px;
+font-family: Greycliff CF, Light; 
+}
+.mobile-donate-button:hover .circle-icon i {
+color: #333333; /* Black arrow */
+font-size: 12px;
+transform: rotate(0deg);
+}
+.mobile-donate-button:hover {
+background-color: #7db32e; /* Slightly darker on hover */
+transform: translateY(-2px);
+}
+.mobile-donate-button i {
+transform: rotate(-45deg);
+}
+.mobile-donate-button > .circle-icon i:hover {
+transform: rotate(0deg);
+}
+.mobile-donate-button i {
+font-size: 14px;
+transition: transform 0.3s ease;
+}
+.mobile-donate-button {
+        margin-top: 30px;
+        /* width: 100%;
+        justify-content: center; */
+    }
+    @media (max-width: 1636px) {
+        .main-nav {
+            display: none; /* Hide desktop nav */
+        }
+
+        .nav-link {
+            padding: 15px 15px;
+        }
+        .header-container {
+            padding: 0px 30px 0px 30px;
+        }
+    }
+    @media (max-width: 1354px) {
+        .main-nav {
+            display: none; /* Hide desktop nav */
+        }
+
+        .nav-link {
+            padding: 15px 6px;
+        }
+        .header-container {
+            padding: 0px;
+        }
+    }
+    @media (max-width: 976px) {
+.employer-support,
+.resources-section,
+.testimonial-section {
+padding-left: 0;
+padding-right: 0;
+}
+
+.employer-support-container,
+.resources-container {
+/* padding: 15px; */
+margin: 0;
+}
+
+/* Ensure content doesn't overflow on mobile */
+.communities-content, 
+.employer-content {
+padding: 15px;
+}
+html, body {
+overflow-x: hidden;
+width: 100%;
+position: relative;
+margin: 0;
+padding: 0;
+}
+
+/* Ensure all containers respect viewport boundaries */
+.container, 
+.banner-container, 
+.header-container, 
+.hero-container, 
+.employer-support-container, 
+.resources-container,
+.testimonial-container,
+.work-together-container,
+.footer-container {
+max-width: 100%;
+box-sizing: border-box;
+/* padding-left: 15px;
+padding-right: 15px; */
+overflow-x: hidden;
+}
+
+.work-together-section .donate-button {
+display: inline-flex !important;
+width: 195px !important;
+margin: 20px auto 0 auto;
+}
+
+/* Fix potential image overflow */
+img {
+max-width: 100%;
+height: auto;
+}
+
+/* Fix potential section overflow */
+section {
+width: 100%;
+overflow-x: hidden;
+}
+
+}
+/* Fix for hamburger X button visibility on mobile */
+.hamburger.open {
+position: fixed;
+top: 15px;
+right: 15px;
+z-index: 9999; /* Extremely high z-index to ensure it's above everything */
+background-color: rgba(255, 255, 255, 0.95); /* Near solid white background */
+padding: 10px;
+border-radius: 50%; /* Make it a circle */
+width: 40px;
+height: 40px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+/* Make the X lines thicker and more visible */
+.hamburger.open span {
+background-color: #333; /* Darker color */
+height: 3px; /* Slightly thicker */
+}
+
+/* Ensure proper X transformation */
+.hamburger.open span:nth-child(1) {
+top: 10px;
+width: 0;
+opacity: 0;
+}
+
+.hamburger.open span:nth-child(2) {
+transform: rotate(45deg);
+width: 100%;
+}
+
+.hamburger.open span:nth-child(3) {
+transform: rotate(-45deg);
+width: 100%;
+}
+
+.hamburger.open span:nth-child(4) {
+width: 0;
+opacity: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 576px) {
+.hamburger.open {
+right: 10px;
+top: 60px;
+width: 44px;
+height: 44px;
+}
+}
+
+@media (max-width: 1478px) { 
+.banner-text {
+        font-size: 15px;
+        margin-right: 0%;
+    }
+
+       .header {
+        padding: 15px 15px;
+        }
+        .banner {
+            padding: 12px 15px;
+        }
+    }
+    @media (max-width: 1354px) {
+        .communities-text {
+        font-size: 16px;
+    }
+
+    
+
+    h4 {
+        font-size: 24px; 
+    }
+
+    .communities-title {
+        font-size: 32px;
+        margin-bottom: 5px;
+    }
+.header {
+    padding: 15px 1%;
+}
+
+.employer-content h2 {
+    font-size: 32px;
+}
+.partnering-text {
+    font-size: 18px;
+}
+
+.support-text {
+    font-size: 18px;
+}
+
+.resources-content {
+    padding: 0% 7% 0% 2%; 
+}
+
+.communities-title {
+    margin-bottom: 5px !important;
+}
+
+.partner-subtitle {
+    margin-bottom: 5px !important;
+
+}
+}
+
+.partner-subtitle {
+font-size: 24px;
+font-weight: 700;
+margin-bottom: 6%;
+}
+
+.testimony-company-logo {
+max-width: 100px !important;
+max-height: 100px !important;
+margin-top: 3%;
+}
+
+/* Animation styles for the section (set in JavaScript) */
+.collaborate-section {
+opacity: 0;
+transform: translateY(20px);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Container styles */
+.container {
+width: 100%;
+margin: 0px auto;
+}
+
+/* Specific responsive styles */
+@media (max-width: 976px) {
+.collaborate-container {
+    grid-template-columns: 1fr;
+    gap: 15px !important;
+}
+
+.collaborate-content {
+    order: 1;
+}
+
+.collaborate-image {
+    order: 0;
+}
+}
+
+@media (max-width: 480px) {
+.collaborate-content h1 {
+    font-size: 32px;
+}
+
+.collaborate-subtitle,
+.how-we-work {
+    font-size: 20px;
+}
+}
+
+/* Image styles */
+@media (max-width: 1478px) {
+.collaborate-image img {
+    width: 100%;
+    height: 400px;
+    border-radius: 35px;
+    object-fit: cover;
+}
+}
+
+/* Inferred grid layout styles based on the HTML structure and media queries */
+.collaborate-container {
+display: grid;
+grid-template-columns: 1fr 1fr; /* On desktop, 2 columns */
+gap: 40px;
+padding: 0 20px;
+}
+
+.collaborate-image img {
+width: 100%;
+border-radius: 35px;
+object-fit: cover;
+height: 700px;
+}
+
+/* List styling that would apply to partner-list */
+ul {
+list-style-type: none;
+}
+
+li {
+margin-bottom: 10px;
+}
+
+/* Heading and text styles */
+.collaborate-content h1 {
+font-size: 48px;
+font-weight: 800;
+margin-bottom: 15px;
+}
+
+.collaborate-subtitle {
+font-size: 24px;
+margin-bottom: 20px;
+}
+
+.collaborate-description {
+font-size: 18px;
+line-height: 1.7;
+margin-bottom: 30px;
+}
+
+.how-we-work {
+font-size: 28px;
+margin-bottom: 20px;
+}
+
+/* Section spacing */
+.collaborate-section {
+padding: 40px 0;
+}
+
+/* Partner list specific styling */
+.partner-list {
+padding-left: 20px;
+}
+
+.partner-list li {
+margin-bottom: 15px;
+line-height: 1.5;
+}
+
+@media (max-width: 1024px) {
+            .team-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+
+        }
+
+        @media (max-width: 1024px) {
+            .collaborate-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .collaborate-content {
+                order: 1;
+            }
+            
+            .collaborate-image {
+                order: 0;
+            }
+            
+    
+        }
+        @media (max-width: 1024px) {
+            .collaborate-image img {
+            width: 100%;
+            height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+
+        .work-together-content h2 {
+    font-size: 50px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+        }
+
+@media (max-width: 1024px) {
+            .collaborate-image img {
+            width: 100%;
+            height: 400px;
+            border-radius: 35px;
+            object-fit: cover;
+        }
+    }
+    @media (max-width: 1354px) {
+        .communities-title {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.0;
+}
+}
+
+@media (max-width: 768px) {
+    .communities-title {
+                font-size: 28px;
+            }
+        }
+</style>
+</head>
+<body>
+    <div id="main-content">
+
+    <section id="pt2ofpg" class="collaborate-section">
+        <div class="collaborate-container">
+            <div class="resources-content">
+                <h2 class="communities-title">Partner With Us</h2>
+                <h4 style="padding-bottom: 2%; color: #4F6B3A; font-family: Greycliff CF, Bold; font-weight: 700;" class="partner-subtitle">Find the Right Talent. Strengthen Your Workforce.</h4>
+                <p class="communities-text">
+                    At Skills for Chicago, we connect businesses with qualified, pre-screened talent they won’t find anywhere else. Our employer partners gain access to job seekers with unique skills and experiences who are ready to contribute and grow. By working with us, companies fill critical roles while driving economic mobility in Chicago.
+                </p>
+            </div>
+            <div class="collaborate-image">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Partner-with-us-1b-1.png" alt="Two people collaborating with tablet">
+            </div>
+        </div>
+    </section>
+    <!-- Hero Section (pt1page) -->
+    <!-- <section class="resources-section">
+        <div class="container resources-container">
+            <div class="resources-content">
+                <h2 class="communities-title">Partner With Us</h2>
+                <h4 style="padding-bottom: 2%; color: #4F6B3A; font-family: Greycliff CF, Bold; font-weight: 700;" class="partner-subtitle">Find the Right Talent. Strengthen  Workforce.</h4>
+                <p class="communities-text">
+                    At Skills for Chicago, we connect businesses with qualified, pre-screened talent they won’t find anywhere else. Our employer partners gain access to job seekers with unique skills and experiences who are ready to contribute and grow. By working with us, companies fill critical roles while driving economic mobility in Chicago.
+                </p>
+            </div>
+            <div class="communities-image">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Partner-with-us-1b-1.png" alt="People at a community event">
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Employer Support Section (pt3page) -->
+    <section class="employer-support">
+        <div class="employer-support-container">
+            <div class="employer-image">
+                <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/AdobeStock_300144034-1-scaled.jpeg" alt="Woman with curly hair using laptop">
+            </div>
+            <div class="employer-content">
+                <h2>How We Support Employers</h2>
+                <ul class="support-list">
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            Curated Talent Pipelines -
+                            Find job-ready candidates aligned with  hiring needs.
+                        </div>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            Tailored Recruitment Solutions -
+                            Tap into flexible hiring support for various industries.
+                        </div>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            Exclusive Talent Access -
+                            Connect with candidates who are not on traditional job boards.
+                        </div>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            Hiring Expertise -
+                            Access insights to streamline and improve  recruitment process.
+                        </div>
+                    </li>
+                    <li class="support-item">
+                        <div class="support-icon"></div>
+                        <div class="support-text">
+                            Strategic Workforce Support -
+                            Strengthen  team with motivated, skilled employees.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+      <!-- Work Together Section -->
+      <section class="work-together-section">
+        <div class="work-together-container">
+            <div class="work-together-content">
+                <h2>Join A Network Of Employers Making A Meaningful Impact in Our City.</h2>
+                <p class="work-together-description">Connect with top talent and build a stronger workforce.</p>
+            </div>
+            <a href="https://skillsforchicago.org/contact-us/" class="donate-button" style="width:195px; padding: 7px 5px 7px 1%;">
+                <span>Partner With Us</span>
+                <div class="circle-icon">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </a>    
+        </div>
+    </section>
+    <section class="testimonial-section">
+        <div class="testimonial-container">
+            <div class="testimonial-carousel" id="testimonialCarousel">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Betsy-Rahill.jpg" alt="Sammuel Jackson">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            “Our partnership with Skills creates the opportunity for candidates who might otherwise get overlooked to have an opportunity to be able to put their resume in front of UCM.”
+                        </p>
+                        <h3 class="testimonial-name">Betsy Rahill</h3>
+                        <p class="testimonial-title">Executive Director, Talent Strategy and Experience</p>
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/UCM_Logo_Master_Brand_Tagline_full_color_rgb.png" class="testimony-company-logo">
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Shannon-D.-Fuller.jpg" alt="Maria Rodriguez">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            “Skills is ahead of the curve in focusing on Skills. I would argue that keeping it real is what Skills is doing. It’s uplifting the community. It’s pouring back into the community. It’s even if you do go away, you reach  hand back, and you pull the next person up.”
+                        </p>
+                        <h3 class="testimonial-name">Shannon D. Fuller</h3>
+                        <p class="testimonial-title">Vice President, Talent Solutions</p>
+                        <!-- <p class="testimonial-program">Placed by Skills Neighborhood Program, Fall 2022</p> -->
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/BCBSIL_center_rgb.png" class="testimony-company-logo">
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="https://skillsforchicago.org/wp-content/uploads/2025/04/Cliff-Houde.jpg" alt="James Washington">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            “Team members that come to us from Skills are great at learning our processes and systems. We have a higher retention rate with Skills hires. They provide great service to our callers and their quality scores are amazing.”
+                        </p>
+                        <h3 class="testimonial-name">Cliff Houde</h3>
+                        <p class="testimonial-title">Staff Vice President, Operations</p>
+                        <img src="https://skillsforchicago.org/wp-content/uploads/2025/05/Carelon-color-logo.png" class="testimony-company-logo">
+                        <!-- <p class="testimonial-program">Placed by Skills Healthcare Pathway, Spring 2023</p> -->
+                    </div>
+                </div>
+                
+                <!-- <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_538810139.jpeg" alt="Lakisha Johnson">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            After being laid off during company restructuring, I wasn't sure where to turn. Skills for Chicago not only helped update my resume and interviewing skills but connected me with employers who were actively seeking candidates like me. What impressed me most was their continued support even after I was hired.
+                        </p>
+                        <h3 class="testimonial-name">Lakisha Johnson</h3>
+                        <p class="testimonial-title">Operations Manager, Blue Cross Blue Shield</p>
+                        <p class="testimonial-program">Placed by Skills Career Transition Program, Winter 2022</p>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-profile">
+                            <img src="/Users/josephchretien/Downloads/SKILLSWEBPAGES/AdobeStock_303533196.jpeg" alt="David Chen">
+                        </div>
+                        <div class="testimonial-quote-mark">"</div>
+                        <p class="testimonial-quote">
+                            I'd been working in retail for years with no clear path forward. The team at Skills for Chicago helped me identify my transferable skills and connected me with training opportunities that led to my current position. For the first time, I feel like I have a real career path and financial stability for my family.
+                        </p>
+                        <h3 class="testimonial-name">David Chen</h3>
+                        <p class="testimonial-title">IT Support Specialist, Hyatt Hotels</p>
+                        <p class="testimonial-program">Placed by Skills Tech Bootcamp, Summer 2023</p>
+                    </div>
+                </div> -->
+                
+                <div class="testimonial-controls">
+                    <button class="testimonial-button prev-button"><i class="fas fa-chevron-left"></i></button>
+                    <button class="testimonial-button next-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                
+                <div class="testimonial-dots" id="testimonialDots">
+                    <span class="testimonial-dot active" data-index="0"></span>
+                    <span class="testimonial-dot" data-index="1"></span>
+                    <span class="testimonial-dot" data-index="2"></span>
+                    <!-- <span class="testimonial-dot" data-index="3"></span> -->
+                    <!-- <span class="testimonial-dot" data-index="4"></span> -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+           
+</div>
+    <script>
+         document.addEventListener('DOMContentLoaded', function() {
+        // Testimonial Carousel
+        const carousel = document.getElementById('testimonialCarousel');
+        const slides = carousel.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        const prevButton = carousel.querySelector('.prev-button');
+        const nextButton = carousel.querySelector('.next-button');
+        let currentIndex = 0;
+        let interval;
+        const autoplayDelay = 35000; // 7 seconds between slides
+        
+        // Function to show a specific slide
+        function showSlide(index) {
+            // Hide all slides
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            
+            // Remove active class from all dots
+            dots.forEach(dot => {
+                dot.classList.remove('active');
+            });
+            
+            // Show the selected slide and activate corresponding dot
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            
+            // Update current index
+            currentIndex = index;
+        }
+        
+        // Function to show the next slide
+        function nextSlide() {
+            let newIndex = currentIndex + 1;
+            if (newIndex >= slides.length) {
+                newIndex = 0; // Loop back to first slide
+            }
+            showSlide(newIndex);
+        }
+        
+        // Function to show the previous slide
+        function prevSlide() {
+            let newIndex = currentIndex - 1;
+            if (newIndex < 0) {
+                newIndex = slides.length - 1; // Loop to last slide
+            }
+            showSlide(newIndex);
+        }
+        
+        // Set up auto rotation
+        function startAutoplay() {
+            interval = setInterval(nextSlide, autoplayDelay);
+        }
+        
+        function stopAutoplay() {
+            clearInterval(interval);
+        }
+        
+        // Event listeners for buttons
+        nextButton.addEventListener('click', function() {
+            stopAutoplay();
+            nextSlide();
+            startAutoplay();
+        });
+        
+        prevButton.addEventListener('click', function() {
+            stopAutoplay();
+            prevSlide();
+            startAutoplay();
+        });
+        
+        // Event listeners for dots
+        dots.forEach(dot => {
+            dot.addEventListener('click', function() {
+                stopAutoplay();
+                const index = parseInt(dot.getAttribute('data-index'));
+                showSlide(index);
+                startAutoplay();
+            });
+        });
+        
+        // Stop autoplay on hover
+        carousel.addEventListener('mouseenter', stopAutoplay);
+        carousel.addEventListener('mouseleave', startAutoplay);
+        
+        // Handle touch events for mobile
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        carousel.addEventListener('touchstart', function(e) {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoplay();
+        }, { passive: true });
+        
+        carousel.addEventListener('touchend', function(e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+            startAutoplay();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const threshold = 75; // Minimum swipe distance
+            
+            if (touchEndX < touchStartX - threshold) {
+                // Swipe left, go to next slide
+                nextSlide();
+            } else if (touchEndX > touchStartX + threshold) {
+                // Swipe right, go to previous slide
+                prevSlide();
+            }
+        }
+        
+        // Initialize the carousel
+        showSlide(0);
+        startAutoplay();
+    });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Social Media Icons
+            const socialIcons = document.querySelectorAll('.social-icon');
+            
+            // Testimonial Carousel
+            const carousel = document.querySelector('.testimonial-cards');
+            const cards = document.querySelectorAll('.testimonial-card');
+            const prevBtn = document.querySelector('.carousel-arrow.left');
+            const nextBtn = document.querySelector('.carousel-arrow.right');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentIndex = 0;
+            const cardWidth = cards[0].offsetWidth;
+            const cardMargin = 25; // gap between cards
+            const totalCards = cards.length;
+            let visibleCards = 3;
+            
+            // Check how many cards should be visible based on screen width
+            function updateVisibleCards() {
+                if (window.innerWidth < 768) {
+                    visibleCards = 1;
+                } else if (window.innerWidth < 1100) {
+                    visibleCards = 2;
+                } else {
+                    visibleCards = 3;
+                }
+                
+                // Update carousel position after changing visible cards
+                goToSlide(currentIndex);
+            }
+            
+            // Initial check
+            updateVisibleCards();
+            
+            // Update on window resize
+            window.addEventListener('resize', updateVisibleCards);
+            
+            // Function to move carousel to specific slide
+            function goToSlide(index) {
+                // Enforce boundaries
+                if (index < 0) {
+                    index = 0;
+                } else if (index > totalCards - visibleCards) {
+                    index = totalCards - visibleCards;
+                }
+                
+                currentIndex = index;
+                
+                // Calculate position
+                const position = -(currentIndex * (cardWidth + cardMargin));
+                carousel.style.transform = `translateX(${position}px)`;
+                
+                // Update dots (if we have 5 dots for 5 testimonials)
+                dots.forEach((dot, i) => {
+                    dot.classList.remove('active');
+                    // Map the current slide index to the appropriate dot
+                    // This is a simplified approach - you might want to
+                    // adjust how dots correspond to carousel positions
+                    if (i === Math.min(currentIndex, dots.length - 1)) {
+                        dot.classList.add('active');
+                    }
+                });
+                
+                // Enable/disable arrows based on position
+                prevBtn.style.opacity = currentIndex === 0 ? "0.5" : "1";
+                nextBtn.style.opacity = currentIndex >= totalCards - visibleCards ? "0.5" : "1";
+            }
+            
+            // Next slide
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+            });
+            
+            // Previous slide
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+            });
+            
+            // Dot navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    goToSlide(index);
+                });
+            });
+            
+            // Banner exit fullscreen
+            const exitButton = document.querySelector('.exit-fullscreen');
+            exitButton.addEventListener('click', () => {
+                // This would normally exit fullscreen, but we'll just hide the button for demo
+                exitButton.style.display = 'none';
+            });
+            
+            // ESC key to exit fullscreen
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape') {
+                    exitButton.style.display = 'none';
+                }
+            });
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Touch swipe for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            
+            carousel.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            });
+            
+            carousel.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                handleSwipe();
+            });
+            
+            function handleSwipe() {
+                const swipeThreshold = 50;
+                if (touchEndX < touchStartX - swipeThreshold) {
+                    // Swiped left, go to next slide
+                    goToSlide(currentIndex + 1);
+                }
+                
+                if (touchEndX > touchStartX + swipeThreshold) {
+                    // Swiped right, go to previous slide
+                    goToSlide(currentIndex - 1);
+                }
+            }
+        });
+    </script>
+     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Add animation to sections when they come into view
+            const animateSections = () => {
+                const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+                
+                sections.forEach(section => {
+                    const rect = section.getBoundingClientRect();
+                    const isVisible = rect.top <= window.innerHeight * 0.8;
+                    
+                    if (isVisible) {
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial styles for animation
+            const sections = document.querySelectorAll('.collaborate-section, .work-together-section, .partner-details-section');
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            });
+            
+            // Run on load and scroll
+            animateSections();
+            window.addEventListener('scroll', animateSections);
+            
+                        // Mobile Menu Functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const hamburger = document.querySelector('.hamburger');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const overlay = document.querySelector('.overlay');
+        const body = document.querySelector('body');
+        
+        // Function to toggle mobile menu
+        function toggleMobileMenu() {
+            hamburger.classList.toggle('open');
+            mobileNav.classList.toggle('open');
+            overlay.classList.toggle('active');
+            
+            // Prevent body scrolling when menu is open
+            if (mobileNav.classList.contains('open')) {
+                body.style.overflow = 'hidden';
+            } else {
+                body.style.overflow = '';
+            }
+        }
+        
+        // Event listeners for menu toggling
+        if (mobileMenuToggle) {
+            mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu when clicking overlay
+        if (overlay) {
+            overlay.addEventListener('click', toggleMobileMenu);
+        }
+        
+        // Close menu when clicking a mobile navigation link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                toggleMobileMenu();
+            });
+        });
+        
+        // Close menu on window resize if screen becomes larger than mobile breakpoint
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 1024 && mobileNav.classList.contains('open')) {
+                toggleMobileMenu();
+            }
+        });
+
+            // Footer Accordion Functionality
+            const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
+            
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const accordion = this.parentElement;
+                    
+                    // Toggle active class
+                    accordion.classList.toggle('active');
+                    
+                    // Close all other accordions (optional - comment out if you want multiple open)
+                    accordionHeaders.forEach(otherHeader => {
+                        if (otherHeader !== this) {
+                            otherHeader.parentElement.classList.remove('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+// Mobile Dropdown Functionality
+const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+
+mobileDropdowns.forEach(dropdown => {
+    const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+    
+    dropdownToggle.addEventListener('click', function() {
+        // Toggle active class on clicked dropdown
+        dropdown.classList.toggle('active');
+        
+        // Optionally close other dropdowns when one is opened
+        // Comment this out if you want multiple dropdowns to be open simultaneously
+        mobileDropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                otherDropdown.classList.remove('active');
+            }
+        });
+    });
+});
+
+// Close dropdowns when a link inside is clicked
+const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+dropdownLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Optionally close the dropdown when a link is clicked
+        // Comment this out if you want the dropdown to stay open after a link is clicked
+        const parentDropdown = this.closest('.mobile-dropdown');
+        setTimeout(() => {
+            parentDropdown.classList.remove('active');
+            
+            // Also close the mobile menu
+            document.querySelector('.hamburger').classList.remove('open');
+            document.querySelector('.mobile-nav').classList.remove('open');
+            document.querySelector('.overlay').classList.remove('active');
+            document.querySelector('body').style.overflow = '';
+        }, 100); // Small delay to allow the click to register
+    });
+});
+
+// Make sure mobile dropdowns are closed when menu is closed
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', function() {
+        // If closing the mobile menu, close all dropdowns
+        if (document.querySelector('.mobile-nav').classList.contains('open')) {
+            setTimeout(() => {
+                mobileDropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }, 300); // Delay to match the mobile menu closing animation
+        }
+    });
+}
+});
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+// Mobile Dropdown Functionality
+const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+
+mobileDropdowns.forEach(dropdown => {
+    const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+    
+    dropdownToggle.addEventListener('click', function() {
+        // Toggle active class on clicked dropdown
+        dropdown.classList.toggle('active');
+        
+        // Optionally close other dropdowns when one is opened
+        // Comment this out if you want multiple dropdowns to be open simultaneously
+        mobileDropdowns.forEach(otherDropdown => {
+            if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+                otherDropdown.classList.remove('active');
+            }
+        });
+    });
+});
+
+// Close dropdowns when a link inside is clicked
+const dropdownLinks = document.querySelectorAll('.mobile-dropdown-menu a');
+dropdownLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        // Optionally close the dropdown when a link is clicked
+        // Comment this out if you want the dropdown to stay open after a link is clicked
+        const parentDropdown = this.closest('.mobile-dropdown');
+        setTimeout(() => {
+            parentDropdown.classList.remove('active');
+            
+            // Also close the mobile menu
+            document.querySelector('.hamburger').classList.remove('open');
+            document.querySelector('.mobile-nav').classList.remove('open');
+            document.querySelector('.overlay').classList.remove('active');
+            document.querySelector('body').style.overflow = '';
+        }, 100); // Small delay to allow the click to register
+    });
+});
+
+// Make sure mobile dropdowns are closed when menu is closed
+const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', function() {
+        // If closing the mobile menu, close all dropdowns
+        if (document.querySelector('.mobile-nav').classList.contains('open')) {
+            setTimeout(() => {
+                mobileDropdowns.forEach(dropdown => {
+                    dropdown.classList.remove('active');
+                });
+            }, 300); // Delay to match the mobile menu closing animation
+        }
+    });
+}
+});
+    </script>
+    <script>
+        // Complete fixed mobile menu accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+  // Mobile Menu Toggle (Hamburger)
+  const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+  const hamburger = document.querySelector('.hamburger');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const overlay = document.querySelector('.overlay');
+  const body = document.body;
+  
+  // Function to toggle mobile menu
+  function toggleMobileMenu() {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+    overlay.classList.toggle('active');
+    
+    // Prevent body scrolling when menu is open
+    if (mobileNav.classList.contains('open')) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = '';
+    }
+  }
+  
+  // Mobile Dropdown Functionality
+  const mobileDropdowns = document.querySelectorAll('.mobile-dropdown');
+  
+  mobileDropdowns.forEach(dropdown => {
+    const dropdownToggle = dropdown.querySelector('.mobile-dropdown-toggle');
+    const dropdownMenu = dropdown.querySelector('.mobile-dropdown-menu');
+    
+    // Fix: Force proper initial state
+    dropdownMenu.style.maxHeight = '0px';
+    
+    dropdownToggle.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // Toggle active class on clicked dropdown
+      dropdown.classList.toggle('active');
+      
+      // Explicitly set max-height to either 0 or actual content height
+      if (dropdown.classList.contains('active')) {
+        dropdownMenu.style.maxHeight = dropdownMenu.scrollHeight + 'px';
+      } else {
+        dropdownMenu.style.maxHeight = '0px';
+      }
+      
+      // Close other dropdowns
+      mobileDropdowns.forEach(otherDropdown => {
+        if (otherDropdown !== dropdown && otherDropdown.classList.contains('active')) {
+          otherDropdown.classList.remove('active');
+          otherDropdown.querySelector('.mobile-dropdown-menu').style.maxHeight = '0px';
+        }
+      });
+    });
+  });
+  
+  // Event listeners for menu toggling
+  if (mobileMenuToggle) {
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+  }
+  
+  // Close menu when clicking overlay
+  if (overlay) {
+    overlay.addEventListener('click', toggleMobileMenu);
+  }
+  
+  // Close menu when clicking a mobile navigation link
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a:not(.mobile-dropdown-toggle)');
+  mobileNavLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      toggleMobileMenu();
+    });
+  });
+  
+  // Footer Accordion Functionality
+  const accordionHeaders = document.querySelectorAll('.footer-accordion-header');
+  
+  accordionHeaders.forEach(header => {
+    const accordion = header.parentElement;
+    const content = accordion.querySelector('.footer-accordion-content');
+    
+    // Fix: Force proper initial state
+    content.style.maxHeight = '0px';
+    
+    header.addEventListener('click', function() {
+      // Toggle active class
+      accordion.classList.toggle('active');
+      
+      // Explicitly set max-height based on active state
+      if (accordion.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + 'px';
+      } else {
+        content.style.maxHeight = '0px';
+      }
+      
+      // Close all other accordions (optional - comment out if you want multiple open)
+      accordionHeaders.forEach(otherHeader => {
+        if (otherHeader !== header) {
+          const otherAccordion = otherHeader.parentElement;
+          const otherContent = otherAccordion.querySelector('.footer-accordion-content');
+          otherAccordion.classList.remove('active');
+          otherContent.style.maxHeight = '0px';
+        }
+      });
+    });
+  });
+});
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Select all footer accordion headers
+    const footerAccordionHeaders = document.querySelectorAll('.footer-accordion-header');
+    
+    // Initialize and set up event handlers for each footer accordion
+    footerAccordionHeaders.forEach(header => {
+        const content = header.nextElementSibling; // Get the content element
+        const accordion = header.parentElement; // Get the accordion container
+        
+        // Ensure accordions are closed initially
+        content.style.maxHeight = '0';
+        
+        // Add click event listener
+        header.addEventListener('click', function() {
+            // Toggle active class
+            accordion.classList.toggle('active');
+            
+            // Set the maxHeight based on the actual content height
+            if (accordion.classList.contains('active')) {
+                // When active, set the maxHeight to match the content's height
+                content.style.maxHeight = content.scrollHeight + 'px';
+                content.style.paddingBottom = '15px';
+            } else {
+                // When inactive, set maxHeight to 0
+                content.style.maxHeight = '0';
+                content.style.paddingBottom = '0';
+            }
+            
+            // Close other accordions (optional - for accordion behavior)
+            footerAccordionHeaders.forEach(otherHeader => {
+                if (otherHeader !== header) {
+                    const otherAccordion = otherHeader.parentElement;
+                    const otherContent = otherHeader.nextElementSibling;
+                    
+                    otherAccordion.classList.remove('active');
+                    otherContent.style.maxHeight = '0';
+                    otherContent.style.paddingBottom = '0';
+                }
+            });
+        });
+    });
+});
+    </script>
+</body>
+</html>
